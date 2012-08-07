@@ -1,0 +1,290 @@
+.clear {
+	clear: both;
+}
+.buy-extensions-btn {
+	margin-top: 15px;
+	padding: 12px 25px;
+	background-color: #CE1212 !important;
+	border: none !important;
+	color: #fff !important;
+	font-weight: bold;
+	text-shadow: 1px 1px 3px #000000;
+	filter: dropshadow(color=#000000, offx=1, offy=1);
+	cursor: pointer !important;
+	position: absolute;
+	right: 1px;
+	top: -14px;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	text-decoration: none;
+}
+.display {
+	display: block !important;
+}
+.designapprovalsystem_page_design-approval-system-tutorials-page .use-of-plugin h3 {
+	color: #fff;
+	font-weight: normal;
+	font-size: 18px;
+	margin: 13px 0 0;
+}
+.designapprovalsystem_page_design-approval-system-tutorials-page .use-of-plugin h3 a:hover {
+	color: #f3f3f3;
+}
+.designapprovalsystem_page_design-approval-system-tutorials-page .use-of-plugin h3:first-child {
+	margin: 30px 0 0 0;
+}
+.designapprovalsystem_page_design-approval-system-tutorials-page .use-of-plugin {
+	padding: 0 0 75px 0;
+	font-size: 14px;
+}
+.use-of-plugin {
+	color: #fff;
+	font-weight: normal;
+	font-size: 14px;
+	padding-bottom: 8px;
+}
+.subtext-of-title {
+	color: rgb(199, 196, 196);
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.das-settings-admin-wrap {
+	width: 900px;
+	background:url(../images/vinyl-backg.jpeg) no-repeat;
+	background-color: #1A1830;
+	padding: 15px 25px 0;
+	-webkit-box-shadow: 2px 3px 7px 1px #333;
+	box-shadow: 2px 3px 7px 1px #333;
+	-webkit-border-radius: 6px;
+	border-radius: 5px;
+	position: relative;
+	margin-top: 50px;
+}
+.das-settings-admin-wrap h2 {
+	color: #CD1723;
+	font-size: 28px;
+	margin: 17px 0 15px -2px;
+	text-shadow: 1px 1px 3px #000000;
+}
+.das-settings-admin-wrap h3 {
+	color: #FFFFFF;
+	padding-top: 12px;
+	margin-bottom: 6px;
+	font-size: 18px;
+	text-shadow: 1px 1px 3px #000000;
+}
+.das-settings-admin-wrap h4 {
+	color: #000;
+	font-size: 14px;
+	margin-bottom: 5px;
+	margin-top: 10px;
+}
+.das-settings-admin-form {
+	width: 100%;
+	padding: 0px 0 20px;
+}
+.das-settings-admin-input-wrap {
+	background-color: #f3f3f3;
+	padding: 10px 20px;
+	margin-bottom: 10px;
+	border: 1px solid #CFCACA;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-border-radius: 6px;
+}
+.das-settings-admin-input-label {
+	margin-right: 10px;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-bottom: 4px;
+}
+.das-settings-admin-input-label a {
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 13px;
+	color: red;
+}
+.company-info-style {
+	background-color: rgba(240, 243, 245, 0.78) !important;
+	color: #000;
+}
+.das-settings-admin-wrap .upload_image_button {
+	margin-top: 5px;
+	padding: 9px 20px;
+	background-color: #CD1723;
+	border: none;
+	color: #fff !important;
+	font-weight: bold;
+	text-shadow: 1px 1px 3px #000000;
+	filter: dropshadow(color=#000000, offx=1, offy=1);
+	cursor: pointer;
+	float: left;
+}
+.upload-logo-size {
+	float: left;
+	width: 350px;
+	margin-left: 15px;
+	margin-top: 2px;
+}
+.das-settings-admin-input-example {
+	font-weight: normal;
+	padding-top: 4px;
+	font-size: 12px;
+	color: #797979;
+}
+.company-info-style .das-settings-admin-input-example {
+	color: #434343;
+}
+.das-settings-admin-input-example a {
+	cursor: pointer;
+}
+.das-settings-admin-input:focus {
+	background-color: #f0f0f0;
+	color: #000;
+	outline: none;
+}
+.das-settings-admin-input {
+	width: 100%;
+	padding: 10px 10px;
+	font-size: 13px;
+	-webkit-transition-duration: 400ms;
+	-webkit-transition-property: width, background;
+	-webkit-transition-timing-function: ease;
+	-moz-transition-duration: 400ms;
+	-moz-transition-property: width, background;
+	-moz-transition-timing-function: ease;
+	-o-transition-duration: 400ms;
+	-o-transition-property: width, background;
+	-o-transition-timing-function: ease;
+}
+.das-settings-admin-submit-btn {
+	margin-top: 15px;
+	padding: 10px;
+	background-color: #CD1723 !important;
+	border: none !important;
+	color: #fff !important;
+	font-weight: bold;
+	text-shadow: 1px 1px 3px #000000;
+	filter: dropshadow(color=#000000, offx=1, offy=1);
+	cursor: pointer !important;
+}
+.das-settings-admin-slick-logo {
+	background:url(../images/footer-logo.png) center no-repeat;
+	width: 124px;
+	height: 20px;
+	padding: 8px 12px;
+	display: block;
+	position: absolute;
+	bottom: 12px;
+	right: 12px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+/*=================================================
+	Design Approval System admin how to's
+=================================================*/
+.das-settings-id-answer {
+	padding: 15px 0 0 0;
+	display: none;
+	margin-top: 10px;
+	font-weight: bold;
+	border-top: 1px solid #ccc;
+}
+.das-settings-id-answer h4 {
+	padding: 0;
+	margin: 5px 0 -6px 0;
+}
+.das-settings-id-answer span {
+	display: block;
+	color: #999;
+	font-size: 13px;
+	margin: 15px 0 0 0;
+}
+.das-settings-id-answer img {
+	margin: 10px 0 14px 0;
+}
+.das-settings-id-answer ul {
+	padding: 8px 0 0 0;
+	clear: both;
+	margin: 0;
+}
+.das-settings-id-answer ul li {
+	margin: 0 0 4px 0;
+}
+.das-settings-id-answer a {
+	cursor: pointer !important;
+}
+.im-done {
+	margin-top: 0px;
+	padding: 7px 38px;
+	background-color: #CD1723;
+	border: none;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	text-shadow: 1px 1px 3px #000000;
+	filter: dropshadow(color=#000000, offx=1, offy=1);
+	-webkit-border-radius: 3px;
+	border-radius: 5px;
+	cursor: pointer;
+	float: left;
+	display: block;
+	clear: both;
+}
+a.im-done:hover, .upload_image_button:hover, .das-settings-admin-submit-btn:hover, .buy-extensions-btn:hover {
+	background: #919191 !important;
+	-webkit-transition-duration: 300ms;
+	-webkit-transition-property: width, background;
+	-webkit-transition-timing-function: ease;
+	-moz-transition-duration: 300ms;
+	-moz-transition-property: width, background;
+	-moz-transition-timing-function: ease;
+	-o-transition-duration: 300ms;
+	-o-transition-property: width, background;
+	-o-transition-timing-function: ease;
+	color: #f1f1f1;
+}
+.das-settings-admin-submit-btn {
+	padding: 10px 40px;
+	margin-top: 30px
+}
+/*=================================================
+	Design Approval System admin HELP PAGE
+=================================================*/
+.das-help-admin-wrap {
+	width: 900px;
+	background:url(../images/vinyl-backg.jpeg) no-repeat;
+	background-color: #1A1830;
+	padding: 15px 25px 0;
+	-webkit-box-shadow: 2px 3px 7px 1px #333;
+	box-shadow: 2px 3px 7px 1px #333;
+	-webkit-border-radius: 6px;
+	border-radius: 5px;
+	position: relative;
+	margin-top: 50px;
+}
+.das-help-admin-wrap h2 {
+	color: #CD1723;
+	font-size: 28px;
+	margin: 17px 0 14px -2px;
+	text-shadow: 1px 1px 3px #000000;
+}
+.das-help-admin-wrap h3 {
+	color: #FFFFFF;
+	padding: 0 0;
+	font-size: 18px;
+	text-shadow: 1px 1px 3px #000000;
+}
+.das-help-admin-wrap a {
+	text-decoration: none;
+	cursor: pointer !important;
+	color: #fff;
+}
+.das-help-admin-wrap a:hover {
+	color: #CD1723;
+}
