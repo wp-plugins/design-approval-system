@@ -1,12 +1,12 @@
 === Design Approval System ===
 Contributors: Justin Labadie, Spencer Labadie 
-Tags: design, approval, system, workflow
-Requires at least: wordpress 3.4.0
+Tags:  approval, design, design approval system, designers, designs, freelancer, freelancers, graphic artists, graphic designers, Graphics, logo designers, photography, plugin, wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow.
+Requires at least: WordPress 3.4.0
 Tested up to: wordpress 3.4.1
 Stable tag: 1.1
 License: GPLv2 or later
 
-A plugin for designers to get clients approval on designs.
+This plugin was created to help streamline the process of getting designs approved by clients.
 
 == Description ==
 This plugin was created to help streamline the process of getting designs approved by clients. Here is a list what you, the clients, and the plugin can do:
@@ -48,7 +48,16 @@ Version 1.0 -
  * Initial Release
 
 == Frequently Asked Questions ==
-None yet.
+Do you offer support?
+Yes. We only offer Premium Support.
+
+Are there Extensions for this plugin?
+Yes. Currently there is only one but we are already working on more! http://www.slickremix.com/product-category/design-approval-system-extensions/
+
+ 
+This plugin seems like it may be complex. Are there tutorials for the plugin?
+Yes. It's not as hard as it may seem. Once you try it you will see how easy we have made it.  http://www.slickremix.com/category/design-approval-system-tutorials/
+
 
 == Screenshots ==
 Coming soon.
