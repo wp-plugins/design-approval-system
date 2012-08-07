@@ -1,8 +1,8 @@
 === Design Approval System ===
 Contributors: Justin Labadie, Spencer Labadie 
 Tags:  approval, design, design approval system, designers, designs, freelancer, freelancers, graphic artists, graphic designers, Graphics, logo designers, photography, plugin, wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow.
-Requires at least: WordPress 3.4.0
-Tested up to: wordpress 3.4.1
+Requires at least: 3.4.0
+Tested up to: 3.4.1
 Stable tag: 1.1
 License: GPLv2 or later
 
