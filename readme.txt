@@ -8,7 +8,8 @@ License: GPLv2 or later
 
 This plugin was created to help streamline the process of getting designs approved by clients.
 
-=== Description ===
+== Description ==
+
 <strong>This plugin was created to help streamline the process of getting designs approved by clients. Here is a list what you, the clients, and the plugin can do:</strong>
 
 = You (the designer) can… =
@@ -36,10 +37,12 @@ This plugin was created to help streamline the process of getting designs approv
   * Hide notes to show just the design on the design review page. (Especially nice for web designers wanting to show what a design will look like on a page.)
   * …and much more!
 
-=== Installation ===
+== Installation ==
+
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
-=== Changelog ===
+== Changelog ==
+
 = Version 1.1 =
 
  * Fixed Custom Post Type auto selection.
@@ -51,7 +54,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
  * Initial Release
 
-=== Frequently Asked Questions ===
+== Frequently Asked Questions ==
 
 = Do you offer support? = 
 
