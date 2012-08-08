@@ -10,7 +10,7 @@ This plugin was created to help streamline the process of getting designs approv
 
 == Description ==
 
-<strong>This plugin was created to help streamline the process of getting designs approved by clients. Here is a list what you, the clients, and the plugin can do:</strong>
+**This plugin was created to help streamline the process of getting designs approved by clients. Here is a list what you, the clients, and the plugin can do:**
 
 = You (the designer) can… =
 
@@ -25,7 +25,7 @@ This plugin was created to help streamline the process of getting designs approv
  = The client can… =
 
   * Approve designs. (An automatic email confirmation will be sent to both parties.)
-  * See project start and end date.>
+  * See project start and end date.
   * See “Designer” notes.
   * See “Client” notes to double check the designer has completed all the things they have requested.
   * …and much more!
