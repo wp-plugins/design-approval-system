@@ -45,10 +45,10 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 = Version 1.1 =
 
- * Fixed Custom Post Type auto selection.
- * Removed 2 fields from DAS post page that where not needed.
- * Fixed duplicated jQuery files now using WordPress's included jQuery.
- * Fixed relative URLS to have dynamic paths. (For WordPress users who do not have WordPress installed on the root of their server)
+ * Fixed: Custom Post Type auto selection.
+ * Removed: Two fields from DAS post page that were not needed.
+ * Fixed: Duplicated jQuery files now using WordPress's included jQuery.
+ * Fixed: Relative URLS to have dynamic paths. (For WordPress users who do not have WordPress installed on the root of their server)
 
 = Version 1.0 =
 
