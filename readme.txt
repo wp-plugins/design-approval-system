@@ -69,6 +69,9 @@ Yes. Currently there is only one but we are already working on more! http://www.
 
 Yes. It's not as hard as it may seem. Once you try it you will see how easy we have made it.  http://www.slickremix.com/category/design-approval-system-tutorials/
 
+== Videos ==
+
+[youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
 == Screenshots ==
 
