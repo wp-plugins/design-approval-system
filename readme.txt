@@ -10,6 +10,8 @@ This plugin was created to help streamline the process of getting designs approv
 
 == Description ==
 
+[youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
+
 **This plugin was created to help streamline the process of getting designs approved by clients. Here is a list what you, the clients, and the plugin can do:**
 
 = You (the designer) can… =
@@ -68,10 +70,6 @@ Yes. Currently there is only one but we are already working on more! http://www.
 = This plugin seems like it may be complex. Are there tutorials for the plugin? = 
 
 Yes. It's not as hard as it may seem. Once you try it you will see how easy we have made it.  http://www.slickremix.com/category/design-approval-system-tutorials/
-
-== Videos ==
-
-[youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
 == Screenshots ==
 
