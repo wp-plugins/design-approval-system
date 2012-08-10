@@ -14,7 +14,7 @@ This plugin was created to help streamline the process of getting designs approv
 
 **This plugin was created to help streamline the process of getting designs approved by clients. Here is a list what you, the clients, and the plugin can do:**
 
-= You (the designer) can… =
+= YOU (THE DESIGNER) CAN… =
 
   * With the click of a button send the design’s review link to a client for approval. (An automatic confirmation email will be sent to both parties.)
   * Change the text in all automatic confirmation emails.
@@ -24,7 +24,7 @@ This plugin was created to help streamline the process of getting designs approv
   * Display ”Client” notes to assure the client you have completed all the things they have requested.
   * …and much more!
 
- = The client can… =
+ = THE CLIENT CAN… =
 
   * Approve designs. (An automatic email confirmation will be sent to both parties.)
   * See project start and end date.
@@ -32,7 +32,7 @@ This plugin was created to help streamline the process of getting designs approv
   * See “Client” notes to double check the designer has completed all the things they have requested.
   * …and much more!
 
-= The plugin can… =
+= THE PLUGIN CAN… =
 
   * Send automatic confirmation emails.
   * Display a versions menu to show previous versions of a design.
