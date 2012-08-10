@@ -6,13 +6,13 @@ Tested up to: 3.4.1
 Stable tag: 1.2
 License: GPLv2 or later
 
-This plugin was created to help streamline the process of getting designs approved by clients.
+This plugin was created to help streamline the process of getting designs (or photos) approved by clients.
 
 == Description ==
 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
-**This plugin was created to help streamline the process of getting designs approved by clients. Here is a list what you, the clients, and the plugin can do:**
+**This plugin was created to help streamline the process of getting designs designs (or photos) by clients. Here is a list what you, the clients, and the plugin can do:**
 
 = YOU (THE DESIGNER) CAN… =
 
