@@ -185,6 +185,21 @@
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
 }
+.das-settings-admin-slick-logo:hover {
+        opacity: .9;
+    }
+.das-settings-facebook-btn	{
+	width:250px;
+	position: absolute;
+	bottom: 19px;
+	right:269px;
+}
+.das-settings-paypal-btn	{
+	width:200px;
+	position: absolute;
+	bottom: 12px;
+	right:146px;
+}
 /*=================================================
 	Design Approval System admin how to's
 =================================================*/

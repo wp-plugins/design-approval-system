@@ -145,9 +145,33 @@ function das_settings_page() {
     <input type="hidden" name="page_options" value="image_1, das-settings-company-name, das-settings-company-email, das-settings-email-for-designers-message-to-clients, das-settings-approved-dig-sig-message-to-designer, das-settings-approved-dig-sig-message-to-clients, das-settings-approved-dig-sig-thank-you<?php if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {?>, das-settings-design-requests-message-to-designer, das-settings-design-requests-message-to-clients, das-settings-design-requests-thank-you, das-settings-add-design-requests-message-to-designer, das-settings-add-design-requests-message-to-clients <?php }?>" />
     <input type="submit" class="das-settings-admin-submit-btn" value="<?php _e('Save Changes') ?>" />
   </form>
+  
+  <div class="das-settings-facebook-btn"> 
+  	<div class="fb-like" data-href="http://www.facebook.com/DesignApprovalSystem" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+  </div><!--/das-settings-facebook-btn-->
+
+  <div class="das-settings-paypal-btn">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="ATNELFK553MBQ">
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+  </div><!--/das-settings-Paypal-btn-->
+
   <a class="das-settings-admin-slick-logo" href="http://www.slickremix.com" target="_blank"></a> </div>
 <!--/das-settings-admin-wrap--> 
 <script type="text/javascript" src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/js/admin.js"></script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=207730929318208";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <?php
 }
 ?>

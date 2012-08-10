@@ -3,7 +3,7 @@ Contributors: Justin Labadie, Spencer Labadie
 Tags:  approval, design, design approval system, designers, designs, clients, slick remix, slick, remix, freelancer, freelancers, graphic artists, graphic designers, graphics, logo designers, photography, plugin, wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation
 Requires at least: 3.4.0
 Tested up to: 3.4.1
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 
 This plugin was created to help streamline the process of getting designs approved by clients.
@@ -45,6 +45,14 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 == Changelog ==
 
+= Version 1.2 =
+ 
+ * Fixed: Screen shot #8 (Thank You message)
+ * Added: Paypal Donate Button to settings page.
+ * Added: Facebook "Like" Button to settings page.
+ * Added: A new FAQ.
+ 
+
 = Version 1.1 =
 
  * Fixed: Custom Post Type auto selection.
@@ -57,6 +65,10 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
  * Initial Release
 
 == Frequently Asked Questions ==
+
+= My client and I are not getting the emails? =
+
+IMPORTANT: Please be sure to let your clients know that for the first design emails you send they will most likely have to look in their Spam/Trash! After they find it they will need to mark it as "not spam".
 
 = Do you offer support? = 
 
