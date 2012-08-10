@@ -12,7 +12,7 @@ This plugin was created to help streamline the process of getting designs (or ph
 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
-**This plugin was created to help streamline the process of getting designs designs (or photos) by clients. Here is a list what you, the clients, and the plugin can do:**
+**This plugin was created to help streamline the process of getting designs (or photos) by clients. Here is a list what you, the clients, and the plugin can do:**
 
 = YOU (THE DESIGNER) CAN… =
 
