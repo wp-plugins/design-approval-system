@@ -1,7 +1,7 @@
 === Design Approval System ===
 Contributors: Justin Labadie, Spencer Labadie 
 Tags:  approval, design, design approval system, designers, designs, clients, slick remix, slick, remix, freelancer, freelancers, graphic artists, graphic designers, graphics, logo designers, photography, plugin, wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation
-Requires at least: 3.4.0
+Requires at least: 3.0.0
 Tested up to: 3.4.1
 Stable tag: 1.2
 License: GPLv2 or later
