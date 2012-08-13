@@ -38,6 +38,8 @@ function register_taxonomy_das_categories() {
     );
 
     register_taxonomy( 'das_categories', array('Design Approval System'), $args1 );
+	
+	flush_rewrite_rules();
 }
 function my_cpt_post_types( $post_types ) {
     $post_types[] = 'Design Approval System';
@@ -77,6 +79,8 @@ function das_custom_post_type_init() {
 		 );
 		 
 	    register_post_type( 'Design Approval System', $args );
+		
+		flush_rewrite_rules();
 }
 add_action( 'init', 'das_custom_post_type_init' );
 
