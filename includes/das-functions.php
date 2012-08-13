@@ -119,7 +119,7 @@ function das_dependencies() {
  	if (is_plugin_active('custom-post-template/custom-post-templates.php')) {
 	}
 	else  {
-    	echo '<div class="error"><p>' . __( 'Warning: The <strong>Design Approval System</strong> plugin needs the <a href="plugin-install.php?tab=search&s=Custom+Post+Template&plugin-search-input=Search+Plugins"><strong>Custom Post Template</strong></a> plugin to be INSTALLED and ACTIVATED to function properly.', 'my-theme' ) . '</p></div>';
+    	echo '<div class="error"><p>' . __( 'Warning: The <strong>Design Approval System</strong> plugin needs the <a href="plugin-install.php?tab=search&type=term&s=Custom+Post+Template&plugin-search-input=Search+Plugins"><strong>Custom Post Template</strong></a> plugin to be INSTALLED and ACTIVATED to function properly.', 'my-theme' ) . '</p></div>';
 	}
 	
 // Checks to see if DAS is activated if so check to see if das slickremix theme file is in theme folder.
