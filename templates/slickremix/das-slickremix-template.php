@@ -207,7 +207,7 @@ Template Name Posts: Design Approval Page
           </form>
         </div>
         <!-- designer-notes-text -->
-        <div class="client-notes <?php echo get_post_meta($post->ID, 'client_notes_on_off', true); ?>">
+        <div class="client-notes <?php echo get_post_meta($post->ID, 'custom_client_notes_on_off', true); ?>">
           <h3>Client request's from previous version</h3>
           <?php echo get_post_meta($post->ID, 'custom_client_notes', true); ?> </div>
       </div>
