@@ -119,7 +119,7 @@ function das_dependencies() {
  	if (is_plugin_active('custom-post-template/custom-post-templates.php')) {
 	}
 	else  {
-    	echo '<div class="error"><p>' . __( 'Warning: The <strong>Design Approval System</strong> plugin needs the <a href="/wp-admin/plugin-install.php?tab=search&s=Custom+Post+Template&plugin-search-input=Search+Plugins"><strong>Custom Post Template</strong></a> plugin to be INSTALLED and ACTIVATED to function properly.', 'my-theme' ) . '</p></div>';
+    	echo '<div class="error"><p>' . __( 'Warning: The <strong>Design Approval System</strong> plugin needs the <a href="plugin-install.php?tab=search&s=Custom+Post+Template&plugin-search-input=Search+Plugins"><strong>Custom Post Template</strong></a> plugin to be INSTALLED and ACTIVATED to function properly.', 'my-theme' ) . '</p></div>';
 	}
 	
 // Checks to see if DAS is activated if so check to see if das slickremix theme file is in theme folder.
@@ -157,13 +157,13 @@ $final_template_uri = $tokens[sizeof($tokens)-1];
 			
 // Checks check if required settings are blank.
 			if (get_option('image_1') =='') {
-			echo '<div class="error"><p>' . __( 'Warning: The <strong>Design Approval System</strong> plugin needs you to fill the in REQUIRED fields on <a href="/wp-admin/edit.php?post_type=designapprovalsystem&page=design-approval-system-settings-page"><strong>settings page</strong></a>.', 'my-theme' ) . '</p></div>';
+			echo '<div class="error"><p>' . __( 'Warning: The <strong>Design Approval System</strong> plugin needs you to fill the in REQUIRED fields on <a href="edit.php?post_type=designapprovalsystem&page=design-approval-system-settings-page"><strong>settings page</strong></a>.', 'my-theme' ) . '</p></div>';
 			}
 			elseif (get_option('das-settings-company-name') =='') {
-			echo '<div class="error"><p>' . __( 'Warning: The <strong>Design Approval System</strong> plugin needs you to fill the in REQUIRED fields on <a href="/wp-admin/edit.php?post_type=designapprovalsystem&page=design-approval-system-settings-page"><strong>settings page</strong></a>.', 'my-theme' ) . '</p></div>';
+			echo '<div class="error"><p>' . __( 'Warning: The <strong>Design Approval System</strong> plugin needs you to fill the in REQUIRED fields on <a href="edit.php?post_type=designapprovalsystem&page=design-approval-system-settings-page"><strong>settings page</strong></a>.', 'my-theme' ) . '</p></div>';
 			}
 			elseif (get_option('das-settings-company-email') =='') {
-			echo '<div class="error"><p>' . __( 'Warning: The <strong>Design Approval System</strong> plugin needs you to fill the in REQUIRED fields on <a href="/wp-admin/edit.php?post_type=designapprovalsystem&page=design-approval-system-settings-page"><strong>settings page</strong></a>.', 'my-theme' ) . '</p></div>';
+			echo '<div class="error"><p>' . __( 'Warning: The <strong>Design Approval System</strong> plugin needs you to fill the in REQUIRED fields on <a href="edit.php?post_type=designapprovalsystem&page=design-approval-system-settings-page"><strong>settings page</strong></a>.', 'my-theme' ) . '</p></div>';
 			}
 	}
 }
