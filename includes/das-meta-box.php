@@ -21,6 +21,12 @@ $prefix = 'custom_';
 
 $custom_meta_fields = array(
 	array(
+		'label'=> "Designer's Name:",
+		'desc'	=> 'Full name of designer on this design/project. (This will be used for signature purposed)',
+		'id'	=> $prefix.'designers_name',
+		'type'	=> 'text'
+	),
+	array(
 		'label'=> "Company or Client Name:",
 		'desc'	=> 'Name of Company or Client this design/project is for.',
 		'id'	=> $prefix.'client_name',

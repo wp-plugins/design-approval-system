@@ -35,8 +35,8 @@ $human1 = ($_GET['human1']) ?$_GET['human1'] : $_POST['human1'];
 if ($_POST) $post=1;
 
 //Simple server side validation for POST data, of course, you should validate the email
-if (!$a1) {$errors[count($errors)] = 'Please enter your Digital Signature.'; ?>$("input[name=a1]").addClass('hightlight1');$(".error-message").addClass('error');
-<?}else{?>$("input[name=a1]").removeClass('hightlight1');$(".error-message").removeClass('error');<?}
+if (!$a1) {$errors[count($errors)] = 'Please enter your Digital Signature.'; ?>jQuery("input[name=a1]").addClass('hightlight1');jQuery(".error-message").addClass('error');
+<?}else{?>jQuery("input[name=a1]").removeClass('hightlight1');jQuery(".error-message").removeClass('error');<?}
 
 
 if (!$human1 ['human1'] == '') {$errors[count($errors)] = 'It appears you may be trying to submit spam. Please disreguard this notice and try again if we made a mistake.'; }
@@ -93,18 +93,18 @@ if (!$errors) {
 	
 	//if POST was used, display the message straight away
 	?>
-<script language="JavaScript">$(document).ready(function(){<?
+<script language="JavaScript">jQuery(document).ready(function(){<?
 	if ($_POST) {
 		if ($result) echo "
-					$('.approved-form-wrap').fadeOut();
+					jQuery('.approved-form-wrap').fadeOut();
 					
 					setTimeout (function(){
 					//show the success message and the thank-you message
-					$('.approved-thankyou-form-wrap').fadeIn(400); },500);
+					jQuery('.approved-thankyou-form-wrap').fadeIn(400); },500);
 					
 					setTimeout (function(){
 					//show the success message and the thank-you message
-					$('.approved-thankyou-form-wrap,.pop-up-backg').fadeOut(400); },4000);
+					jQuery('.approved-thankyou-form-wrap,.pop-up-backg').fadeOut(400); },4000);
 					";
 		else echo "alert('Sorry, unexpected error. Please try again!');";
 

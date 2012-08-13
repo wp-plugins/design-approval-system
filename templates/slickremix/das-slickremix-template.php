@@ -39,11 +39,8 @@ Template Name Posts: Design Approval Page
 <script type="text/javascript" src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/js/jquery.tools.min.js"></script>
 <script type="text/javascript" src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/js/jquery.form.js"></script>
 
-<?php if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {
-	$das_plugin_path = DAS_PLUGIN_PATH ;
-	echo '<script type="text/javascript" src="'.$das_plugin_path.'/design-approval-system/templates/slickremix/js/design-requests.js"></script>';
-}
-?>
+<script type="text/javascript" src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/js/design-requests.js"></script>
+
 </head>
 
 <body <?php body_class(); ?> id="design-template">
@@ -254,21 +251,21 @@ Template Name Posts: Design Approval Page
 
 <script type="text/javascript">
 	// We placed this javascript here to make it easy to customize things if you want using simple jquery and flowplayer jquery tools. Enjoy!
-	$(document).ready(function() {
-		$('.hide-notes').click(function () {
-			$('.main-logo-tab,  .desginers-notes-backg, .header-wrap').hide();
-			$('.header-wrap').slideUp();
-			$('.show-notes').show();
-			$('.show-notes a').fadeIn(1000);
-			$('body').css('background', 'none #000000');
+	jQuery(document).ready(function() {
+		jQuery('.hide-notes').click(function () {
+			jQuery('.main-logo-tab,  .desginers-notes-backg, .header-wrap').hide();
+			jQuery('.header-wrap').slideUp();
+			jQuery('.show-notes').show();
+			jQuery('.show-notes a').fadeIn(1000);
+			jQuery('body').css('background', 'none #000000');
 		});
-		$('.show-notes').click(function () {	
-			$('.header-wrap, .desginers-notes-backg, ').slideDown();
-			$('.show-notes').hide();
-			$('.main-logo-tab').fadeIn(1000);
-			$('body').css('background', 'url(<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/images/designer-backg-grey.png) no-repeat top left #000000');
+		jQuery('.show-notes').click(function () {	
+			jQuery('.header-wrap, .desginers-notes-backg, ').slideDown();
+			jQuery('.show-notes').hide();
+			jQuery('.main-logo-tab').fadeIn(1000);
+			jQuery('body').css('background', 'url(<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/images/designer-backg-grey.png) no-repeat top left #000000');
 		});
-		$("#versions-tooltip").tooltip({
+		jQuery("#versions-tooltip").tooltip({
 			// use div.tooltip as our tooltip
 			tip: '.tooltip',
 			// use the fade effect instead of the default

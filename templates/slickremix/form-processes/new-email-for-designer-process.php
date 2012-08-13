@@ -79,11 +79,11 @@ if (!$errors) {
 	$result = sendmail($to, $subject, $message, $from);
 	
 	//if POST was used, display the message straight away
-	?><script language="JavaScript">$(document).ready(function(){<?
+	?><script language="JavaScript">jQuery(document).ready(function(){<?
 	if ($_POST) {
 		if ($result) echo "
-					$('#send-email-for-designer').hide();
-					$('#send-email-for-designer-done').fadeIn();
+					jQuery('#send-email-for-designer').hide();
+					jQuery('#send-email-for-designer-done').fadeIn();
 					";
 		else echo "alert('Sorry, unexpected error. Please try again!');";
 
@@ -98,7 +98,7 @@ if (!$errors) {
 //if the errors array has values
 } else {
 	//display the errors message
-	?><script language="JavaScript">$(document).ready(function(){<?
+	?><script language="JavaScript">jQuery(document).ready(function(){<?
 	//for ($i=0; $i<count($errors); $i++) $disperrors.= htmlspecialchars($errors[$i]) . '\n';
 	//echo("alert('".$disperrors."');");
 	//no alert for errors anymore
