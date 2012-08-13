@@ -98,7 +98,7 @@ function das_settings_page() {
         <ul>
           <li>This design comp has been approved by the client. Please take the next appropriate step.</li>
         </ul>
-        <span>Example of Email</span> <img src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/images/how-to/help-approval-designer.jpg" width="857" height="162" /> <a class="im-done">close</a> </div>
+        <span>Example of Email</span> <img src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/images/how-to/help-approval-designer.jpg" width="857" height="189" /> <a class="im-done">close</a> </div>
       <!--/das-settings-id-answer-->
       <div class="clear"></div>
     </div>
