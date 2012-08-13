@@ -40,7 +40,7 @@ $custom_meta_fields = array(
 	),
 	array(
 		'label'=> "Project Start and End Date:",
-		'desc'	=> 'When the project will start and end. (Example: 10-15-12 through 10-20-12)',
+		'desc'	=> 'When the project will start and end. (Example: 10-15-12 thru 10-20-12)',
 		'id'	=> $prefix.'project_start_end',
 		'type'	=> 'text'
 	),
