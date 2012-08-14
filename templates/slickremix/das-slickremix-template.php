@@ -240,7 +240,7 @@ Template Name Posts: Design Approval Page
 <div id="versions-tooltip-menu" class="tooltip">
   <ul>
     <?php
-         $query = new WP_Query(array('post_type' => 'Design Approval System', 'DAS Categories' => get_the_term_list( $post->ID, 'DAS Categories' )));
+         $query = new WP_Query(array('post_type' => 'Design Approval System', 'DAS Categories' => get_the_term_list( $post->ID, 'DAS Categories' ) ));
          while ($query->have_posts()) : $query->the_post();
          ?>
     <li> <a href="<?php the_permalink() ?>" rel="bookmark">Design <?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?> </a> </li>
