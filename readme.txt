@@ -48,7 +48,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 = Version 1.4 =
  
  * MAJOR FIX - Fixed: Javascript on design post page NOW working. (ATTENTION EVERYONE - THIS UPDATE is NEEDED for DAS plugin to work PROPERLY! ALL Previous versions have NOT been working!)
- * MAJOR FIX - Fixed: categories menu to work.
+ * MAJOR FIX - Fixed: Versions menu to work.
  * Added: "Designer's Name" field back into post backend.
  * Fixed: updated screen shots on settings page to match correct text.
 
