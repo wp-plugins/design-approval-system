@@ -2,21 +2,6 @@
 /************************************************
  	Function file for Design System plugin
 ************************************************/
-//update all posts on activation
-function das_post_update(){
-    $my_posts = get_posts( array('post_type' => 'designapprovalsystem', 'numberposts' => 0 ) );
-    foreach ( $my_posts as $my_post ):
-		wp_update_post( $my_post );
-    endforeach;
-}
-
-function das_activate() {
-  add_action('init','das_post_update');
-  do_action('init','das_post_update');
-}
-
-register_activation_hook( __FILE__, 'das_activate' );
-
 //Create Taxenomy for DAS
 add_action( 'init', 'register_taxonomy_das_categories' );
 
@@ -165,6 +150,10 @@ $final_template_uri = $tokens[sizeof($tokens)-1];
 	if (file_exists($das_slick_template_v2)) {
 		//delete old template file
 		unlink($das_slick_template_v2);
+		
+		$das_template_file = file_get_contents($das_template_file_uri);
+		$theme_das_template_file = '../wp-content/themes/'.$final_template_uri.'/das-slick-template-v3.php';
+		file_put_contents($theme_das_template_file, $das_template_file);
 	}
 	if (file_exists($das_slick_template_v3)) {
 		//do nothing 
@@ -176,8 +165,6 @@ $final_template_uri = $tokens[sizeof($tokens)-1];
 		$theme_das_template_file = '../wp-content/themes/'.$final_template_uri.'/das-slick-template-v3.php';
 		file_put_contents($theme_das_template_file, $das_template_file);
 }
-
-
 			
 // Checks check if required settings are blank.
 			if (get_option('image_1') =='') {

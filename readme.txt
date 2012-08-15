@@ -3,7 +3,7 @@ Contributors: Justin Labadie, Spencer Labadie
 Tags:  approval, design, design approval system, designers, designs, clients, slick remix, slick, remix, freelancer, freelancers, graphic artists, graphic designers, graphics, logo designers, photography, plugin, wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation
 Requires at least: 3.0.0
 Tested up to: 3.4.1
-Stable tag: 1.3
+Stable tag: 1.4
 License: GPLv2 or later
 
 This plugin was created to help streamline the process of getting designs (or photos) approved by clients.
@@ -45,9 +45,16 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 == Changelog ==
 
+= Version 1.4 =
+ 
+ * MAJOR FIX - Fixed: Javascript on design post page NOW working. (ATTENTION EVERYONE - THIS UPDATE is NEEDED for DAS plugin to work PROPERLY! ALL Previous versions have NOT been working!)
+ * MAJOR FIX - Fixed: categories menu to work.
+ * Added: "Designer's Name" field back into post backend.
+ * Fixed: updated screen shots on settings page to match correct text.
+
 = Version 1.3 =
  
- * MAJOR FIX - Fixed: Post Paged getting "404 Page Not Found error". (Update needed for DAS to work properly!) 
+ * MAJOR FIX - Fixed: Post Paged getting "404 Page Not Found error".  
 
 = Version 1.2 =
  
