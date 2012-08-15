@@ -133,25 +133,32 @@ $final_template_uri = $tokens[sizeof($tokens)-1];
 	
 	$das_slick_template_v2 = '../wp-content/themes/'.$final_template_uri.'/das-slick-template-v2.php';
 	
+	$das_slick_template_v3 = '../wp-content/themes/'.$final_template_uri.'/das-slick-template-v3.php';
+	
 	$das_template_file_uri = '../wp-content/plugins/design-approval-system/templates/slickremix/das-slickremix-template.php';
+	
 	if (file_exists($das_slick_template)) {
 		//delete old template file
 		unlink($das_slick_template);
 		
 		//create new template file
-		touch($das_slick_template_v2);
+		touch($das_slick_template_v3);
 		$das_template_file = file_get_contents($das_template_file_uri);
-		$theme_das_template_file = '../wp-content/themes/'.$final_template_uri.'/das-slick-template-v2.php';
+		$theme_das_template_file = '../wp-content/themes/'.$final_template_uri.'/das-slick-template-v3.php';
 		file_put_contents($theme_das_template_file, $das_template_file);
 	}
 	if (file_exists($das_slick_template_v2)) {
+		//delete old template file
+		unlink($das_slick_template_v2);
+	}
+	if (file_exists($das_slick_template_v3)) {
 		//do nothing 
 	}
 	//Creates slickremix custom post template 
 	else {
-		touch($das_slick_template_v2);
+		touch($das_slick_template_v3);
 		$das_template_file = file_get_contents($das_template_file_uri);
-		$theme_das_template_file = '../wp-content/themes/'.$final_template_uri.'/das-slick-template-v2.php';
+		$theme_das_template_file = '../wp-content/themes/'.$final_template_uri.'/das-slick-template-v3.php';
 		file_put_contents($theme_das_template_file, $das_template_file);
 }
 			

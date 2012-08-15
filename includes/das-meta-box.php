@@ -292,7 +292,7 @@ global $post_type;
 	    echo 'jQuery(\'#custom_post_template option[selected="selected"]\').removeAttr(\'selected\');';
 		echo 'jQuery(\'#custom_post_template option[value="default"]\').removeAttr(\'selected\');';
 		echo 'jQuery(\'#custom_post_template option[value="default"]\').remove();';
-		echo 'jQuery(\'#custom_post_template option[value="das-slick-template-v2.php"]\').attr(\'selected\',\'selected\');';
+		echo 'jQuery(\'#custom_post_template option[value="das-slick-template-v3.php"]\').attr(\'selected\',\'selected\');';
 	  echo '</script>';
 	}
 }
