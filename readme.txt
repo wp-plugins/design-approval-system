@@ -39,6 +39,10 @@ This plugin was created to help streamline the process of getting designs (or ph
   * Hide notes to show just the design on the design review page. (Especially nice for web designers wanting to show what a design will look like on a page.)
   * …and much more!
 
+Here is a Full Tutorial about the Design Approval System plugin and Client Changes Extension
+
+[youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
+
 == Installation ==
 
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
