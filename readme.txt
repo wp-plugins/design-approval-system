@@ -13,13 +13,13 @@ This plugin was created to help streamline the process of getting designs (or ph
 
 Here is a quick look at the Design Approval System:
 
-http://www.youtube.com/watch?v=1CtzTrPuc1A&feature=player_embedded
+http://youtu.be/1CtzTrPuc1A
 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
 Here is a Full Tutorial about the Design Approval System plugin and Client Changes Extension:
 
-http://www.youtube.com/watch?v=pYdF2OJCOv4&feature=player_embedded
+http://youtu.be/pYdF2OJCOv4
 
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
  
