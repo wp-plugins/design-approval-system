@@ -92,6 +92,10 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 == Frequently Asked Questions ==
 
+= When I install the extension the DAS plugin disappears from the plugins area. whats wrong? =
+
+We are still debugging this issue. Please just re-install and activate DAS plugin. Your DAS posts/settings should stay intact. 
+
 = My client and I are not getting the emails? =
 
 IMPORTANT: Please be sure to let your clients know that for the first design emails you send they will most likely have to look in their Spam/Trash! After they find it they will need to mark it as "not spam".
