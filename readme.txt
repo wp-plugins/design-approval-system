@@ -11,14 +11,12 @@ This plugin was created to help streamline the process of getting designs (or ph
 == Description ==
 This plugin was created to help streamline the process of getting designs (or photos) approved by clients.
 
-Here is a quick look at the Design Approval System:
-
+Here is a quick look at the Design Approval System: 
 http://youtu.be/1CtzTrPuc1A
 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
 Here is a Full Tutorial about the Design Approval System plugin and Client Changes Extension:
-
 http://youtu.be/pYdF2OJCOv4
 
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
@@ -49,7 +47,10 @@ Here is a list what you, the clients, and the plugin can do:
   * Display a versions menu to show previous versions of a design.
   * Hide notes to show just the design on the design review page. (Especially nice for web designers wanting to show what a design will look like on a page.)
   * …and much more!
-
+  
+= SUPPORT FORUM… =
+  * Having problems, or possibly looking to extend our plugin to customize your needs? You can find answers to your questions or drop us a line at our Support Forum. http://www.slickremix.com/support-forum/
+  
 == Installation ==
 
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
