@@ -11,14 +11,10 @@ This plugin was created to help streamline the process of getting designs (or ph
 == Description ==
 This plugin was created to help streamline the process of getting designs (or photos) approved by clients.
 
-Here is a quick look at the Design Approval System: 
-http://youtu.be/1CtzTrPuc1A
-
+Here is a quick look at the Design Approval System: http://youtu.be/1CtzTrPuc1A
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
-Here is a Full Tutorial about the Design Approval System plugin and Client Changes Extension:
-http://youtu.be/pYdF2OJCOv4
-
+Here is a Full Tutorial about the Design Approval System plugin and Client Changes Extension: http://youtu.be/pYdF2OJCOv4
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
  
 Here is a list what you, the clients, and the plugin can do:
