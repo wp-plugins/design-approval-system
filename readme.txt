@@ -53,7 +53,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 == Changelog ==
 = Version 1.6 =
  
- * Fixed: No more auto selection of post template. (We are now offering more themes) [If you purchase one of our themes you may select which theme you would like to use for each indiviudual post]
+ * Fixed: No more auto selection of post template. (We are now offering more themes) [If you purchase one of our themes you may select which theme you would like to use for each individual post.]
  * Added: Size for "Clean Theme" to settings page.
 
 = Version 1.5 =
