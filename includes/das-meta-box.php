@@ -287,13 +287,19 @@ echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce
 	echo '</table>'; // end table
 	
 global $post_type;
-    if( 'designapprovalsystem' == $post_type ) {
-	  echo '<script>';
-	    echo 'jQuery(\'#custom_post_template option[selected="selected"]\').removeAttr(\'selected\');';
-		echo 'jQuery(\'#custom_post_template option[value="default"]\').removeAttr(\'selected\');';
-		echo 'jQuery(\'#custom_post_template option[value="default"]\').remove();';
-		echo 'jQuery(\'#custom_post_template option[value="das-slick-template-v4.php"]\').attr(\'selected\',\'selected\');';
-	  echo '</script>';
+       if( 'designapprovalsystem' == $post_type ) {
+?> 		
+		<script>
+		  jQuery('#custom_post_template option[value="default"]').removeAttr('selected');
+		  jQuery('#custom_post_template option[value="default"]').remove();
+		  
+		  $(document).ready(function() {
+		   if (jQuery("#custom_post_template").selectedIndex <= 0) {
+                	jQuery('#custom_post_template option[value="das-slick-template-v4.php"]').attr('selected, selected');
+            }
+		  });
+	  	</script>
+<?php
 	}
 }
 

@@ -1,9 +1,9 @@
 === Design Approval System ===
 Contributors: Justin Labadie, Spencer Labadie 
 Tags:  approval, design, design approval system, designers, designs, clients, slick remix, slick, remix, freelancer, freelancers, graphic artists, graphic designers, graphics, logo designers, photography, plugin, wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation
-Requires at least: 3.0.0
+Requires at least: 3.4.0
 Tested up to: 3.4.1
-Stable tag: 1.5
+Stable tag: 1.6
 License: GPLv2 or later
 
 This plugin was created to help streamline the process of getting designs (or photos) approved by clients.
@@ -51,6 +51,9 @@ Here is a Full Tutorial about the Design Approval System plugin and Client Chang
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Changelog ==
+= Version 1.6 =
+ 
+ * Fixed: No more auto selection of post template. (We are now offering more themes) [If you purchase one of our themes you may select which theme you would like to use for each indiviudual post]
 
 = Version 1.5 =
  
