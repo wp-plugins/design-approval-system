@@ -39,7 +39,7 @@ function das_settings_page() {
       <div class="das-settings-admin-input-label">Company Logo (required): <a class="question1">?</a></div>
       <input id="image_1" name="image_1" class="das-settings-admin-input" type="text"  value="<?php echo get_option('image_1'); ?>" />
       <input id="_btn" class="upload_image_button" type="button" value="Upload Image" />
-      <div class="das-settings-admin-input-example upload-logo-size">This logo will be displayed at the top of all your design posts. Size should be 124px X 20px.</div>
+      <div class="das-settings-admin-input-example upload-logo-size">This logo will be displayed at the top of all your design posts. Size for the "defualt" template is 124px X 20px. <?php if(is_plugin_active('das-clean-theme/das-clean-theme.php')) {?>If You are using the "Clean Theme" the size for the logo has to be 155px X 135px.<?php }?></div>
       <div class="clear"></div>
       <div class="das-settings-id-answer answer1">
         <ul>
