@@ -65,6 +65,10 @@ function das_settings_page() {
       <div class="das-settings-admin-input-example">This is required to send emails to a client through our system</div>
     </div>
     <!--/das-settings-admin-input-wrap-->
+
+<?php if(is_plugin_active('das-clean-theme/das-clean-theme.php')) {
+   include('../wp-content/plugins/das-clean-theme/admin/das-clean-theme-settings-page.php');
+}?>
     
     <h3>Email for Designer Message</h3>
     <div class="subtext-of-title">These settings are for the email to your client, letting them know their design is ready to be reviewed.<br/>
@@ -142,7 +146,7 @@ function das_settings_page() {
 	include('../wp-content/plugins/das-changes-extension/admin/das-changes-extension-settings-page.php');
 }?>
     <input type="hidden" name="action" value="update" />
-    <input type="hidden" name="page_options" value="image_1, das-settings-company-name, das-settings-company-email, das-settings-email-for-designers-message-to-clients, das-settings-approved-dig-sig-message-to-designer, das-settings-approved-dig-sig-message-to-clients, das-settings-approved-dig-sig-thank-you<?php if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {?>, das-settings-design-requests-message-to-designer, das-settings-design-requests-message-to-clients, das-settings-design-requests-thank-you, das-settings-add-design-requests-message-to-designer, das-settings-add-design-requests-message-to-clients <?php }?>" />
+    <input type="hidden" name="page_options" value="image_1, das-settings-company-name, das-settings-company-email, <?php if(is_plugin_active('das-clean-theme/das-clean-theme.php')) {?>image_2,<?php }?> das-settings-email-for-designers-message-to-clients, das-settings-approved-dig-sig-message-to-designer, das-settings-approved-dig-sig-message-to-clients, das-settings-approved-dig-sig-thank-you<?php if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {?>, das-settings-design-requests-message-to-designer, das-settings-design-requests-message-to-clients, das-settings-design-requests-thank-you, das-settings-add-design-requests-message-to-designer, das-settings-add-design-requests-message-to-clients <?php }?>" />
     <input type="submit" class="das-settings-admin-submit-btn" value="<?php _e('Save Changes') ?>" />
   </form>
   
@@ -162,6 +166,10 @@ function das_settings_page() {
   <a class="das-settings-admin-slick-logo" href="http://www.slickremix.com" target="_blank"></a> </div>
 <!--/das-settings-admin-wrap--> 
 <script type="text/javascript" src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/js/admin.js"></script>
+
+<?php if(is_plugin_active('das-clean-theme/das-clean-theme.php')) {?>
+   <script type="text/javascript" src="<?php print DAS_PLUGIN_PATH ?>/das-clean-theme/admin/js/admin.js"></script>
+<?php }?>
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
