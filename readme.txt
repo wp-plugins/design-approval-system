@@ -111,7 +111,7 @@ Yes, Contact us at info@slickremix.com for problems with your plugin. We also of
 
 = Are there Extensions for this plugin? =
 
-Yes. Currently there is only one but we are already working on more! http://www.slickremix.com/product-category/design-approval-system-extensions/
+Yes. Currently we have 2 and are working on more! http://www.slickremix.com/product-category/design-approval-system-extensions/
 
  
 = This plugin seems like it may be complex. Are there tutorials for the plugin? = 
