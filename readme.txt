@@ -54,7 +54,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 = Version 1.7 =
  
  * Fixed: Settings Page is now set up for new theme options.
- * Fixed: Jquery on Settings Page to be compatible with new themes.
+ * Fixed: jQuery on Settings Page now compatible with new themes.
 
 = Version 1.6 =
  
