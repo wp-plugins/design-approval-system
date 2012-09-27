@@ -2,7 +2,7 @@
 Contributors: Justin Labadie, Spencer Labadie 
 Tags:  approval, design, design approval system, designers, designs, clients, slick remix, slick, remix, freelancer, freelancers, graphic artists, graphic designers, graphics, logo designers, photography, plugin, wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation
 Requires at least: 3.4.0
-Tested up to: 3.4.1
+Tested up to: 3.4.2
 Stable tag: 1.7
 License: GPLv2 or later
 
@@ -44,7 +44,12 @@ Here what you, the clients, and the plugin can do:
 
 Here is a Full Tutorial about the Design Approval System plugin and Client Changes Extension: http://youtu.be/pYdF2OJCOv4
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
- 
+
+= THEMES AND EXTENSIONS… =
+	* Clean Theme. http://www.slickremix.com/product/clean-theme-for-design-approval-system/
+	* Client Changes Extension. http://www.slickremix.com/product/client-changes-extension/
+
+If you would like to make an extension or theme for our plugin we would be happy to review it! Please contact us for more info.
    
 == Installation ==
 
