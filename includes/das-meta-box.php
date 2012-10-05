@@ -19,24 +19,35 @@ add_action('add_meta_boxes', 'add_das_meta_box');
 //DAS metabox array
 $prefix = 'custom_';
 
+if(is_plugin_active('das-roles-extension/das-roles-extension.php')) {
+	$designer_name_type = 'select_designer_name';
+	$client_name_type = 'select_client_name';
+	$client_email_type = 'select_client_email';
+}
+else	{
+	$designer_name_type = 'text';
+	$client_name_type = 'text';
+	$client_email_type = 'text';
+}
+
 $custom_meta_fields = array(
 	array(
 		'label'=> "Designer's Name:",
 		'desc'	=> 'Full name of designer on this design/project. (This will be used for signature purposed)',
 		'id'	=> $prefix.'designers_name',
-		'type'	=> 'text'
+		'type'	=> $designer_name_type
 	),
 	array(
 		'label'=> "Company or Client Name:",
 		'desc'	=> 'Name of Company or Client this design/project is for.',
 		'id'	=> $prefix.'client_name',
-		'type'	=> 'text'
+		'type'	=> $client_name_type
 	),
 	array(
 		'label'=> "Company or Client Email:",
 		'desc'	=> 'Email address of Company or Client this design/project is for. (Only 1 email address allowed)',
 		'id'	=> $prefix.'clients_email',
-		'type'	=> 'text'
+		'type'	=> $client_email_type
 	),
 	array(
 		'label'=> "Project Start and End Date:",
@@ -281,6 +292,53 @@ echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce
 						echo '</select><br /><span class="description">'.$field['desc'].'</span>';
 					break;
 					
+					// Designer Name
+					case 'select_designer_name':
+						 echo '<select name="'.$field['id'].'" id="'.$field['id'].'">';
+						 
+						  echo '<option value="">- Please Select Designer -</option>';
+						  $client_roles = get_option('das-settings-designer-role');
+						  $client_users_name = get_users('blog_id=1&orderby=display_name&role='.$client_roles.'');			  
+					
+							foreach ($client_users_name as $user) {
+								$clients_name = $user->display_name;
+								$clients_email = $user->user_email;
+								$row = $clients_name;
+								  
+									echo '<option value="'.$row.'"', $meta == $row ? 'selected="selected"':'','>'.$row.'</option>';
+							}
+					
+						  echo '</select><br /><span class="description">'.$field['desc'].'</span>';
+						  
+					break;
+					
+					// Client Name
+					case 'select_client_name':
+						echo '<select name="'.$field['id'].'" id="'.$field['id'].'">';
+
+						echo '<option value="">- Please Select Client -</option>';
+						$client_roles = get_option('das-settings-client-role');  
+						$client_users_name = get_users('blog_id=1&orderby=display_name&role='.$client_roles.'');			  
+						
+						  foreach ($client_users_name as $user) {
+							  $clients_name = $user->display_name;
+							  $clients_email = $user->user_email;
+							  $row = $clients_name;
+								
+								  echo '<option value="'.$row.'"', $meta == $row ? 'selected="selected"':'','>'.$row.' ['.$clients_email.'] </option>';
+						  }
+						
+						echo '</select><br /><span class="description">'.$field['desc'].'</span>'; 
+					break;
+					
+					
+					// Client Email
+					case 'select_client_email':
+
+						echo '<input type="text" name="'.$field['id'].'" id="'.$field['id'].'" value="'.$meta.'" size="30" />
+							<br /><span class="description">'.$field['desc'].'</span>';
+					break;
+					
 				} //end switch
 		echo '</td></tr>';
 	} // end foreach
@@ -297,6 +355,26 @@ global $post_type;
 		   if (jQuery("#custom_post_template").selectedIndex <= 0) {
                 	jQuery('#custom_post_template option[value="das-slick-template-v4.php"]').attr('selected, selected');
             }
+			<?php if(is_plugin_active('das-roles-extension/das-roles-extension.php')) { ?>
+				   // This selector is called every time a select box is changed
+					$("select#custom_client_name").change(function(){
+						// varible to hold string
+						var str = "";
+						var finalString = "";
+						$("select#custom_client_name option:selected").each(function(){
+							// when the select box is changed, we add the value text to the varible
+							str += $(this).text() + " ";
+						   
+						});
+						 var matches = str.match(/\[(.*?)\]/);
+						  if (matches) {
+							  var submatch = matches[1];
+						  }
+						// then display it in the following class	
+						$("#custom_clients_email").val(submatch);
+					})
+		 		<?php } ?>
+			
 		  });
 	  	</script>
 <?php

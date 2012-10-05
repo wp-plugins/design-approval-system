@@ -2,8 +2,8 @@
 Contributors: Justin Labadie, Spencer Labadie 
 Tags:  approval, design, design approval system, designers, designs, clients, slick remix, slick, remix, freelancer, freelancers, graphic artists, graphic designers, graphics, logo designers, photography, plugin, wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation
 Requires at least: 3.4.0
-Tested up to: 3.4.2
-Stable tag: 1.7
+Tested up to: 3.5.0
+Stable tag: 1.8
 License: GPLv2 or later
 
 This plugin was created to help streamline the process of getting designs (or photos) approved by clients.
@@ -48,6 +48,7 @@ Here is a Full Tutorial about the Design Approval System plugin and Client Chang
 = THEMES AND EXTENSIONS… =
 	* Clean Theme. http://www.slickremix.com/product/clean-theme-for-design-approval-system/
 	* Client Changes Extension. http://www.slickremix.com/product/client-changes-extension/
+	* Roles Extension. http://www.slickremix.com/product/client-changes-extension/
 
 If you would like to make an extension or theme for our plugin we would be happy to review it! Please contact us for more info.
    
@@ -56,6 +57,13 @@ If you would like to make an extension or theme for our plugin we would be happy
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Changelog ==
+
+= Version 1.8 =
+ 
+ * Added: Settings Page is now set up for new Roles Extenstion options.
+ * Added: Options to DAS Meta Box for new Roles Extenstion switching "Designer Name", "Client Name" to drop downs and "Client email" to auto fill input to email of the client selected.
+ * Tested: The DAS Plugin, Themes, and extenstions for any bugs against the new (Beta) version of WordPress 3.5  
+ 
 = Version 1.7 =
  
  * Fixed: Settings Page is now set up for new theme options.

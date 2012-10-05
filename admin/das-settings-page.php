@@ -43,7 +43,7 @@ function das_settings_page() {
       <div class="clear"></div>
       <div class="das-settings-id-answer answer1">
         <ul>
-          <li>Your logo will be placed at the top right of the page.</li>
+          <li>Your logo will be placed at the left right of the page.</li>
         </ul>
         <img src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/images/how-to/admin-help-logo.jpg" width="857" height="133" alt="Header Logo Example" /> <a class="im-done">close</a> </div>
       <!--/das-settings-id-answer-->
@@ -145,8 +145,13 @@ function das_settings_page() {
     <?php if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {
 	include('../wp-content/plugins/das-changes-extension/admin/das-changes-extension-settings-page.php');
 }?>
+	
+    <?php if(is_plugin_active('das-roles-extension/das-roles-extension.php')) {
+		include('../wp-content/plugins/das-roles-extension/admin/das-roles-extension-settings-page.php');
+}?>
+
     <input type="hidden" name="action" value="update" />
-    <input type="hidden" name="page_options" value="image_1, das-settings-company-name, das-settings-company-email, <?php if(is_plugin_active('das-clean-theme/das-clean-theme.php')) {?>image_2,<?php }?> das-settings-email-for-designers-message-to-clients, das-settings-approved-dig-sig-message-to-designer, das-settings-approved-dig-sig-message-to-clients, das-settings-approved-dig-sig-thank-you<?php if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {?>, das-settings-design-requests-message-to-designer, das-settings-design-requests-message-to-clients, das-settings-design-requests-thank-you, das-settings-add-design-requests-message-to-designer, das-settings-add-design-requests-message-to-clients <?php }?>" />
+    <input type="hidden" name="page_options" value="image_1, das-settings-company-name, das-settings-company-email, <?php if(is_plugin_active('das-clean-theme/das-clean-theme.php')) {?>image_2,<?php }?> das-settings-email-for-designers-message-to-clients, das-settings-approved-dig-sig-message-to-designer, das-settings-approved-dig-sig-message-to-clients, das-settings-approved-dig-sig-thank-you<?php if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {?>, das-settings-design-requests-message-to-designer, das-settings-design-requests-message-to-clients, das-settings-design-requests-thank-you, das-settings-add-design-requests-message-to-designer, das-settings-add-design-requests-message-to-clients <?php }?> <?php if(is_plugin_active('das-roles-extension/das-roles-extension.php')) {?>das-settings-designer-role, das-settings-client-role <?php }?>" />
     <input type="submit" class="das-settings-admin-submit-btn" value="<?php _e('Save Changes') ?>" />
   </form>
   
