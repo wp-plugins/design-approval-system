@@ -357,13 +357,13 @@ global $post_type;
             }
 			<?php if(is_plugin_active('das-roles-extension/das-roles-extension.php')) { ?>
 				   // This selector is called every time a select box is changed
-					$("select#custom_client_name").change(function(){
+					jQuery("select#custom_client_name").change(function(){
 						// varible to hold string
 						var str = "";
 						var finalString = "";
-						$("select#custom_client_name option:selected").each(function(){
+						jQuery("select#custom_client_name option:selected").each(function(){
 							// when the select box is changed, we add the value text to the varible
-							str += $(this).text() + " ";
+							str += jQuery(this).text() + " ";
 						   
 						});
 						 var matches = str.match(/\[(.*?)\]/);
@@ -371,9 +371,9 @@ global $post_type;
 							  var submatch = matches[1];
 						  }
 						// then display it in the following class	
-						$("#custom_clients_email").val(submatch);
+						jQuery("#custom_clients_email").val(submatch);
 					})
-		 		<?php } ?>
+		  <?php } ?>
 			
 		  });
 	  	</script>
