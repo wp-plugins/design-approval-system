@@ -1,3 +1,8 @@
+<?php
+/*
+	Template Name Posts: Design Approval Page
+*/
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
