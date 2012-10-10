@@ -58,6 +58,10 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 == Changelog ==
 
+= Version 1.9 =
+ 
+ * Revised: CSS and jQuery for versions drop down menu. Now works in Firefox. 
+ 
 = Version 1.8 =
  
  * Added: Settings Page is now set up for new Roles Extenstion options.
