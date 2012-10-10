@@ -351,7 +351,7 @@ global $post_type;
 		  jQuery('#custom_post_template option[value="default"]').removeAttr('selected');
 		  jQuery('#custom_post_template option[value="default"]').remove();
 		  
-		  $(document).ready(function() {
+		  jQuery(document).ready(function() {
 		   if (jQuery("#custom_post_template").selectedIndex <= 0) {
                 	jQuery('#custom_post_template option[value="das-slick-template-v4.php"]').attr('selected, selected');
             }
