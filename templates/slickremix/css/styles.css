@@ -312,7 +312,15 @@ a:hover.close {
 }
 a {
 	outline: none;
+	-webkit-transition: background 1s;
+	-moz-transition: background 1s;
 }
+a:hover {
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
+    }
 /*moz hack */
 .color-dark-grey {
 	color: #979797;
@@ -895,6 +903,22 @@ a:hover.cancel-additional-requests {
 	margin: 0px !important;
 	padding: 0px !important;
 }
+#send-email-for-designer:hover {
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
+	text-decoration: none !important;
+	color:#FFF !important;
+}
+.post-edit-link:hover {
+     -webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
+	text-decoration: none !important;
+	color:#FFF !important;   
+}
 span#send-email-for-designer-done {
 	display: none;
 	color: #0095da;
@@ -903,53 +927,55 @@ span#send-email-for-designer-done {
 	color: #888;
 }
 /*==========================================
-	Design Page - Tooltip
+	Design Page - Drop Down Menu
 ===========================================*/
-#versions-tooltip-menu {
-	display: none;
-	min-width: 135px;
-	height: auto;
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background-position: 0% 0%;
-	z-index: 500;
-	padding-left: 3px;
-	white-space: nowrap;
-	z-index: 2000;
+#das-nav {
+	list-style:none;
+	margin:0;
+	padding:0;
 }
-#versions-tooltip-menu ul {
+#das-nav li {
+	position:relative; 
+	float:right;
+	display:block;	
+}
+#das-nav li ul {
+	display: none;
+	height: auto;
+	min-width: 165px;	
+	z-index: 5000;
+	padding-top:15px;
+	position:absolute;
+	top:25px;
+	left:-16px;
 	background-color: #323232;
-	margin-top: 0px;
 	-moz-box-shadow: 2px 2px 11px #323232;
 	-webkit-box-shadow: 2px 2px 11px #323232;
 	list-style-type: none;
-	line-height: inherit;
-	padding-top: 12px;
+	line-height:inherit;
 }
-#versions-tooltip-menu ul li {
-	line-height: 24px;
-	border-bottom: 1px solid #000000
+#das-nav ul li {
+	line-height: 22px;
+	border-bottom: 1px solid #333;
+	padding:0;
+	margin:0;
+	
+	display:block;
 }
-#versions-tooltip-menu ul li a {
+#das-nav ul li a {
 	color: #FFFFFF;
 	font-size: 12px;
 	text-decoration: none;
 	display: block;
-	padding: 10px 30px;
+	padding: 10px 30px; 
 }
-#versions-tooltip-menu ul li a:hover {
-	color: #0095da;
-	background: #212121 !important;
-	-webkit-transition-duration: 300ms;
-	-webkit-transition-property: width, background;
-	-webkit-transition-timing-function: ease;
-	-moz-transition-duration: 300ms;
-	-moz-transition-property: width, background;
-	-moz-transition-timing-function: ease;
-	-o-transition-duration: 300ms;
-	-o-transition-property: width, background;
-	-o-transition-timing-function: ease;
-	color: #f1f1f1;
+#das-nav ul li a:hover {
+	color: #42B7F8;
+	background: #333;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
 }
 /*==========================================
 	Hide Notes Tab

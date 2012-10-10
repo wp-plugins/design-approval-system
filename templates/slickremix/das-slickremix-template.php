@@ -1,8 +1,3 @@
-<?php
-/*
-	Template Name Posts: Design Approval Page
-*/
-?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -36,9 +31,7 @@
 
 <link rel="stylesheet" type="text/css" media="all" href="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/css/styles.css" />
 <script type="text/javascript" src="<?php print includes_url(); ?>/js/jquery/jquery.js"></script>
-<script type="text/javascript" src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/js/jquery.tools.min.js"></script>
 <script type="text/javascript" src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/js/jquery.form.js"></script>
-
 <script type="text/javascript" src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/js/design-requests.js"></script>
 
 </head>
@@ -79,7 +72,55 @@
   </div>
   <!--/header-info-wrap-->
   
-  <div class="header-tabs-wrap"> <a class="project-timeline">Project Timeline: <?php echo get_post_meta($post->ID, 'custom_project_start_end', true); ?></a> <a href="#" class="hide-notes">Hide Notes</a> <a href="javascript:;" class="versions" id="versions-tooltip">Versions</a> <a class="version-tab"><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?></a> </div>
+  <div class="header-tabs-wrap"> 
+     <ul id="das-nav">
+  		<li><a class="project-timeline">Project Timeline: <?php echo get_post_meta($post->ID, 'custom_project_start_end', true); ?></a></li> 
+        <li><a href="#" class="hide-notes">Hide Notes</a></li>
+        <li id="das-nav-history"><a href="javascript:;" class="versions" id="versions-tooltip">Versions</a>
+        		  <?php 
+echo '<ul>';
+
+ if ( 'designapprovalsystem' == get_post_type() ) {
+
+	$das_cats = wp_get_post_terms( $post->ID, 'das_categories' );
+
+	if ( $das_cats ) {
+		$das_cats_ids = array();
+		foreach( $das_cats as $individual_das_cats ) $das_cats_ids[] = $individual_das_cats->term_id;
+		
+		$args = array(
+			'tax_query' => array(
+				array(
+					'taxonomy'  => 'das_categories',
+					'terms' 	=> $das_cats_ids,
+					'operator'  => 'IN'
+				)
+			),
+		
+			'posts_per_page' 		=> -1,
+			'ignore_sticky_posts' 	=> 1
+);
+
+		$my_query = new wp_query( $args );
+		if( $my_query->have_posts() ) {
+			
+			while ( $my_query->have_posts() ) :
+				$my_query->the_post();?>
+
+				  <li> <a href="<?php the_permalink() ?>" rel="bookmark">Design <?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?> </a> </li>
+
+			<?php endwhile;
+		}
+		wp_reset_query();
+	}
+}
+
+echo '</ul>';
+?>
+        </li> 
+        <li><a class="version-tab"><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?></a></li>
+     </ul>
+  </div>
   <!--/header-tabs-wrap--> 
   
 </div>
@@ -237,54 +278,22 @@
 
 <div style="display:none" id="output"></div>
 <?php endwhile; ?>
-<div id="versions-tooltip-menu" class="tooltip">
-  
-  <?php 
-echo '<ul>';
-
- if ( 'designapprovalsystem' == get_post_type() ) {
-
-	$das_cats = wp_get_post_terms( $post->ID, 'das_categories' );
-
-	if ( $das_cats ) {
-		$das_cats_ids = array();
-		foreach( $das_cats as $individual_das_cats ) $das_cats_ids[] = $individual_das_cats->term_id;
-		
-		$args = array(
-			'tax_query' => array(
-				array(
-					'taxonomy'  => 'das_categories',
-					'terms' 	=> $das_cats_ids,
-					'operator'  => 'IN'
-				)
-			),
-		
-			'posts_per_page' 		=> -1,
-			'ignore_sticky_posts' 	=> 1
-);
-
-		$my_query = new wp_query( $args );
-		if( $my_query->have_posts() ) {
-			
-			while ( $my_query->have_posts() ) :
-				$my_query->the_post();?>
-
-				  <li> <a href="<?php the_permalink() ?>" rel="bookmark">Design <?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?> </a> </li>
-
-			<?php endwhile;
-		}
-		wp_reset_query();
-	}
-}
-
-	echo '</ul>';
-?>
-</div>
-<!--versions-tooltip-menu--> 
 
 <script type="text/javascript">
-	// We placed this javascript here to make it easy to customize things if you want using simple jquery and flowplayer jquery tools. Enjoy!
+// We placed this javascript here to make it easy to customize things if you want using simple jquery tools. Enjoy!
+function mainmenu(){
+	
+	jQuery(" #das-nav li").hover(function(){
+			jQuery(this).find('ul:first').fadeIn('fast');
+		},
+	function(){
+		jQuery(this).find('ul:first').fadeOut('fast');
+	 });
+}
+	
 	jQuery(document).ready(function() {
+		mainmenu();
+		
 		jQuery('.hide-notes').click(function () {
 			jQuery('.main-logo-tab,  .desginers-notes-backg, .header-wrap').hide();
 			jQuery('.header-wrap').slideUp();
@@ -298,21 +307,9 @@ echo '<ul>';
 			jQuery('.main-logo-tab').fadeIn(1000);
 			jQuery('body').css('background', 'url(<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/images/designer-backg-grey.png) no-repeat top left #000000');
 		});
-		jQuery("#versions-tooltip").tooltip({
-			// use div.tooltip as our tooltip
-			tip: '.tooltip',
-			// use the fade effect instead of the default
-			effect: 'fade',
-			// make fadeOutSpeed similar to the browser's default
-			fadeOutSpeed: 100,
-			// the time before the tooltip is shown
-			predelay: 100,
-			// tweak the position
-			position: "bottom right",
-			offset: [ 0, -122]
-		});
 		
 	});	
 </script>
+
 </body>
 </html>
