@@ -3,7 +3,7 @@ Contributors: Justin Labadie, Spencer Labadie
 Tags:  approval, design, design approval system, designers, designs, clients, slick remix, slick, remix, freelancer, freelancers, graphic artists, graphic designers, graphics, logo designers, photography, plugin, wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation
 Requires at least: 3.4.0
 Tested up to: 3.5.0
-Stable tag: 1.8
+Stable tag: 1.9
 License: GPLv2 or later
 
 This plugin was created to help streamline the process of getting designs (or photos) approved by clients.
@@ -60,7 +60,8 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 = Version 1.9 =
  
- * Revised: CSS and jQuery for versions drop down menu. Now works in Firefox. 
+ * Revised: CSS and jQuery for versions drop down menu. Now works in Firefox.
+ * Fixed: Select user and email bugs. 
  
 = Version 1.8 =
  
