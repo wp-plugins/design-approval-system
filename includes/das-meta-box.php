@@ -219,6 +219,39 @@ if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {
 	);
 }
 
+if(is_plugin_active('das-design-login/das-design-login.php')) {
+	$custom_meta_fields[] =	array(
+				'label'=> 'Is login required to view design?',
+				'desc'	=> 'This will make client login using the information you set below in order to see the design.',
+				'id'	=> $prefix.'login_no_login',
+				'type'	=> 'select',
+				'options' => array (
+					'one' => array (
+						'label' => 'Yes, Login Required',
+						'value'	=> 'yes-login'
+					),
+					'two' => array (
+						'label' => 'No, Login NOT Required',
+						'value'	=> 'no-login'
+					)
+				  )
+				  
+	);
+	$custom_meta_fields[] =	array(
+		'label'=> "Login User Name",
+		'desc'	=> 'The user name for logging into (ONLY) this design. [CASE SENSITIVE]',
+		'id'	=> $prefix.'user_name_of_design',
+		'type'	=> 'text'
+	);
+	$custom_meta_fields[] =	array(
+		'label'=> "Login Password",
+		'desc'	=> 'The password for logging into (ONLY) this design. [CASE SENSITIVE]',
+		'id'	=> $prefix.'password_of_design',
+		'type'	=> 'text'
+	);
+}
+
+
 // The Callback
 function show_custom_das_meta_box() {
 global $custom_meta_fields, $post;

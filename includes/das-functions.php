@@ -137,6 +137,8 @@ $final_template_uri = $tokens[sizeof($tokens)-1];
 	
 	$das_slick_template_v4 = '../wp-content/themes/'.$final_template_uri.'/das-slick-template-v4.php';
 	
+	$das_default_template = '../wp-content/themes/'.$final_template_uri.'/das-default-template.php';
+	
 	$das_template_file_uri = '../wp-content/plugins/design-approval-system/templates/slickremix/das-slickremix-template.php';
 	
 	if (file_exists($das_slick_template)) {
@@ -144,9 +146,9 @@ $final_template_uri = $tokens[sizeof($tokens)-1];
 		unlink($das_slick_template);
 		
 		//create new template file
-		touch($das_slick_template_v4);
+		touch($$das_default_template);
 		$das_template_file = file_get_contents($das_template_file_uri);
-		$theme_das_template_file = '../wp-content/themes/'.$final_template_uri.'/das-slick-template-v4.php';
+		$theme_das_template_file = '../wp-content/themes/'.$final_template_uri.'/das-default-template.php';
 		file_put_contents($theme_das_template_file, $das_template_file);
 	}
 	if (file_exists($das_slick_template_v2)) {
@@ -154,9 +156,9 @@ $final_template_uri = $tokens[sizeof($tokens)-1];
 		unlink($das_slick_template_v2);
 		
 		//create new template file
-		touch($das_slick_template_v4);
+		touch($$das_default_template);
 		$das_template_file = file_get_contents($das_template_file_uri);
-		$theme_das_template_file = '../wp-content/themes/'.$final_template_uri.'/das-slick-template-v4.php';
+		$theme_das_template_file = '../wp-content/themes/'.$final_template_uri.'/das-default-template.php';
 		file_put_contents($theme_das_template_file, $das_template_file);
 	}
 	if (file_exists($das_slick_template_v3)) {
@@ -164,19 +166,19 @@ $final_template_uri = $tokens[sizeof($tokens)-1];
 		unlink($das_slick_template_v3);
 		
 		//create new template file
-		touch($das_slick_template_v4);
+		touch($$das_default_template);
 		$das_template_file = file_get_contents($das_template_file_uri);
-		$theme_das_template_file = '../wp-content/themes/'.$final_template_uri.'/das-slick-template-v4.php';
+		$theme_das_template_file = '../wp-content/themes/'.$final_template_uri.'/das-default-template.php';
 		file_put_contents($theme_das_template_file, $das_template_file);
 	}
-	if (file_exists($das_slick_template_v4)) {
+	if (file_exists($das_default_template)) {
 		//do nothing 
 	}
 	//Creates slickremix custom post template 
 	else {
-		touch($das_slick_template_v4);
+		touch($das_default_template);
 		$das_template_file = file_get_contents($das_template_file_uri);
-		$theme_das_template_file = '../wp-content/themes/'.$final_template_uri.'/das-slick-template-v4.php';
+		$theme_das_template_file = '../wp-content/themes/'.$final_template_uri.'/das-default-template.php';
 		file_put_contents($theme_das_template_file, $das_template_file);
 }
 			
