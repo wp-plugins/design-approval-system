@@ -395,7 +395,7 @@ body#design-template {
 	display: block;
 	margin: auto;
 }
-a.version-tab, a.hide-notes, a.project-timeline, a.versions {
+a.version-tab, a.hide-notes, a.project-timeline, a.versions, a.logout-btn {
 	height: 20px;
 	padding: 0 20px;
 	background-color: #323232;
@@ -407,14 +407,14 @@ a.version-tab, a.hide-notes, a.project-timeline, a.versions {
 	text-decoration: none;
 	color: #1295DA;
 }
-a.hide-notes, a.versions {
+a.hide-notes, a.versions, a.logout-btn {
 	color: #CCC;
 	padding: 5px 25px 0 25px;
 }
 a:hover.version-tab {
 	color: #1295DA;
 }
-a:hover.hide-notes, a:hover.versions {
+a:hover.hide-notes, a:hover.versions, a:hover.logout-btn  {
 	color: #1295DA;
 }
 a.project-timeline {
@@ -501,7 +501,7 @@ a:hover.project-timeline {
 }
 .designer-notes-text {
 	padding: 0 35px 0 17px;
-	min-height: 64px
+	min-height: 49px
 }
 .designers-notes-content-right-wrap {
 	float: left;
