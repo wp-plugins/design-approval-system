@@ -12,8 +12,8 @@ This plugin was created to help streamline the process of getting designs (or ph
 
 == Description ==
 
-= PRO BUNDLE =
-Love our FREE DAS? Go PRO with the [Current Bundle](http://www.slickremix.com/product-category/design-approval-system-extensions) which includes all of our Extensions.
+= DAS PRO BUNDLE =
+Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval-system-extensions) and step up your game even more.
 
 Here is a quick look at the [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
@@ -46,7 +46,7 @@ Here what you, the clients, and the plugin can do:
   * …and much more!
   
 = SUPPORT FORUM =
-  * Having problems, or possibly looking to extend our plugin to customize your needs? You can find answers to your questions or drop us a line at our (Support Forum)[http://www.slickremix.com/support-forum].
+  * Having problems, or possibly looking to extend our plugin to customize your needs? You can find answers to your questions or drop us a line at our [Support Forum](http://www.slickremix.com/support-forum).
 
 = SLICK DAS TIPS =
   1. [HOW TO CHANGE the Background Color of your Design Post?](http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)
