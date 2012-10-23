@@ -6,7 +6,7 @@ Tested up to: 3.5.0
 Stable tag: 2.1
 License: GPLv2 or later
 
-== Premium Bundle ==
+= Premium Bundle =
 http://www.slickremix.com/product-category/design-approval-system-extensions
 
 This plugin was created to help streamline the process of getting designs (or photos) approved by clients.
