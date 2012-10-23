@@ -13,7 +13,7 @@ This plugin was created to help streamline the process of getting designs (or ph
 == Description ==
 
 = PRO BUNDLE =
-[Love our FREE DAS? Go PRO with the Current Bundle which includes all of our Extensions](http://www.slickremix.com/product-category/design-approval-system-extensions)
+Love our FREE DAS? Go PRO with the [Current Bundle](http://www.slickremix.com/product-category/design-approval-system-extensions) which includes all of our Extensions.
 
 Here is a quick look at the [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
@@ -61,7 +61,7 @@ Here is a Full Tutorial about the [Design Approval System plugin and Client Chan
   1. [NEW! Select User and Email Extension](http://www.slickremix.com/product/client-changes-extension)
   2. [NEW! Design Login Extension](http://www.slickremix.com/product/design-login-das-extension)
   3. [NEW! All Extensions and Theme Bundle](http://www.slickremix.com/product/das-extensions-bundle)
-  4. [Clean Theme][http://www.slickremix.com/product/clean-theme-for-design-approval-system)
+  4. [Clean Theme](http://www.slickremix.com/product/clean-theme-for-design-approval-system)
   5. [Client Changes Extension](http://www.slickremix.com/product/client-changes-extension)
 	
 
