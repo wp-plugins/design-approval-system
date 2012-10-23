@@ -49,10 +49,10 @@ Here what you, the clients, and the plugin can do:
   * Having problems, or possibly looking to extend our plugin to customize your needs? You can find answers to your questions or drop us a line at our (Support Forum)[http://www.slickremix.com/support-forum].
 
 = SLICK DAS TIPS... =
-  1. [HOW TO CHANGE the Background Color of your Design Post?])http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)
-  2. [Adding the FREE Duplicate Post WordPress Plugin to extend our DAS])http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)
-  3. [Adding the FREE WordPress Editorial Calendar Plugin to extend our DAS])http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)
-  4. [And More!])http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)         
+  1. [HOW TO CHANGE the Background Color of your Design Post?](http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)
+  2. [Adding the FREE Duplicate Post WordPress Plugin to extend our DAS](http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)
+  3. [Adding the FREE WordPress Editorial Calendar Plugin to extend our DAS](http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)
+  4. [And More!](http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)         
 
 Here is a Full Tutorial about the Design Approval System plugin and Client Changes Extension: http://youtu.be/pYdF2OJCOv4
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
