@@ -12,10 +12,10 @@ This plugin was created to help streamline the process of getting designs (or ph
 
 == Description ==
 
-= Pro Bundle =
-[All Current Extensions for the DAS](http://www.slickremix.com/product-category/design-approval-system-extensions)
+= PRO BUNDLE =
+[Love our FREE DAS? Go PRO with the Current Bundle which includes all of our Extensions](http://www.slickremix.com/product-category/design-approval-system-extensions)
 
-Here is a quick look at the Design Approval System: http://youtu.be/1CtzTrPuc1A
+Here is a quick look at the [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
 Here what you, the clients, and the plugin can do:
@@ -45,19 +45,19 @@ Here what you, the clients, and the plugin can do:
   * Hide notes to show just the design on the design review page. (Especially nice for web designers wanting to show what a design will look like on a page.)
   * …and much more!
   
-= SUPPORT FORUM… =
+= SUPPORT FORUM =
   * Having problems, or possibly looking to extend our plugin to customize your needs? You can find answers to your questions or drop us a line at our (Support Forum)[http://www.slickremix.com/support-forum].
 
-= SLICK DAS TIPS... =
+= SLICK DAS TIPS =
   1. [HOW TO CHANGE the Background Color of your Design Post?](http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)
   2. [Adding the FREE Duplicate Post WordPress Plugin to extend our DAS](http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)
   3. [Adding the FREE WordPress Editorial Calendar Plugin to extend our DAS](http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)
   4. [And More!](http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)         
 
-Here is a Full Tutorial about the Design Approval System plugin and Client Changes Extension: http://youtu.be/pYdF2OJCOv4
+Here is a Full Tutorial about the [Design Approval System plugin and Client Changes Extension](http://youtu.be/pYdF2OJCOv4): 
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
 
-= THEMES AND EXTENSIONS… =
+= THEMES AND EXTENSIONS =
   1. [NEW! Select User and Email Extension](http://www.slickremix.com/product/client-changes-extension)
   2. [NEW! Design Login Extension](http://www.slickremix.com/product/design-login-das-extension)
   3. [NEW! All Extensions and Theme Bundle](http://www.slickremix.com/product/das-extensions-bundle)
