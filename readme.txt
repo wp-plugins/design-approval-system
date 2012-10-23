@@ -58,11 +58,12 @@ Here is a Full Tutorial about the Design Approval System plugin and Client Chang
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
 
 = THEMES AND EXTENSIONS… =
-	* Clean Theme. http://www.slickremix.com/product/clean-theme-for-design-approval-system/
-	* Client Changes Extension. http://www.slickremix.com/product/client-changes-extension/
-	* Select User and Email Extension. http://www.slickremix.com/product/client-changes-extension/
-	* Design Login Extension. http://www.slickremix.com/product/design-login-das-extension/
-	* All Extensions and Theme Bundle. http://www.slickremix.com/product/das-extensions-bundle/
+  1. [NEW! Select User and Email Extension](http://www.slickremix.com/product/client-changes-extension)
+  2. [NEW! Design Login Extension](http://www.slickremix.com/product/design-login-das-extension)
+  3. [NEW! All Extensions and Theme Bundle](http://www.slickremix.com/product/das-extensions-bundle)
+  4. [Clean Theme][http://www.slickremix.com/product/clean-theme-for-design-approval-system)
+  5. [Client Changes Extension](http://www.slickremix.com/product/client-changes-extension)
+	
 
 If you would like to make an extension or theme for our plugin we would be happy to review it! Please contact us for more info.
    
