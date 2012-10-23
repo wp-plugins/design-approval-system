@@ -11,8 +11,9 @@ License: GPLv2 or later
 This plugin was created to help streamline the process of getting designs (or photos) approved by clients.
 
 == Description ==
-= Premium Bundle =
-http://www.slickremix.com/product-category/design-approval-system-extensions
+
+= Pro Bundle =
+[All Current Extensions for the DAS] (http://www.slickremix.com/product-category/design-approval-system-extensions)
 
 Here is a quick look at the Design Approval System: http://youtu.be/1CtzTrPuc1A
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
