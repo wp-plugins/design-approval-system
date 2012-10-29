@@ -3,7 +3,7 @@ Contributors: Justin Labadie, Spencer Labadie
 Tags:  approval, design, design approval system, designers, designs, clients, slick remix, slick, remix, freelancer, freelancers, graphic artists, graphic designers, graphics, logo designers, photography, plugin, wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation
 Requires at least: 3.4.0
 Tested up to: 3.5.0
-Stable tag: 2.1
+Stable tag: 2.2
 License: GPLv2 or later
 
 
@@ -72,6 +72,9 @@ If you would like to make an extension or theme for our plugin we would be happy
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Changelog ==
+
+= Version 2.2 =
+ * Added: Fixed "Upload Image" jQuery confliction with themes.
 
 = Version 2.1 =
  * Added: Additional CSS for default template.

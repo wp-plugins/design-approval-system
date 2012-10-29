@@ -1,7 +1,6 @@
 <?php
 /*
 	This is file is for creating the options page for Wordpress's backend
-	
 */
 
 //Adds setting page to DAS sub menu
@@ -20,8 +19,11 @@ function das_settings_admin_scripts() {
 function das_settings_admin_styles() {
 	wp_enqueue_style('thickbox');
 }
-add_action('admin_print_scripts', 'das_settings_admin_scripts');
-add_action('admin_print_styles', 'das_settings_admin_styles');
+
+if (isset($_GET['page']) && $_GET['page'] == 'design-approval-system-settings-page') {
+  add_action('admin_print_scripts', 'das_settings_admin_scripts');
+  add_action('admin_print_styles', 'das_settings_admin_styles');
+}
 
 //Main setting page function
 function das_settings_page() {
