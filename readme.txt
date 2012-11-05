@@ -12,7 +12,7 @@ This plugin was created to help streamline the process of getting designs (or ph
 
 == Description ==
 
-= 10-31-12 EXTENSION GIVE AWAY =
+= EXTENSION GIVE AWAY =
 Want to grab an extension for FREE? Check out our DAS plugin and write a stellar [review](http://wordpress.org/support/view/plugin-reviews/design-approval-system) and we'll email you a coupon for the extension of your choice. Only accepting 5 winners so hurry up. 
 
 = DAS PRO BUNDLE =
