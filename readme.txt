@@ -155,7 +155,7 @@ IMPORTANT: Please be sure to let your clients know that for the first design ema
 
 = Do you offer support? = 
 
-Yes, Contact us at info@slickremix.com for problems with your plugin. We also offer Premium Support if you are looking to extend our plugin or just need help with your website.
+Yes, if you are having problems, or possibly looking to extend our plugin to customize your needs? You can find answers to your questions or drop us a line at our [Support Forum](http://www.slickremix.com/support-forum).
 
 = Are there Extensions for this plugin? =
 
