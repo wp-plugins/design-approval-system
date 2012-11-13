@@ -12,8 +12,8 @@ This plugin was created to help streamline the process of getting designs (or ph
 
 == Description ==
 
-= EXTENSION GIVE AWAY =
-Want to grab an extension for FREE? Check out our DAS plugin and write a stellar [review](http://wordpress.org/support/view/plugin-reviews/design-approval-system) and we'll email you a coupon for the extension of your choice. Only accepting 5 winners so hurry up. 
+= Join us on Facebook! =
+Don't get left behind! Make sure you "Like" our [Facebook](http://www.facebook.com/DesignApprovalSystem) for News, Updates, and Coupons! 
 
 = DAS PRO BUNDLE =
 Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval-system-extensions) and step up your game even more.
