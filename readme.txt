@@ -13,7 +13,7 @@ This plugin was created to help streamline the process of getting designs (or ph
 == Description ==
 
 = Join us on Facebook! =
-Don't get left behind! Make sure you "Like" our [Facebook](http://www.facebook.com/DesignApprovalSystem) for News, Updates, and Coupons! 
+Don't get left behind! Make sure you "Like" our [Facebook](http://www.facebook.com/DesignApprovalSystem) for News, Updates, and Coupons! CYBER Monday Sale Today! See our [Facebook](http://www.facebook.com/DesignApprovalSystem) for Details!
 
 = DAS PRO BUNDLE =
 Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval-system-extensions) and step up your game even more.
