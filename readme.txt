@@ -1,4 +1,4 @@
- === Design Approval System ===
+=== Design Approval System ===
 Contributors: Justin Labadie, Spencer Labadie 
 Tags:  approval, design, design approval system, designers, designs, clients, slick remix, slick, remix, freelancer, freelancers, graphic artists, graphic designers, graphics, logo designers, photography, plugin, wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation
 Requires at least: 3.4.0
@@ -12,20 +12,14 @@ This plugin was created to help streamline the process of getting designs (or ph
 
 == Description ==
 
-<<<<<<< .mine
 = Join us on Facebook! =
 Don't get left behind! Make sure you "Like" our [Facebook](http://www.facebook.com/DesignApprovalSystem) for News, Updates, and Coupons! CYBER Monday Sale Today! See our [Facebook](http://www.facebook.com/DesignApprovalSystem) for Details!
 
-=======
->>>>>>> .r632069
 = DAS PRO BUNDLE =
 Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval-system-extensions) and step up your game even more.
 
 Here is a quick look at the [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
-
-= Join us on Facebook! =
-Don't get left behind! Make sure you "Like" our [Facebook](http://www.facebook.com/DesignApprovalSystem) for News, Updates, and Coupons! 
 
 Here what you, the clients, and the plugin can do:
 
@@ -86,7 +80,6 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
  * NEW: DAS Videos page to admin menu!
  * NEW: DAS News & Updates page to admin menu!
  * NEW: Help page added to admin menu!
- * NEW: CSS Animated Links and Buttons throughout!
  * Fixed: "Upload Image" jQuery duplication.
 
 = Version 2.2 =
