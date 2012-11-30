@@ -12,9 +12,6 @@ This plugin was created to help streamline the process of getting designs (or ph
 
 == Description ==
 
-= Join us on Facebook! =
-Don't get left behind! Make sure you "Like" our [Facebook](http://www.facebook.com/DesignApprovalSystem) for News, Updates, and Coupons! CYBER Monday Sale Today! See our [Facebook](http://www.facebook.com/DesignApprovalSystem) for Details!
-
 = DAS PRO BUNDLE =
 Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval-system-extensions) and step up your game even more.
 
@@ -66,8 +63,10 @@ Here is a Full Tutorial about the [Design Approval System plugin and Client Chan
   3. [NEW! All Extensions and Theme Bundle](http://www.slickremix.com/product/das-extensions-bundle)
   4. [Clean Theme](http://www.slickremix.com/product/clean-theme-for-design-approval-system)
   5. [Client Changes Extension](http://www.slickremix.com/product/client-changes-extension)
+  
+= Join us on Facebook! =
+Don't get left behind! Make sure you "Like" our [Facebook](http://www.facebook.com/DesignApprovalSystem) for News, Updates, and Coupons! See our [Facebook](http://www.facebook.com/DesignApprovalSystem) for Details.
 	
-
 If you would like to make an extension or theme for our plugin we would be happy to review it! Please contact us for more info.
    
 == Installation ==
@@ -80,6 +79,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
  * NEW: DAS Videos page to admin menu!
  * NEW: DAS News & Updates page to admin menu!
  * NEW: Help page added to admin menu!
+ * Added: Animated links and buttons all around.
  * Fixed: "Upload Image" jQuery duplication.
 
 = Version 2.2 =
