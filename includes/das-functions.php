@@ -86,6 +86,14 @@ add_action( 'init', 'das_custom_post_type_init' );
 
 add_filter( 'attribute_escape', 'rename_second_das_submenu_name', 10, 2 );
 
+// THIS GIVES US SOME OPTIONS FOR STYLING THE ADMIN AREA
+function das_admin_css() {
+   echo '<link rel="stylesheet" id="DAS-ADMIN-CSS" href="'.DAS_PLUGIN_PATH.'/design-approval-system/admin/css/admin.css" type="text/css" media="all">';
+}
+
+add_action('admin_head', 'das_admin_css');
+
+
 /**
  * Renames the first occurence of 'See All Academias' to 'Academias'
  * and deactivates itself then.
@@ -105,13 +113,26 @@ function rename_second_das_submenu_name( $safe_text, $text )
     return 'Design Approval System';
 }
 
+//Adds Video page to DAS sub menu
+add_action('admin_menu', 'register_das_video_submenu_page');
+
+function register_das_video_submenu_page() {
+	add_submenu_page( 'edit.php?post_type=designapprovalsystem', 'Design Approval System Videos', 'DAS Videos', 'manage_options', 'design-approval-system-video-page', 'das_video_page' );
+}
+//Adds News & Updates Page page to DAS sub menu
+add_action('admin_menu', 'register_das_news_updates_submenu_page');
+
+function register_das_news_updates_submenu_page() {
+	add_submenu_page( 'edit.php?post_type=designapprovalsystem', 'Design Approval System News & Updates', 'DAS News', 'manage_options', 'design-approval-system-news-updates-page', 'das_news_updates_page' );
+}
+
 //Adds Tutorials page to DAS sub menu
 add_action('admin_menu', 'register_das_help_submenu_page');
 
 function register_das_help_submenu_page() {
 	add_submenu_page( 'edit.php?post_type=designapprovalsystem', 'Design Approval System Help', 'Help', 'manage_options', 'design-approval-system-tutorials-page', 'das_help_page' );
 }
- 
+
 // Checks to see if Custom Post Template is installed and activated.
 add_action( 'admin_notices', 'das_dependencies' );
 
@@ -205,4 +226,6 @@ if (file_exists($das_slick_template)) {
 			}
 	}
 }
+
+
 ?>
