@@ -79,7 +79,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
  * NEW: DAS Videos page to admin menu!
  * NEW: DAS News & Updates page to admin menu!
  * NEW: Help page added to admin menu!
- * Added: Animated links and buttons all around.
+ * Added: Animated links and buttons through-out.
  * Fixed: "Upload Image" jQuery duplication.
 
 = Version 2.2 =
