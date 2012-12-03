@@ -276,7 +276,7 @@ function mainmenu(){
 			jQuery('body').css('background', 'none #000000');
 		});
 		jQuery('.show-notes').click(function () {	
-			jQuery('.header-wrap, .desginers-notes-backg, ').slideDown();
+			jQuery('.header-wrap, .desginers-notes-backg').slideDown();
 			jQuery('.show-notes').hide();
 			jQuery('.main-logo-tab').fadeIn(1000);
 			jQuery('body').css('background', 'url(<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/images/designer-backg-grey.png) no-repeat top left #000000');
