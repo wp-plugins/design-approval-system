@@ -13,7 +13,7 @@ This plugin was created to help streamline the process of getting designs (or ph
 == Description ==
 
 = DAS PRO BUNDLE =
-Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval-system-extensions) and step up your game even more.
+Happy Holidays! Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval-system-extensions) and step up your game even more. Use discount code: holidayhookup, for another 50% off our bundle.
 
 Here is a quick look at the [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
