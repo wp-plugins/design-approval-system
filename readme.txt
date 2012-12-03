@@ -3,7 +3,7 @@ Contributors: Justin Labadie, Spencer Labadie
 Tags:  approval, design, design approval system, designers, designs, clients, slick remix, slick, remix, freelancer, freelancers, graphic artists, graphic designers, graphics, logo designers, photography, plugin, wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation
 Requires at least: 3.4.0
 Tested up to: 3.5.0
-Stable tag: 2.3
+Stable tag: 2.4
 License: GPLv2 or later
 
 
@@ -75,6 +75,9 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 == Changelog ==
 
+= Version 2.4 =
+ * Fixed: Show Desing Option. We removed an extra comma causing error when using jQuery 1.8.0+
+ 
 = Version 2.3 =
  * NEW: DAS Videos page to admin menu!
  * NEW: DAS News & Updates page to admin menu!
