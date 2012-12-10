@@ -12,9 +12,6 @@ This plugin was created to help streamline the process of getting designs (or ph
 
 == Description ==
 
-= DAS PRO BUNDLE =
-Happy Holidays! Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval-system-extensions) and step up your game even more. Use discount code: holidayhookup, for another 50% off our bundle.
-
 Here is a quick look at the [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
@@ -44,6 +41,9 @@ Here what you, the clients, and the plugin can do:
   * Display a versions menu to show previous versions of a design.
   * Hide notes to show just the design on the design review page. (Especially nice for web designers wanting to show what a design will look like on a page.)
   * …and much more!
+
+= DAS PRO BUNDLE =
+Happy Holidays! Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval-system-extensions) and step up your game even more. Use discount code: holidayhookup, for another 50% off our bundle.
   
 = SUPPORT FORUM =
   * Having problems, or possibly looking to extend our plugin to customize your needs? You can find answers to your questions or drop us a line at our [Support Forum](http://www.slickremix.com/support-forum).
