@@ -76,7 +76,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 == Changelog ==
 
 = Version 2.5 =
- * Added: New admin DAS logo for leftsite menu, with added Retina support.
+ * Added: New admin DAS logo for leftside menu, with added Retina support.
  * Added: Additional admin CSS improvements.
  
 = Version 2.4 =
