@@ -303,6 +303,7 @@ a.im-done:hover, .upload_image_button:hover, .das-settings-admin-submit-btn:hove
 	-moz-transition: all 0.30s ease-in-out;
 	-o-transition: all 0.30s ease-in-out;
 	transition: all 0.30s ease-in-out;
+	border-radius:3px;
 }
 /*=================================================
 	Design Approval System admin HELP PAGE

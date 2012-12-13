@@ -1,13 +1,37 @@
-#adminmenu  #menu-posts-designapprovalsystem .wp-menu-image img {
-	padding:2px 0 5px 0 !important;
-}
-#adminmenu a.menu-icon-designapprovalsystem {
-	line-height:15px !important;
-}
 .menu-icon-designapprovalsystem .wp-submenu a, #menu-posts-designapprovalsystem .wp-submenua {
 	-webkit-transition: background 2s !important;
 	-webkit-transition: all 0.30s ease-in-out !important;
 	-moz-transition: all 0.30s ease-in-out !important;
 	-o-transition: all 0.30s ease-in-out !important;
 	transition: all 0.30s ease-in-out !important;
+}
+#menu-posts-designapprovalsystem .wp-not-current-submenu {
+	background-image: url('../images/design-approval-icon-sprite.png') !important;
+	background-position: 4px -21px !important;
+	background-size: 22px !important;
+	background-repeat: no-repeat !important;
+}
+#menu-posts-designapprovalsystem .wp-not-current-submenu:hover {
+	background-position: 4px 5px !important;
+	background-size: 22px !important;
+}
+#menu-posts-designapprovalsystem .wp-menu-open {
+	background-image: url('../images/design-approval-icon-sprite.png') !important;
+	background-position: 4px 5px !important;
+	background-size: 22px !important;
+	background-repeat: no-repeat !important;
+}
+
+/* Retina Display Size */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
+ #menu-posts-designapprovalsystem .wp-not-current-submenu {
+	background-image: url('../images/design-approval-icon-sprite.png') !important;
+	background-position: 4px -21px !important;
+	background-size: 22px !important;
+	background-repeat: no-repeat !important;
+}
+#menu-posts-designapprovalsystem .wp-not-current-submenu:hover {
+	background-position: 4px 5px !important;
+	background-size: 22px !important;
+}
 }

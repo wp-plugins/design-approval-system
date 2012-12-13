@@ -61,7 +61,7 @@ function das_custom_post_type_init() {
 		'hierarchical' => true,
 		'rewrite' => array('slug' => 'designs'),
 		'query_var' => 'Design Approval System',
-		'menu_icon' => ''.DAS_PLUGIN_PATH .'/design-approval-system/admin/images/design-approval-icon2.png',
+		'menu_icon' => '',
 		'supports' => array(
 		'title',
 		'editor',
@@ -110,7 +110,7 @@ function rename_second_das_submenu_name( $safe_text, $text )
     // We are on the main menu item now. The filter is not needed anymore.
     remove_filter( 'attribute_escape', 'rename_second_das_submenu_name' );
 
-    return 'Design Approval System';
+    return 'DAS';
 }
 
 //Adds Video page to DAS sub menu
