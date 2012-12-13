@@ -80,7 +80,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
  * Added: Additional admin CSS improvements.
  
 = Version 2.4 =
- * Fixed: Show Desing Option. We removed an extra comma causing error when using jQuery 1.8.0+
+ * Fixed: Show Design Option. We removed an extra comma causing error when using jQuery 1.8.0+
  
 = Version 2.3 =
  * NEW: DAS Videos page to admin menu!
@@ -102,12 +102,10 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
  * Added: Added features for 2 new plugins.
  
 = Version 1.9 =
- 
  * Revised: CSS and jQuery for versions drop down menu. Now works in Firefox.
  * Fixed: Select user and email bugs. 
  
 = Version 1.8 =
- 
  * Added: Settings Page is now set up for new Roles Extenstion options.
  * Added: Options to DAS Meta Box for new Roles Extenstion switching "Designer Name", "Client Name" to drop downs and "Client email" to auto fill input to email of the client selected.
  * Tested: The DAS Plugin, Themes, and extenstions for any bugs against the new (Beta) version of WordPress 3.5  
@@ -118,27 +116,22 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
  * Fixed: jQuery on Settings Page now compatible with new themes.
 
 = Version 1.6 =
- 
  * Fixed: No more auto selection of post template. (We are now offering more themes) [If you purchase one of our themes you may select which theme you would like to use for each individual post.]
  * Added: Size for "Clean Theme" to settings page.
 
 = Version 1.5 =
- 
  * Fixed: Duplicated page in template file.
 
 = Version 1.4 =
- 
  * MAJOR FIX - Fixed: Javascript on design post page NOW working. (ATTENTION EVERYONE - THIS UPDATE is NEEDED for DAS plugin to work PROPERLY! ALL Previous versions have NOT been working!)
  * MAJOR FIX - Fixed: Versions menu to work.
  * Added: "Designer's Name" field back into post backend.
  * Fixed: updated screen shots on settings page to match correct text.
 
 = Version 1.3 =
- 
  * MAJOR FIX - Fixed: Post Paged getting "404 Page Not Found error".  
 
 = Version 1.2 =
- 
  * Fixed: Screen shot #8 (Thank You message)
  * Added: Paypal Donate Button to settings page.
  * Added: Facebook "Like" Button to settings page.
@@ -146,14 +139,12 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
  
 
 = Version 1.1 =
-
  * Fixed: Custom Post Type auto selection.
  * Removed: Two fields from DAS post page that were not needed.
  * Fixed: Duplicated jQuery files now using WordPress's included jQuery.
  * Fixed: Relative URLS to have dynamic paths. (For WordPress users who do not have WordPress installed on the root of their server)
 
 = Version 1.0 =
-
  * Initial Release
 
 == Frequently Asked Questions ==
