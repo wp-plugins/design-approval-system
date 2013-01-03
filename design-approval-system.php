@@ -3,18 +3,18 @@
 Plugin Name: Design Approval System
 Plugin URI: http://slickremix.com/
 Description: A plugin to display Designs and have a client approve them by giving a digital signature.
-Version: 2.5
+Version: 2.6
 Author: SlickRemix [Justin Labadie & Spencer Labadie]
 Author URI: http://slickremix.com/
 Requires at least: wordpress 3.4.0
 Tested up to: wordpress 3.5.0
-Stable tag: 2.5
+Stable tag: 2.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
  * @package    			Design Approval System
  * @category   			Core
- * @author     		    SlickRemix [Justin Labadie & Spencer Labadie]
+ * @author     		    SlickRemix
  * @copyright  			Copyright (c) 2012 SlickRemix
 
 If you need support or want to tell us thanks please contact us at info@slickremix.com or use our support forum on slickremix.com

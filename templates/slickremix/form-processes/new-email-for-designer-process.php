@@ -1,4 +1,7 @@
-<html><body>
+<html>>
+<head>
+</head>
+<body>
 <?php
 require_once('class.phpmailer.php');
 //Retrieve form data. 
@@ -7,6 +10,7 @@ require_once('class.phpmailer.php');
 $email4 = ($_GET['email4']) ?$_GET['email4'] : $_POST['email4'];
 $companyname4 = ($_GET['companyname4']) ?$_GET['companyname4'] : $_POST['companyname4'];
 $version4 = ($_GET['version4']) ?$_GET['version4'] : $_POST['version4'];
+$customNameOfDesign = ($_GET['customNameOfDesign']) ?$_GET['customNameOfDesign'] : $_POST['customNameOfDesign'];
 $link4 = ($_GET['link4']) ?$_GET['link4'] : $_POST['link4'];
 $pagetitle = ($_GET['pagetitle']) ?$_GET['pagetitle'] : $_POST['pagetitle'];
 $human4 = ($_GET['human4']) ?$_GET['human4'] : $_POST['human4'];
@@ -47,7 +51,7 @@ if (!$errors) {
 	$from = $das_settings_company_name. '<' .$das_settings_company_email. '>';
 	
 	//subject and the html message
-	$subject = $pagetitle;	
+	$subject = $customNameOfDesign  . ' - ' . $version4  . ' - ' . $companyname4;	
 	$message = nl2br('From: '.$das_settings_company_name. '	
 	For: ' . $companyname4 . '
 	' . $version4 . '
@@ -68,7 +72,7 @@ if (!$errors) {
 	$from = $das_settings_company_name. '<' .$das_settings_company_email. '>' ;
 	
 	//subject and the html message
-	$subject = $pagetitle;	
+	$subject = $customNameOfDesign  . ' - ' . $version4  . ' - ' . $companyname4;			
 	$message = nl2br('' . $companyname4 . ' Comp was sent Successfully. 
 	' . $version4 . '
 	

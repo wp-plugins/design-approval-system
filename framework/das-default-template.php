@@ -150,6 +150,9 @@ echo '</ul>';
             <br/>
             <input type="text" name="a1"/>
             <input type="hidden" value="<?php echo get_permalink() ?>" name="designtitle" />
+            <input type="hidden" value="<?php echo get_post_meta($post->ID, 'custom_name_of_design', true); ?>" name="customNameOfDesign" />
+            <input type="hidden" class="design-client-email" value="<?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?>" name="version4"  />
+            <input type="hidden" class="design-client-email" value="<?php echo get_post_meta($post->ID, 'custom_client_name', true); ?>" name="companyname4"  />
             <input type="hidden" value="<?php echo get_option('das-settings-company-name'); ?>" name="dasSettingsCompanyName" />
             <input type="hidden" value="<?php echo get_option('das-settings-company-email'); ?>" name="dasSettingsCompanyEmail" />
             <input type="hidden" value="<?php echo ''.$das_settings_approved_dig_sig_message_to_designer.''; ?>" name="dasSettingsApprovedDigSigMessageToDesigner" />
@@ -204,6 +207,7 @@ echo '</ul>';
                 $das_settings_email_for_designers_message_to_clients = get_option('das-settings-approved-dig-sig-message-to-clients');
             }?>
           <form class="myform" id="sendEmailforDesigner" method="post" action="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/form-processes/new-email-for-designer-process.php" name="sendEmailforDesigner">
+            <input type="hidden" value="<?php echo get_post_meta($post->ID, 'custom_name_of_design', true); ?>" name="customNameOfDesign" />
             <input type="hidden" name="email4" class="design-client-email" value="<?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?>" />
             <input type="hidden" name="companyname4" class="design-client-email" value="<?php echo get_post_meta($post->ID, 'custom_client_name', true); ?>" />
             <input type="hidden" name="version4" class="design-client-email" value="<?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?>" />

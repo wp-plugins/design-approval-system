@@ -9,7 +9,10 @@ require_once('class.phpmailer.php');
 //POST - in case user does not support javascript, we'll use POST instead
 $a1 = ($_GET['a1']) ?$_GET['a1'] : $_POST['a1'];
 $email1 = ($_GET['email1']) ?$_GET['email1'] : $_POST['email1'];
+$companyname4 = ($_GET['companyname4']) ?$_GET['companyname4'] : $_POST['companyname4'];
 $designtitle = ($_GET['designtitle']) ?$_GET['designtitle'] : $_POST['designtitle'];
+$version4 = ($_GET['version4']) ?$_GET['version4'] : $_POST['version4'];
+$customNameOfDesign = ($_GET['customNameOfDesign']) ?$_GET['customNameOfDesign'] : $_POST['customNameOfDesign'];
 //Company Info
 $das_settings_company_name = ($_GET['dasSettingsCompanyName']) ?$_GET['dasSettingsCompanyName'] : $_POST['dasSettingsCompanyName'];
 $das_settings_company_email = ($_GET['dasSettingsCompanyEmail']) ?$_GET['dasSettingsCompanyEmail'] : $_POST['dasSettingsCompanyEmail'];
@@ -53,7 +56,7 @@ if (!$errors) {
 	$from = $das_settings_company_name . ' <' . $das_settings_company_email . '>';
 
 	//subject and the html message
-	$subject = $a1 . ' approved a design comp';	
+	$subject = $customNameOfDesign  . ' - ' . $version4 .  ' - ' . $companyname4 . ' Approved this Design';
 	$message = nl2br(''.$das_settings_approved_dig_sig_message_to_designer.'
 	
 	From: ' . $email1 . '
@@ -75,7 +78,7 @@ if (!$errors) {
 	$from = $das_settings_company_name. '<' .$das_settings_company_email. '>';
 	
 	//subject and the html message
-	$subject = 'Design Comp Confirmation';	
+	$subject = $customNameOfDesign  . ' - ' . $version4  . ' - Design Approval Confirmation';
 	$message = nl2br(''.$das_settings_approved_dig_sig_message_to_clients.'
 	
 	From: ' . $email1 . '
