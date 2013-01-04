@@ -204,7 +204,7 @@ echo '</ul>';
                 $das_settings_email_for_designers_message_to_clients = 'Please review your design comp for changes and/or errors:';
             }
             else{
-                $das_settings_email_for_designers_message_to_clients = get_option('das-settings-approved-dig-sig-message-to-clients');
+                $das_settings_email_for_designers_message_to_clients = get_option('das-settings-email-for-designers-message-to-clients');
             }?>
           <form class="myform" id="sendEmailforDesigner" method="post" action="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/form-processes/new-email-for-designer-process.php" name="sendEmailforDesigner">
             <input type="hidden" value="<?php echo get_post_meta($post->ID, 'custom_name_of_design', true); ?>" name="customNameOfDesign" />
