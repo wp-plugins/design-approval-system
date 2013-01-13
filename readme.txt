@@ -8,7 +8,7 @@ License: GPLv2 or later
 
 
 
-This plugin was created to help streamline the process of getting designs (or photos) approved by clients.
+A systems to streamline the process of getting designs, photos or videos approved by clients.
 
 == Description ==
 
