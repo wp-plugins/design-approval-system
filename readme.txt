@@ -8,7 +8,7 @@ License: GPLv2 or later
 
 
 
-A systems to streamline the process of getting designs, photos or videos approved by clients.
+A system to streamline the process of getting designs, photos or videos approved by clients.
 
 == Description ==
 
