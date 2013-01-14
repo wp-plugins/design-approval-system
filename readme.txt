@@ -169,7 +169,7 @@ Yes, if you are having problems, or possibly looking to extend our plugin to cus
 
 = Are there Extensions for this plugin? =
 
-Yes. Currently we have 2 and are working on more! http://www.slickremix.com/product-category/design-approval-system-extensions/
+Yes. Currently we have 3 and are working on more! http://www.slickremix.com/product-category/design-approval-system-extensions/
  
 = This plugin seems like it may be complex. Are there tutorials for the plugin? = 
 
