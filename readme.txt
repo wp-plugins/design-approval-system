@@ -42,6 +42,9 @@ Here what you, the clients, and the plugin can do:
   * Hide notes to show just the design on the design review page. (Especially nice for web designers wanting to show what a design will look like on a page.)
   * …and much more!
   
+= DAS PRO BUNDLE =
+Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval-system-extensions) and step up your game even more.
+  
 = SUPPORT FORUM =
   * Having problems, or possibly looking to extend our plugin to customize your needs? You can find answers to your questions or drop us a line at our [Support Forum](http://www.slickremix.com/support-forum).
 
