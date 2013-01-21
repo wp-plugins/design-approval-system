@@ -66,10 +66,7 @@ Don't get left behind! Make sure you "Like" our [Facebook](http://www.facebook.c
 	
 If you would like to make an extension or theme for our plugin we would be happy to review it! Please contact us for more info.
 
-  ** **DISClAIMER** ** SlickRemix **DOES NOT** support the Internet Explorer browser. For best user experience please use one of the following browsers: 
-  * [Google Chrome](https://www.google.com/intl/en/chrome/browser/) 
-  * [Firefox](http://www.mozilla.org/en-US/firefox/)
-  * [Safari](http://www.apple.com/safari/)
+  **DISClAIMER:** SlickRemix **DOES NOT** code for IE. If it works awesome, if not we highly suggest one of the following modern browsers: [Google Chrome](https://www.google.com/intl/en/chrome/browser/), [Safari](http://www.apple.com/safari/) or [Firefox](http://www.mozilla.org/en-US/firefox/).
    
 == Installation ==
 
