@@ -3,12 +3,12 @@
 Plugin Name: Design Approval System
 Plugin URI: http://slickremix.com/
 Description: A plugin to display Designs and have a client approve them by giving a digital signature.
-Version: 2.7
+Version: 2.8
 Author: SlickRemix
 Author URI: http://slickremix.com/
 Requires at least: wordpress 3.4.0
 Tested up to: wordpress 3.5.0
-Stable tag: 2.7
+Stable tag: 2.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,7 @@ include( 'admin/das-settings-page.php' );
 include( 'admin/das-help-page.php' );
 include( 'admin/das-video-page.php' );
 include( 'admin/das-news-updates-page.php' );
+include( 'admin/das-projects-page.php' );
 
 /**
  * Returns current plugin version. SRL added

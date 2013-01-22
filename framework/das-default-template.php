@@ -100,7 +100,7 @@ echo '</ul>';
 <!--header-wrap-->
 
 <div class="designers-photo-wrap">
-  <div class="designers-photo-content"> <?php echo get_the_content() ?> </div>
+  <div class="designers-photo-content"> <?php the_content() ?> </div>
   <!--/designers-photo-content-->
   
   <div class="clear"></div>

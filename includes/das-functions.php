@@ -114,6 +114,13 @@ function rename_second_das_submenu_name( $safe_text, $text )
 }
 
 //Adds Video page to DAS sub menu
+add_action('admin_menu', 'register_das_projects_submenu_page');
+
+function register_das_projects_submenu_page() {
+	add_submenu_page( 'edit.php?post_type=designapprovalsystem', 'Projects', 'Project Board', 'manage_options', 'design-approval-system-projects-page', 'das_projects_page' );
+}
+
+//Adds Video page to DAS sub menu
 add_action('admin_menu', 'register_das_video_submenu_page');
 
 function register_das_video_submenu_page() {

@@ -3,7 +3,7 @@ Contributors: slickremix
 Tags:  approval, design, design approval system, designers, designs, clients, slick remix, slick, remix, freelancer, freelancers, graphic artists, graphic designers, graphics, logo designers, photography, plugin, wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation
 Requires at least: 3.4.0
 Tested up to: 3.5.0
-Stable tag: 2.7
+Stable tag: 2.8
 License: GPLv2 or later
 
 
@@ -12,13 +12,15 @@ A system to streamline the process of getting designs, photos or videos approved
 
 == Description ==
 
+**NEW**: Project Board Addition. Now your clients and designs are all organized!
+
 Here is a quick look at the [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
-Here is a Full Tutorial about the [Design Approval System plugin and Client Changes Extension](http://youtu.be/pYdF2OJCOv4): 
+Full Tutorial about the [Design Approval System plugin and Client Changes Extension](http://youtu.be/pYdF2OJCOv4): 
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
 
-Here what you, the clients, and the plugin can do:
+Here's what you, the clients, and the plugin can do:
 
 = YOU (THE DESIGNER) CAN… =
   * With the click of a button send the design’s review link to a client for approval. (An automatic confirmation email will be sent to both parties.)
@@ -74,6 +76,10 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 == Changelog ==
 
+= Version 2.8 / January 22, 2013 =
+ * NEW: Project Board Page. Now your design posts are all organized.
+ * FIX: Default Template now has the_content instead of get_the_content. Now shortcodes will work.  
+ 
 = Version 2.7 / January 4, 2013 =
  * Settings Page Fix: MESSAGE TO CLIENT (OPTIONAL) text area field has been fixed.
  * NOTE: This also effects the Clean Theme premium extension too, so make sure and update that plugin as well.  
