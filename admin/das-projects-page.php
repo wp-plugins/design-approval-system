@@ -6,7 +6,7 @@ function das_projects_page() {
 <div class="das-project-admin-wrap">
 <a class="buy-extensions-btn" href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank">Get Extensions Here!</a>
 <h2 class="project-board-header">Project Board</h2>
-<div class="use-of-plugin">Below are your Clients and their Projects: We suggest you use the <a href="http://www.slickremix.com/product/select-user-and-email-extension/" target="_blank">Select User and Email, DAS Extension</a> to make this list work seamlessly. Learn how to use and setup the <a href="http://slickremix.com/das-project-board" target="_blank">Project Board Here</a>. </div>
+<div class="use-of-plugin">Below are your Clients and their Projects: We suggest you use the <a href="http://www.slickremix.com/product/select-user-and-email-extension/" target="_blank">Select User and Email, DAS Extension</a> to make this list work seamlessly. Learn how to use and setup the <a href="http://www.slickremix.com/2013/01/22/das-project-board-tutorial/" target="_blank">Project Board Here</a>. </div>
 <?php
 //Custom DAS Post Type
 $post_type = 'designapprovalsystem';
