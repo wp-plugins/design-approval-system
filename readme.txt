@@ -10,7 +10,7 @@ A system to streamline the process of getting designs, photos, or videos approve
 
 == Description ==
 
-**NEW IN 2.8**: Project Board Addition. Now your clients and designs are all organized on one page!
+**NEW IN 2.8**: Project Board Addition. Now clients, projects, and designs are organized on one page!
 
 Here is a quick look at the [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
