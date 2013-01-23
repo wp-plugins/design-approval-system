@@ -84,7 +84,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
  * Settings Page Fix: MESSAGE TO CLIENT (OPTIONAL) text area field has been fixed.
  * NOTE: This also effects the Clean Theme premium extension too, so make sure and update that plugin as well.  
  
-= Version 2.6/ January 2, 2013 =
+= Version 2.6 / January 2, 2013 =
  * Revised: How the subject field of emails are displayed. This was changed to help people be able to search or sort emails more efficiently. This is the new way the subject is displayed, Name of Design First, Design Version 2nd and the Company or Client name 3rd. EXAMPLE. Subject: Redbull Flyer - Version 1 - SlickRemix
  * MUST: You must also update the client changes premium extention and clean theme premium extention for the changes noted above to take effect.
  * NOTE: If you have made custom changes to either the default template or the clean theme template you may want to save a copy of them before updating or those files will be overwritten.
