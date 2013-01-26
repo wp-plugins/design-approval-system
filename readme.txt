@@ -1,6 +1,6 @@
 === Design Approval System ===
 Contributors: slickremix
-Tags:  approval, design, design approval system, designers, designs, clients, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, logo designers, photography, plugin, wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, image, images, imaging, posts, Post, admin, page, links,  comments, project, project board
+Tags:  project, project board, approval, design approval system, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, logo designers, photography, plugin, wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, image, images, imaging, posts, Post, admin, page, links,  comments
 Requires at least: 3.4.0
 Tested up to: 3.5.0
 Stable tag: 2.8
@@ -10,7 +10,7 @@ A system to streamline the process of getting designs, photos, or videos approve
 
 == Description ==
 
-**NEW IN 2.8**: Project Board Addition. Now clients, projects, and designs are organized on one page!
+**NEW IN 2.8**: Project Board. Now clients, projects, & designs are organized on one page!
 
 Here is a quick look at the [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
