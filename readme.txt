@@ -10,7 +10,7 @@ A system to streamline the process of getting designs, photos, or videos approve
 
 == Description ==
 
-**NEW IN 2.8**: Project Board. Now clients, projects, & designs are organized on one page!
+**NEW IN 2.8**: [Project Board](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/). Now clients, projects, & designs are organized on one page!
 
 Here is a quick look at the [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
@@ -194,3 +194,6 @@ If you have more questions or would like to view other users questions please vi
 6. Example of header when you click the hide notes button.
 7. This will fade in when your client clicks the approve button.
 8. This message will fade in once your client types in their name and clicks submit.
+9. Example of our Project Board Page. This organizes your client projects and designs. At the end of each project row is the number of versions for that project. See the [Full Project Board Tutorial](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/) Here.
+10. Simply click on one of the project rows and watch your version(s) slide into view. You can also hover your mouse over the thumbnail to reveal more options.
+11. Clicking the details link in the thumbnail will reveal all the design details. If you have client notes they will be added as well. If you don't have then or designer notes that area simply will be hidden.
