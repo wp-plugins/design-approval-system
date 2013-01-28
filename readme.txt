@@ -40,6 +40,7 @@ Here's what you, the clients, and the plugin can do:
   * Send automatic confirmation emails.
   * Display a versions menu to show previous versions of a design.
   * Hide notes to show just the design on the design review page. (Especially nice for web designers wanting to show what a design will look like on a page.)
+  *	Show you a list of all of your clients and projects! (Project Board page) 
   * …and much more!
   
 = DAS PRO BUNDLE =
