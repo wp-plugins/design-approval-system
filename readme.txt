@@ -1,6 +1,6 @@
 === Design Approval System ===
 Contributors: slickremix
-Tags:  project, project board, approval, design approval system, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, logo designers, photography, plugin, wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, image, images, imaging, posts, Post, admin, page, links,  comments
+Tags:   image, images, imaging, posts, Post, admin, page, comments, plugin, project, project board, approval, design approval system, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links,  
 Requires at least: 3.4.0
 Tested up to: 3.5.0
 Stable tag: 2.8
@@ -183,7 +183,7 @@ Yes. Currently we have 3 and are working on more! http://www.slickremix.com/prod
 Yes. It's not as hard as it may seem. Once you try it you will see how easy we have made it.  http://www.slickremix.com/category/design-approval-system-tutorials/
 
 
-If you have more questions or would like to view other users questions please visit our forum at http://www.slickremix.com/support-forum/
+If you have more questions or would like to view other users questions please visit our support forum at http://www.slickremix.com/support-forum/
 
 == Screenshots ==
 
