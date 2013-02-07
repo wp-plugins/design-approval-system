@@ -21,7 +21,7 @@ Full Tutorial about our [Design Approval System plugin and Client Changes Extens
 Here's what you, the clients, and the plugin can do:
 
 = YOU (THE DESIGNER) CAN… =
-  * With the click of a button send the design’s review link to a client for approval. (An automatic confirmation email will be sent to both parties.)
+  * With the click of a button you can send the design’s review link to a client for approval. (An automatic confirmation email will be sent to both parties.)
   * Change the text in all automatic confirmation emails.
   * Display your company logo.
   * Display “Designer” notes for the client to read.
