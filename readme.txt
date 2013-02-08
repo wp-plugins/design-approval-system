@@ -47,7 +47,7 @@ Here's what you, the clients, and the plugin can do:
 Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval-system-extensions) and step up your game even more.
   
 = SUPPORT FORUM =
-  * Having problems, or possibly looking to extend our plugin to customize your needs? You can find answers to your questions or drop us a line at our [Support Forum](http://www.slickremix.com/support-forum).
+  * Having problems, or possibly looking to extend our plugin to fit your needs? You can find answers to your questions or drop us a line at our [Support Forum](http://www.slickremix.com/support-forum).
 
 = SLICK DAS TIPS =
   1. [HOW TO CHANGE the Background Color of your Design Post?](http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)
