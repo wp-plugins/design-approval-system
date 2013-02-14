@@ -65,7 +65,7 @@ Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval
 = Join us on Facebook! =
 Don't get left behind! Make sure you "Like" our [Facebook](http://www.facebook.com/DesignApprovalSystem) for News, Updates, and Coupons! See our [Facebook](http://www.facebook.com/DesignApprovalSystem) for Details.
 	
-If you would like to create an extension or theme for our plugin we would be happy to review it! Please contact us for more info.
+If you'de like to create an extension or theme for our plugin we would be happy to review it! Please contact us for more info.
 
   **DISClAIMER:** SlickRemix **DOES NOT** code for IE. If it works awesome, if not we highly suggest one of the following modern browsers: [Google Chrome](https://www.google.com/intl/en/chrome/browser/), [Safari](http://www.apple.com/safari/) or [Firefox](http://www.mozilla.org/en-US/firefox/).
    
