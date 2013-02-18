@@ -15,7 +15,7 @@ A system to streamline the process of getting designs, photos, or videos approve
 Here's a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
-Full Tutorial about our [Design Approval System plugin and Client Changes Extension](http://youtu.be/pYdF2OJCOv4): 
+View full tutorial about our [Design Approval System plugin and Client Changes Extension](http://youtu.be/pYdF2OJCOv4): 
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
 
 Here's what you, the clients, and the plugin can do:
