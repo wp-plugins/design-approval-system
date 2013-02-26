@@ -1,6 +1,6 @@
 === Design Approval System ===
 Contributors: slickremix
-Tags:   image, images, imaging, posts, Post, admin, page, comments, plugin, project, project board, approval, design approval system, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links,  
+Tags: project, project board, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links,  
 Requires at least: 3.4.0
 Tested up to: 3.5.0
 Stable tag: 2.8
@@ -18,7 +18,7 @@ Here's a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A)
 View the full tutorial about our [Design Approval System plugin and Client Changes Extension](http://youtu.be/pYdF2OJCOv4): 
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
 
-Here's what you, the clients, and the plugin can do:
+Here is what you, the clients, and the plugin can do:
 
 = YOU (THE DESIGNER) CAN… =
   * With the click of a button you can send the design’s review link to a client for approval. (An automatic confirmation email will be sent to both parties.)
