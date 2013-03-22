@@ -2,6 +2,18 @@
 /************************************************
  	Function file for Design System plugin
 ************************************************/
+// SRL added to allow only admin to view the edit button on project board, else it will show up as a view button with link. Function call is on the das-project-board-page in admin folder. 3-16-13
+function is_admin_logged_in(){
+
+global $user_ID; 
+
+if( $user_ID  && current_user_can('level_10') ) :
+return true;
+else : 
+return false;
+endif;
+
+}
 //Create Taxenomy for DAS
 add_action( 'init', 'register_taxonomy_das_categories' );
 
@@ -117,7 +129,7 @@ function rename_second_das_submenu_name( $safe_text, $text )
 add_action('admin_menu', 'register_das_projects_submenu_page');
 
 function register_das_projects_submenu_page() {
-	add_submenu_page( 'edit.php?post_type=designapprovalsystem', 'Projects', 'Project Board', 'manage_options', 'design-approval-system-projects-page', 'das_projects_page' );
+	add_submenu_page( 'edit.php?post_type=designapprovalsystem', 'Projects', 'Project Board', 'read', 'design-approval-system-projects-page', 'das_projects_page' );
 }
 
 //Adds Video page to DAS sub menu

@@ -1,13 +1,9 @@
 <?php 
  /*This is DAS Default Template*/
-?> 
+?>
 <!--default das template CSS-->
 <link rel="stylesheet" type="text/css" media="all" href="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/css/styles.css" />
-
-</head>
-<body <?php body_class(); ?> id="design-template">
-
-
+</head><body <?php body_class(); ?> id="design-template">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 <div class="header-top"></div>
 <!--/header-top-->
@@ -17,7 +13,8 @@
 
 <div class="header-wrap">
   <div class="main-logo-tab">
-    <div id="main-logo"> <a href="/"><img src="<?php echo get_option('image_1'); ?>" alt="<?php echo get_option('das-settings-company-name'); ?>" /></a></div><!--/main-logo--> 
+    <div id="main-logo"> <a href="/"><img src="<?php echo get_option('image_1'); ?>" alt="<?php echo get_option('das-settings-company-name'); ?>" /></a></div>
+    <!--/main-logo--> 
   </div>
   <!--/main-logo-tab-->
   
@@ -42,15 +39,15 @@
   </div>
   <!--/header-info-wrap-->
   
-  <div class="header-tabs-wrap"> 
-     <ul id="das-nav">
-    <?php if(is_plugin_active('das-design-login/das-design-login.php') and $login_required == 'yes-login') { ?>
-     	<li class="logout-btn-wrap"><a href="?logout=1" class="logout-btn">Log Out</a></li>
-	<?php } ?>
-  		<li><a class="project-timeline">Timeline: <?php echo get_post_meta($post->ID, 'custom_project_start_end', true); ?></a></li> 
-        <li><a href="#" class="hide-notes">Hide Notes</a></li>
-        <li id="das-nav-history"><a href="javascript:;" class="versions" id="versions-tooltip">Versions</a>
-        		  <?php 
+  <div class="header-tabs-wrap">
+    <ul id="das-nav">
+      <?php if(is_plugin_active('das-design-login/das-design-login.php') and $login_required == 'yes-login') { ?>
+      <li class="logout-btn-wrap"><a href="?logout=1" class="logout-btn">Log Out</a></li>
+      <?php } ?>
+      <li><a class="project-timeline">Timeline: <?php echo get_post_meta($post->ID, 'custom_project_start_end', true); ?></a></li>
+      <li><a href="#" class="hide-notes">Hide Notes</a></li>
+      <li id="das-nav-history"><a href="javascript:;" class="versions" id="versions-tooltip">Versions</a>
+        <?php 
 echo '<ul>';
 
  if ( 'designapprovalsystem' == get_post_type() ) {
@@ -79,10 +76,8 @@ echo '<ul>';
 			
 			while ( $my_query->have_posts() ) :
 				$my_query->the_post();?>
-
-	   <li> <a href="<?php the_permalink() ?>" rel="bookmark">Design <?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?> </a> </li>
-
-			<?php endwhile;
+      <li> <a href="<?php the_permalink() ?>" rel="bookmark">Design <?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?> </a> </li>
+      <?php endwhile;
 		}
 		wp_reset_query();
 	}
@@ -90,9 +85,9 @@ echo '<ul>';
 
 echo '</ul>';
 ?>
-        </li> 
-        <li><a class="version-tab"><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?></a></li>
-     </ul>
+      </li>
+      <li><a class="version-tab"><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?></a></li>
+    </ul>
   </div>
   <!--/header-tabs-wrap--> 
   
@@ -100,7 +95,9 @@ echo '</ul>';
 <!--header-wrap-->
 
 <div class="designers-photo-wrap">
-  <div class="designers-photo-content"> <?php the_content() ?> </div>
+  <div class="designers-photo-content">
+    <?php the_content() ?>
+  </div>
   <!--/designers-photo-content-->
   
   <div class="clear"></div>
@@ -113,7 +110,7 @@ echo '</ul>';
       <h2>Status: <span class="color-green">Approve</span></h2>
       <a href="javascript:;" class="close">X</a>
       <div class="clear"></div>
-      <div class="approved-form-text"> Please be sure to double check this design comp thoroughly for any errors or discrepancies in
+      <div class="approved-form-text">Please be sure to double check this design comp thoroughly for any errors or discrepancies in
         design, grammar, spelling, and overall vision. Your signature below represents the final
         approval of this design comp as is, and any changes from your previously approved copy will
         be charged accordingly.<br/>
@@ -151,8 +148,8 @@ echo '</ul>';
             <input type="text" name="a1"/>
             <input type="hidden" value="<?php echo get_permalink() ?>" name="designtitle" />
             <input type="hidden" value="<?php echo get_post_meta($post->ID, 'custom_name_of_design', true); ?>" name="customNameOfDesign" />
-            <input type="hidden" class="design-client-email" value="<?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?>" name="version4"  />
-            <input type="hidden" class="design-client-email" value="<?php echo get_post_meta($post->ID, 'custom_client_name', true); ?>" name="companyname4"  />
+            <input type="hidden" value="<?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?>" name="version4"  />
+            <input type="hidden" value="<?php echo get_post_meta($post->ID, 'custom_client_name', true); ?>" name="companyname4"  />
             <input type="hidden" value="<?php echo get_option('das-settings-company-name'); ?>" name="dasSettingsCompanyName" />
             <input type="hidden" value="<?php echo get_option('das-settings-company-email'); ?>" name="dasSettingsCompanyEmail" />
             <input type="hidden" value="<?php echo ''.$das_settings_approved_dig_sig_message_to_designer.''; ?>" name="dasSettingsApprovedDigSigMessageToDesigner" />
@@ -253,10 +250,8 @@ echo '</ul>';
 </div>
 <!--designer-notes-backg-->
 
-<div style="display:none" id="output"></div>
-
 <?php endwhile; ?>
-
+<div style="display:none" id="output"></div>
 <script type="text/javascript">
 // We placed this javascript here to make it easy to customize things if you want using simple jquery tools. Enjoy!
 function mainmenu(){
@@ -287,7 +282,7 @@ function mainmenu(){
 		});
 		
 	});	
-</script>
+</script> 
 
 <!-- this is the main template -->
 

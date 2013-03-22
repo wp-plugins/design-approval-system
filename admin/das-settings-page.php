@@ -67,6 +67,52 @@ function das_settings_page() {
       <div class="das-settings-admin-input-example">This is required to send emails to a client through our system</div>
     </div>
     <!--/das-settings-admin-input-wrap-->
+    
+    <div class="das-settings-admin-input-wrap company-info-style ">
+      <div class="das-settings-admin-input-label das-smtp-custom">Send emails using SMTP<!--<a class="question7">?</a>--></div>
+
+      <input name="das-settings-smtp" class="das-settings-admin-input" type="checkbox"  id="das-settings-smtp" value="1" <?php checked( '1', get_option( 'das-settings-smtp' ) ); ?>/>
+  <?php    
+ 
+     $smtp_checked =  get_option( 'das-settings-smtp' );
+		
+if ($smtp_checked == '1') {
+ echo "Checked, you are now using SMTP to send emails. You must contact your host provider if you are unsure of the settings to enter.";
+}
+else	{
+  echo "Not checked, you are using sendmail. If your experiencing email troubles we suggest you check the box and enter your SMTP info.";
+}
+   ?>
+  
+   <div class="smpt-form-wrap">
+   <label>SMTP Server</label>
+   <input type="text" name="das-smtp-server" id="das-smtp-server" value="<?php echo get_option( 'das-smtp-server' ); ?>" placeholder="mail.yourdomain.com">
+   
+   <label>SMTP Port</label>
+   <input type="text" name="das-smtp-port" value="<?php echo get_option( 'das-smtp-port' ); ?>"  placeholder="26 is usually the default SMPT port">
+   
+   <label class="checkbox-label">SMTP Authenticate?</label>
+   <input class="checkbox-input" type="checkbox" name="das-smtp-checkbox-authenticate" id="das-smtp-checkbox-authenticate" value="1" <?php echo checked( '1', get_option( 'das-smtp-checkbox-authenticate' ) ); ?>/>
+   
+   <label>Authenticate Username</label>
+   <input type="text" name="das-smtp-authenticate-username" id="das-smtp-authenticate-username" value="<?php echo get_option( 'das-smtp-authenticate-username' ); ?>" placeholder="example@yourdomain.com">
+   
+   <label>Authenticate Password</label>
+   <input type="password" name="das-smtp-authenticate-password" id="das-smtp-authenticate-password" value="<?php echo get_option( 'das-smtp-authenticate-password' ); ?>">
+   </div>
+   
+     <p><strong>NOTE:</strong> If you check SMTP authenticate and enter your username or password incorrectly the form will not submit and show Thank-You message, letting you know your information is incorrect. You should test this before allowing clients to use your Design Approval System.</p>
+     <p>There are many things that can go wrong with sending mail through SMTP and most of the problems come from permission issues.</p>
+     <ul>
+ <li>1. Does your Host have permission to relay through the SMTP Host?</li>
+ <li>2. Does your host require POP before SMTP?</li>
+ <li>3. Does your Host require SMTP authentication?</li>
+ <li>4. Are your SMTP settings correct for the remote host username / password?</li>
+</ul>
+
+<div class="clear"></div>
+    </div>
+    <!--/das-settings-admin-input-wrap-->
 
 <?php if(is_plugin_active('das-clean-theme/das-clean-theme.php')) {
    include('../wp-content/plugins/das-clean-theme/admin/das-clean-theme-settings-page.php');
@@ -153,10 +199,9 @@ function das_settings_page() {
 }?>
 
     <input type="hidden" name="action" value="update" />
-    <input type="hidden" name="page_options" value="image_1, das-settings-company-name, das-settings-company-email, <?php if(is_plugin_active('das-clean-theme/das-clean-theme.php')) {?>image_2,<?php }?> das-settings-email-for-designers-message-to-clients, das-settings-approved-dig-sig-message-to-designer, das-settings-approved-dig-sig-message-to-clients, das-settings-approved-dig-sig-thank-you<?php if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {?>, das-settings-design-requests-message-to-designer, das-settings-design-requests-message-to-clients, das-settings-design-requests-thank-you, das-settings-add-design-requests-message-to-designer, das-settings-add-design-requests-message-to-clients<?php }?> <?php if(is_plugin_active('das-roles-extension/das-roles-extension.php')) {?>, das-settings-designer-role, das-settings-client-role <?php }?>" />
+    <input type="hidden" name="page_options" value="image_1, das-settings-company-name, das-settings-company-email, das-settings-smtp, das-smtp-server, das-smtp-port, das-smtp-checkbox-authenticate, das-smtp-authenticate-username, das-smtp-authenticate-password, <?php if(is_plugin_active('das-clean-theme/das-clean-theme.php')) {?>image_2,<?php }?> das-settings-email-for-designers-message-to-clients, das-settings-approved-dig-sig-message-to-designer, das-settings-approved-dig-sig-message-to-clients, das-settings-approved-dig-sig-thank-you<?php if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {?>, das-settings-design-requests-message-to-designer, das-settings-design-requests-message-to-clients, das-settings-design-requests-thank-you, das-settings-add-design-requests-message-to-designer, das-settings-add-design-requests-message-to-clients, <?php }?> <?php if(is_plugin_active('das-roles-extension/das-roles-extension.php')) {?> das-settings-designer-role, das-settings-client-role <?php }?>" />
     <input type="submit" class="das-settings-admin-submit-btn" value="<?php _e('Save Changes') ?>" />
   </form>
-  
   <div class="das-settings-facebook-btn"> 
   	<div class="fb-like" data-href="http://www.facebook.com/DesignApprovalSystem" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false"></div>
   </div><!--/das-settings-facebook-btn-->

@@ -940,9 +940,8 @@ span#send-email-for-designer-done {
 	display:block;	
 }
 #das-nav li ul {
-	display: none;
 	height: auto;
-	min-width: 165px;	
+	min-width: 160px;	
 	z-index: 5000;
 	padding-top:15px;
 	position:absolute;
@@ -952,7 +951,8 @@ span#send-email-for-designer-done {
 	-moz-box-shadow: 2px 2px 11px #323232;
 	-webkit-box-shadow: 2px 2px 11px #323232;
 	list-style-type: none;
-	line-height:inherit;
+	line-height: inherit;
+	display: none;
 }
 #das-nav ul li {
 	line-height: 22px;

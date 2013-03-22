@@ -1,16 +1,16 @@
 === Design Approval System ===
 Contributors: slickremix
-Tags: project, project board, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links,  
+Tags: project, project board, login, user login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links,  
 Requires at least: 3.4.0
-Tested up to: 3.5.0
-Stable tag: 2.8
+Tested up to: 3.5.1
+Stable tag: 2.9
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, or videos approved by clients quickly.
 
 == Description ==
 
-**NEW IN 2.8**: [Project Board](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/). Now clients, projects, & designs are organized on one page! View [Live Example](http://www.slickremix.com/project-board/). Public Project board coming soon, your client will be able to login and see all of there designs.
+**NEW IN 2.9**: [Project Board](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/). Now clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Live Example](http://www.slickremix.com/project-board/). SMTP options now available on setting page. 
 
 Here is a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
@@ -65,7 +65,7 @@ Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval
 = Join us on Facebook! =
 Don't get left behind! Make sure you "Like" our [Facebook](http://www.facebook.com/DesignApprovalSystem) for News, Updates, and Coupons! See our [Facebook](http://www.facebook.com/DesignApprovalSystem) for Details.
 	
-If you would like to create an extension or theme for our plugin we would be happy to review it! Please contact us for more info.
+If you would like to become apart of our team and help develop and make money check out this [page](http://www.slickremix.com/join-slickremix/).
 
   **DISClAIMER:** SlickRemix **DOES NOT** code for IE. If it works awesome, if not we highly suggest one of the following modern browsers: [Google Chrome](https://www.google.com/intl/en/chrome/browser/), [Safari](http://www.apple.com/safari/) or [Firefox](http://www.mozilla.org/en-US/firefox/).
    
@@ -75,6 +75,15 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 == Changelog ==
 
+= Version 2.9 / March 22, 2013 =
+ * MAJOR UPDATE!
+ * NEW: Clients can login to view there designs. Simply make a wordpress user for them. Once they login they will see the DAS menu with Project Board.
+ * NEW: SMTP options are now available on the settings page. Hopefully this will solve a lot of email problems on servers that don't like sendmail. We have updated to the newest versions of class.phpmailer.php and jquery.forms.js for more flexibility and security.
+ * FIX: Misc. CSS fixes for desktop and mobile on project board and default template.
+ * FIX: Clean Theme now shows Version number in subject for the Approval option.
+ * IMPORTANT: You MUST update your Client Changes premium plugin as well if you have purchased it. Updated version should be 1.4
+ * NOTE: We are still looking into child theme issues and themes that don't follow general theme structures. If you are having problems please reffer to our forum for help. Quite of few people have figured out work arounds.
+ 
 = Version 2.8 / January 22, 2013 =
  * NEW: Project Board Page. Now your design posts are all organized.
  * FIX: Default Template now has the_content instead of get_the_content. Now shortcodes will work.  
@@ -198,3 +207,4 @@ If you have more questions or would like to view other users questions please vi
 9. Example of our Project Board Page. This organizes your client projects and designs. At the end of each project row is the number of versions for that project. See the [Full Project Board Tutorial](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/) Here.
 10. Simply click on one of the project rows and watch your version(s) slide into view. You can also hover your mouse over the thumbnail to reveal more options.
 11. Clicking the details link in the thumbnail will reveal all the design details. If you have client notes they will be added as well. If you don't have then or designer notes that area simply will be hidden.
+11. Create a user for your clients in wordpress like normal, and add there company for the Name and there project board will appear for them once they login as depicted in the photo.

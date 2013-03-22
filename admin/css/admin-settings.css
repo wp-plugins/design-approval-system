@@ -505,10 +505,11 @@ a.das-debug-report {
 	margin-right: 20px;
 	min-width: 673px;
 }
-.project-board-header {
+h2.project-board-header {
      background: url(../images/das-project-icon.png) 0 7px no-repeat !important;
+	 background-size:50px 36px !important;
      color: #CC0303 !important;
-	font-size: 30px !important;
+	font-size: 32px !important;
 	margin: 5px 25px 15px 0 !important;
 	letter-spacing: -1px !important;
 	height: 30px !important;
@@ -532,6 +533,8 @@ a.das-debug-report {
 	padding: 12px 0 0 34px;
 	background: url(../images/das-project-client-icon.png) 0 8px no-repeat;
 	background-size:25px 29px;
+	font-family:arial;
+	line-height:.7em;
 }
 .das-project-admin-wrap h3 {
 	color: #21759B !important;
@@ -731,6 +734,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d6d6d', end
 .project-large-thumbnail img {
        
 }
+.pb-logged-out-link {
+	padding:10px 22px 10px 10px !important;	
+}
  @keyframes fade {
  from {
 opacity: 1.0;
@@ -752,4 +758,34 @@ opacity: 0.5;
 to {
 	opacity: 1.0;
 }
+}
+.smpt-form-wrap {
+     margin:15px 20px 30px 20px; 
+}
+.checkbox-input {
+     margin-top:10px !important;   
+}
+.checkbox-label {
+     margin-top:18px !important;   
+}
+#das-settings-smtp {
+     width:17px;   
+}
+.das-smtp-custom {
+     margin-bottom:5px;   
+}
+.smpt-form-wrap label {
+     width:30%;
+     text-align:right;
+     margin-top:2px;
+     line-height:15px;
+     padding:5px;
+     display:inline-block;
+     
+}
+.smpt-form-wrap input {
+     width:50%;
+     margin-top:15px;
+     padding:10px;
+     display:inline-block;  
 }
