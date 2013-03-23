@@ -3,14 +3,14 @@ Contributors: slickremix
 Tags: project, project board, login, user login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links 
 Requires at least: 3.4.0
 Tested up to: 3.5.1
-Stable tag: 2.9
+Stable tag: 3.0
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, or videos approved by clients quickly.
 
 == Description ==
 
-**NEW IN 2.9**: [Project Board](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/). Now clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Live Example](http://www.slickremix.com/project-board/). SMTP options now available on the settings page. 
+**NEW IN 3.0**: [Project Board](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/). Now clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Live Example](http://www.slickremix.com/project-board/). SMTP options now available on the settings page. 
 
 Here's a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
@@ -74,6 +74,9 @@ If you would like to become apart of our team and help develop and make money ch
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Changelog ==
+
+= Version 3.0 / March 23, 2013 =
+ * MAJOR FIX! Missing SMTP Files. Please Upgrade to 3.0 and your sendmail and SMTP will work.
 
 = Version 2.9 / March 22, 2013 =
  * MAJOR UPDATE!
