@@ -47,7 +47,7 @@ Here is what you, the clients, and the plugin can do:
 Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval-system-extensions) and step up your game even more.
   
 = SUPPORT FORUM =
-  * Having problems, or possibly looking to extend our plugin to fit your needs? You can find answers to your questions or drop us a line at our [Support Forum](http://www.slickremix.com/support-forum).
+  * Having problems, or possibly looking to extend our plugin to fit your needs? You can find answers to your questions or drop us a line at our [Support Forum](http://www.slickremix.com/free-and-premium-support/).
 
 = SLICK DAS TIPS =
   1. [HOW TO CHANGE the Background Color of your Design Post?](http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)
@@ -184,7 +184,7 @@ IMPORTANT: Please be sure to let your clients know that for the first design ema
 
 = Do you offer support? = 
 
-Yes, if you are having problems, or possibly looking to extend our plugin to customize your needs? You can find answers to your questions or drop us a line at our [Support Forum](http://www.slickremix.com/support-forum).
+Yes, if you are having problems, or possibly looking to extend our plugin to customize your needs? You can find answers to your questions or drop us a line at our [Support Forum](http://www.slickremix.com/free-and-premium-support/).
 
 = Are there Extensions for this plugin? =
 
@@ -195,7 +195,7 @@ Yes. Currently we have 3 and are working on more! http://www.slickremix.com/prod
 Yes. It's not as hard as it may seem. Once you try it you will see how easy we have made it.  http://www.slickremix.com/category/design-approval-system-tutorials/
 
 
-If you have more questions or would like to view other users questions please visit our support forum at http://www.slickremix.com/support-forum/
+If you have more questions or would like to view other users questions please visit our support forum at http://www.slickremix.com/free-and-premium-support/
 
 == Screenshots ==
 
