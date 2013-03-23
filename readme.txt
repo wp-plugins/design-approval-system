@@ -1,6 +1,6 @@
 === Design Approval System ===
 Contributors: slickremix
-Tags: project, project board, login, user login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links,  
+Tags: project, project board, login, user login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links 
 Requires at least: 3.4.0
 Tested up to: 3.5.1
 Stable tag: 2.9
@@ -65,7 +65,7 @@ Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval
 = Join us on Facebook! =
 Don't get left behind! Make sure you "Like" our [Facebook](http://www.facebook.com/DesignApprovalSystem) for News, Updates, and Coupons! See our [Facebook](http://www.facebook.com/DesignApprovalSystem) for Details.
 	
-If you would like to become apart of our team and help develop and make money check out this [page](http://www.slickremix.com/join-slickremix/).
+If you would like to become apart of our team and help develop and make money check out this [page](http://www.slickremix.com/join-slickremix/) for more details.
 
   **DISClAIMER:** SlickRemix **DOES NOT** code for IE. If it works awesome, if not we highly suggest one of the following modern browsers: [Google Chrome](https://www.google.com/intl/en/chrome/browser/), [Safari](http://www.apple.com/safari/) or [Firefox](http://www.mozilla.org/en-US/firefox/).
    
