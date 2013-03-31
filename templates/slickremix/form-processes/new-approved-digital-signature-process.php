@@ -5,9 +5,10 @@
 <body>
 <?php
 require_once('class.phpmailer.php');
-// Retrieve form data. GET user submitted data using AJAX POST in case user does not support javascript, we'll use POST instead
+// Retrieve form data
 $a1 = ($_GET['a1']) ?$_GET['a1'] : $_POST['a1'];
 $email1 = ($_GET['email1']) ?$_GET['email1'] : $_POST['email1'];
+$designerEmail = ($_GET['designer_email']) ?$_GET['designer_email'] : $_POST['designer_email'];
 $companyname4 = ($_GET['companyname4']) ?$_GET['companyname4'] : $_POST['companyname4'];
 $designtitle = ($_GET['designtitle']) ?$_GET['designtitle'] : $_POST['designtitle'];
 $version4 = ($_GET['version4']) ?$_GET['version4'] : $_POST['version4'];
@@ -132,6 +133,7 @@ $dasSettingsSmtp = get_option( 'das-settings-smtp' );
 	$mail->FromName   = $das_settings_company_name;
 	$mail->From       = $das_settings_company_email;
 	$mail->AddAddress($to_designer, $das_settings_company_name);
+	$mail->AddCC($designerEmail);
 	$mail->Subject  = $subject_designer;
 	$mail->MsgHTML($message_designer);
   }

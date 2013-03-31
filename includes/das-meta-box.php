@@ -21,11 +21,13 @@ $prefix = 'custom_';
 
 if(is_plugin_active('das-roles-extension/das-roles-extension.php')) {
 	$designer_name_type = 'select_designer_name';
+	$designer_email_type = 'select_designer_email';
 	$client_name_type = 'select_client_name';
 	$client_email_type = 'select_client_email';
 }
 else	{
 	$designer_name_type = 'text';
+	$designer_email_type = 'text';
 	$client_name_type = 'text';
 	$client_email_type = 'text';
 }
@@ -33,37 +35,43 @@ else	{
 $custom_meta_fields = array(
 	array(
 		'label'=> "Designer's Name:",
-		'desc'	=> 'Full name of designer on this design/project. (This will be used for signature purposed)',
+		'desc'	=> 'Full name of designer on this project.<br/><small>(This will be used on the design template)</small>',
 		'id'	=> $prefix.'designers_name',
 		'type'	=> $designer_name_type
 	),
 	array(
+		'label'=> "Designer's Email:",
+		'desc'	=> 'Email address of Designer for this project.<br/><small>(Only 1 email address allowed)</small>',
+		'id'	=> $prefix.'designers_email',
+		'type'	=> $designer_email_type
+	),
+	array(
 		'label'=> "Company or Client Name:",
-		'desc'	=> 'Name of Company or Client this design/project is for.',
+		'desc'	=> 'Name of Company or Client this project is for.',
 		'id'	=> $prefix.'client_name',
 		'type'	=> $client_name_type
 	),
 	array(
 		'label'=> "Company or Client Email:",
-		'desc'	=> 'Email address of Company or Client this design/project is for. (Only 1 email address allowed)',
+		'desc'	=> 'Email address of Company or Client this project is for.<br/><small>(Only 1 email address allowed)</small>',
 		'id'	=> $prefix.'clients_email',
 		'type'	=> $client_email_type
 	),
 	array(
 		'label'=> "Project Start and End Date:",
-		'desc'	=> 'When the project will start and end. (Example: 10-15-12 thru 10-20-12)',
+		'desc'	=> 'When the project will start and end.<br/><small>(Example: 10-15-12 thru 10-20-12)</small>',
 		'id'	=> $prefix.'project_start_end',
 		'type'	=> 'text'
 	),
 	array(
-		'label'=> "Name of the Design",
-		'desc'	=> 'The title or name of the design. (Example: Home Page)',
+		'label'=> "Name of the Project:",
+		'desc'	=> 'The title or name of the project.<br/><small>(Example: Home Page)</small>',
 		'id'	=> $prefix.'name_of_design',
 		'type'	=> 'text'
 	),
 	array(
-		'label'=> 'Version of Design',
-		'desc'	=> 'What Version of design is this?',
+		'label'=> 'Version of the Project:',
+		'desc'	=> 'What Version of the project is this?',
 		'id'	=> $prefix.'version_of_design',
 		'type'	=> 'select',
 		'options' => array (
@@ -171,12 +179,12 @@ $custom_meta_fields = array(
 	),
 	array(
 		'label'=> "Designer Notes:",
-		'desc'	=> 'Notes about design or project to the Client',
+		'desc'	=> 'Notes about the project to the client.',
 		'id'	=> $prefix.'designer_notes',
 		'type'	=> 'textarea'
 	),
 	array(
-		'label'=> 'Client Notes On or Off',
+		'label'=> 'Client Notes On or Off:',
 		'desc'	=> 'Make the client notes viewable on the page.',
 		'id'	=> $prefix.'client_notes_on_off',
 		'type'	=> 'select',
@@ -192,8 +200,8 @@ $custom_meta_fields = array(
 		)
 	),
 	array(
-		'label'=> 'Client Notes',
-		'desc'	=> 'Notes from the client about the design.',
+		'label'=> 'Client Notes:',
+		'desc'	=> 'Notes from the client about the project.',
 		'id'	=> $prefix.'client_notes',
 		'type'	=> 'textarea'
 	),
@@ -202,7 +210,7 @@ $custom_meta_fields = array(
 
 if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {
 	$custom_meta_fields[] =	array(
-				'label'=> 'Paid or Not Paid Version',
+				'label'=> 'Paid or Not Paid Version:',
 				'desc'	=> 'Has the next set of design changes been paid for by client? If not select "Not Paid" and the next time the client trys to submit changes they will be notified that they are being charged for additional changes. [If client decides to submit additional changes you will recieve an email letting you know that they have accepted and it will also send them an email confirming this.',
 				'id'	=> $prefix.'paid_not_paid',
 				'type'	=> 'select',
@@ -330,20 +338,29 @@ echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce
 						 echo '<select name="'.$field['id'].'" id="'.$field['id'].'">';
 						 
 						  echo '<option value="">- Please Select Designer -</option>';
-						  $client_roles = get_option('das-settings-designer-role');
-						  $client_users_name = get_users('blog_id=1&orderby=display_name&role='.$client_roles.'');			  
+						  $designer_roles = get_option('das-settings-designer-role');
+						  $designer_users_name = get_users('blog_id=1&orderby=display_name&role='.$designer_roles.'');			  
 					
-							foreach ($client_users_name as $user) {
-								$clients_name = $user->display_name;
-								$clients_email = $user->user_email;
-								$row = $clients_name;
+							foreach ($designer_users_name as $user) {
+								$designer_name = $user->display_name;
+								$designer_email = $user->user_email;
+								$row = $designer_name;
 								  
-									echo '<option value="'.$row.'"', $meta == $row ? 'selected="selected"':'','>'.$row.'</option>';
+									echo '<option value="'.$row.'"', $meta == $row ? 'selected="selected"':'','>'.$row.' ['.$designer_email.'] </option>';
 							}
 					
 						  echo '</select><br /><span class="description">'.$field['desc'].'</span>';
 						  
 					break;
+					
+					// Client Email
+					case 'select_designer_email':
+
+						echo '<input type="text" name="'.$field['id'].'" id="'.$field['id'].'" value="'.$meta.'" size="30" />
+							<br /><span class="description">'.$field['desc'].'</span>';
+					break;
+					
+					
 					
 					// Client Name
 					case 'select_client_name':
@@ -405,7 +422,29 @@ global $post_type;
 						  }
 						// then display it in the following class	
 						jQuery("#custom_clients_email").val(submatch);
+						
 					})
+					
+					
+						
+						// This selector is called every time a select box is changed
+					jQuery("select#custom_designers_name").change(function(){
+						// varible to hold string
+						var str = "";
+						var finalString = "";
+						jQuery("select#custom_designers_name option:selected").each(function(){
+							// when the select box is changed, we add the value text to the varible
+							str += jQuery(this).text() + " ";
+						   
+						});
+						 var matches = str.match(/\[(.*?)\]/);
+						  if (matches) {
+							  var submatch = matches[1];
+						  }
+						// then display it in the following class	
+						jQuery("#custom_designers_email").val(submatch);
+						
+						})
 		  <?php } ?>
 			
 		  });
