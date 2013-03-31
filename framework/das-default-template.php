@@ -146,6 +146,7 @@ echo '</ul>';
             <label>Digital Signature:</label>
             <br/>
             <input type="text" name="a1"/>
+            <input type="hidden" name="designer_email" class="design-client-email" value="<?php echo get_post_meta($post->ID, 'custom_designers_email', true); ?>" />
             <input type="hidden" value="<?php echo get_permalink() ?>" name="designtitle" />
             <input type="hidden" value="<?php echo get_post_meta($post->ID, 'custom_name_of_design', true); ?>" name="customNameOfDesign" />
             <input type="hidden" value="<?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?>" name="version4"  />
@@ -205,6 +206,7 @@ echo '</ul>';
             }?>
           <form class="myform" id="sendEmailforDesigner" method="post" action="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/form-processes/new-email-for-designer-process.php" name="sendEmailforDesigner">
             <input type="hidden" value="<?php echo get_post_meta($post->ID, 'custom_name_of_design', true); ?>" name="customNameOfDesign" />
+            <input type="hidden" name="designer_email" class="design-client-email" value="<?php echo get_post_meta($post->ID, 'custom_designers_email', true); ?>" />
             <input type="hidden" name="email4" class="design-client-email" value="<?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?>" />
             <input type="hidden" name="companyname4" class="design-client-email" value="<?php echo get_post_meta($post->ID, 'custom_client_name', true); ?>" />
             <input type="hidden" name="version4" class="design-client-email" value="<?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?>" />
