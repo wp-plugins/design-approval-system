@@ -12,7 +12,7 @@ A system to streamline the process of getting designs, photos, or videos approve
 
 **NEW IN 3.1**: [Project Board](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/). Now clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Live Example](http://www.slickremix.com/project-board/). SMTP options now available on the settings page, and Designers can now add there email to a design post to also receive email notifications.
 
-**Just launched** [wpdas.com](http://www.wpdas.com). Don't want to set it all up, we will do all the work?!
+**NOW LAUNCHED**  Don't want to set it all up or worry about plugin conflicts on your personal website? Let us do all the work! Get an account on [wpdas.com](http://www.wpdas.com). 
 
 Here is a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
