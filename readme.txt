@@ -14,13 +14,13 @@ A system to streamline the process of getting designs, photos, or videos approve
 
 **NOW LAUNCHED**  Don't want to set it all up or worry about plugin conflicts on your personal website? Let us do all the work! Get an account on [wpdas.com](http://www.wpdas.com). 
 
-Here is a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
+Here's a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
 View a full tutorial about our [Design Approval System plugin and Client Changes Extension](http://youtu.be/pYdF2OJCOv4): 
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
 
-Here is what you, the clients, and the plugin can do:
+Here's what you, the clients, and the plugin can do:
 
 = YOU (THE DESIGNER) CAN… =
   * With the click of a button you can send the design’s review link to a client for approval. (An automatic confirmation email will be sent to both parties.)
@@ -154,8 +154,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 = Version 1.5 =
  * Fixed: Duplicated page in template file.
 
-= Version 1.4 =
- * MAJOR FIX - Fixed: Javascript on design post page NOW working. (ATTENTION EVERYONE - THIS UPDATE is NEEDED for DAS plugin to work PROPERLY! ALL Previous versions have NOT been working!)
+= Version 1.4 = * MAJOR FIX - Fixed: Javascript on design post page NOW working. (ATTENTION EVERYONE - THIS UPDATE is NEEDED for DAS plugin to work PROPERLY! ALL Previous versions have NOT been working!)
  * MAJOR FIX - Fixed: Versions menu to work.
  * Added: "Designer's Name" field back into post backend.
  * Fixed: updated screen shots on settings page to match correct text.
