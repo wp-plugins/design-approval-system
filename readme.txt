@@ -14,13 +14,13 @@ A system to streamline the process of getting designs, photos, or videos approve
 
 **NOW LAUNCHED**  Don't want to set it all up or worry about plugin conflicts on your personal website? Let us do all the work! Get an account on [wpdas.com](http://www.wpdas.com). 
 
-Here is a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
+Here's a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
 View a full tutorial about our [Design Approval System plugin and Client Changes Extension](http://youtu.be/pYdF2OJCOv4): 
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
 
-Here is what you, the clients, and the plugin can do:
+Here's what you, the clients, and the plugin can do:
 
 = YOU (THE DESIGNER) CAN… =
   * With the click of a button you can send the design’s review link to a client for approval. (An automatic confirmation email will be sent to both parties.)
