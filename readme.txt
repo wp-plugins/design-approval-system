@@ -224,7 +224,7 @@ If you have more questions or would like to view other users questions please vi
 == Screenshots ==
 
 1. This is the settings area for the Design Approval System. Many options to customize the emails that go to your client and you!
-2. Example of what your custom post page looks like for the Design Approval System.
+2. Example of what making a new design page looks like for your client to see on the Design Approval System.
 3. Here is an example of the theme page that will showcase your design examples. This is a theme so you can feel free to edit the CSS/HTML to your liking too.
 4. Here you can see your notes, client notes... Client can approve the design, and if you have purchased our Changes Extension, the client will be able to make notes on the same page... When submitted you and your client will get the changes. You can buy that extension here. http://www.slickremix.com/product/client-changes-extension/
 5. Example of the drop down showing the different design versions.
