@@ -233,8 +233,8 @@ If you have more questions or would like to view other users questions please vi
 8. This message will fade in and out once your client types in their name and clicks submit.
 9. Example of our Project Board Page. This organizes your client projects and designs. At the end of each project row is the number of versions for that project. The STARS mean a client has approved that design. See the [Full Project Board Tutorial](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/) Here.
 10. Simply click on one of the project rows and watch your version(s) slide into view. You can also hover your mouse over the thumbnail to reveal more options.
-11. Clicking the details link in the thumbnail will reveal all the design details. If you have client notes they will be added as well. If you don't have then or designer notes that area simply will be hidden.
-12. Create a Das-Client user for your clients in wordpress, and add there client email on there designs and they'll appear for them once they login as depicted in the photo.
+11. Clicking the details link on the thumbnail will show you the design details. If your client has added comments then they will be appear as well.
+12. Create a Das-Client user for your clients in wordpress, and add your clients email on the designs you make and they'll appear for your client once they login as depicted in the photo.
 13. We also have a Walk-Through to really help speed things along. This will explain what each menu item is for and give you a 3 step process to create your project board.
 14. The second step of the walk through just so you can see how easy we're trying to make this.
 15. This is an example of the client changes extension. If you need the option for your client to be able to make comments on your designs, this extension is what you need. It automatically makes an update to the page for the client to see his/her comments without refreshing the page too, once the client has submitted the form. And it also sends an email to you, the designer and the client letting them know about the design comments.
