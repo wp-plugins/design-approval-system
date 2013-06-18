@@ -3,12 +3,6 @@
 	This is file is for creating the options page for Wordpress's backend
 */
 
-//Adds setting page to DAS sub menu
-add_action('admin_menu', 'register_das_settings_submenu_page');
-
-function register_das_settings_submenu_page() {
-	add_submenu_page( 'edit.php?post_type=designapprovalsystem', 'Design Approval System Settings', 'Settings', 'manage_options', 'design-approval-system-settings-page', 'das_settings_page' ); 
-}
 //Adds upload button and script to setting page
 function das_settings_admin_scripts() {
 	wp_enqueue_script('media-upload');
@@ -233,5 +227,8 @@ else	{
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <?php
+
+	include('walkthrough/walkthrough.php');	
+
 }
 ?>
