@@ -199,13 +199,9 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 == Frequently Asked Questions ==
 
-= When I install the extension the DAS plugin disappears from the plugins area, whats wrong? =
-
-We are still debugging this issue. Please just re-install and activate DAS plugin. Your DAS posts/settings should stay intact. 
-
 = My client and I are not getting the emails? =
 
-IMPORTANT: Please be sure to let your clients know that for the first design emails you send they will most likely have to look in their Spam/Trash! After they find it they will need to mark it as "not spam".
+IMPORTANT: Please be sure to let your clients know that usually the first design email you send will most likely end up in their Spam/Trash! After they find have your client mark it as "not spam".
 
 = Do you offer support? = 
 
@@ -217,7 +213,7 @@ Yes. Currently we have 4 and are working on more! http://www.slickremix.com/prod
  
 = This plugin seems like it may be complex. Are there tutorials for the plugin? = 
 
-Yes. It's not as hard as it may seem. Once you try it you will see how easy we have made it.  http://www.slickremix.com/category/design-approval-system-tutorials/
+Yes. It's not as hard as it may seem. Once you try it you will see how easy we have made it. And now with our new Walk-Through getting up and going could not be easier.  http://www.slickremix.com/category/design-approval-system-tutorials/
 
 
 If you have more questions or would like to view other users questions please visit our support forum at http://www.slickremix.com/free-and-premium-support/
