@@ -27,7 +27,7 @@ function das_settings_page() {
 <div class="das-settings-admin-wrap">
   <h2>Design Approval System Settings</h2>
   <a class="buy-extensions-btn" href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank">Get Extensions Here!</a>
-  <div class="use-of-plugin">Please fill out the settings below. If you don't understand what a field is for please click question mark at end of label.</div>
+  <div class="use-of-plugin">Please fill out the settings below. If you don't understand what a field is for click the question mark next to that title.</div>
   <h3>COMPANY INFO</h3>
   <form method="post" class="das-settings-admin-form" action="options.php">
     <?php wp_nonce_field('update-options'); ?>
@@ -132,8 +132,8 @@ else	{
     <!--/das-settings-admin-input-wrap-->
     
     <h3>Approved Digital Signature Email and Popup Message</h3>
-    <div class="subtext-of-title">These settings are for the email to  you, the designer, letting you know the client has approved the design. <br/>
-      It also Includes a confirmation email to your Client too.</div>
+    <div class="subtext-of-title">These settings are for the email to you, the designer, letting you know the client has approved the design. <br/>
+      It also includes a confirmation email to your Client too.</div>
     <div class="das-settings-admin-input-wrap">
       <div class="das-settings-admin-input-label">Message to Designer (optional): <a class="question5">?</a></div>
       <textarea name="das-settings-approved-dig-sig-message-to-designer" class="das-settings-admin-input" type="text" id="das-settings-approved-dig-sig-message-to-designer"><?php echo get_option('das-settings-approved-dig-sig-message-to-designer'); ?></textarea>

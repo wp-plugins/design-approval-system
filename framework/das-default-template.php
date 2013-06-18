@@ -214,7 +214,7 @@ echo '</ul>';
 <div class="designers-notes-backg">
   <div class="designers-notes-wrap">
     <div class="designers-notes-content-left-wrap">
-      <div class="designers-notes-tab">Designers Notes</div>
+      <div class="designers-notes-tab">Designer's Notes</div>
       <br class="clear"/>
       <div class="designers-notes-content-left">
         <div class="designer-notes-text">

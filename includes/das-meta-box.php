@@ -201,13 +201,13 @@ $custom_meta_fields = array(
 	),
 	array(
 		'label'=> 'Client Notes:',
-		'desc'	=> 'Notes from the client about the project. When a client submits comments on the design page they will show up here automatically, If you have the client changes premium extension installed.',
+		'desc'	=> 'Notes from the client about the project. When a client submits comments on the design page they will show up here automatically, if you have the client changes premium extension installed.',
 		'id'	=> $prefix.'client_notes',
 		'type'	=> 'textarea'
 	),
 	array(
 		'label'=> 'Design Approved:',
-		'desc'	=> "Did the client approve this version? If Yes, a STAR will appear for that project & version on your Project Board. This option will automatically change to 'Yes' if a client submits there signature, but you can change it manually if you like. Once this option is set to 'Yes' your client will not be able to approve this project version from the front end.",
+		'desc'	=> "Did the client approve this version? If Yes, a STAR will appear for that project & version on your Project Board. This option will automatically change to 'Yes' if a client submits their signature, but you can change it manually if you like. Once this option is set to 'Yes' your client will not be able to approve this project version from the front end.",
 		'id'	=> $prefix.'client_approved',
 		'type'	=> 'select',
 		'options' => array (
