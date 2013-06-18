@@ -6,7 +6,7 @@ Tested up to: 3.5.1
 Stable tag: 3.2
 License: GPLv2 or later
 
-A system to streamline the process of getting designs, photos, videos or music approved by clients quickly.
+A system to streamline the process of getting designs, photos, documents, videos or music approved by clients quickly.
 
 == Description ==
 
