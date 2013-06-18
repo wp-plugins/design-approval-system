@@ -61,9 +61,9 @@ Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval
   4. [And More!](http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)         
 
 = THEMES AND EXTENSIONS =
-  1. [NEW! Select User and Email Extension](http://www.slickremix.com/product/client-changes-extension)
-  2. [NEW! Design Login Extension](http://www.slickremix.com/product/design-login-das-extension)
-  3. [NEW! All Extensions and Theme Bundle](http://www.slickremix.com/product/das-extensions-bundle)
+  1. [Select User and Email Extension](http://www.slickremix.com/product/client-changes-extension)
+  2. [Design Login Extension](http://www.slickremix.com/product/design-login-das-extension)
+  3. [All Extensions and Theme Bundle](http://www.slickremix.com/product/das-extensions-bundle)
   4. [Clean Theme](http://www.slickremix.com/product/clean-theme-for-design-approval-system)
   5. [Client Changes Extension](http://www.slickremix.com/product/client-changes-extension)
   
