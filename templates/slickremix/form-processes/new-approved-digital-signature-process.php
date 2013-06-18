@@ -6,7 +6,10 @@
 <?php
 require_once('class.phpmailer.php');
 // Retrieve form data
-$a1 = ($_GET['a1']) ?$_GET['a1'] : $_POST['a1'];
+$custom_client_approved_signature = ($_GET['custom_client_approved_signature']) ?$_GET['custom_client_approved_signature'] : $_POST['custom_client_approved_signature'];
+// Submit Yes to create approved design stars for project board
+$submitApprovedYes = ($_GET['submitApprovedYes']) ?$_GET['submitApprovedYes'] : $_POST['submitApprovedYes'];
+
 $email1 = ($_GET['email1']) ?$_GET['email1'] : $_POST['email1'];
 $designerEmail = ($_GET['designer_email']) ?$_GET['designer_email'] : $_POST['designer_email'];
 $companyname4 = ($_GET['companyname4']) ?$_GET['companyname4'] : $_POST['companyname4'];
@@ -38,11 +41,9 @@ input.hightlight1, input.hightlight2, input.hightlight3  {
 //flag to indicate which method it uses. If POST set it to 1
 if ($_POST) $post=1;
 
-//Simple server side validation for POST data, of course, you should validate the email
-if (!$a1) {$errors[count($errors)] = 'Please enter your Digital Signature.'; ?>jQuery("input[name=a1]").addClass('hightlight1');jQuery(".error-message").addClass('error');
-<?}else{?>jQuery("input[name=a1]").removeClass('hightlight1');jQuery(".error-message").removeClass('error');<?}
-
-
+//Simple server side validation for POST data, of course, you should validate the email. , This part really is not needed as the process has shifted more on my_dasChecker.js We'll update this change next version. SRL 6-15-13
+if (!$custom_client_approved_signature) {$errors[count($errors)] = 'Please enter your Digital Signature.'; ?>jQuery("input[name=custom_client_approved_signature]").addClass('hightlight1');jQuery(".error-message").addClass('error');
+<?}else{?>jQuery("input[name=custom_client_approved_signature]").removeClass('hightlight1');jQuery(".error-message").removeClass('error');<?}
 if (!$human1 ['human1'] == '') {$errors[count($errors)] = 'It appears you may be trying to submit spam. Please disreguard this notice and try again if we made a mistake.'; }
 
 //if the errors array is empty, send the mail
@@ -70,9 +71,9 @@ if (!$errors) {
 	$message_designer = nl2br(''.$das_settings_approved_dig_sig_message_to_designer.'
 	
 	From: ' . $email1 . '
-	Digital Signature: ' . $a1 . '
+	Digital Signature: ' . $custom_client_approved_signature . '
 	
-	Design Approved: ' . $designtitle.'
+	Design Approved, '. $submitApprovedYes . ': ' . $designtitle.'
 	
 	');
 	
@@ -90,9 +91,9 @@ if (!$errors) {
 	$message_client = nl2br(''.$das_settings_approved_dig_sig_message_to_clients.'
 	
 	From: ' . $email1 . '
-	Digital Signature: ' . $a1 . '
+	Digital Signature: ' . $custom_client_approved_signature . '
 	
-	Design Approved: ' . $designtitle.'
+	Design Approved, '. $submitApprovedYes . ': ' . $designtitle.'
 	
   	Sincerely,
 	'.$das_settings_company_name.'
@@ -148,16 +149,21 @@ $dasSettingsSmtp = get_option( 'das-settings-smtp' );
   }
   
   if(!$myresult = $mail->Send()) {
+	  
 	
   } else {
   }
 }
 	
+
+
 	//if POST was used, display the message straight away
 	?>
-<script language="JavaScript">jQuery(document).ready(function(){<?
+    <script language='JavaScript'>jQuery(document).ready(function(){
+<?php
 	if ($_POST) {
-		if ($myresult) echo "
+		if ($myresult) 
+					echo "
 					jQuery('.approved-form-wrap').fadeOut();
 					
 					setTimeout (function(){
@@ -166,9 +172,10 @@ $dasSettingsSmtp = get_option( 'das-settings-smtp' );
 					
 					setTimeout (function(){
 					//show the success message and the thank-you message
-					jQuery('.approved-thankyou-form-wrap,.pop-up-backg').fadeOut(400); },4000);
+					jQuery('.approved-thankyou-form-wrap, .pop-up-backg').fadeOut(400); },4000);
 					
-					";
+					";  
+					
 		else echo "alert('".$mail->ErrorInfo."');";
 
 		

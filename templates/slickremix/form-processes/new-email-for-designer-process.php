@@ -23,9 +23,6 @@ $das_settings_company_email = ($_GET['dasSettingsCompanyEmail']) ?$_GET['dasSett
 $das_settings_email_for_designers_message_to_clients = ($_GET['dasSettingsEmailForDesignersMessageToClients']) ?$_GET['dasSettingsEmailForDesignersMessageToClients'] : $_POST['dasSettingsEmailForDesignersMessageToClients'];
 
 ?>
-<style type="text/css">
- /* if we had styles to define for error messages we would do it here */
-</style>
 <script language="JavaScript"><?
 
 //flag to indicate which method it uses. If POST set it to 1

@@ -285,6 +285,12 @@ a.close {
 }
 .design-request-form-wrap a.close {
 	margin: 5px 0 0 3px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 a:hover.close {
 	color: #CCC;
@@ -320,7 +326,7 @@ a:hover {
 	-moz-transition: all 0.30s ease-in-out;
 	-o-transition: all 0.30s ease-in-out;
 	transition: all 0.30s ease-in-out;
-    }
+}
 /*moz hack */
 .color-dark-grey {
 	color: #979797;
@@ -414,7 +420,7 @@ a.hide-notes, a.versions, a.logout-btn {
 a:hover.version-tab {
 	color: #1295DA;
 }
-a:hover.hide-notes, a:hover.versions, a:hover.logout-btn  {
+a:hover.hide-notes, a:hover.versions, a:hover.logout-btn {
 	color: #1295DA;
 }
 a.project-timeline {
@@ -517,7 +523,7 @@ a:hover.project-timeline {
 .changes-wrap {
 	border-top: 1px solid #3D3C3D;
 }
-.desginers-notes-tab {
+.designers-notes-tab {
 	height: 28px;
 	background-color: #323232;
 	color: #0095da;
@@ -526,7 +532,7 @@ a:hover.project-timeline {
 	float: left;
 	padding: 9px 16px 0 16px;
 }
-.desginers-options-tab {
+.designers-options-tab {
 	height: 28px;
 	background-color: #323232;
 	color: #FFFFFF;
@@ -534,7 +540,7 @@ a:hover.project-timeline {
 	float: left;
 	padding: 9px 16px 0 16px;
 }
-.desginers-notes-backg {
+.designers-notes-backg {
 	background: url(../images/designer-notes-backg.jpg) repeat-x;
 	height: auto;
 	border-bottom: 21px solid #323232;
@@ -568,7 +574,7 @@ a:hover.design-option-btn {
 	float: right;
 }
 /*===============================================================
-	status-Approcoved FORM
+	status-Approved FORM
 ================================================================*/
 .approved-form-wrap {
 	background-color: #100f0f !important;
@@ -615,18 +621,18 @@ a:hover.design-option-btn {
 	margin-right: 2px;
 	outline: none;
 	border: none;
+	border-radius: 0px;
 	-webkit-border-top-left-radius: .3em;
 	-webkit-border-bottom-left-radius: .3em;
 	-moz-border-radius-topleft: .3em;
 	-moz-border-radius-bottomleft: .3em;
 }
-.label-digital-signature input.submit-signature {
+.label-digital-signature .submit-signature {
 	color: #e0e2e3 !important;
 	background-color: #403d3d;
 	display: inline-block !important;
 	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
 	width: auto !important;
-	height: auto !important;
  *display: inline !important;
 	vertical-align: baseline !important;
 	margin: 0 auto !important;
@@ -634,8 +640,10 @@ a:hover.design-option-btn {
 	cursor: pointer !important;
 	text-align: center !important;
 	text-decoration: none !important;
-	font-size: 14px !important;
-	padding: 14px 17px 13px 17px !important;
+	font-size: 13px !important;
+	height: 19px !important;
+	line-height: 21px !important;
+	padding: 8px 17px 10px 17px !important;
 	-webkit-border-top-right-radius: .3em !important;
 	-webkit-border-bottom-right-radius: .3em!important;
 	-moz-border-radius-topright: 0.3em!important;
@@ -675,6 +683,13 @@ a:hover.design-option-btn {
 	padding: 0;
 	color: #999;
 }
+.hightlight1 {
+	background: rgb(255, 255, 190) !important;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
+}
 /*===============================================================
 	status-Design Request FORM
 ================================================================*/
@@ -707,6 +722,12 @@ a:hover.design-option-btn {
 	position: absolute;
 	top: 31px;
 	right: 118px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 .submit-requests:hover {
 	color: #333333;
@@ -714,6 +735,7 @@ a:hover.design-option-btn {
 	background: -webkit-gradient(linear, left top, left bottom, from(#dbdbdb), to(#b6b5b5));
  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#dbdbdb', endColorstr='#b6b5b5');
 	float: right;
+	cursor: pointer;
 }
 .design-requests-area {
 	width: 801px;
@@ -733,16 +755,19 @@ a:hover.design-option-btn {
 	border-bottom: 2px solid #403d3d;
 }
 .requests-wrap {
-	width: 777px;
-	height: 146px;
-	padding: 12px;
+	width: 779px;
+	height: 202px;
+	padding: 5px;
+	margin-top: 6px;
 	float: left;
 	background-color: #403d3d;
+	box-shadow: 0 0 3px #eee;
 }
 .requests-wrap textarea {
 	width: 751px;
-	height: 121px;
+	height: 160px;
 	padding: 12px;
+	font-size: 14px;
 	background-color: #dedbdb;
 }
 #b1 {
@@ -909,15 +934,15 @@ a:hover.cancel-additional-requests {
 	-o-transition: all 0.30s ease-in-out;
 	transition: all 0.30s ease-in-out;
 	text-decoration: none !important;
-	color:#FFF !important;
+	color: #FFF !important;
 }
 .post-edit-link:hover {
-     -webkit-transition: all 0.30s ease-in-out;
+	-webkit-transition: all 0.30s ease-in-out;
 	-moz-transition: all 0.30s ease-in-out;
 	-o-transition: all 0.30s ease-in-out;
 	transition: all 0.30s ease-in-out;
 	text-decoration: none !important;
-	color:#FFF !important;   
+	color: #FFF !important;
 }
 span#send-email-for-designer-done {
 	display: none;
@@ -930,23 +955,23 @@ span#send-email-for-designer-done {
 	Design Page - Drop Down Menu
 ===========================================*/
 #das-nav {
-	list-style:none;
-	margin:0;
-	padding:0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 #das-nav li {
-	position:relative; 
-	float:right;
-	display:block;	
+	position: relative;
+	float: right;
+	display: block;
 }
 #das-nav li ul {
 	height: auto;
-	min-width: 160px;	
+	min-width: 160px;
 	z-index: 5000;
-	padding-top:15px;
-	position:absolute;
-	top:25px;
-	left:-16px;
+	padding-top: 15px;
+	position: absolute;
+	top: 25px;
+	left: -16px;
 	background-color: #323232;
 	-moz-box-shadow: 2px 2px 11px #323232;
 	-webkit-box-shadow: 2px 2px 11px #323232;
@@ -957,17 +982,16 @@ span#send-email-for-designer-done {
 #das-nav ul li {
 	line-height: 22px;
 	border-bottom: 1px solid #333;
-	padding:0;
-	margin:0;
-	
-	display:block;
+	padding: 0;
+	margin: 0;
+	display: block;
 }
 #das-nav ul li a {
 	color: #FFFFFF;
 	font-size: 12px;
 	text-decoration: none;
 	display: block;
-	padding: 10px 30px; 
+	padding: 10px 30px;
 }
 #das-nav ul li a:hover {
 	color: #42B7F8;
@@ -1015,8 +1039,10 @@ span#send-email-for-designer-done {
 	display: none;
 }
 .client-notes h3 {
-	color: #CCC;
-	margin: 25px 0 5px 0;
+	color: #0095da;
+	margin: 25px 0 20px 0;
+	font-size: 16px;
+	line-height: 16px;
 }
 .entry-utility {
 	margin-top: 15px

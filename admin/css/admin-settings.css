@@ -47,32 +47,32 @@
 	font-size: 14px;
 }
 .use-of-plugin {
-	color: #fff;
+	color: rgb(168, 168, 168);
 	font-weight: normal;
 	font-size: 14px;
 	padding-bottom: 8px;
 }
 .subtext-of-title {
-	color: rgb(199, 196, 196);
-	font-weight: bold;
+	color: rgb(199, 196, 196); 
 	margin-bottom: 10px;
+	font-size:12px;
 }
 .das-settings-admin-wrap {
 	width: 900px;
-	background: url(../images/vinyl-backg.jpeg) no-repeat;
-	background-color: #1A1830;
+	background:url(../images/das-settings-back2.png) #000 !important;
 	padding: 15px 25px 0;
-	-webkit-box-shadow: 2px 3px 7px 1px #333;
-	box-shadow: 2px 3px 7px 1px #333;
+	-webkit-box-shadow: 2px 3px 7px 1px rgb(151, 151, 151);
+	box-shadow: 2px 3px 7px 1px rgb(180, 180, 180);
 	-webkit-border-radius: 6px;
 	border-radius: 5px;
 	position: relative;
-	margin-top: 50px;
+	margin-top: 17px;
+	border: 1px solid rgb(202, 202, 202);
 }
 .das-settings-admin-wrap h2 {
-	color: #CD1723;
+	color: rgb(255, 255, 255);
 	font-size: 28px;
-	margin: 17px 0 15px -2px;
+	margin: 15px 0 15px -2px;
 	text-shadow: 1px 1px 3px #000000;
 }
 .das-settings-admin-wrap h3 {
@@ -531,8 +531,8 @@ h2.project-board-header {
 	height: 25px;
 	text-shadow: 0 0px 0px #222;
 	padding: 12px 0 0 34px;
-	background: url(../images/das-project-client-icon.png) 0 8px no-repeat;
-	background-size:25px 29px;
+	background: url(../images/das-project-client-icon.png) 0 9px no-repeat;
+	background-size:24px 27px;
 	font-family:arial;
 	line-height:.7em;
 }
@@ -702,6 +702,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d6d6d', end
 }
 .das-project-list a {
 	text-decoration: none;
+	outline:none;
 }
 .project-notes-backg {
 	height:150px;
@@ -722,6 +723,123 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d6d6d', end
      box-shadow:0 0 3px #aaa;
      margin: 0;
 }
+.das-approved-design {
+     position:absolute;
+     top:163px; 
+     background: url(../images/28-star@2x.png) no-repeat;
+     background-size:18px 18px;
+     height:18px;
+     width:18px; 
+     display:block;
+}
+
+.das-approved-design-title {
+	  float: left;
+	  position: relative;
+	  background: url(../images/28-star@2x.png) no-repeat;
+	  background-size: 18px 18px;
+	  height: 18px;
+	  min-width:18px;
+	  margin-top: 25px;
+	  display: block;
+	  text-align: right;
+	  line-height: 18px;
+}
+.das-approved-design-subtitle {
+	  position: relative;
+	  background: url(../images/28-star@2x.png) no-repeat;
+	  background-size: 18px 18px;
+	  height: 18px;
+	  width: 18px;
+	  display: inline-block;
+	  text-align: right;
+	  line-height: 22px;
+	  margin:0px;
+	  position:absolute;
+	  top:9px;
+	  right:49px;
+	transition-delay: 0.2s;
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+.das-project-admin-wrap h3:hover .das-approved-design-subtitle {
+	  background-size: 20px 20px; 
+	  height: 20px;
+	  width: 20px;
+	  right:47px;
+	  transform:rotate(95deg) scale(.95);
+-ms-transform:rotate(95deg) scale(.95); /* IE 9 */
+-webkit-transform:rotate(95deg) scale(.95); /* Safari and Chrome */;
+	transition-delay: 0.2s;
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+	
+.outer-star {
+     position:absolute;
+     top:-45px;
+     left: -27px; 
+     background: url(../images/28-star@2x.png) no-repeat;
+     background-size:18px 18px;
+     height:18px;
+     width:18px; 
+     display:block !important;
+}
+.das-approved-design span.view-all-articles, .das-approved-design-title span.view-all-articles  {
+	opacity:0;
+	display:block;
+	position:relative;
+	right: 0px;
+	height:17px; 
+	top:25px;
+	text-align:left;
+	color:#FFF;
+	font-weight:normal;
+	letter-spacing:1px;
+	font-size:11px;
+	width:60px;
+	background: rgba(0, 0, 0, 0.6);
+	border-radius:1px;
+	padding:3px 4px 3px 9px;
+	-webkit-transition-delay: 0.2s;
+	-moz-transition-delay: 0.2s;
+	-o-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+} 
+.das-approved-design a.icon-view-all:hover span.view-all-articles, .das-approved-design-title a.icon-view-all:hover span.view-all-articles  {
+	opacity:1;
+	-webkit-transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	-o-transition-delay: 0s;
+	transition-delay: 0s;
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	z-index:10000;
+}
+/* create an arrow that points right */
+.das-approved-design span.arrow-right, .das-approved-design-title span.arrow-right {
+	width:0px; 
+	height:0px; 
+	position:relative;
+	right:5px;
+	bottom:35px;
+	opacity:.8;
+	border-left:5px solid transparent;  /* left arrow slant */
+	border-right:5px solid transparent; /* right arrow slant */
+	border-bottom:5px solid #222; /* bottom, add background color here */
+	font-size:0px;
+	line-height:0px;
+}
 .project-large-thumbnail img {
      width:150px;
      height:150px;  
@@ -730,6 +848,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d6d6d', end
      background: url(../images/no-image-thumb.jpg) no-repeat;
      height:150px;
      width:150px;
+     margin-bottom:3px
 }
 .project-large-thumbnail img {
        

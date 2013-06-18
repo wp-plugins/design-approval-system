@@ -2,16 +2,33 @@
 function das_projects_page() {
 ?>
 <link rel="stylesheet" id="das-settings-admin-css" href="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/css/admin-settings.css" type="text/css" media="all">
-
 <?php
-if (is_admin_logged_in()) {
+global $current_user; get_currentuserinfo();
+										
+$user_id = $current_user->ID;
+$user_blogs = get_blogs_of_user( $user_id );
+
+foreach ($user_blogs AS $user_blog) {
+  if ($user_blog->path == '/'){
+	  # do nothing
+  }
+  else {
+	  
+  $user_blog_id = $user_blog->userblog_id;
+  
+  }
+}
+
+if (current_user_can_for_blog($user_blog_id, 'administrator') || current_user_can_for_blog($user_blog_id, 'das_designer')) {
+
 ?>
+
+
 
 <div class="das-project-admin-wrap">
 <a class="buy-extensions-btn" href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank">Get Extensions Here!</a>
 <h2 class="project-board-header">Project Board</h2>
 <div class="use-of-plugin">Below are your Clients and their Projects: We suggest you use the <a href="http://www.slickremix.com/product/select-user-and-email-extension/" target="_blank">Select User and Email, DAS Extension</a> to make this list work seamlessly. Learn how to use and setup the <a href="http://www.slickremix.com/2013/01/22/das-project-board-tutorial/" target="_blank">Project Board Here</a>. </div>
-
 <?php
 //Custom DAS Post Type
 $post_type = 'designapprovalsystem';
@@ -24,6 +41,7 @@ $client = get_terms( $tax );
 $clients_names = array();
 $term_names = array();
 $post_counts = array();
+$approved_main_designs_count = array();
 
 //Loop to custom taxonomy to build Client and Terms arrays.
 foreach ($client as $term) :
@@ -52,32 +70,38 @@ foreach ($client as $term) :
 		  $clients_names[] = $clients_name;
 		  $term_names[$term->name] = $clients_name;
 		  
-		 			 
-	endwhile; endif;   	
+		  $title_approved_checker = get_post_meta($post->ID, 'custom_client_approved', true);
+		  $approved_main_designs_count[$clients_name][$term->name][] = $title_approved_checker;
+											
+	endwhile; endif;   		
 endforeach;
 //END Build Arrays
  
 //Clean up Clients Array So no duplicate client titles happen.
 $final_clients_names = array_unique($clients_names);
-			
+
 //Start loop for displaying Client Name [Final Build loop]				
 foreach ($final_clients_names as $key => $value) :
+$first_counter = 0;	
 
 //Client Name	
-echo "<h2>".$value."</h2>"; 
+echo '<h2>'.$value.'</h2>'; 
 
 //Client Name value for check.
 $client_value = $value;
 
 $counter = 0;
+
 	//loop for displaying Project Name
 	foreach ($term_names as $key => $value) :
-	  $term_value = $value;
-	
+	  $term_value = $value; 
 	if($client_value == $value) {
-		echo "<h3 class='pb-cat-header'>".$key." <span>".$post_counts[$counter]."</span></h3>";
-	
-		echo "<div class='das-project-list-wrap'>";
+		
+		?>
+<h3 class='pb-cat-header'> <?php echo $key ?>
+  <?php if(in_array("Yes", $approved_main_designs_count[$value][$key])) { echo'<div class="das-approved-design-subtitle"></div>'; } ?>
+  <span><?php echo $post_counts[$counter]; ?></span></h3>
+<?php echo "<div class='das-project-list-wrap'>";
 			echo "<ul class='das-project-list'>";
 		//loop for displaying posts for Project
 		foreach ($client as $term) :
@@ -97,70 +121,80 @@ $counter = 0;
 			 'orderby' => 'name', 
 			 'order' => 'ASC'
 		  );
+		  
+		   
+		   
+			
+		 
+ 
+		  
 		   $my_query = new WP_Query($args);
 		   	 	
 						if( $my_query->have_posts() ) : ?>
-							<?php while ( $my_query->have_posts() ) : $my_query->the_post(); global $post; 
+<?php while ( $my_query->have_posts() ) : $my_query->the_post(); global $post; 
 								
-							 
+							 	
 							 
 								$final_client_value = get_post_meta($post->ID, 'custom_client_name', true);
 								$final_term_value = $term->name;
 								
 								//Design Link creation
 								if(($term_value == $final_client_value) && ($key == $final_term_value)) {?>
-											 <li>
-                                          
-                                             <div class='project-large-thumbnail'>
-											 
-                                              <?php
-													if ( has_post_thumbnail()) {
+<li>
+  <div class='project-large-thumbnail'>
+    <?php if ( has_post_thumbnail()) {
 													   echo the_post_thumbnail('thumbnail');
 													} else {
 													 //do nothing or whatever you need when no custom field or text was found
 													  echo "<div class='pb-no-thumbnail-image'></div>";
-													}
+													} 
+											  ?>
+    <?php 
+											//Check if Design is Approved
+											$approved_check = get_post_meta($post->ID, 'custom_client_approved', true);
+												if ($approved_check == 'Yes'){ 
 												?>
-                                             
-                                             <a href='<?php the_permalink();?>' title='<?php the_title_attribute(); ?>' target="_blank" class='project-list-link'><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?></a>
-                                             </div>	
-                                             
-											<span class="project-notes-entry-utility project-notes-backg"></span>
-                                              
-                                           
-                      
-					 
-                                            <?php global $user_ID; if( $user_ID ) : ?>
-<?php if( current_user_can('level_10') ) : ?>
-
-<?php edit_post_link( __( 'Edit'), '<span class="edit-link project-notes-entry-utility project-notes-edit">', '</span>' ); ?>
-
-<?php else : ?>
-
-<span class="edit-link project-notes-entry-utility project-notes-edit"><a href="<?php the_permalink();?>" target="_blank" title="<?php the_title_attribute(); ?>">View</a></span>
-
-<?php endif; ?>
-<?php endif; ?>
-
-                                            <span class="project-notes-entry-utility project-day-date"><?php the_time('l') ?><br/><?php the_time('F jS, Y') ?></span>
-                                             <span class="project-notes-entry-utility project-notes-show"><a href="#" title="Details">Details</a></span>
-                                              
-
-                <div class="project-notes-wrap">
+    <div class="das-approved-design"><a class="icon-view-all" target="_blank" href="<?php the_permalink();?>"><span class="view-all-articles">Approved<span class="arrow-right"></span></span></a></div>
+    <?php 
+												}
+										 ?>
+    <a href='<?php the_permalink();?>' title='<?php the_title_attribute(); ?>' target="_blank" class='project-list-link'><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?></a> </div>
+  <span class="project-notes-entry-utility project-notes-backg"></span>
+	<?php if( current_user_can_for_blog($user_blog_id, 'administrator') || current_user_can_for_blog($user_blog_id, 'das_designer') ) : ?>
+  <?php edit_post_link( __( 'Edit'), '<span class="edit-link project-notes-entry-utility project-notes-edit">', '</span>' ); ?>
+  <?php else : ?>
+  <span class="edit-link project-notes-entry-utility project-notes-edit"><a href="<?php the_permalink();?>" target="_blank" title="<?php the_title_attribute(); ?>">View</a></span>
+  <?php endif; ?>
+  <span class="project-notes-entry-utility project-day-date">
+  <?php the_time('l') ?>
+  <br/>
+  <?php the_time('F jS, Y') ?>
+  </span> <span class="project-notes-entry-utility project-notes-show"><a href="#" title="Details">Details</a></span>
+  <div class="project-notes-wrap">
+    <div class="project-details-wrap">
+      <div class='project-notes-text-header'>Details</div>
+      <div class='project-notes-detail-text-wrap'> <strong>Post Name:</strong> <a href='<?php the_permalink();?>' target="_blank" title='<?php the_title_attribute(); ?>'>
+        <?php the_title(); ?>
+        </a><br/>
+        <strong><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?></strong><br/>
+        <strong>Design Name</strong>: <?php echo get_post_meta($post->ID, 'custom_name_of_design', true); ?><br/>
+        <strong>Timeline</strong>: <?php echo get_post_meta($post->ID, 'custom_project_start_end', true); ?><br/>
+        <strong>Client Email</strong>: <a href="mailto:<?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?>"><?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?></a><br/>
+        <strong>Designer</strong>: <?php echo get_post_meta($post->ID, 'custom_designers_name', true); ?><br/>
+        <?php 
+			   if(get_post_meta($post->ID, 'custom_client_approved', true) == 'Yes') { ?>
+        <strong>Client Approved</strong>: <span class="custom_client_approved"><?php echo get_post_meta($post->ID, 'custom_client_approved', true); ?><span class="arrow-right"></span></span><br/>
+        <strong>Client Signature</strong>: <span class="custom_client_approved"><?php echo get_post_meta($post->ID, 'custom_client_approved_signature', true); ?><span class="arrow-right"></span></span>
+        <?php }  
+                else {
                 	
-                <div class="project-details-wrap">
-                <div class='project-notes-text-header'>Details</div>
-                 <div class='project-notes-detail-text-wrap'>
-				 <strong>Post Name:</strong> <a href='<?php the_permalink();?>' target="_blank" title='<?php the_title_attribute(); ?>'><?php the_title(); ?></a><br/>
-				 <strong><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?></strong><br/>
-                 <strong>Design Name</strong>: <?php echo get_post_meta($post->ID, 'custom_name_of_design', true); ?><br/>
-                 <strong>Timeline</strong>: <?php echo get_post_meta($post->ID, 'custom_project_start_end', true); ?><br/>
-				 <strong>Client Email</strong>: <a href="mailto:<?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?>"><?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?></a><br/>
-                 <strong>Designer</strong>: <?php echo get_post_meta($post->ID, 'custom_designers_name', true); ?>
-                
-                </div><div class="clear"></div>
-                </div>
-                <?php
+                }
+                ?>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <?php
 					$custom_designer_notes = get_post_meta($post->ID, 'custom_designer_notes', true);
 					if ($custom_designer_notes){
 					   echo "<div class='project-text-header-designer-notes'>Designer Notes</div>";
@@ -171,8 +205,7 @@ $counter = 0;
 					 //do nothing or whatever you need when no custom field or text was found
 					}
 				?>
-                
-				<?php
+    <?php
 					$custom_client_notes = get_post_meta($post->ID, 'custom_client_notes', true);
 					if ($custom_client_notes){
 					   echo "<div class='project-text-header-client-notes'>Client Notes</div>";
@@ -183,11 +216,11 @@ $counter = 0;
 					 //do nothing or whatever you need when no custom field or text was found
 					}
 				?>
-            </div>                                            
-                                             </li>
-								 <?php }
-					    endwhile; endif;   ?>		 
-		<?php endforeach; 
+  </div>
+</li>
+<?php }
+					    endwhile; endif;   ?>
+<?php endforeach; 
 			echo "</ul>";
 		echo "</div>";
 		}
@@ -195,6 +228,8 @@ $counter = 0;
 	endforeach;
 	
 endforeach;
+
+$first_counter++;
 
 
 		  
@@ -202,21 +237,18 @@ endforeach;
 wp_reset_query();
 wp_reset_postdata();
 ?>
-
 <?php
 // this ends the if das user is logged in or not action
 
 } else {
 
 $user = wp_get_current_user();
-$this_users_name = $user->nickname;
+$this_users_email = $user->user_email;
+
 ?>
-
 <div class="das-project-admin-wrap">
-<h2 class="project-board-header">Project Board</h2>
-
-
-<?php
+  <h2 class="project-board-header">Project Board</h2>
+  <?php
 
 //Custom DAS Post Type
 $post_type = 'designapprovalsystem';
@@ -252,26 +284,30 @@ foreach ($client as $term) :
 	 $post_counts[] = $my_query2->post_count;
 	 
 	if( $my_query2->have_posts() ) : 
-	  while ( $my_query2->have_posts() ) : $my_query2->the_post(); global $post;   
-		$clients_name = get_post_meta($post->ID, 'custom_client_name', true);
-		  $clients_names[] = $clients_name;
-		  $term_names[$term->name] = $clients_name;
+	     while ( $my_query2->have_posts() ) : $my_query2->the_post(); global $post;   
+		$clients_email = get_post_meta($post->ID, 'custom_clients_email', true);
+		  $clients_emails[] = $clients_email;
+		  $term_names[$term->name] = $clients_email;
 		  
-		 			 
-	endwhile; endif;   	
+		  $title_approved_checker = get_post_meta($post->ID, 'custom_client_approved', true);
+		  $approved_main_designs_count[$clients_email][$term->name][] = $title_approved_checker;
+											
+	endwhile; endif;   		
 endforeach;
 //END Build Arrays
  
 //Clean up Clients Array So no duplicate client titles happen.
-$final_clients_names = array_unique($clients_names);
+$final_clients_emails = array_unique($clients_emails);
 			
 //Start loop for displaying Client Name [Final Build loop]				
-foreach ($final_clients_names as $key => $value) :
+foreach ($final_clients_emails as $key => $value)  :
 
-if ($value == $this_users_name) {
+if ($value == $this_users_email) {
+	
+
 	
 //Client Name	
-echo "<h2>".$value."</h2>"; 
+echo "<h2>".get_post_meta($post->ID, 'custom_client_name', true)."</h2>"; 
 
 //Client Name value for check.
 $client_value = $value;
@@ -279,12 +315,14 @@ $client_value = $value;
 $counter = 0;
 	//loop for displaying Project Name
 	foreach ($term_names as $key => $value) :
-	  $term_value = $value;
-	
+	  $term_value = $value; 
 	if($client_value == $value) {
-		echo "<h3 class='pb-cat-header'>".$key." <span>".$post_counts[$counter]."</span></h3>";
-	
-		echo "<div class='das-project-list-wrap'>";
+		
+		?>
+<h3 class='pb-cat-header'> <?php echo $key ?>
+  <?php if(in_array("Yes", $approved_main_designs_count[$value][$key])) { echo'<div class="das-approved-design-subtitle"></div>'; } ?>
+  <span><?php echo $post_counts[$counter]; ?></span></h3>
+<?php echo "<div class='das-project-list-wrap'>";
 			echo "<ul class='das-project-list'>";
 		//loop for displaying posts for Project
 		foreach ($client as $term) :
@@ -307,20 +345,17 @@ $counter = 0;
 		   $my_query = new WP_Query($args);
 		   	 	
 						if( $my_query->have_posts() ) : ?>
-							<?php while ( $my_query->have_posts() ) : $my_query->the_post(); global $post; 
+  <?php while ( $my_query->have_posts() ) : $my_query->the_post(); global $post; 
 								
-							 
-							 
-								$final_client_value = get_post_meta($post->ID, 'custom_client_name', true);
+							
+								$final_client_value = get_post_meta($post->ID, 'custom_clients_email', true);
 								$final_term_value = $term->name;
 								
 								//Design Link creation
 								if(($term_value == $final_client_value) && ($key == $final_term_value)) {?>
-											 <li>
-                                          
-                                             <div class='project-large-thumbnail'>
-											 
-                                              <?php
+  <li>
+    <div class='project-large-thumbnail'>
+      <?php
 													if ( has_post_thumbnail()) {
 													   echo the_post_thumbnail('thumbnail');
 													} else {
@@ -328,46 +363,54 @@ $counter = 0;
 													  echo "<div class='pb-no-thumbnail-image'></div>";
 													}
 												?>
-                                             
-                                             <a href='<?php the_permalink();?>' title='<?php the_title_attribute(); ?>' target="_blank" class='project-list-link'><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?></a>
-                                             </div>	
-                                             
-											<span class="project-notes-entry-utility project-notes-backg"></span>
-                                              
-                                           
-                      
-					 
-                                            <?php global $user_ID; if( $user_ID ) : ?>
-<?php if( current_user_can('level_10') ) : ?>
-
-<?php edit_post_link( __( 'Edit'), '<span class="edit-link project-notes-entry-utility project-notes-edit">', '</span>' ); ?>
-
-<?php else : ?>
-
-<span class="edit-link project-notes-entry-utility project-notes-edit"><a href="<?php the_permalink();?>" target="_blank" title="<?php the_title_attribute(); ?>">View</a></span>
-
-<?php endif; ?>
-<?php endif; ?>
-
-                                            <span class="project-notes-entry-utility project-day-date"><?php the_time('l') ?><br/><?php the_time('F jS, Y') ?></span>
-                                             <span class="project-notes-entry-utility project-notes-show"><a href="#" title="Details">Details</a></span>
-                                              
-
-                <div class="project-notes-wrap">
+      <a href='<?php the_permalink();?>' title='<?php the_title_attribute(); ?>' target="_blank" class='project-list-link'><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?></a>
+      <?php 
+											
+											$name = get_post_meta($post->ID, 'custom_client_approved', true);
+												if ($name == 'Yes'){ ?>
+      <div class="das-approved-design"><a class="icon-view-all" target="_blank" href="<?php the_permalink();?>"><span class="view-all-articles">Approved<span class="arrow-right"></span></span></a></div>
+      <?php 
+												} else {
+												 //do nothing or whatever you need when no custom field or text was found
+												}
+										 ?>
+    </div>
+    <span class="project-notes-entry-utility project-notes-backg"></span>
+    <?php if( current_user_can_for_blog($user_blog_id, 'administrator') || current_user_can_for_blog($user_blog_id, 'das_designer') ) : ?>
+    <?php edit_post_link( __( 'Edit'), '<span class="edit-link project-notes-entry-utility project-notes-edit">', '</span>' ); ?>
+    <?php else : ?>
+    <span class="edit-link project-notes-entry-utility project-notes-edit"><a href="<?php the_permalink();?>" target="_blank" title="<?php the_title_attribute(); ?>">View</a></span>
+    <?php endif; ?>
+    <span class="project-notes-entry-utility project-day-date">
+    <?php the_time('l') ?>
+    <br/>
+    <?php the_time('F jS, Y') ?>
+    </span> <span class="project-notes-entry-utility project-notes-show"><a href="#" title="Details">Details</a></span>
+    <div class="project-notes-wrap">
+      <div class="project-details-wrap">
+        <div class='project-notes-text-header'>Details</div>
+        <div class='project-notes-detail-text-wrap'> <strong>Post Name:</strong> <a href='<?php the_permalink();?>' target="_blank" title='<?php the_title_attribute(); ?>'>
+          <?php the_title(); ?>
+          </a><br/>
+          <strong><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?></strong><br/>
+          <strong>Design Name</strong>: <?php echo get_post_meta($post->ID, 'custom_name_of_design', true); ?><br/>
+          <strong>Timeline</strong>: <?php echo get_post_meta($post->ID, 'custom_project_start_end', true); ?><br/>
+          <strong>Client Email</strong>: <a href="mailto:<?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?>"><?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?></a><br/>
+        <strong>Designer</strong>: <?php echo get_post_meta($post->ID, 'custom_designers_name', true); ?><br/>
+         <?php
+		 if(get_post_meta($post->ID, 'custom_client_approved', true) == 'Yes') { ?>
+        <strong>Client Approved</strong>: <span class="custom_client_approved"><?php echo get_post_meta($post->ID, 'custom_client_approved', true); ?><span class="arrow-right"></span></span><br/>
+        <strong>Client Signature</strong>: <span class="custom_client_approved"><?php echo get_post_meta($post->ID, 'custom_client_approved_signature', true); ?><span class="arrow-right"></span></span>
+        <?php }  
+                else {
                 	
-                <div class="project-details-wrap">
-                <div class='project-notes-text-header'>Details</div>
-                 <div class='project-notes-detail-text-wrap'>
-				 <strong>Post Name:</strong> <a href='<?php the_permalink();?>' target="_blank" title='<?php the_title_attribute(); ?>'><?php the_title(); ?></a><br/>
-				 <strong><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?></strong><br/>
-                 <strong>Design Name</strong>: <?php echo get_post_meta($post->ID, 'custom_name_of_design', true); ?><br/>
-                 <strong>Timeline</strong>: <?php echo get_post_meta($post->ID, 'custom_project_start_end', true); ?><br/>
-				 <strong>Client Email</strong>: <a href="mailto:<?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?>"><?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?></a><br/>
-                 <strong>Designer</strong>: <?php echo get_post_meta($post->ID, 'custom_designers_name', true); ?>
-                
-                </div><div class="clear"></div>
-                </div>
-                <?php
+                }
+                ?>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <?php
 					$custom_designer_notes = get_post_meta($post->ID, 'custom_designer_notes', true);
 					if ($custom_designer_notes){
 					   echo "<div class='project-text-header-designer-notes'>Designer Notes</div>";
@@ -378,8 +421,7 @@ $counter = 0;
 					 //do nothing or whatever you need when no custom field or text was found
 					}
 				?>
-                
-				<?php
+      <?php
 					$custom_client_notes = get_post_meta($post->ID, 'custom_client_notes', true);
 					if ($custom_client_notes){
 					   echo "<div class='project-text-header-client-notes'>Client Notes</div>";
@@ -390,27 +432,33 @@ $counter = 0;
 					 //do nothing or whatever you need when no custom field or text was found
 					}
 				?>
-            </div>                                            
-                                             </li>
-								 <?php }
-					    endwhile; endif;   ?>		 
-		<?php endforeach; 
+    </div>
+  </li>
+  <?php }
+					    endwhile; endif;   ?>
+  <?php endforeach; 
 			echo "</ul>";
 		echo "</div>";
 		}
 		$counter++;
 	endforeach;
 }
-
 endforeach;
+$first_counter++;
 
  }
+
+
+
+
+		  
+// Restore original Query & Post Data
+wp_reset_query();
+wp_reset_postdata();
 ?>
-
-<br class="clear"/>
-  <a class="das-settings-admin-slick-logo" href="http://www.slickremix.com" target="_blank"></a> 
-</div><!--/das-help-admin-wrap-->
-
+  <br class="clear"/>
+  <a class="das-settings-admin-slick-logo" href="http://www.slickremix.com" target="_blank"></a> </div>
+<!--/das-help-admin-wrap--> 
 <script type="text/javascript">
 	jQuery(document).ready(function() {
 		jQuery("li").hover(function(){
@@ -435,11 +483,11 @@ endforeach;
         return false;
     });
 	
-		 
-		
 	}); 
-	
 </script>
 <?php
+	if (current_user_can('edit_post')) {
+		include('walkthrough/walkthrough.php');	
+	}
 }
 ?>

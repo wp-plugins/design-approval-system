@@ -35,7 +35,7 @@ else	{
 $custom_meta_fields = array(
 	array(
 		'label'=> "Designer's Name:",
-		'desc'	=> 'Full name of designer on this project.<br/><small>(This will be used on the design template)</small>',
+		'desc'	=> 'Full name of Designer on this project.<br/><small>(This will be used on the design template)</small>',
 		'id'	=> $prefix.'designers_name',
 		'type'	=> $designer_name_type
 	),
@@ -201,17 +201,40 @@ $custom_meta_fields = array(
 	),
 	array(
 		'label'=> 'Client Notes:',
-		'desc'	=> 'Notes from the client about the project.',
+		'desc'	=> 'Notes from the client about the project. When a client submits comments on the design page they will show up here automatically, If you have the client changes premium extension installed.',
 		'id'	=> $prefix.'client_notes',
 		'type'	=> 'textarea'
 	),
+	array(
+		'label'=> 'Design Approved:',
+		'desc'	=> "Did the client approve this version? If Yes, a STAR will appear for that project & version on your Project Board. This option will automatically change to 'Yes' if a client submits there signature, but you can change it manually if you like. Once this option is set to 'Yes' your client will not be able to approve this project version from the front end.",
+		'id'	=> $prefix.'client_approved',
+		'type'	=> 'select',
+		'options' => array (
+			'No' => array (
+				'label' => 'No',
+				'value'	=> 'No'
+			),
+			'Yes' => array (
+				'label' => 'Yes',
+				'value'	=> 'Yes'
+			)
+			
+		)
+	),
+	array(
+		'label'=> 'Client Approved Signature:',
+		'desc'	=> 'If Approved, your clients digital signature will be here.',
+		'id'	=> $prefix.'client_approved_signature',
+		'type'	=> 'text'
+	)
 	
 );
 
 if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {
 	$custom_meta_fields[] =	array(
 				'label'=> 'Paid or Not Paid Version:',
-				'desc'	=> 'Has the next set of design changes been paid for by client? If not select "Not Paid" and the next time the client trys to submit changes they will be notified that they are being charged for additional changes. [If client decides to submit additional changes you will recieve an email letting you know that they have accepted and it will also send them an email confirming this.',
+				'desc'	=> 'Has the next set of design changes been paid for by client? If not select "Not Paid" and the next time the client trys to submit changes they will be notified that they are being charged for additional changes. If a client decides to submit additional changes you will receive an email letting you know that they have accepted, additionally it will send them an email confirming this.',
 				'id'	=> $prefix.'paid_not_paid',
 				'type'	=> 'select',
 				'options' => array (
@@ -229,33 +252,21 @@ if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {
 
 if(is_plugin_active('das-design-login/das-design-login.php')) {
 	$custom_meta_fields[] =	array(
-				'label'=> 'Is login required to view design?',
-				'desc'	=> 'This will make client login using the information you set below in order to see the design.',
+				'label'=> 'Show custom login screen',
+				'desc'	=> 'You must create a user for your client in wordpress to view this design now.',
 				'id'	=> $prefix.'login_no_login',
 				'type'	=> 'select',
 				'options' => array (
-					'one' => array (
-						'label' => 'Yes, Login Required',
-						'value'	=> 'yes-login'
-					),
 					'two' => array (
 						'label' => 'No, Login NOT Required',
 						'value'	=> 'no-login'
+					),
+					'one' => array (
+						'label' => 'Yes, Login Required',
+						'value'	=> 'yes-login'
 					)
 				  )
 				  
-	);
-	$custom_meta_fields[] =	array(
-		'label'=> "Login User Name",
-		'desc'	=> 'The user name for logging into (ONLY) this design. [CASE SENSITIVE]',
-		'id'	=> $prefix.'user_name_of_design',
-		'type'	=> 'text'
-	);
-	$custom_meta_fields[] =	array(
-		'label'=> "Login Password",
-		'desc'	=> 'The password for logging into (ONLY) this design. [CASE SENSITIVE]',
-		'id'	=> $prefix.'password_of_design',
-		'type'	=> 'text'
 	);
 }
 
@@ -265,6 +276,7 @@ function show_custom_das_meta_box() {
 global $custom_meta_fields, $post;
 // Use nonce for verification
 echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';
+	
 	
 	// Begin the field table and loop
 	echo '<table class="form-table">';

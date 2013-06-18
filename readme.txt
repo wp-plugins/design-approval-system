@@ -3,24 +3,23 @@ Contributors: slickremix
 Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links 
 Requires at least: 3.4.0
 Tested up to: 3.5.1
-Stable tag: 3.1
+Stable tag: 3.2
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, or videos approved by clients quickly.
 
 == Description ==
 
-**NEW IN 3.1**: [Project Board](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/). Now clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Live Example](http://www.slickremix.com/project-board/). SMTP options now available on the settings page, and Designers can now add there email to a design post to also receive email notifications.
-
-**NOW LAUNCHED**  Don't want to set it all up or worry about plugin conflicts on your personal website? Let us do all the work! Get an account on [wpdas.com](http://www.wpdas.com). 
-
-Here is a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
+**NEW IN 3.2**: Approved designs now get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/). Clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Live Example](http://www.slickremix.com/project-board/). 
+Here's a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
-View a full tutorial about our [Design Approval System plugin and Client Changes Extension](http://youtu.be/pYdF2OJCOv4): 
+If you have an idea please don't hesitate to [email us @ info@slickremix.com](mailto:info@slickremix.com). We could not do this without everyones help. We want to make the Design Approval System the best and quickest way to get projects approved on the web.
+
+View the full tutorial about our [Design Approval System plugin and Client Changes Extension](http://youtu.be/pYdF2OJCOv4): 
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
 
-Here is what you, the clients, and the plugin can do:
+Here's what you, the clients, and the plugin can do:
 
 = YOU (THE DESIGNER) CAN… =
   * With the click of a button you can send the design’s review link to a client for approval. (An automatic confirmation email will be sent to both parties.)
@@ -40,9 +39,11 @@ Here is what you, the clients, and the plugin can do:
 
 = THE PLUGIN CAN… =
   * Send automatic confirmation emails.
+  * Shows a STAR on approved Designs on the Project Board.
+  * Adds clients approved signature to the database and can be view in the details area of design on the Project Board.
   * Display a versions menu to show previous versions of a design.
   * Hide notes to show just the design on the design review page. (Especially nice for web designers wanting to show what a design will look like on a page.)
-  *	Show you a list of all of your clients and projects! (Project Board page) 
+  * Show you a list of all of your clients and projects! (Project Board page) 
   * …and much more!
   
 = DAS PRO BUNDLE =
@@ -75,7 +76,23 @@ If you would like to become apart of our team and help develop and make money ch
 
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
-== Changelog ==
+== Change-log ==
+
+= Version 3.2 / June 16th, 2013 =
+ * SPECIAL CHANGE & ADDITION: We have updated the menu to a more comprehesive flow. In addition we have added a Special Walk-Through of the menu and a more easy to understand way to work the Design Approval System. We have spent hundreds of hours on this new update between only 2 people. Justin and Spencer Labadie and of course the countless others input to help further this project! Thanks to Everyone who have helped progress this plugin, and to all our premium extension buyers… You help motivate us beyond belief!
+ * ADDED: Wordpress header and footer are now in the the default and clean theme, this allows for the Wordpress menu bar to be visible and more. 
+ * ADDED: Now when projects are approved the signature is submitted to the database and will show up on the project board details. And once a client submits there signature they will not be able to approve that design again, unless you change the approved select option on the design edit page. You will also see the clients signature on the design edit page too.
+ * ADDED: A STAR will appear on the row of the Project Name and the version in that project on the Project Board. FYI. For existing users of the DAS we added a meta field so you can manually approve designs if you want.
+ * ADDED: DAS Client and DAS Designer are now default user roles. This means when signing up Clients and Designers you can specify that role and they will only be able to access certain areas when logging in. For instance if you sign up a client as a DAS Client they will only be able to view the project board, change password for themselves and Approve a design on the front end. They will not be able to edit posts or anything else. DAS Designers on the other hand will see the DAS and be able to post designs.
+* CHANGES/ADDITIONS: Default Theme, modifications to forms to allow for new forced login to approve designs. And ajax submit on Approval Signature. If you use the Design Login premium extension you will get a login screen before the client see's the design. Plus this keeps the general public from stumbling upon your designs.
+
+= IMPORTANT NOTES FOR OUR PREMIUM EXTENSION USERS, You must update all your purchased DAS premium plugins when upgrading to 3.2 =
+ * CHANGES/ADDITIONS:  Client Changes, you'll now notice the client requests on the front end submit to database and automatically update on the page via ajax. We also added TinyMCE to the form so your clients can comment with style.
+ * CHANGES/ADDITIONS: Clean Theme, modifications to forms to allow for new forced login to approve designs. And ajax submit on Approval Signature.
+ * CHANGES/ADDITIONS: The Design Login now looks for existing wordpress users, and logs them in via ajax. This means you'll need to create a user for your client. Make sure you choose DAS Client as the role when setting them up, so when a DAS Client user logs in they'll only see the project board, and there user info. Required update if you are running DAS 3.2
+ * REMOVED FROM DESIGN LOGIN: Custom username and password on post pages. Sorry for the inconvenience, but this new method is much more secure. 
+ * CHANGES: Roles extension, misc edits to work with DAS 3.2.  
+
 
 = Version 3.1 / March 31, 2013 =
  * ADDED: Designers can now add there email address to a design post, or just leave it blank and the settings page email will still receive the email notifications. This was added so larger companies with more than one designer, photographer, video editor, etc. on board can also receive email notifications for a particular design post.
@@ -87,7 +104,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 = Version 2.9 / March 22, 2013 =
  * MAJOR UPDATE!
- * NEW: Clients can login to view there designs. Simply make a wordpress user for them. Once they login they will see the DAS menu with Project Board.
+ * NEW: Clients can login to view there designs. Simply make a Wordpress user for them. Once they login they will see the DAS menu with Project Board.
  * NEW: SMTP options are now available on the settings page. Hopefully this will solve a lot of email problems on servers that don't like sendmail. We have updated to the newest versions of class.phpmailer.php and jquery.forms.js for more flexibility and security.
  * FIX: Misc. CSS fixes for desktop and mobile on project board and default template.
  * FIX: Clean Theme now shows Version number in subject for the Approval option.
@@ -104,11 +121,11 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
  
 = Version 2.6 / January 2, 2013 =
  * Revised: How the subject field of emails are displayed. This was changed to help people be able to search or sort emails more efficiently. This is the new way the subject is displayed, Name of Design First, Design Version 2nd and the Company or Client name 3rd. EXAMPLE. Subject: Redbull Flyer - Version 1 - SlickRemix
- * MUST: You must also update the client changes premium extention and clean theme premium extention for the changes noted above to take effect.
+ * MUST: You must also update the client changes premium extension and clean theme premium extension for the changes noted above to take effect.
  * NOTE: If you have made custom changes to either the default template or the clean theme template you may want to save a copy of them before updating or those files will be overwritten.
  
 = Version 2.5 =
- * Added: New admin DAS logo for leftside menu, with added Retina support.
+ * Added: New admin DAS logo for left-side menu, with added Retina support.
  * Added: Additional admin CSS improvements.
  
 = Version 2.4 =
@@ -154,7 +171,8 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 = Version 1.5 =
  * Fixed: Duplicated page in template file.
 
-= Version 1.4 = * MAJOR FIX - Fixed: Javascript on design post page NOW working. (ATTENTION EVERYONE - THIS UPDATE is NEEDED for DAS plugin to work PROPERLY! ALL Previous versions have NOT been working!)
+= Version 1.4 =
+ * MAJOR FIX - Fixed: Javascript on design post page NOW working. (ATTENTION EVERYONE - THIS UPDATE is NEEDED for DAS plugin to work PROPERLY! ALL Previous versions have NOT been working!)
  * MAJOR FIX - Fixed: Versions menu to work.
  * Added: "Designer's Name" field back into post backend.
  * Fixed: updated screen shots on settings page to match correct text.
@@ -180,7 +198,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 == Frequently Asked Questions ==
 
-= When I install the extension the DAS plugin disappears from the plugins area. whats wrong? =
+= When I install the extension the DAS plugin disappears from the plugins area, whats wrong? =
 
 We are still debugging this issue. Please just re-install and activate DAS plugin. Your DAS posts/settings should stay intact. 
 
@@ -194,7 +212,7 @@ Yes, if you are having problems, or possibly looking to extend our plugin to cus
 
 = Are there Extensions for this plugin? =
 
-Yes. Currently we have 3 and are working on more! http://www.slickremix.com/product-category/design-approval-system-extensions/
+Yes. Currently we have 4 and are working on more! http://www.slickremix.com/product-category/design-approval-system-extensions/
  
 = This plugin seems like it may be complex. Are there tutorials for the plugin? = 
 
@@ -211,9 +229,12 @@ If you have more questions or would like to view other users questions please vi
 4. Here you can see your notes, client notes... Client can approve the design, and if you have purchased our Changes Extension, the client will be able to make notes on the same page... When submitted you and your client will get the changes. You can buy that extension here. http://www.slickremix.com/product/client-changes-extension/
 5. Example of the drop down showing the different design versions.
 6. Example of header when you click the hide notes button.
-7. This will fade in when your client clicks the approve button.
-8. This message will fade in once your client types in their name and clicks submit.
-9. Example of our Project Board Page. This organizes your client projects and designs. At the end of each project row is the number of versions for that project. See the [Full Project Board Tutorial](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/) Here.
+7. This will fade-in when your client clicks the approve button. Also once the client approves the design a STAR will appear for that design on the project board, and will record there signature for you to view on the details of the design on the project board.
+8. This message will fade in and out once your client types in their name and clicks submit.
+9. Example of our Project Board Page. This organizes your client projects and designs. At the end of each project row is the number of versions for that project. The STARS mean a client has approved that design. See the [Full Project Board Tutorial](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/) Here.
 10. Simply click on one of the project rows and watch your version(s) slide into view. You can also hover your mouse over the thumbnail to reveal more options.
 11. Clicking the details link in the thumbnail will reveal all the design details. If you have client notes they will be added as well. If you don't have then or designer notes that area simply will be hidden.
-11. Create a user for your clients in wordpress like normal, and add there company for the Name and there project board will appear for them once they login as depicted in the photo.
+12. Create a Das-Client user for your clients in wordpress, and add there client email on there designs and they'll appear for them once they login as depicted in the photo.
+13. We also have a Walk-Through to really help speed things along. This will explain what each menu item is for and give you a 3 step process to create your project board.
+14. The second step of the walk through just so you can see how easy we're trying to make this.
+15. This is an example of the client changes extension. If you need the option for your client to be able to make comments on your designs, this extension is what you need. It automatically makes an update to the page for the client to see his/her comments without refreshing the page too, once the client has submitted the form. And it also sends an email to you, the designer and the client letting them know about the design comments.

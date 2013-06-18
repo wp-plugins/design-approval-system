@@ -36,6 +36,7 @@
     margin-top:4px !important;
     display:block;
     margin-right:15px;
+    max-width:520px;
 }
 #custom_das_meta_box textarea {
     margin-bottom:-5px !important;
