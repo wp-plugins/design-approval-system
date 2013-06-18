@@ -19,6 +19,7 @@ If you have an idea please don't hesitate to [email us @ info@slickremix.com](ma
 View the full tutorial about our [Design Approval System plugin and Client Changes Extension](http://youtu.be/pYdF2OJCOv4): 
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
 
+
 Here's what you, the clients, and the plugin can do:
 
 = YOU (THE DESIGNER) CAN… =
