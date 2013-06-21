@@ -3,14 +3,14 @@ Contributors: slickremix
 Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature
 Requires at least: 3.4.0
 Tested up to: 3.5.1
-Stable tag: 3.2
+Stable tag: 3.3
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, documents, videos or music approved by clients quickly.
 
 == Description ==
 
-**NEW IN 3.2**: Approved designs now get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/). Clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Live Example](http://www.slickremix.com/project-board/). 
+**NEW**: Approved designs now get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/). Clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Live Example](http://www.slickremix.com/project-board/). 
 
 Here's a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
@@ -80,6 +80,10 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 == Change-log ==
 
+= Version 3.3 / June 21st, 2013 =
+ * FIXED: Project Board for clients, title correction.
+ * FIXED: Firefox CSS fixes on default theme and project board. 
+ 
 = Version 3.2 / June 16th, 2013 =
  * SPECIAL CHANGE & ADDITION: We have updated the menu to a more comprehesive flow. In addition we have added a Special Walk-Through of the menu and a more easy to understand way to work the Design Approval System. We have spent hundreds of hours on this new update between only 2 people. Justin and Spencer Labadie and of course the countless others input to help further this project! Thanks to Everyone who have helped progress this plugin, and to all our premium extension buyers… You help motivate us beyond belief!
  * ADDED: Wordpress header and footer are now in the the default and clean theme, this allows for the Wordpress menu bar to be visible and more. 

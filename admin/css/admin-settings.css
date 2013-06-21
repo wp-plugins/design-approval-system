@@ -698,6 +698,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d6d6d', end
 	display:block;
 	background:#EEE;
 	padding-top:4px;
+	height:15px;
 	color:#777;
 }
 .das-project-list a {
@@ -828,17 +829,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d6d6d', end
 }
 /* create an arrow that points right */
 .das-approved-design span.arrow-right, .das-approved-design-title span.arrow-right {
-	width:0px; 
-	height:0px; 
-	position:relative;
-	right:5px;
-	bottom:35px;
-	opacity:.8;
-	border-left:5px solid transparent;  /* left arrow slant */
-	border-right:5px solid transparent; /* right arrow slant */
-	border-bottom:5px solid #222; /* bottom, add background color here */
-	font-size:0px;
-	line-height:0px;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    left: 4px;
+    bottom: 23px;
+    opacity: 0.8;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid rgb(34, 34, 34);
+    font-size: 0px;
+    line-height: 0px;
 }
 .project-large-thumbnail img {
      width:150px;
