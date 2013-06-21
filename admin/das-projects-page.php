@@ -23,8 +23,6 @@ if (current_user_can_for_blog($user_blog_id, 'administrator') || current_user_ca
 
 ?>
 
-
-
 <div class="das-project-admin-wrap">
 <a class="buy-extensions-btn" href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank">Get Extensions Here!</a>
 <h2 class="project-board-header">Project Board</h2>
@@ -258,6 +256,7 @@ $tax = 'das_categories';
 $client = get_terms( $tax );
 
 //Client and Terms arrays.
+$clients_emails = array();
 $clients_names = array();
 $term_names = array();
 $post_counts = array();
@@ -288,6 +287,7 @@ foreach ($client as $term) :
 		$clients_email = get_post_meta($post->ID, 'custom_clients_email', true);
 		  $clients_emails[] = $clients_email;
 		  $term_names[$term->name] = $clients_email;
+		  $clients_names[] = get_post_meta($post->ID, 'custom_client_name', true);
 		  
 		  $title_approved_checker = get_post_meta($post->ID, 'custom_client_approved', true);
 		  $approved_main_designs_count[$clients_email][$term->name][] = $title_approved_checker;
@@ -304,10 +304,14 @@ foreach ($final_clients_emails as $key => $value)  :
 
 if ($value == $this_users_email) {
 	
-
+	foreach($clients_names as $number => $title){
+		if ($number == $key) {
+			$client_title = $title;
+		}
+	}
 	
 //Client Name	
-echo "<h2>".get_post_meta($post->ID, 'custom_client_name', true)."</h2>"; 
+echo "<h2>".$client_title."</h2>"; 
 
 //Client Name value for check.
 $client_value = $value;
