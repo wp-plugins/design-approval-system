@@ -2,7 +2,7 @@
 Contributors: slickremix
 Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature
 Requires at least: 3.4.0
-Tested up to: 3.5.1
+Tested up to: 3.5.2
 Stable tag: 3.3
 License: GPLv2 or later
 
@@ -12,7 +12,7 @@ A system to streamline the process of getting designs, photos, documents, videos
 
 **NEW**: Approved designs now get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/). Clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Live Example](http://www.slickremix.com/project-board/). 
 
-Here's a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
+Here is a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
 If you have an idea please don't hesitate to [email us @ info@slickremix.com](mailto:info@slickremix.com). We could not do this without everyones help. We want to make the Design Approval System the best and quickest way to get projects approved on the web.
@@ -21,7 +21,7 @@ View the full tutorial about our [Design Approval System plugin and Client Chang
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
 
 
-Here's what you, the clients, and the plugin can do:
+Here is what you, the clients, and the plugin can do:
 
 = YOU (THE DESIGNER) CAN… =
   * With the click of a button you can send the design’s review link to a client for approval. (An automatic confirmation email will be sent to both parties.)
