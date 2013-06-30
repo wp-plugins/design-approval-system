@@ -173,7 +173,7 @@ echo '</ul>';
             <input type="hidden" value="<?php echo ''.$das_settings_approved_dig_sig_message_to_designer.''; ?>" name="dasSettingsApprovedDigSigMessageToDesigner" />
             <input type="hidden" value="<?php echo ''.$das_settings_approved_dig_sig_message_to_clients.''; ?>" name="dasSettingsApprovedDigSigMessageToClients" />
        
-            <a id="submit" class="submit-signature" rel="<?php echo $post->ID; ?>">Submit</a>
+            <a id="submit" class="das-submit-signature" rel="<?php echo $post->ID; ?>">Submit</a>
             
           </div>
         </form>

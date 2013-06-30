@@ -3,27 +3,9 @@
 	This is file is for creating the options page for Wordpress's backend
 */
 
-//Adds upload button and script to setting page
-function das_settings_admin_scripts() {
-	wp_enqueue_script('media-upload');
-	wp_enqueue_script('thickbox');
-	wp_register_script('my-upload', ''.plugins_url( 'admin/js/das-settings-page-image-uploader.js' , dirname(__FILE__) ).'', array('jquery','media-upload','thickbox'));
-	wp_enqueue_script('my-upload');
-}
-function das_settings_admin_styles() {
-	wp_enqueue_style('thickbox');
-}
-
-if (isset($_GET['page']) && $_GET['page'] == 'design-approval-system-settings-page') {
-  add_action('admin_print_scripts', 'das_settings_admin_scripts');
-  add_action('admin_print_styles', 'das_settings_admin_styles');
-}
-
 //Main setting page function
 function das_settings_page() {
 ?>
-<link rel="stylesheet" id="das-settings-admin-css" href="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/css/admin-settings.css" type="text/css" media="all">
-
 <div class="das-settings-admin-wrap">
   <h2>Design Approval System Settings</h2>
   <a class="buy-extensions-btn" href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank">Get Extensions Here!</a>
@@ -35,7 +17,7 @@ function das_settings_page() {
       <div class="das-settings-admin-input-label">Company Logo (required): <a class="question1">?</a></div>
       <input id="image_1" name="image_1" class="das-settings-admin-input" type="text"  value="<?php echo get_option('image_1'); ?>" />
       <input id="_btn" class="upload_image_button" type="button" value="Upload Image" />
-      <div class="das-settings-admin-input-example upload-logo-size">This logo will be displayed at the top of all your design posts. Size for the "defualt" template is 124px X 20px. <?php if(is_plugin_active('das-clean-theme/das-clean-theme.php')) {?>If You are using the "Clean Theme" the size for the logo has to be 155px X 135px.<?php }?></div>
+      <div class="das-settings-admin-input-example upload-logo-size">This logo will be displayed at the top of all your design posts. Size for the "defualt" template is 124px X 20px.</div>
       <div class="clear"></div>
       <div class="das-settings-id-answer answer1">
         <ul>
@@ -87,7 +69,7 @@ else	{
    
    <label class="checkbox-label">SMTP Authenticate?</label>
    <input class="checkbox-input" type="checkbox" name="das-smtp-checkbox-authenticate" id="das-smtp-checkbox-authenticate" value="1" <?php echo checked( '1', get_option( 'das-smtp-checkbox-authenticate' ) ); ?>/>
-   
+   <div class="clear"></div>
    <label>Authenticate Username</label>
    <input type="text" name="das-smtp-authenticate-username" id="das-smtp-authenticate-username" value="<?php echo get_option( 'das-smtp-authenticate-username' ); ?>" placeholder="example@yourdomain.com">
    
@@ -107,11 +89,8 @@ else	{
 <div class="clear"></div>
     </div>
     <!--/das-settings-admin-input-wrap-->
-
-<?php if(is_plugin_active('das-clean-theme/das-clean-theme.php')) {
-   include('../wp-content/plugins/das-clean-theme/admin/das-clean-theme-settings-page.php');
-}?>
     
+ 
     <h3>Email for Designer Message</h3>
     <div class="subtext-of-title">These settings are for the email to your client, letting them know their design is ready to be reviewed.<br/>
       It also Includes a confirmation email to you the Designer too.</div>
@@ -193,7 +172,7 @@ else	{
 }?>
 
     <input type="hidden" name="action" value="update" />
-    <input type="hidden" name="page_options" value="image_1, das-settings-company-name, das-settings-company-email, das-settings-smtp, das-smtp-server, das-smtp-port, das-smtp-checkbox-authenticate, das-smtp-authenticate-username, das-smtp-authenticate-password, <?php if(is_plugin_active('das-clean-theme/das-clean-theme.php')) {?>image_2,<?php }?> das-settings-email-for-designers-message-to-clients, das-settings-approved-dig-sig-message-to-designer, das-settings-approved-dig-sig-message-to-clients, das-settings-approved-dig-sig-thank-you<?php if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {?>, das-settings-design-requests-message-to-designer, das-settings-design-requests-message-to-clients, das-settings-design-requests-thank-you, das-settings-add-design-requests-message-to-designer, das-settings-add-design-requests-message-to-clients, <?php }?> <?php if(is_plugin_active('das-roles-extension/das-roles-extension.php')) {?> das-settings-designer-role, das-settings-client-role <?php }?>" />
+    <input type="hidden" name="page_options" value="image_1, das-settings-company-name, das-settings-company-email, das-settings-smtp, das-smtp-server, das-smtp-port, das-smtp-checkbox-authenticate, das-smtp-authenticate-username, das-smtp-authenticate-password, das-settings-email-for-designers-message-to-clients, das-settings-approved-dig-sig-message-to-designer, das-settings-approved-dig-sig-message-to-clients, das-settings-approved-dig-sig-thank-you<?php if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {?>, das-settings-design-requests-message-to-designer, das-settings-design-requests-message-to-clients, das-settings-design-requests-thank-you, das-settings-add-design-requests-message-to-designer, das-settings-add-design-requests-message-to-clients, <?php }?> <?php if(is_plugin_active('das-roles-extension/das-roles-extension.php')) {?> das-settings-designer-role, das-settings-client-role <?php }?>" />
     <input type="submit" class="das-settings-admin-submit-btn" value="<?php _e('Save Changes') ?>" />
   </form>
   <div class="das-settings-facebook-btn"> 
@@ -213,9 +192,7 @@ else	{
 <!--/das-settings-admin-wrap--> 
 <script type="text/javascript" src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/js/admin.js"></script>
 
-<?php if(is_plugin_active('das-clean-theme/das-clean-theme.php')) {?>
-   <script type="text/javascript" src="<?php print DAS_PLUGIN_PATH ?>/das-clean-theme/admin/js/admin.js"></script>
-<?php }?>
+
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

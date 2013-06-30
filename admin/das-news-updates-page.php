@@ -1,10 +1,4 @@
-<?php
-function das_news_updates_page() {
-?>
-<link rel="stylesheet" id="das-settings-admin-css" href="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/css/admin-settings.css" type="text/css" media="all">
-
-<link rel="stylesheet" id="das-settings-admin-css" href="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/css/news-updates-styles.css" type="text/css" media="all">
-
+<?php function das_news_updates_page() { ?>
 <div class="das-video-admin-wrap das-news-admin-wrap">
  <a class="buy-extensions-btn" href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank">Get Extensions Here!</a>
  <h2>DAS News and Updates</h2>
@@ -290,9 +284,10 @@ print '</div><!--/jal-single-fb-post-->';
      //Count the post 
 	 $count_posts++;
 	 }	
-
   print '</div><!--/jal-fb-group-display-->';
   print '<div class="clear"></div>'; 
   print '<a class="das-settings-admin-slick-logo" href="http://www.slickremix.com" target="_blank"></a></div><!--/das-help-admin-wrap-->';
+
+  include('walkthrough/walkthrough.php');	
 }
 ?>

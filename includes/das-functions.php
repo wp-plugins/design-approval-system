@@ -201,12 +201,24 @@ function rename_second_das_submenu_name( $safe_text, $text )
 }
 
 
-//Adds Video page to DAS sub menu
+//Adds Project Board page to DAS sub menu
 add_action('admin_menu', 'register_das_projects_submenu_page');
 
 function register_das_projects_submenu_page() {
 	add_submenu_page( 'edit.php?post_type=designapprovalsystem', 'Project Board', '', 'read', 'design-approval-system-projects-page', 'das_projects_page' );
+
 }
+//Enque admin-setttings.css only for this page
+function das_projects_settings_admin_scripts(){
+	wp_register_style('og-admin-css', plugins_url( 'design-approval-system/admin/css/admin-settings.css'));
+	wp_enqueue_style( 'og-admin-css' );
+}
+if (isset($_GET['page']) && $_GET['page'] == 'design-approval-system-projects-page') {
+  add_action('admin_enqueue_scripts', 'das_projects_settings_admin_scripts');
+}
+
+
+
 
 //Adds Video page to DAS sub menu
 add_action('admin_menu', 'register_das_video_submenu_page');
@@ -214,19 +226,54 @@ add_action('admin_menu', 'register_das_video_submenu_page');
 function register_das_video_submenu_page() {
 	add_submenu_page( 'edit.php?post_type=designapprovalsystem', 'Design Approval System Videos', 'Tutorial Videos', 'manage_options', 'design-approval-system-video-page', 'das_video_page' );
 }
+//Enque admin-setttings.css only for this page
+function das_video_settings_admin_scripts(){
+	wp_register_style('og-admin-css', plugins_url( 'design-approval-system/admin/css/admin-settings.css'));
+	wp_enqueue_style( 'og-admin-css' );
+}
+if (isset($_GET['page']) && $_GET['page'] == 'design-approval-system-video-page') {
+  add_action('admin_enqueue_scripts', 'das_video_settings_admin_scripts');
+}
+
+
+
+
+
 //Adds News & Updates Page page to DAS sub menu
 add_action('admin_menu', 'register_das_news_updates_submenu_page');
-
 function register_das_news_updates_submenu_page() {
 	add_submenu_page( 'edit.php?post_type=designapprovalsystem', 'Design Approval System News & Updates', 'DAS News', 'manage_options', 'design-approval-system-news-updates-page', 'das_news_updates_page' );
 }
+//Enque admin-setttings.css only for this page
+function das_news_settings_admin_scripts(){
+	wp_register_style('og-admin-css', plugins_url( 'design-approval-system/admin/css/admin-settings.css'));
+	wp_enqueue_style( 'og-admin-css' );
+	wp_register_style('news-admin-css', plugins_url( 'design-approval-system/admin/css/news-updates-styles.css'));
+	wp_enqueue_style( 'news-admin-css' );
+}
+if (isset($_GET['page']) && $_GET['page'] == 'design-approval-system-news-updates-page') {
+  add_action('admin_enqueue_scripts', 'das_news_settings_admin_scripts');
+}
 
-//Adds Tutorials page to DAS sub menu
+
+
+
+
+
+//Adds Help page to DAS sub menu
 add_action('admin_menu', 'register_das_help_submenu_page');
-
 function register_das_help_submenu_page() {
 	add_submenu_page( 'edit.php?post_type=designapprovalsystem', 'Design Approval System Help', 'Help', 'manage_options', 'design-approval-system-help-page', 'das_help_page' );
 }
+//Enque admin-setttings.css only for this page
+function das_help_settings_admin_scripts(){
+	wp_register_style('og-admin-css', plugins_url( 'design-approval-system/admin/css/admin-settings.css'));
+	wp_enqueue_style( 'og-admin-css' );
+}
+if (isset($_GET['page']) && $_GET['page'] == 'design-approval-system-help-page') {
+  add_action('admin_enqueue_scripts', 'das_help_settings_admin_scripts');
+}
+
 
 add_action('admin_menu','remove_tags_menu');
 function remove_tags_menu() {
@@ -234,12 +281,29 @@ function remove_tags_menu() {
     remove_submenu_page( 'edit.php?post_type=designapprovalsystem', 'edit-tags.php?taxonomy=post_tag&amp;post_type=designapprovalsystem' );
 }
 
+
+
 //Adds setting page to DAS sub menu
 add_action('admin_menu', 'register_das_settings_submenu_page');
 
 function register_das_settings_submenu_page() {
 	add_submenu_page( 'edit.php?post_type=designapprovalsystem', 'Design Approval System Settings', 'Settings', 'manage_options', 'design-approval-system-settings-page', 'das_settings_page' ); 
 }
+//Enque admin-setttings.css only for this page
+function das_main_settings_admin_scripts(){
+	wp_enqueue_script('media-upload');
+	wp_enqueue_script('thickbox');
+	wp_register_script('my-upload', ''.plugins_url( 'admin/js/das-settings-page-image-uploader.js' , dirname(__FILE__) ).'', array('jquery','media-upload','thickbox'));
+	wp_enqueue_script('my-upload');
+	wp_enqueue_style('thickbox');
+	wp_register_style('og-admin-css', plugins_url( 'design-approval-system/admin/css/admin-settings.css'));
+	wp_enqueue_style( 'og-admin-css' );
+}
+if (isset($_GET['page']) && $_GET['page'] == 'design-approval-system-settings-page') {
+  add_action('admin_enqueue_scripts', 'das_main_settings_admin_scripts');
+}
+
+
 // Re-Construct Submenu Item
 function edit_admin_menus() {
 	global $submenu;
@@ -318,8 +382,14 @@ function edit_admin_menus() {
 		$submenu['edit.php?post_type=designapprovalsystem'][25][2] = 'das-design-login-settings-page';
 		$submenu['edit.php?post_type=designapprovalsystem'][25][3] = 'Design Approval System Login Settings';
 	}	
-		
-		
+	
+	if (is_plugin_active('das-clean-theme/das-clean-theme.php')) {	
+		 
+		$submenu['edit.php?post_type=designapprovalsystem'][26][0] = 'Theme Settings';
+		$submenu['edit.php?post_type=designapprovalsystem'][26][1] = 'manage_options';
+		$submenu['edit.php?post_type=designapprovalsystem'][26][2] = 'das-clean-theme-settings-page';
+		$submenu['edit.php?post_type=designapprovalsystem'][26][3] = 'Clean Theme Settings Page';
+	}	
 		
 }
 add_action( 'admin_menu', 'edit_admin_menus' );

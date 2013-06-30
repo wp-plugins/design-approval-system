@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-    jQuery(".submit-signature").click(function() {
+    jQuery(".das-submit-signature").click(function() {
 		
 	var validation = jQuery("#sendDigitalSignature #custom_client_approved_signature").val(); 
 	
@@ -14,9 +14,9 @@ jQuery(document).ready(function() {
         console.log('Submit Function');
         var postMeta = jQuery('input[name="custom_client_approved_signature"]').val();
 		console.log(postMeta);
-		var postID = jQuery('.submit-signature').prop("rel");
+		var postID = jQuery('.das-submit-signature').prop("rel");
 		console.log(postID);
-        var button = jQuery('.submit-signature').html('saving...');
+        var button = jQuery('.das-submit-signature').html('saving...');
 		console.log(button);
 		
         jQuery.ajax({
@@ -25,10 +25,12 @@ jQuery(document).ready(function() {
             url: myAjax.ajaxurl,
             success: function( response ) { 
 				jQuery('.approved-wrap').fadeIn();
-				jQuery('.not-approved-wrap').hide();	
+				jQuery('.not-approved-wrap').hide();
 				console.log('Well Done and got this from sever: ' + response);
 				console.log('Form process sending');
-				jQuery('#sendDigitalSignature').ajaxSubmit({ target: '#output'}); return false;
+				jQuery('#sendDigitalSignature').ajaxSubmit({ target: '#output'}); 
+				return false;
+				
 			}
         }); // end of ajax()
         return false;
@@ -39,7 +41,7 @@ jQuery(document).ready(function() {
 
 
 jQuery(document).ready(function() {
-    jQuery("#submit-design-request").click(function() {
+    jQuery("#das-submit-design-request").click(function() {
 	// custom_client_changes is the id for the design request textarea	
 	var validation = tinymce.activeEditor.getContent(); 
 	
@@ -52,9 +54,9 @@ jQuery(document).ready(function() {
 		// custom_client_changes is the id for the design request textarea	
         var postMeta = tinymce.activeEditor.getContent();
 		console.log(postMeta);
-		var postID = jQuery('.submit-requests').prop("rel");
+		var postID = jQuery('.das-submit-requests').prop("rel");
 		console.log(postID);
-        var button = jQuery('.submit-requests').html('saving...');
+        var button = jQuery('.das-submit-requests').html('saving...');
 		console.log(button);
 		
         jQuery.ajax({
@@ -67,8 +69,10 @@ jQuery(document).ready(function() {
 				jQuery('.custom_client_changes').html(result);
 				console.log('Client notes echoed to textarea for email form process double check: ' + result);
 				console.log('Form process sending');
-				jQuery('#sendDesignRequests').ajaxSubmit({ target: '#output'}); return false;
-				
+				jQuery('#sendDesignRequests').ajaxSubmit({ target: '#output'}); 
+       			var button2 = jQuery('.das-submit-requests').html('Submit Comments');
+				console.log(button2);
+				return false;
 			}
         }); // end of ajax()
         return false;

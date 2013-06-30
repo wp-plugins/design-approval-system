@@ -3,7 +3,7 @@ Contributors: slickremix
 Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature
 Requires at least: 3.4.0
 Tested up to: 3.5.2
-Stable tag: 3.3
+Stable tag: 3.4
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, documents, videos or music approved by clients quickly.
@@ -64,7 +64,7 @@ Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval
   1. [Select User and Email Extension](http://www.slickremix.com/product/client-changes-extension)
   2. [Design Login Extension](http://www.slickremix.com/product/design-login-das-extension)
   3. [All Extensions and Theme Bundle](http://www.slickremix.com/product/das-extensions-bundle)
-  4. [Clean Theme](http://www.slickremix.com/product/clean-theme-for-design-approval-system)
+  4. [Clean Theme](http://www.slickremix.com/product/clean-theme-for-design-approval-system) NOW FULLY CUSTOMIZABLE
   5. [Client Changes Extension](http://www.slickremix.com/product/client-changes-extension)
   
 = Join us on Facebook! =
@@ -79,6 +79,11 @@ If you would like to become apart of our team and help develop and make money ch
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Change-log ==
+
+= Version 3.4 / June 30st, 2013 =
+ * FIXED ADMIN: Misc CSS Fixes for Firefox
+ * FIXED ADMIN: Enqued scripts only on DAS admin pages
+ * NOTE: You must update to DAS 3.4 if you are going to update to the new Clean Theme Version: 2.1 (This version allows you to fully customize the theme to fit your company looks).
 
 = Version 3.3 / June 21st, 2013 =
  * FIXED: Project Board for clients, title correction.

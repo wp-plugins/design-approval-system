@@ -1,8 +1,6 @@
 <?php
 function das_video_page() {
 ?>
-<link rel="stylesheet" id="das-settings-admin-css" href="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/css/admin-settings.css" type="text/css" media="all">
-
 <div class="das-video-admin-wrap">
  <a class="buy-extensions-btn" href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank">Get Extensions Here!</a>
 <h2>DAS Instructional Videos</h2>
@@ -32,7 +30,7 @@ We have short &amp; full length tutorials, plus instructions  on a few of our Pr
   <br class="clear"/>
   <a class="das-settings-admin-slick-logo" href="http://www.slickremix.com" target="_blank"></a> 
 </div><!--/das-help-admin-wrap-->
-
 <?php
+	include('walkthrough/walkthrough.php');	
 }
 ?>

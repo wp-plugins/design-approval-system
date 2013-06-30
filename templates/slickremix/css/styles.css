@@ -627,7 +627,7 @@ a:hover.design-option-btn {
 	-moz-border-radius-topleft: .3em;
 	-moz-border-radius-bottomleft: .3em;
 }
-.label-digital-signature .submit-signature {
+.label-digital-signature .das-submit-signature {
 	color: #e0e2e3 !important;
 	background-color: #403d3d;
 	display: inline-block !important;
@@ -705,10 +705,10 @@ a:hover.design-option-btn {
 	position: absolute;
 	overlflow: hidden;
 }
-.submit-requests {
+.das-submit-requests {
 	display: inline-block;
 	height: auto !important;
-	width: 135px !important;
+	width: 150px !important;
 	text-align: center;
 	border: none !important;
 	outline: none !important;
@@ -729,7 +729,7 @@ a:hover.design-option-btn {
 	-ms-user-select: none;
 	user-select: none;
 }
-.submit-requests:hover {
+.das-submit-requests:hover {
 	color: #333333;
 	background: -moz-linear-gradient(top, #dbdbdb 0%, #b6b5b5 100%);
 	background: -webkit-gradient(linear, left top, left bottom, from(#dbdbdb), to(#b6b5b5));

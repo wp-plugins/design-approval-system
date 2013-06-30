@@ -1,10 +1,4 @@
-<?php
-
-function das_help_page(){
-	
-?>
-<link rel="stylesheet" id="das-settings-admin-css" href="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/css/admin-settings.css" type="text/css" media="all">
-
+<?php function das_help_page(){ ?>
 <div class="das-help-admin-wrap"> 
 <a class="buy-extensions-btn" href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank">Get Extensions Here!</a>
 <h2>DAS Info and Help </h2>
@@ -155,5 +149,6 @@ function das_help_page(){
 
 	</script> 
 <?php
+	include('walkthrough/walkthrough.php');	
 }
 ?>

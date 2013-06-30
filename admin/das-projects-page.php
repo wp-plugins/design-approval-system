@@ -1,8 +1,6 @@
-<?php
+<?php 
 function das_projects_page() {
-?>
-<link rel="stylesheet" id="das-settings-admin-css" href="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/css/admin-settings.css" type="text/css" media="all">
-<?php
+	
 global $current_user; get_currentuserinfo();
 										
 $user_id = $current_user->ID;
@@ -13,16 +11,11 @@ foreach ($user_blogs AS $user_blog) {
 	  # do nothing
   }
   else {
-	  
-  $user_blog_id = $user_blog->userblog_id;
-  
+ 	 $user_blog_id = $user_blog->userblog_id;
   }
 }
-
 if (current_user_can_for_blog($user_blog_id, 'administrator') || current_user_can_for_blog($user_blog_id, 'das_designer')) {
-
 ?>
-
 <div class="das-project-admin-wrap">
 <a class="buy-extensions-btn" href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank">Get Extensions Here!</a>
 <h2 class="project-board-header">Project Board</h2>
@@ -239,7 +232,21 @@ wp_reset_postdata();
 // this ends the if das user is logged in or not action
 
 } else {
+global $current_user; get_currentuserinfo();
+										
+$user_id = $current_user->ID;
+$user_blogs = get_blogs_of_user( $user_id );
 
+foreach ($user_blogs AS $user_blog) {
+  if ($user_blog->path == '/'){
+	  # do nothing
+  }
+  else {
+	  
+  $user_blog_id = $user_blog->userblog_id;
+  
+  }
+}
 $user = wp_get_current_user();
 $this_users_email = $user->user_email;
 
@@ -406,9 +413,7 @@ $counter = 0;
         <strong>Client Approved</strong>: <span class="custom_client_approved"><?php echo get_post_meta($post->ID, 'custom_client_approved', true); ?><span class="arrow-right"></span></span><br/>
         <strong>Client Signature</strong>: <span class="custom_client_approved"><?php echo get_post_meta($post->ID, 'custom_client_approved_signature', true); ?><span class="arrow-right"></span></span>
         <?php }  
-                else {
-                	
-                }
+                else { }
                 ?>
           <div class="clear"></div>
         </div>
@@ -439,6 +444,7 @@ $counter = 0;
     </div>
   </li>
   <?php }
+  
 					    endwhile; endif;   ?>
   <?php endforeach; 
 			echo "</ul>";
@@ -446,11 +452,12 @@ $counter = 0;
 		}
 		$counter++;
 	endforeach;
-}
+} 
 endforeach;
 $first_counter++;
 
  }
+ 
 
 
 
