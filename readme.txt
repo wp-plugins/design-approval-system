@@ -64,7 +64,7 @@ Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval
   1. [Select User and Email Extension](http://www.slickremix.com/product/client-changes-extension)
   2. [Design Login Extension](http://www.slickremix.com/product/design-login-das-extension)
   3. [All Extensions and Theme Bundle](http://www.slickremix.com/product/das-extensions-bundle)
-  4. [Clean Theme](http://www.slickremix.com/product/clean-theme-for-design-approval-system) NOW FULLY CUSTOMIZABLE
+  4. [Clean Theme](http://www.slickremix.com/product/clean-theme-for-design-approval-system) Now fully customizable to fit your company look.
   5. [Client Changes Extension](http://www.slickremix.com/product/client-changes-extension)
   
 = Join us on Facebook! =
