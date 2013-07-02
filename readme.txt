@@ -171,7 +171,6 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
  * Tested: The DAS Plugin, Themes, and extenstions for any bugs against the new (Beta) version of WordPress 3.5  
  
 = Version 1.7 =
- 
  * Fixed: Settings Page is now set up for new theme options.
  * Fixed: jQuery on Settings Page now compatible with new themes.
 
@@ -197,7 +196,6 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
  * Added: Facebook "Like" Button to settings page.
  * Added: A new FAQ.
  
-
 = Version 1.1 =
  * Fixed: Custom Post Type auto selection.
  * Removed: Two fields from DAS post page that were not needed.
