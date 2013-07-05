@@ -6,7 +6,7 @@ Tested up to: 3.5.2
 Stable tag: 3.4
 License: GPLv2 or later
 
-FREE Design Approval System BUNDLE this 4th of July ONLY at slickremix.com, use this coupon code on checkout: Freefor4th
+A system to streamline the process of getting designs, photos, documents, videos or music approved by clients quickly.
 
 == Description ==
 
