@@ -223,6 +223,9 @@ Yes. Currently we have 4 and are working on more! http://www.slickremix.com/prod
 
 Yes. It's not as hard as it may seem. Once you try it you will see how easy we have made it. And now with our new Walk-Through getting up and going could not be easier.  http://www.slickremix.com/category/design-approval-system-tutorials/
 
+= My page is now getting 404 error when activating your plugin. =
+
+Well sadly it's not our fault but the <a href="http://www.slickremix.com/2013/07/15/my-page-is-now-getting-404-error-when-activating-your-plugin/">Solution is Here</a>!
 
 If you have more questions or would like to view other users questions please visit our support forum at http://www.slickremix.com/free-and-premium-support/
 
