@@ -3,7 +3,7 @@ Contributors: slickremix
 Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature
 Requires at least: 3.4.0
 Tested up to: 3.6.0
-Stable tag: 3.4
+Stable tag: 3.5
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, documents, videos or music approved by clients quickly.
@@ -79,6 +79,9 @@ If you would like to become apart of our team and help develop and make money ch
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Change-log ==
+
+= Version 3.5 / August 18th, 2013 =
+ * FIXED: Possible fatal error on some installs regarding the function st4_columns_head() in our functions.php file. This function has been removed now. Thanks to 'aspirenetwork' for pointing this out. [Link to original post](http://wordpress.org/support/topic/error-in-activatiing-the-plugin?replies=8)
 
 = Version 3.4 / June 30st, 2013 =
  * FIXED ADMIN: Misc CSS Fixes for Firefox

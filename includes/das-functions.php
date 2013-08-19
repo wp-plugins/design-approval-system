@@ -4,48 +4,27 @@
 ************************************************/
 // SRL added to allow only admin to view the edit button on project board, else it will show up as a view button with link. Function call is on the das-project-board-page in admin folder. 3-16-13
 function is_admin_logged_in(){
-
 global $user_ID; 
 
-if( $user_ID  && current_user_can('level_10') ) :
-return true;
-else : 
-return false;
-endif;
-
+	if( $user_ID  && current_user_can('level_10') ) :
+	return true;
+	else : 
+	return false;
+	endif;
 }
  
-function my_columns_filter($columns) {
+function my_columns_filter_das($columns) {
  // unset($columns['author']);
-    unset($columns['tags']);
  // unset($columns['categories']);
-    unset($columns['custom-fields']);
     unset($columns['tags']);
+    unset($columns['custom-fields']);
     unset($columns['comments']);
     return $columns;
 }
-add_filter( 'manage_edit-designapprovalsystem_columns', 'my_columns_filter', 10, 1 );
-
-
-
-
-// ADD TWO NEW COLUMNS, this is not working yet SRL
-function ST4_columns_head($defaults) {
-	$defaults['first_column']  = 'Approved';
-	$defaults['second_column'] = 'Version';
-	return $defaults;
+function my_das_column_init() {
+	add_filter( 'manage_edit-designapprovalsystem_columns', 'my_columns_filter_das');
 }
-
-function ST4_columns_content($column_name, $post_ID) {
-	if ($column_name == 'Approved') {
-		// First column
-	}
-	if ($column_name == 'Version') {
-		// Second column
-	}
-}
-
-
+add_action( 'admin_init' , 'my_das_column_init' );
 
 // SRL added 6-6-13 to allow us to record the approved information directly to db
 function my_script_enqueuer() {
@@ -180,7 +159,6 @@ function das_admin_css() {
 
 add_action('admin_head', 'das_admin_css');
 
-
 /**
  * Renames the first occurence of 'See All Academias' to 'Academias'
  * and deactivates itself then.
@@ -200,7 +178,6 @@ function rename_second_das_submenu_name( $safe_text, $text )
     return 'DAS';
 }
 
-
 //Adds Project Board page to DAS sub menu
 add_action('admin_menu', 'register_das_projects_submenu_page');
 
@@ -217,9 +194,6 @@ if (isset($_GET['page']) && $_GET['page'] == 'design-approval-system-projects-pa
   add_action('admin_enqueue_scripts', 'das_projects_settings_admin_scripts');
 }
 
-
-
-
 //Adds Video page to DAS sub menu
 add_action('admin_menu', 'register_das_video_submenu_page');
 
@@ -234,10 +208,6 @@ function das_video_settings_admin_scripts(){
 if (isset($_GET['page']) && $_GET['page'] == 'design-approval-system-video-page') {
   add_action('admin_enqueue_scripts', 'das_video_settings_admin_scripts');
 }
-
-
-
-
 
 //Adds News & Updates Page page to DAS sub menu
 add_action('admin_menu', 'register_das_news_updates_submenu_page');
@@ -255,11 +225,6 @@ if (isset($_GET['page']) && $_GET['page'] == 'design-approval-system-news-update
   add_action('admin_enqueue_scripts', 'das_news_settings_admin_scripts');
 }
 
-
-
-
-
-
 //Adds Help page to DAS sub menu
 add_action('admin_menu', 'register_das_help_submenu_page');
 function register_das_help_submenu_page() {
@@ -274,14 +239,11 @@ if (isset($_GET['page']) && $_GET['page'] == 'design-approval-system-help-page')
   add_action('admin_enqueue_scripts', 'das_help_settings_admin_scripts');
 }
 
-
 add_action('admin_menu','remove_tags_menu');
 function remove_tags_menu() {
     // remove_submenu_page was introduced in 3.1
     remove_submenu_page( 'edit.php?post_type=designapprovalsystem', 'edit-tags.php?taxonomy=post_tag&amp;post_type=designapprovalsystem' );
 }
-
-
 
 //Adds setting page to DAS sub menu
 add_action('admin_menu', 'register_das_settings_submenu_page');
@@ -302,7 +264,6 @@ function das_main_settings_admin_scripts(){
 if (isset($_GET['page']) && $_GET['page'] == 'design-approval-system-settings-page') {
   add_action('admin_enqueue_scripts', 'das_main_settings_admin_scripts');
 }
-
 
 // Re-Construct Submenu Item
 function edit_admin_menus() {
@@ -393,7 +354,6 @@ function edit_admin_menus() {
 		
 }
 add_action( 'admin_menu', 'edit_admin_menus' );
-
 
 // Checks to see if Custom Post Template is installed and activated.
 add_action( 'admin_notices', 'das_dependencies' );
