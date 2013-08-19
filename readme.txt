@@ -82,6 +82,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 = Version 3.5 / August 18th, 2013 =
  * FIXED: Possible fatal error on some installs regarding the function st4_columns_head() in our functions.php file. This function has been removed now. Thanks to 'aspirenetwork' for pointing this out. [Link to original post](http://wordpress.org/support/topic/error-in-activatiing-the-plugin?replies=8)
+ * REMOVED: Tags from column for the designs list page in the wp-admin.
 
 = Version 3.4 / June 30st, 2013 =
  * FIXED ADMIN: Misc CSS Fixes for Firefox
