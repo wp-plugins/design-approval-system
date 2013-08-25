@@ -1,3 +1,21 @@
+<?php // additional security check so clients can't view other clients projects
+		function das_get_current_user_role() {
+			global $wp_roles;
+			$current_user = wp_get_current_user();
+			$roles = $current_user->roles;
+			$role = array_shift($roles);
+			return isset($wp_roles->role_names[$role]) ? translate_user_role($wp_roles->role_names[$role] ) : false;
+		} 
+		$current_user_role = das_get_current_user_role();
+		$emailCheckerCurrentUser = $current_user->user_email;
+		$emailCheckeronPage = get_post_meta($post->ID, 'custom_clients_email', true);
+		if($current_user_role == 'DAS Client') { 
+			if ($emailCheckerCurrentUser == $emailCheckeronPage){ //show the page 
+				} else {  
+					wp_redirect(home_url()); exit;
+				} 
+		}
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -53,7 +71,6 @@ tinymce.init({
         });</script>
     
 <?php wp_enqueue_script( 'my_script_enqueuer' ); ?>
-	
 <!--<script type="text/javascript" src="< ?php print includes_url(); ?>js/jquery/jquery.js"></script> -->
 <script type="text/javascript" src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/js/jquery.form.js"></script>
 <script type="text/javascript" src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/js/design-requests.js"></script>

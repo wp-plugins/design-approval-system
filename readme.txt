@@ -3,7 +3,7 @@ Contributors: slickremix
 Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature
 Requires at least: 3.4.0
 Tested up to: 3.6.0
-Stable tag: 3.5
+Stable tag: 3.6
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, documents, videos or music approved by clients quickly.
@@ -12,7 +12,7 @@ A system to streamline the process of getting designs, photos, documents, videos
 
 **NEW**: Approved designs now get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/). Clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Live Example](http://www.slickremix.com/project-board/). 
 
-Here is a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
+Here's a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
 If you have an idea please don't hesitate to [email us @ info@slickremix.com](mailto:info@slickremix.com). We could not do this without everyones help. We want to make the Design Approval System the best and quickest way to get projects approved on the web.
@@ -21,7 +21,7 @@ View the full tutorial about our [Design Approval System plugin and Client Chang
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
 
 
-Here is what you, the clients, and the plugin can do:
+Here's what you, the clients, and the plugin can do:
 
 = YOU (THE DESIGNER) CAN… =
   * With the click of a button you can send the design’s review link to a client for approval. (An automatic confirmation email will be sent to both parties.)
@@ -79,7 +79,11 @@ If you would like to become apart of our team and help develop and make money ch
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Change-log ==
-
+= Version 3.6 / August 25th, 2013 =
+ * FIXED: Additional security check added to the das-header.php so clients can't view other clients projects. Thanks to JetDingo for bringing this to our attention in our [support fourm](http://www.slickremix.com/support-forum/wordpress-plugins-group3/design-login-extension-forum6/possible-security-issue-login-work-around-public-can-view-all-designs-without-logging-in-thread122.0/#postid-564).
+ * FIXED: Additional security check added to das-functions.php to redirect all users that try to access the site url on front end to view active projects coming from the content loop. (*ie. http://www.slickremix.com/testblog/?post_type=designapprovalsystem&page=design-approval-system-projects-page). So anything containing the word ?post_type=designapprovalsystem in the URL will get redirected to the home page. Additional Thanks to JetDingo for pointing this out. If you want to be able to view projects on the front end we do have the Public Project Board available ($5.00). See [more details here](http://www.slickremix.com/product/public-project-board-das-extension/).
+ * FIXED: Removed the designapprovalsystem custom post type from being able to search on the front end. Another way random people could access your projects.
+ 
 = Version 3.5 / August 18th, 2013 =
  * FIXED: Possible fatal error on some installs regarding the function st4_columns_head() in our functions.php file. This function has been removed now. Thanks to 'aspirenetwork' for pointing this out. [Link to original post](http://wordpress.org/support/topic/error-in-activatiing-the-plugin?replies=8)
  * REMOVED: Tags from column for the designs list page in the wp-admin.

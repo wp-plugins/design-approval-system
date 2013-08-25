@@ -12,7 +12,16 @@ global $user_ID;
 	return false;
 	endif;
 }
- 
+// Redirect all users that try to access the site url on front end to view active projects coming from the content loop. (*ie. http://www.slickremix.com/testblog/?post_type=designapprovalsystem&page=design-approval-system-projects-page). So anything containing the word ?post_type=designapprovalsystem in the URL will get redirected to the home page
+function das_admin_redirect() {
+$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+		if (false !== strpos($url,'?post_type=designapprovalsystem')){
+			wp_redirect(home_url()); 
+			exit;
+		}
+}
+add_action('get_header', 'das_admin_redirect');
+
 function my_columns_filter_das($columns) {
  // unset($columns['author']);
  // unset($columns['categories']);
@@ -124,6 +133,8 @@ function das_custom_post_type_init() {
 		'public' => true,
 		'show_ui' => true,
 		'capability_type' => 'post',
+		'has_archive' => false,
+		'exclude_from_search' => true,
 		'hierarchical' => true,
 		'rewrite' => array('slug' => 'designs'),
 		'query_var' => 'Design Approval System',
