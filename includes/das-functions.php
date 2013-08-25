@@ -134,7 +134,6 @@ function das_custom_post_type_init() {
 		'show_ui' => true,
 		'capability_type' => 'post',
 		'has_archive' => false,
-		'exclude_from_search' => true,
 		'hierarchical' => true,
 		'rewrite' => array('slug' => 'designs'),
 		'query_var' => 'Design Approval System',
