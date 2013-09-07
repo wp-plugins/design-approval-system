@@ -3,7 +3,7 @@ Contributors: slickremix
 Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature
 Requires at least: 3.4.0
 Tested up to: 3.6.0
-Stable tag: 3.6
+Stable tag: 3.7
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, documents, videos or music approved by clients quickly.
@@ -79,6 +79,12 @@ If you would like to become apart of our team and help develop and make money ch
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Change-log ==
+= Version 3.7 / September 7th, 2013 =
+BIG THANKS to all those who have been helping on the forum or sending emails in regards to suggestions and security issues. We could not do it without you all! 
+ * FIXED: Security issue with walkthrough in WP admin, leaving it open to XSS attack. Needed to sanatize the step process, all good now.
+ * FIXED: Issue with posts being limited on the Project Board because of the number of posts set in wp settings page.
+ * FIXED: Depreciated call 'caller_get_posts' changed to 'ignore_sticky_posts' on the admin Project Board.
+ 
 = Version 3.6 / August 25th, 2013 =
  * FIXED: Additional security check added to the das-header.php so clients can't view other clients projects. Thanks to JetDingo for bringing this to our attention in our [support fourm](http://www.slickremix.com/support-forum/wordpress-plugins-group3/design-login-extension-forum6/possible-security-issue-login-work-around-public-can-view-all-designs-without-logging-in-thread122.0/#postid-564).
  * FIXED: Additional security check added to das-functions.php to redirect all users that try to access the site url on front end to view active projects coming from the content loop. (*ie. http://www.slickremix.com/testblog/?post_type=designapprovalsystem&page=design-approval-system-projects-page). So anything containing the word ?post_type=designapprovalsystem in the URL will get redirected to the home page. Additional Thanks to JetDingo for pointing this out. If you want to be able to view projects on the front end we do have the Public Project Board available ($5.00). See [more details here](http://www.slickremix.com/product/public-project-board-das-extension/).

@@ -38,9 +38,9 @@ $approved_main_designs_count = array();
 foreach ($client as $term) :
 	$args = array(
 	  'post_type' => $post_type,
-	  'post_per_page' => -1,
+	  'posts_per_page' => -1,
 	  'post_status'   => 'publish',
-	  'caller_get_posts' => 1,
+	  'ignore_sticky_posts' => 1,
 	  'tax_query' => array(
 			   array(
 				 'taxonomy' => $tax,
@@ -98,10 +98,11 @@ $counter = 0;
 		foreach ($client as $term) :
 		$args = array(
 			'post_type' => $post_type,
-			'post_per_page' => -1,
+			'posts_per_page' => -1,
 			'post_status'   => 'publish',
-			'caller_get_posts' => 1,'orderby'                  => 'name',
-	'order'                    => 'ASC',
+			'caller_get_posts' => 1,
+			'orderby' => 'name',
+			'order' => 'ASC',
 			'tax_query' => array(
 					 array(
 					   'taxonomy' => $tax,
@@ -272,7 +273,7 @@ $post_counts = array();
 foreach ($client as $term) :
 	$args = array(
 	  'post_type' => $post_type,
-	  'post_per_page' => -1,
+	  'post_per_page' => 0,
 	  'post_status'   => 'publish',
 	  'caller_get_posts' => 1,
 	  'tax_query' => array(

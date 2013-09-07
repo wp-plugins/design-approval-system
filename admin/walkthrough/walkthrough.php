@@ -1,18 +1,13 @@
 <?php 
-
+$_GET["step"] = filter_var($_GET["step"], FILTER_SANITIZE_STRING);
 $step = $_GET["step"];
-
 
 if ($_GET['post_type'] == 'designapprovalsystem') {
   add_action('admin_enqueue_scripts', 'das_walkthrough_cookie_scripts');
-  // THIS GIVES US SOME OPTIONS FOR STYLING THE ADMIN AREA
   function das_walkthrough_cookie_scripts() {
-	  
   }
 }
-
 ?>
-
 <script>
 	jQuery(function() {
 				var config = [
