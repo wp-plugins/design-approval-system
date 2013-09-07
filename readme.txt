@@ -80,7 +80,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 == Change-log ==
 = Version 3.7 / September 7th, 2013 =
-BIG THANKS to all those who have been helping on the forum or sending emails in regards to suggestions and security issues. We could not do it without you all! 
+ * BIG THANKS to all those who have been helping on the forum or sending emails in regards to suggestions and security issues. We could not do it without you all! 
  * FIXED: Security issue with walkthrough in WP admin, leaving it open to XSS attack. Needed to sanatize the step process, all good now.
  * FIXED: Issue with posts being limited on the Project Board because of the number of posts set in wp settings page.
  * FIXED: Depreciated call 'caller_get_posts' changed to 'ignore_sticky_posts' on the admin Project Board.
