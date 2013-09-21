@@ -21,7 +21,7 @@ View the full tutorial about our [Design Approval System plugin and Client Chang
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
 
 
-Here's what you, the clients, and the plugin can do:
+Here is what you, the clients, and the plugin can do:
 
 = YOU (THE DESIGNER) CAN… =
   * With the click of a button you can send the design’s review link to a client for approval. (An automatic confirmation email will be sent to both parties.)
