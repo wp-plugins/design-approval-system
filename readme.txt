@@ -14,7 +14,7 @@ A system to streamline the process of getting designs, photos, documents, videos
 
 If you enjoy using this plugin please take a second to tell others! [Click here to share.](http://www.facebook.com/sharer.php?u=http://wordpress.org/plugins/design-approval-system/&t=DesignApprovalSystem)
 
-Here is a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
+Here's a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
 If you have an idea please don't hesitate to [email us @ info@slickremix.com](mailto:info@slickremix.com). We could not do this without everyones help. We want to make the Design Approval System the best and quickest way to get projects approved on the web.
