@@ -10,7 +10,7 @@ A system to streamline the process of getting designs, photos, documents, videos
 
 == Description ==
 
-**NEW**: Approved designs now get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/). Clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Live Example](http://www.slickremix.com/project-board/). 
+Approved designs get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/). Clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Live Example](http://www.slickremix.com/project-board/). 
 
 If you enjoy using this plugin please take a second to tell others! [Click here to share.](http://www.facebook.com/sharer.php?u=http://wordpress.org/plugins/design-approval-system/&t=DesignApprovalSystem)
 
