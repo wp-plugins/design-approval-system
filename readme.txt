@@ -3,7 +3,7 @@ Contributors: slickremix
 Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature, work flow
 Requires at least: 3.4.0
 Tested up to: 3.8
-Stable tag: 3.7
+Stable tag: 3.8
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, documents, videos, or music approved by clients quickly.
@@ -81,6 +81,10 @@ If you would like to become apart of our team and help develop and make money ch
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Change-log ==
+= Version 3.8 / January 11th, 2014 =
+ * UPDATED: UI overhaul for 3.8 wordpress update and all premium extensions. If you don't care about the 3.8 version update then don't worry about updating just yet.
+ * FIXED: Replaced depreciated function for WP Max Upload Size on the help/system info page.
+ 
 = Version 3.7 / September 7th, 2013 =
  * Big thanks to all those who have been helping on the forum or sending emails in regards to suggestions and security issues, we could not do it without you all! 
  * FIXED: Security issue with walkthrough in WP admin, leaving it open to XSS attack. Needed to sanatize the step process, all good now. Thanks to [http://www.ibliss.com.br/](http://www.ibliss.com.br/) for pointing this out.

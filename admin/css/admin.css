@@ -1,25 +1,67 @@
-.menu-icon-designapprovalsystem .wp-submenu a, #menu-posts-designapprovalsystem .wp-submenua {
-	-webkit-transition: background 2s !important;
-	-webkit-transition: all 0.30s ease-in-out !important;
-	-moz-transition: all 0.30s ease-in-out !important;
-	-o-transition: all 0.30s ease-in-out !important;
-	transition: all 0.30s ease-in-out !important;
+.menu-icon-designapprovalsystem .wp-not-current-submenu div.wp-menu-image {
+	background-image: url('../images/design-approval-icon-sprite.png');
+	background-position: 9px -17px;
+	background-size: 22px;
+	background-repeat: no-repeat;
 }
-#menu-posts-designapprovalsystem .wp-not-current-submenu {
+#adminmenu .menu-icon-designapprovalsystem .wp-not-current-submenu:hover div.wp-menu-image {
+	background-position: 9px 9px;
+	background-size: 22px;
+}
+#adminmenu .menu-icon-designapprovalsystem .wp-menu-open div.wp-menu-image {
 	background-image: url('../images/design-approval-icon-sprite.png') !important;
-	background-position: 4px -21px !important;
+	background-position: 9px 9px !important;
 	background-size: 22px !important;
 	background-repeat: no-repeat !important;
 }
-#menu-posts-designapprovalsystem .wp-not-current-submenu:hover {
-	background-position: 4px 5px !important;
-	background-size: 22px !important;
+/* Retina Display Size */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
+.menu-icon-designapprovalsystem .wp-not-current-submenu {
+	 background-image: url('../images/design-approval-icon-sprite.png');
+	 background-position: 9px -17px;
+	 background-size: 22px;
+	 background-repeat: no-repeat;
 }
-#menu-posts-designapprovalsystem .wp-menu-open {
-	background-image: url('../images/design-approval-icon-sprite.png') !important;
-	background-position: 4px 5px !important;
-	background-size: 22px !important;
-	background-repeat: no-repeat !important;
+.menu-icon-designapprovalsystem .wp-not-current-submenu:hover {
+	 background-position: 9px 9px;
+	 background-size: 22px;
+}
+}
+@media only screen and (max-width: 900px) {
+.menu-icon-designapprovalsystem .wp-not-current-submenu div.wp-menu-image {
+	background-position: 7px -17px !important;
+}
+.menu-icon-designapprovalsystem .wp-not-current-submenu:hover div.wp-menu-image {
+	background-position: 7px 9px !important;
+}
+.menu-icon-designapprovalsystem .wp-not-current-submenu:hover div.wp-menu-image {
+	background-position: 7px 9px !important;
+}
+#adminmenu .menu-icon-designapprovalsystem .wp-menu-open div.wp-menu-image {
+	background-position: 7px 9px !important;
+}
+#adminmenu .menu-icon-designapprovalsystem:hover div.wp-menu-image {
+	background-position: 7px 9px !important;
+}
+}
+@media only screen and (max-width: 782px) {
+#adminmenu .menu-icon-designapprovalsystem div.wp-menu-image {
+	height: 27px !important;
+	width: 35px !important;
+	position: absolute;
+	z-index: 25;
+	background: url('../images/design-approval-icon-sprite.png') bottom no-repeat;
+	background-size: 22px;
+}
+#adminmenu .menu-icon-designapprovalsystem .wp-not-current-submenu:hover div.wp-menu-image {
+	background-position: 7px 9px !important;
+}
+#adminmenu .menu-icon-designapprovalsystem .wp-menu-open div.wp-menu-image {
+	background-position: 7px 9px !important;
+}
+#adminmenu .menu-icon-designapprovalsystem:hover div.wp-menu-image {
+	background-position: 7px 9px !important;
+}
 }
 
 #custom_das_meta_box .description{
@@ -85,17 +127,4 @@
 #custom_das_meta_box th label {
  padding-right:5px;
  color:#444;
-}
-/* Retina Display Size */
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
- #menu-posts-designapprovalsystem .wp-not-current-submenu {
-	background-image: url('../images/design-approval-icon-sprite.png') !important;
-	background-position: 4px -21px !important;
-	background-size: 22px !important;
-	background-repeat: no-repeat !important;
-}
-#menu-posts-designapprovalsystem .wp-not-current-submenu:hover {
-	background-position: 4px 5px !important;
-	background-size: 22px !important;
-}
 }

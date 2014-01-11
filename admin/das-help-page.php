@@ -93,7 +93,7 @@
 				<tr>
                     <td><?php _e('WP Max Upload Size','dasystem'); ?></td>
                     <td><?php
-                    	echo wp_convert_bytes_to_hr( wp_max_upload_size() );
+                    	echo size_format( wp_max_upload_size() );
                     ?></td>
                 </tr>
                 
