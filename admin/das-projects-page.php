@@ -143,34 +143,40 @@ $counter = 0;
     <div class="das-approved-design"><a class="icon-view-all" target="_blank" href="<?php the_permalink();?>"><span class="view-all-articles"><?php _e('Approved', 'design-approval-system') ?><span class="arrow-right"></span></span></a></div>
     
     
-    <?php 
-	//WOOCOMMERCE 
-							 	$custom_woo_product = get_post_meta($post->ID, 'custom_woo_product', true);
-								$das_product_id = get_post_meta($post->ID, 'das_design_woo_product_id', true); 
+    
+    
+    						    <?php  //Woo for DAS
+								if(is_plugin_active('woocommerce-for-das/woocommerce-for-das.php') && is_plugin_active('woocommerce/woocommerce.php')) { 
+										//WOOCOMMERCE 
+										$custom_woo_product = get_post_meta($post->ID, 'custom_woo_product', true);
+										$das_product_id = get_post_meta($post->ID, 'das_design_woo_product_id', true); 
+										
+										
+										if ($custom_woo_product == 'yes-woo-product' && !empty($das_product_id)) {
+											//Price of Design
+											$das_product_price = get_post_meta($das_product_id, '_regular_price', true);
+											
+											
+										}
+		
+										//Client Email
+										$client_email = get_post_meta($post->ID, 'custom_clients_email', true);
+										//Get user ID for design based on client's email
+										$client_id = get_user_by( 'email', $client_email );
 								
 								
-								if ($custom_woo_product == 'yes-woo-product' && !empty($das_product_id)) {
-									//Price of Design
-									$das_product_price = get_post_meta($das_product_id, '_regular_price', true);
-									
-									
-								}
-
-								//Client Email
-								$client_email = get_post_meta($post->ID, 'custom_clients_email', true);
-								//Get user ID for design based on client's email
-								$client_id = get_user_by( 'email', $client_email );
-								
-								//Check if client Purchased design
-								if (wc_customer_bought_product($client_email, $client_id->ID, $das_product_id )) { ?>
-									<div class="das-purchased-design"><a class="icon-view-all" target="_blank" href="<?php the_permalink();?>"><span class="view-all-articles"><?php _e('Purchased', 'design-approval-system') ?><span class="arrow-right"></span></span></a></div><?php
-								}
-								else{
-									// might put shopping cart icon here echo 'Not Purchased';
-								}
-								//END WOOCOMMERCE
-												}
-	?>
+										
+										//Check if client Purchased design
+										if (wc_customer_bought_product($client_email, $client_id->ID, $das_product_id )) { ?>
+											<div class="das-purchased-design"><a class="icon-view-all" target="_blank" href="<?php the_permalink();?>"><span class="view-all-articles"><?php _e('Purchased', 'design-approval-system') ?><span class="arrow-right"></span></span></a></div><?php
+										}
+										else{
+											// might put shopping cart icon here echo 'Not Purchased';
+										}
+										//END WOOCOMMERCE
+								}	//END IF WOOCOMMERCE and DAS			
+						}
+				?>
     
     <a href='<?php the_permalink();?>' title='<?php the_title_attribute(); ?>' target="_blank" class='project-list-link'><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?></a> </div>
   <span class="project-notes-entry-utility project-notes-backg"></span>
@@ -427,7 +433,8 @@ $counter = 0;
 												}
 										
 										
-										
+ //Woo for DAS
+								if(is_plugin_active('woocommerce-for-das/woocommerce-for-das.php') && is_plugin_active('woocommerce/woocommerce.php')) { 										
 	//WOOCOMMERCE 
 							 	$custom_woo_product = get_post_meta($post->ID, 'custom_woo_product', true);
 								$das_product_id = get_post_meta($post->ID, 'das_design_woo_product_id', true); 
@@ -453,6 +460,7 @@ $counter = 0;
 									// might put shopping cart icon here echo 'Not Purchased';
 								}
 								//END WOOCOMMERCE
+							} //END IF WOOCOMMERCE and DAS
 												
 	?>
           
