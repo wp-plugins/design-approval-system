@@ -17,9 +17,9 @@ foreach ($user_blogs AS $user_blog) {
 if (current_user_can_for_blog($user_blog_id, 'administrator') || current_user_can_for_blog($user_blog_id, 'das_designer')) {
 ?>
 <div class="das-project-admin-wrap">
-<a class="buy-extensions-btn" href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank">Get Extensions Here!</a>
-<h2 class="project-board-header">Project Board</h2>
-<div class="use-of-plugin">Below are your Clients and their Projects: We suggest you use the <a href="http://www.slickremix.com/product/select-user-and-email-extension/" target="_blank">Select User and Email, DAS Extension</a> to make this list work seamlessly. Learn how to use and setup the <a href="http://www.slickremix.com/2013/01/22/das-project-board-tutorial/" target="_blank">Project Board Here</a>. </div>
+<a class="buy-extensions-btn" href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank"><?php _e('Get Extensions Here!', 'design-approval-system') ?></a>
+<h2 class="project-board-header"><?php _e('Project Board', 'design-approval-system') ?></h2>
+<div class="use-of-plugin"><?php _e('Below are your Clients and their Projects: We suggest you use the', 'design-approval-system') ?> <a href="http://www.slickremix.com/product/select-user-and-email-extension/" target="_blank"><?php _e('Select User and Email, DAS Extension', 'design-approval-system') ?></a> <?php _e('to make this list work seamlessly. Learn how to use and setup the', 'design-approval-system') ?> <a href="http://www.slickremix.com/2013/01/22/das-project-board-tutorial/" target="_blank"><?php _e('Project Board Here', 'design-approval-system') ?></a>. </div>
 <?php
 //Custom DAS Post Type
 $post_type = 'designapprovalsystem';
@@ -115,17 +115,11 @@ $counter = 0;
 		  );
 		  
 		   
-		   
-			
-		 
- 
-		  
 		   $my_query = new WP_Query($args);
 		   	 	
 						if( $my_query->have_posts() ) : ?>
 <?php while ( $my_query->have_posts() ) : $my_query->the_post(); global $post; 
 								
-							 	
 							 
 								$final_client_value = get_post_meta($post->ID, 'custom_client_name', true);
 								$final_term_value = $term->name;
@@ -146,42 +140,88 @@ $counter = 0;
 											$approved_check = get_post_meta($post->ID, 'custom_client_approved', true);
 												if ($approved_check == 'Yes'){ 
 												?>
-    <div class="das-approved-design"><a class="icon-view-all" target="_blank" href="<?php the_permalink();?>"><span class="view-all-articles">Approved<span class="arrow-right"></span></span></a></div>
+    <div class="das-approved-design"><a class="icon-view-all" target="_blank" href="<?php the_permalink();?>"><span class="view-all-articles"><?php _e('Approved', 'design-approval-system') ?><span class="arrow-right"></span></span></a></div>
+    
+    
     <?php 
+	//WOOCOMMERCE 
+							 	$custom_woo_product = get_post_meta($post->ID, 'custom_woo_product', true);
+								$das_product_id = get_post_meta($post->ID, 'das_design_woo_product_id', true); 
+								
+								
+								if ($custom_woo_product == 'yes-woo-product' && !empty($das_product_id)) {
+									//Price of Design
+									$das_product_price = get_post_meta($das_product_id, '_regular_price', true);
+									
+									
+								}
+
+								//Client Email
+								$client_email = get_post_meta($post->ID, 'custom_clients_email', true);
+								//Get user ID for design based on client's email
+								$client_id = get_user_by( 'email', $client_email );
+								
+								//Check if client Purchased design
+								if (wc_customer_bought_product($client_email, $client_id->ID, $das_product_id )) { ?>
+									<div class="das-purchased-design"><a class="icon-view-all" target="_blank" href="<?php the_permalink();?>"><span class="view-all-articles"><?php _e('Purchased', 'design-approval-system') ?><span class="arrow-right"></span></span></a></div><?php
+								}
+								else{
+									// might put shopping cart icon here echo 'Not Purchased';
+								}
+								//END WOOCOMMERCE
 												}
-										 ?>
+	?>
+    
     <a href='<?php the_permalink();?>' title='<?php the_title_attribute(); ?>' target="_blank" class='project-list-link'><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?></a> </div>
   <span class="project-notes-entry-utility project-notes-backg"></span>
 	<?php if( current_user_can_for_blog($user_blog_id, 'administrator') || current_user_can_for_blog($user_blog_id, 'das_designer') ) : ?>
-  <?php edit_post_link( __( 'Edit'), '<span class="edit-link project-notes-entry-utility project-notes-edit">', '</span>' ); ?>
+  <?php edit_post_link( __('Edit', 'design-approval-system'), '<span class="edit-link project-notes-entry-utility project-notes-edit">', '</span>' ); ?>
   <?php else : ?>
-  <span class="edit-link project-notes-entry-utility project-notes-edit"><a href="<?php the_permalink();?>" target="_blank" title="<?php the_title_attribute(); ?>">View</a></span>
+  <span class="edit-link project-notes-entry-utility project-notes-edit"><a href="<?php the_permalink();?>" target="_blank" title="<?php the_title_attribute(); ?>"><?php _e('View', 'design-approval-system') ?></a></span>
   <?php endif; ?>
   <span class="project-notes-entry-utility project-day-date">
   <?php the_time('l') ?>
   <br/>
   <?php the_time('F jS, Y') ?>
-  </span> <span class="project-notes-entry-utility project-notes-show"><a href="#" title="Details">Details</a></span>
+  </span> <span class="project-notes-entry-utility project-notes-show"><a href="#" title="Details"><?php _e('Details', 'design-approval-system') ?></a></span>
   <div class="project-notes-wrap">
     <div class="project-details-wrap">
-      <div class='project-notes-text-header'>Details</div>
-      <div class='project-notes-detail-text-wrap'> <strong>Post Name:</strong> <a href='<?php the_permalink();?>' target="_blank" title='<?php the_title_attribute(); ?>'>
+      <div class='project-notes-text-header'><?php _e('Details', 'design-approval-system') ?></div>
+      <div class='project-notes-detail-text-wrap'> <strong><?php _e('Post Name', 'design-approval-system') ?>:</strong> <a href='<?php the_permalink();?>' target="_blank" title='<?php the_title_attribute(); ?>'>
         <?php the_title(); ?>
         </a><br/>
         <strong><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?></strong><br/>
-        <strong>Design Name</strong>: <?php echo get_post_meta($post->ID, 'custom_name_of_design', true); ?><br/>
-        <strong>Timeline</strong>: <?php echo get_post_meta($post->ID, 'custom_project_start_end', true); ?><br/>
-        <strong>Client Email</strong>: <a href="mailto:<?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?>"><?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?></a><br/>
-        <strong>Designer</strong>: <?php echo get_post_meta($post->ID, 'custom_designers_name', true); ?><br/>
+        <strong><?php _e('Design Name', 'design-approval-system') ?></strong>: <?php echo get_post_meta($post->ID, 'custom_name_of_design', true); ?><br/>
+        
+        <?php if (get_post_meta($post->ID, 'custom_project_start_end', true) == '') { ?> 
+                            <?php } 
+							else { ?>
+                            
+                            <strong><?php _e('Timeline', 'design-approval-system') ?></strong>: <?php echo get_post_meta($post->ID, 'custom_project_start_end', true); ?><br/>
+								
+		<?	} ?>
+        
+       
+        <strong><?php _e('Client Email', 'design-approval-system') ?></strong>: <a href="mailto:<?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?>"><?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?></a><br/>
+        <strong><?php _e('Designer', 'design-approval-system') ?></strong>: <?php echo get_post_meta($post->ID, 'custom_designers_name', true); ?><br/>
         <?php 
 			   if(get_post_meta($post->ID, 'custom_client_approved', true) == 'Yes') { ?>
-        <strong>Client Approved</strong>: <span class="custom_client_approved"><?php echo get_post_meta($post->ID, 'custom_client_approved', true); ?><span class="arrow-right"></span></span><br/>
-        <strong>Client Signature</strong>: <span class="custom_client_approved"><?php echo get_post_meta($post->ID, 'custom_client_approved_signature', true); ?><span class="arrow-right"></span></span>
-        <?php }  
+        <strong><?php _e('Client Approved', 'design-approval-system') ?></strong>: <span class="custom_client_approved"><?php echo get_post_meta($post->ID, 'custom_client_approved', true); ?><span class="arrow-right"></span></span><br/>
+        <strong><?php _e('Client Signature', 'design-approval-system') ?></strong>: <span class="custom_client_approved"><?php echo get_post_meta($post->ID, 'custom_client_approved_signature', true); ?><span class="arrow-right"></span></span><br/>
+          <?php }  
                 else {
                 	
                 }
-                ?>
+               
+			   if($custom_woo_product) {
+					echo '<br/><strong>Cost:</strong> ' . get_post_meta($das_product_id, '_regular_price', true);    
+			   }
+			   
+			    ?>
+                
+        
+         
+         
         <div class="clear"></div>
       </div>
       <div class="clear"></div>
@@ -253,7 +293,7 @@ $this_users_email = $user->user_email;
 
 ?>
 <div class="das-project-admin-wrap">
-  <h2 class="project-board-header">Project Board</h2>
+  <h2 class="project-board-header"><?php _e('Project Board', 'design-approval-system') ?></h2>
   <?php
 
 //Custom DAS Post Type
@@ -380,39 +420,75 @@ $counter = 0;
 											
 											$name = get_post_meta($post->ID, 'custom_client_approved', true);
 												if ($name == 'Yes'){ ?>
-      <div class="das-approved-design"><a class="icon-view-all" target="_blank" href="<?php the_permalink();?>"><span class="view-all-articles">Approved<span class="arrow-right"></span></span></a></div>
+      <div class="das-approved-design"><a class="icon-view-all" target="_blank" href="<?php the_permalink();?>"><span class="view-all-articles"><?php _e('Approved', 'design-approval-system') ?><span class="arrow-right"></span></span></a></div>
       <?php 
 												} else {
 												 //do nothing or whatever you need when no custom field or text was found
 												}
-										 ?>
+										
+										
+										
+	//WOOCOMMERCE 
+							 	$custom_woo_product = get_post_meta($post->ID, 'custom_woo_product', true);
+								$das_product_id = get_post_meta($post->ID, 'das_design_woo_product_id', true); 
+								echo $das_product_price;
+								
+								if ($custom_woo_product == 'yes-woo-product' && !empty($das_product_id)) {
+									//Price of Design
+									$das_product_price = get_post_meta($das_product_id, '_regular_price', true);
+									
+									
+								}
+
+								//Client Email
+								$client_email = get_post_meta($post->ID, 'custom_clients_email', true);
+								//Get user ID for design based on client's email
+								$client_id = get_user_by( 'email', $client_email );
+								
+								//Check if client Purchased design
+								if (wc_customer_bought_product($client_email, $client_id->ID, $das_product_id )) { ?>
+									<div class="das-purchased-design"><a class="icon-view-all" target="_blank" href="<?php the_permalink();?>"><span class="view-all-articles"><?php _e('Purchased', 'design-approval-system') ?><span class="arrow-right"></span></span></a></div><?php
+								}
+								else{
+									// might put shopping cart icon here echo 'Not Purchased';
+								}
+								//END WOOCOMMERCE
+												
+	?>
+          
     </div>
     <span class="project-notes-entry-utility project-notes-backg"></span>
     <?php if( current_user_can_for_blog($user_blog_id, 'administrator') || current_user_can_for_blog($user_blog_id, 'das_designer') ) : ?>
-    <?php edit_post_link( __( 'Edit'), '<span class="edit-link project-notes-entry-utility project-notes-edit">', '</span>' ); ?>
+    <?php edit_post_link( __('Edit', 'design-approval-system'), '<span class="edit-link project-notes-entry-utility project-notes-edit">', '</span>' ); ?>
     <?php else : ?>
-    <span class="edit-link project-notes-entry-utility project-notes-edit"><a href="<?php the_permalink();?>" target="_blank" title="<?php the_title_attribute(); ?>">View</a></span>
+    <span class="edit-link project-notes-entry-utility project-notes-edit"><a href="<?php the_permalink();?>" target="_blank" title="<?php the_title_attribute(); ?>"><?php _e('View', 'design-approval-system') ?></a></span>
     <?php endif; ?>
     <span class="project-notes-entry-utility project-day-date">
     <?php the_time('l') ?>
     <br/>
     <?php the_time('F jS, Y') ?>
-    </span> <span class="project-notes-entry-utility project-notes-show"><a href="#" title="Details">Details</a></span>
+    </span> <span class="project-notes-entry-utility project-notes-show"><a href="#" title="Details"><?php _e('Details', 'design-approval-system') ?></a></span>
     <div class="project-notes-wrap">
       <div class="project-details-wrap">
-        <div class='project-notes-text-header'>Details</div>
-        <div class='project-notes-detail-text-wrap'> <strong>Post Name:</strong> <a href='<?php the_permalink();?>' target="_blank" title='<?php the_title_attribute(); ?>'>
+        <div class='project-notes-text-header'><?php _e('Details', 'design-approval-system') ?></div>
+        <div class='project-notes-detail-text-wrap'> <strong><?php _e('Post Name', 'design-approval-system') ?>:</strong> <a href='<?php the_permalink();?>' target="_blank" title='<?php the_title_attribute(); ?>'>
           <?php the_title(); ?>
           </a><br/>
           <strong><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?></strong><br/>
-          <strong>Design Name</strong>: <?php echo get_post_meta($post->ID, 'custom_name_of_design', true); ?><br/>
-          <strong>Timeline</strong>: <?php echo get_post_meta($post->ID, 'custom_project_start_end', true); ?><br/>
-          <strong>Client Email</strong>: <a href="mailto:<?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?>"><?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?></a><br/>
-        <strong>Designer</strong>: <?php echo get_post_meta($post->ID, 'custom_designers_name', true); ?><br/>
+          <strong><?php _e('Design Name', 'design-approval-system') ?></strong>: <?php echo get_post_meta($post->ID, 'custom_name_of_design', true); ?><br/>
+          <?php if (get_post_meta($post->ID, 'custom_project_start_end', true) == '') { ?> 
+                            <?php } 
+							else { ?>
+                            
+                            <strong><?php _e('Timeline', 'design-approval-system') ?></strong>: <?php echo get_post_meta($post->ID, 'custom_project_start_end', true); ?><br/>
+								
+		  <? } ?>
+         <strong><?php _e('Client Email', 'design-approval-system') ?></strong>: <a href="mailto:<?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?>"><?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?></a><br/>
+         <strong><?php _e('Designer', 'design-approval-system') ?></strong>: <?php echo get_post_meta($post->ID, 'custom_designers_name', true); ?><br/>
          <?php
 		 if(get_post_meta($post->ID, 'custom_client_approved', true) == 'Yes') { ?>
-        <strong>Client Approved</strong>: <span class="custom_client_approved"><?php echo get_post_meta($post->ID, 'custom_client_approved', true); ?><span class="arrow-right"></span></span><br/>
-        <strong>Client Signature</strong>: <span class="custom_client_approved"><?php echo get_post_meta($post->ID, 'custom_client_approved_signature', true); ?><span class="arrow-right"></span></span>
+        <strong><?php _e('Client Approved', 'design-approval-system') ?></strong>: <span class="custom_client_approved"><?php echo get_post_meta($post->ID, 'custom_client_approved', true); ?><span class="arrow-right"></span></span><br/>
+        <strong><?php _e('Client Signature', 'design-approval-system') ?></strong>: <span class="custom_client_approved"><?php echo get_post_meta($post->ID, 'custom_client_approved_signature', true); ?><span class="arrow-right"></span></span><br/>
         <?php }  
                 else { }
                 ?>

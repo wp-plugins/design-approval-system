@@ -25,6 +25,8 @@ $das_settings_approved_dig_sig_message_to_designer = ($_GET['dasSettingsApproved
 $das_settings_approved_dig_sig_message_to_clients = ($_GET['dasSettingsApprovedDigSigMessageToClients']) ?$_GET['dasSettingsApprovedDigSigMessageToClients'] : $_POST['dasSettingsApprovedDigSigMessageToClients'];
 
 $human1 = ($_GET['human1']) ?$_GET['human1'] : $_POST['human1'];
+// added this for the gq theme, sends the post meta info for the template das-gq-theme-main.php so we can check against it for the jquery approve messges.
+$templateName = ($_GET['templateName']) ?$_GET['templateName'] : $_POST['templateName'];
 ?>
 <style type="text/css">
 input.hightlight1, input.hightlight2, input.hightlight3  {
@@ -36,20 +38,14 @@ input.hightlight1, input.hightlight2, input.hightlight3  {
 	color:#222;
 	}
 </style>
-<script language="JavaScript"><?
+<?
 
 //flag to indicate which method it uses. If POST set it to 1
 if ($_POST) $post=1;
 
-//Simple server side validation for POST data, of course, you should validate the email. , This part really is not needed as the process has shifted more on my_dasChecker.js We'll update this change next version. SRL 6-15-13
-if (!$custom_client_approved_signature) {$errors[count($errors)] = 'Please enter your Digital Signature.'; ?>jQuery("input[name=custom_client_approved_signature]").addClass('hightlight1');jQuery(".error-message").addClass('error');
-<?}else{?>jQuery("input[name=custom_client_approved_signature]").removeClass('hightlight1');jQuery(".error-message").removeClass('error');<?}
 if (!$human1 ['human1'] == '') {$errors[count($errors)] = 'It appears you may be trying to submit spam. Please disreguard this notice and try again if we made a mistake.'; }
 
 //if the errors array is empty, send the mail
-?></script>
-<?
-
 $recipients = array("designer", "client");
 
 if (!$errors) {
@@ -154,29 +150,51 @@ $dasSettingsSmtp = get_option( 'das-settings-smtp' );
   } else {
   }
 }
-	
 
-
-	//if POST was used, display the message straight away
-	?>
-    <script language='JavaScript'>jQuery(document).ready(function(){
+//if POST was used, display the message straight away
+?>
+<script language='JavaScript'>jQuery(document).ready(function(){
 <?php
 	if ($_POST) {
-		if ($myresult) 
-					echo "
+		if ($myresult) {
+				global $post; 	?> 
 					jQuery('.approved-form-wrap').fadeOut();
 					
-					setTimeout (function(){
-					//show the success message and the thank-you message
-					jQuery('.approved-thankyou-form-wrap').fadeIn(400); },500);
 					
-					setTimeout (function(){
-					//show the success message and the thank-you message
-					jQuery('.approved-thankyou-form-wrap, .pop-up-backg').fadeOut(400); },4000);
+					<?php
+					 $das_gq_plugin = is_plugin_active('das-gq-theme/das-gq-theme.php');
+					 $das_template_name = $templateName;
+				     $das_gq_plugin_compare = 'das-gq-theme-main.php'; 
+					 
+					 if ($das_gq_plugin && $das_template_name == $das_gq_plugin_compare )  { 
+					 ?> 
+						setTimeout (function(){
+						jQuery('.status-area1').hide(); },500); 
+						
+					<?php   } 
+					  else { ?>
+					  		setTimeout (function(){
+					  		jQuery('.status-area1').fadeOut(400); },400); 	
+					 <?php  } ?>
+					 
+							setTimeout (function(){
+							//show the success message and the thank-you message
+							jQuery('.approved-thankyou-form-wrap').fadeIn(400); },500);
 					
-					";  
+					<?php  
 					
-		else echo "alert('".$mail->ErrorInfo."');";
+					 if ($das_gq_plugin && $das_template_name == $das_gq_plugin_compare) { ?>
+						// do nothing
+					<?php } 
+					else { ?>
+						setTimeout (function(){
+						//show the success message and the thank-you message
+						jQuery('.approved-thankyou-form-wrap, .pop-up-backg').fadeOut(400); },4000);
+					<?php	}
+					
+			 }    
+					
+	else echo "alert('".$mail->ErrorInfo."');";
 
 		
 	//else if GET was used, return the boolean value so that 
@@ -187,19 +205,7 @@ $dasSettingsSmtp = get_option( 'das-settings-smtp' );
 	}
 	?>});</script>
 <?
-//if the errors array has values
-} else {
-	//display the errors message
-	?>
-<script language="JavaScript">jQuery(document).ready(function(){<?
-	//for ($i=0; $i<count($errors); $i++) $disperrors.= htmlspecialchars($errors[$i]) . '\n';
-	//echo("alert('".$disperrors."');");
-	//no alert for errors anymore
-	?>});</script>
-<?
-	exit;
-}
-
+} 
 ?>
 </body>
 </html>

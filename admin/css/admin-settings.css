@@ -66,12 +66,13 @@ input[type=checkbox]#das-settings-smtp, .designapprovalsystem_page_das-clean-the
 }
 .designapprovalsystem_page_das-clean-theme-settings-page .das-settings-admin-wrap {
 	max-width:975px;
+	
 }
 .das-settings-admin-wrap {
 	min-height: 379px;
 	background: url(../images/das-settings-back2.png) center top;
 	background-color: #000000;
-	padding: 25px 28px 45px 28px;
+	padding: 25px 28px 70px 28px;
 	-webkit-box-shadow: 2px 3px 7px 1px #ddd;
 	box-shadow: 2px 3px 7px 1px #ddd;
 	-webkit-border-radius: 10px;
@@ -100,7 +101,7 @@ input[type=checkbox]#das-settings-smtp, .designapprovalsystem_page_das-clean-the
 }
 .das-settings-admin-form {
 	width: 100%;
-	padding: 0px 0 20px;
+	/* padding: 0px 0 20px; */
 }
 .das-settings-admin-input-wrap {
 	background-color: #f3f3f3;
@@ -220,17 +221,50 @@ input[type=checkbox]#das-settings-smtp, .designapprovalsystem_page_das-clean-the
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
 }
+.designapprovalsystem_page_das-clean-theme-settings-page .das-settings-icon-wrap {
+margin-right:12px;
+}
+
+.das-settings-icon-wrap {
+float:right;
+height: 34px; 
+}
+.das-settings-icon-wrap a.facebook-icon {
+	float: right;
+	display: block;
+	height: 28px;
+	width: 28px;
+	cursor: default;
+	outline: none;
+	border: none;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
+}
+.das-settings-icon-wrap a:hover {
+	opacity: .95;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
+}
+.das-settings-icon-wrap a.facebook-icon {
+	background: url(../images/facebook-icon.png) no-repeat;
+	 background-size:28px 28px;
+	cursor: pointer;
+}
 .das-settings-admin-slick-logo {
-	background:url(../images/footer-logo.png) left no-repeat;
+	background: url(../images/footer-logo.png) center no-repeat;
+	background-color:#333 ;
 	width: 108px;
 	height: 20px;
-	padding: 8px 2px;
+	padding: 4px 8px !important;
 	display: block;
-	position: absolute;
-	bottom: 10px;
-	right: 28px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
+	float:right;
+	margin-right:1px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
 }
 .designapprovalsystem_page_design-approval-system-news-updates-page .das-video-admin-wrap .das-settings-admin-slick-logo, .designapprovalsystem_page_design-approval-system-video-page .das-video-admin-wrap .das-settings-admin-slick-logo {
 	bottom: 7px;
@@ -363,7 +397,9 @@ a.im-done:hover, .upload_image_button:hover, .das-settings-admin-submit-btn:hove
 }
 .das-settings-admin-submit-btn {
 	padding: 10px 40px;
- margin-top: 30px  -webkit-transition: background 2s;
+ margin-top: 0px;
+ float:left;
+ -webkit-transition: background 2s;
 	-webkit-transition: all 0.30s ease-in-out;
 	-moz-transition: all 0.30s ease-in-out;
 	-o-transition: all 0.30s ease-in-out;
@@ -800,6 +836,16 @@ h2.project-board-header {
      width:18px; 
      display:block;
 }
+.das-purchased-design  {
+     position:absolute;
+     top:163px; 
+	 left:26px;
+     background: url(../images/172-pricetag@2x.png ) no-repeat;
+     background-size:24px 20px;
+     height:20px;
+     width:24px; 
+     display:block;
+}
 
 .das-approved-design-title {
 	  float: left;
@@ -857,7 +903,7 @@ h2.project-board-header {
      width:18px; 
      display:block !important;
 }
-.das-approved-design span.view-all-articles, .das-approved-design-title span.view-all-articles  {
+.das-approved-design span.view-all-articles, .das-approved-design-title span.view-all-articles {
 	opacity:0;
 	display:block;
 	position:relative;
@@ -869,7 +915,7 @@ h2.project-board-header {
 	font-weight:normal;
 	letter-spacing:1px;
 	font-size:11px;
-	width:60px;
+	width:62px;
 	background: rgba(0, 0, 0, 0.6);
 	border-radius:1px;
 	padding:3px 4px 3px 9px;
@@ -882,7 +928,32 @@ h2.project-board-header {
 	-o-transition-duration: 0.2s;
 	transition-duration: 0.2s;
 } 
-.das-approved-design a.icon-view-all:hover span.view-all-articles, .das-approved-design-title a.icon-view-all:hover span.view-all-articles  {
+.das-purchased-design span.view-all-articles, .das-purchased-design-title span.view-all-articles  {
+	opacity:0;
+	display:block;
+	position:relative;
+	left: 0px;
+	height:17px; 
+	top:25px;
+	text-align:left;
+	color:#FFF;
+	font-weight:normal;
+	letter-spacing:1px;
+	font-size:11px;
+	width:67px;
+	background: rgba(0, 0, 0, 0.6);
+	border-radius:1px;
+	padding:3px 4px 3px 9px;
+	-webkit-transition-delay: 0.2s;
+	-moz-transition-delay: 0.2s;
+	-o-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+} 
+.das-approved-design a.icon-view-all:hover span.view-all-articles, .das-approved-design-title a.icon-view-all:hover span.view-all-articles, .das-purchased-design a.icon-view-all:hover span.view-all-articles, .das-purchased-design-title a.icon-view-all:hover span.view-all-articles  {
 	opacity:1;
 	-webkit-transition-delay: 0s;
 	-moz-transition-delay: 0s;
@@ -895,7 +966,7 @@ h2.project-board-header {
 	z-index:10000;
 }
 /* create an arrow that points right */
-.das-approved-design span.arrow-right, .das-approved-design-title span.arrow-right {
+.das-approved-design span.arrow-right, .das-approved-design-title span.arrow-right, .das-purchased-design span.arrow-right, .das-purchased-design-title span.arrow-right {
     width: 0px;
     height: 0px;
     position: absolute;

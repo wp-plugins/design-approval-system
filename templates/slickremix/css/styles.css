@@ -351,10 +351,12 @@ body#design-template {
 	background: url(../images/header-wrap-backg.png) left top no-repeat #000000;
 }
 .header-info-wrap {
-	width: 807px;
-	height: 73px;
+	width: 790px;
+	height: 84px;
 	padding-top: 13px;
 	letter-spacing: 0.04em;
+	position:relative;
+	/* z-index:500; */
 }
 .logo-top {
 	width: 149px;
@@ -368,7 +370,7 @@ body#design-template {
 .designers-name-wrap {
 	text-align: right;
 	color: #FFFFFF;
-	font-size: 13px;
+	font-size: 12px;
 }
 .header-title-notes-wrap {
 	list-style-type: none;
@@ -377,9 +379,11 @@ body#design-template {
 	text-align: left;
 	display: block;
 	float: left;
-	margin-left: 30px;
 	color: #bfbfbf;
-	font-size: 14px;
+	font-size: 13px;
+	min-height:53px;
+	position:absolute;
+	left:135px;
 }
 .header-title-text {
 	float: left;
@@ -389,7 +393,8 @@ body#design-template {
 	text-align: right;
 	display: block;
 	color: #cdc9c9;
-	font-size: 14px;
+	font-size: 12px;
+	font-weight:bold;
 }
 .main-logo-tab {
 	width: 139px;
@@ -397,12 +402,56 @@ body#design-template {
 	float: right;
 	background-color: #323232;
 }
+
+.main-checkout-tab {
+	width: auto;
+	height: 41px;
+	float: right;
+	background-color: #323232;
+	margin-right:1px;
+	margin-left:12px;
+	color:#FFF;
+	position:relative;
+	z-index:5000;
+	
+}
+
+.main-checkout-tab p {
+	border:none !important;
+	padding:7px 10px 0 15px !important;
+}
+.add_to_cart_button {
+	
+background: -moz-linear-gradient(top, #b6b5b5 0%, #dbdbdb 100%) !important;
+background: -webkit-gradient(linear, left top, left bottom, from(#b6b5b5), to(#dbdbdb)) !important;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b6b5b5', endColorstr='#dbdbdb') !important;
+	color: #000000 !important;
+}
+.main-checkout-tab a {
+	/* background:url(../images/80-shopping-cart@2x.png) no-repeat; */
+	background-size:25px 25px;
+	height:25px;
+	margin-left:10px !important;
+	display:block;
+	box-shadow:0px;
+	color:#FFF ;
+	text-shadow:none !important;
+	font-weight:normal !important;
+	border-radius:0px !important;
+}
+.main-checkout-tab .add_to_cart_button:before {
+	color:#FFF ;
+}
+.main-checkout-tab a.added_to_cart {
+	color:#FFF !important;
+	padding-left:15px;
+}
 .main-logo {
 	display: block;
 	margin: auto;
 }
 a.version-tab, a.hide-notes, a.project-timeline, a.versions, a.logout-btn {
-	height: 20px;
+	height: 26px;
 	padding: 0 20px;
 	background-color: #323232;
 	display: block;
@@ -524,21 +573,21 @@ a:hover.project-timeline {
 	border-top: 1px solid #3D3C3D;
 }
 .designers-notes-tab {
-	height: 28px;
+	/* height: 28px; */
 	background-color: #323232;
 	color: #0095da;
 	font-size: 16px;
 	margin-left: 20px;
 	float: left;
-	padding: 9px 16px 0 16px;
+	padding: 9px 16px 9px 16px;
 }
 .designers-options-tab {
-	height: 28px;
+	/* height: 28px; */
 	background-color: #323232;
 	color: #FFFFFF;
 	font-size: 16px;
 	float: left;
-	padding: 9px 16px 0 16px;
+	padding: 9px 16px 9px 16px;
 }
 .designers-notes-backg {
 	background: url(../images/designer-notes-backg.jpg) repeat-x;
@@ -551,7 +600,7 @@ a:hover.project-timeline {
 }
 a.design-option-btn {
 	display: block;
-	height: 20px;
+	/* height: 20px; */
 	width: 106px;
 	text-align: center;
 	padding: 6px 0;

@@ -3,7 +3,7 @@ $_GET["step"] = filter_var($_GET["step"], FILTER_SANITIZE_STRING);
 $step = $_GET["step"];
 
 if ($_GET['post_type'] == 'designapprovalsystem') {
-  add_action('admin_enqueue_scripts', 'das_walkthrough_cookie_scripts');
+  add_action('admin__nqueue_scripts', 'das_walkthrough_cookie_scripts');
   function das_walkthrough_cookie_scripts() {
   }
 }
@@ -13,57 +13,57 @@ if ($_GET['post_type'] == 'designapprovalsystem') {
 				var config = [
 					{
 						"name" 		: "tour_1",
-						"text"		: "<p>This page shows all of your clients and projects. You can view the details of each design, and if a design is approved a STAR will appear next to that project and design version.</p> <p>By following the Next 3 steps in our walk-through your project board will come alive!</p><p>Step 1: Make sure you have filled out the details in the Settings page</p>",
+						"text"		: "<?php echo __("<p>This page shows all of your clients and projects. You can view the details of each design, and if a design is approved a STAR will appear next to that project and design version.</p> <p>By following the Next 3 steps in our walk-through your project board will come alive!</p><p>Step 1: Make sure you have filled out the details in the Settings page</p>", "design-approval-system") ?>",
 						"time" 		: 5000
 					},
 					{
 						"name" 		: "tour_2",
-						"text"		: "<p>Step 2: Create a Project Name.<br/>Make your name relative to your client and your project. Like this example,</p><p><i>Bomber Eyewear – Home Trial</i>.</p><p>This will make it easy to see very quickly, what project was for who.",
+						"text"		: "<?php echo __("<p>Step 2: Create a Project Name.<br/>Make your name relative to your client and your project. Like this example,</p><p><i>Bomber Eyewear – Home Trial</i>.</p><p>This will make it easy to see very quickly, what project was for who.", "design-approval-system") ?>",
 						"time" 		: 5000
 					},
 					{
 						"name" 		: "tour_3",
-						"text"		: "<p>Step 3: Add a New Design.<br/>Fill out the title with the name of your client and project. This is how we do it:</p><p><i>Bomber Eyewear, Home Trial V1</i></p><p>Then add your photo, video, music, or whatever you need approved into the large textbox on the page.</p> <p>Fill out the Design Approval Fields, making sure to enter your clients name and email.</p><p>Finally, make sure and check your Project Name for this Design version in the right sidebar and add a Featured Image. This is very important as it's what helps organize the Project Board.<p>That's all, now your project board should have one project and a design version.</p>",
+						"text"		: "<?php echo __("<p>Step 3: Add a New Design.<br/>Fill out the title with the name of your client and project. This is how we do it:</p><p><i>Bomber Eyewear, Home Trial V1</i></p><p>Then add your photo, video, music, or whatever you need approved into the large textbox on the page.</p> <p>Fill out the Design Approval Fields, making sure to enter your clients name and email.</p><p>Finally, make sure and check your Project Name for this Design version in the right sidebar and add a Featured Image. This is very important as it is what helps organize the Project Board.<p>Now your project board should have one project and a design version.</p>", "design-approval-system") ?>",
 						"time" 		: 5000
 					},
 					{
 						"name" 		: "tour_4",
-						"text"		: "<p>This page displays a list of all your designs with a date title and author (designer name).</p> <p>You can also edit, add new or delete designs here too.</p>",
+						"text"		: "<?php echo __("<p>This page displays a list of all your designs with a date title and author (designer name).</p> <p>You can also edit, add new or delete designs here too.</p>", "design-approval-system") ?>",
 						"time" 		: 5000
 					},
 					{
 						"name" 		: "tour_5",
-						"text"		: "<p>This page displays a list of all your clients that you will have signed up on the <a href='user-new.php'>add new users</a> page.</p> <p>When you sign up a DAS Client and they login, they will only be able to see the Project Board and there projects. They will not be able to edit designs or add new ones. By logging in your client will also be able to Approve Designs, or *makes Changes. (* if you have the premium extension).</p><p>IMPORTANT: Make sure your designs have the client's email you signed them up with so only your client can see his/her projects when they login.</p>",
+						"text"		: "<?php echo __("<p>This page displays a list of all your clients that you will have signed up on the <a href='user-new.php'>add new users</a> page.</p> <p>When you sign up a DAS Client and they login, they will only be able to see the Project Board and there projects. They will not be able to edit designs or add new ones. By logging in your client will also be able to Approve Designs, or *makes Changes. (* if you have the premium extension).</p><p>IMPORTANT: Make sure your designs have the client(s) email you signed them up with so only your client can see his/her projects when they login.</p>", "design-approval-system") ?>",
 						"time" 		: 5000
 					},
 					{
 						"name" 		: "tour_6",
-						"text"		: "<p>This page displays a list of all your designers that you will have signed up on the <a href='user-new.php'>add new users</a> page.</p><p>When you sign up a DAS Designer and they login they will be able to see all of wordpress, but they can't edit your main wordpress settings.</p>",
+						"text"		: "<?php echo __("<p>This page displays a list of all your designers that you will have signed up on the <a href='user-new.php'>add new users</a> page.</p><p>When you sign up a DAS Designer and they login they will be able to see all of wordpress, but they can not edit your main wordpress settings.</p>", "design-approval-system") ?>",
 						"time" 		: 5000
 					},
 					{
 						"name" 		: "tour_7",
-						"text"		: "<p>Here you can stay up to date with all of our latest news and events happening with the Design Approval System. You can follow our <a href='https://www.facebook.com/groups/163760557102843/' target='_blank'>Group here</a> and Like our Facebook <a href='https://www.facebook.com/DesignApprovalSystem' target='_blank'>Page here</a>.</p>",
+						"text"		: "<?php echo __("<p>Here you can stay up to date with all of our latest news and events happening with the Design Approval System. You can follow our <a href='https://www.facebook.com/groups/163760557102843/' target='_blank'>Group here</a> and Like our Facebook <a href='https://www.facebook.com/DesignApprovalSystem' target='_blank'>Page here</a>.</p>", "design-approval-system") ?>",
 						"time" 		: 5000
 					},
 					{
 						"name" 		: "tour_8",
-						"text"		: "<p>Take a Walk-Through of the DAS menu items, and the 3 easy steps to get your project board up a running.</p>",
+						"text"		: "<?php echo __("<p>Take a Walk-Through of the DAS menu items, and the 3 easy steps to get your project board up a running.</p>", "design-approval-system") ?>",
 						"time" 		: 5000
 					},
 					{
 						"name" 		: "tour_9",
-						"text"		: "<p>Look at tutorial videos we produced for the Design Approval System and the premium extensions we have available.</p> <p>IMPORTANT: Be sure to look at the Walk-Through as we have recently updated the names of some menu items.</p>",
+						"text"		: "<?php echo __("<p>Look at tutorial videos we produced for the Design Approval System and the premium extensions we have available.</p> <p>IMPORTANT: Be sure to look at the Walk-Through as we have recently updated the names of some menu items.", "design-approval-system") ?></p>",
 						"time" 		: 5000
 					},
 					{
 						"name" 		: "tour_10",
-						"text"		: "<p>You can find some good FAQS here, along with system settings about your worpress and the Design Approval System Version.</p><p>IMPORTANT: If you need help and want to submit an email or post on our support forum, please make sure and copy the System Info information on this page.",
+						"text"		: "<?php echo __("<p>You can find some good FAQS here, along with system settings about your worpress and the Design Approval System Version.</p><p>IMPORTANT: If you need help and want to submit an email or post on our support forum, please make sure and copy the System Info information on this page.", "design-approval-system") ?>",
 						"time" 		: 5000
 					},
 					{
 						"name" 		: "tour_11",
-						"text"		: "<p>This is what makes the Design Approval System work. Add your company logo and fill out all the details to get up and running. Many cool options here.</p>",
+						"text"		: "<?php echo __("<p>This is what makes the Design Approval System work. Add your company logo and fill out all the details to get up and running. Many cool options here.</p>", "design-approval-system") ?>",
 						"time" 		: 5000
 					}
 
@@ -255,14 +255,14 @@ if ($_GET['post_type'] == 'designapprovalsystem') {
 					and also navigate through the steps
 					 */
 					var $tourcontrols  = '<div id="tourcontrols" class="tourcontrols">';
-					$tourcontrols += '<p>DAS Walk-Through</p>';
-					$tourcontrols += '<span class="button" id="activatetour">Start the tour</span>';
+					$tourcontrols += '<p><?php _e('DAS Walk-Through', 'design-approval-system') ?></p>';
+					$tourcontrols += '<span class="button" id="activatetour"><?php _e('Start the tour', 'design-approval-system') ?></span>';
 						if(!autoplay){
-							$tourcontrols += '<div class="nav"><span class="button" id="prevstep" style="display:none;">< Previous</span>';
-							$tourcontrols += '<span class="button" id="nextstep" style="display:none;">Next ></span></div>';
+							$tourcontrols += '<div class="nav"><span class="button" id="prevstep" style="display:none;"><?php _e('< Previous', 'design-approval-system') ?></span>';
+							$tourcontrols += '<span class="button" id="nextstep" style="display:none;"><?php _e('Next >', 'design-approval-system') ?></span></div>';
 						}
-						$tourcontrols += '<a id="restarttour" style="display:none;">Restart the tour</span>';
-						$tourcontrols += '<a id="endtour" style="display:none;">End the tour</a>';
+						$tourcontrols += '<a id="restarttour" style="display:none;"><?php _e('Restart the tour', 'design-approval-system') ?></span>';
+						$tourcontrols += '<a id="endtour" style="display:none;"><?php _e('End the tour', 'design-approval-system') ?></a>';
 						$tourcontrols += '<span class="close" id="canceltour"></span>';
 					$tourcontrols += '</div>';
 					

@@ -1,336 +1,56 @@
-<?php 
- /*This is DAS Default Template*/
-?> 
-<!--default das template CSS-->
-<link rel="stylesheet" type="text/css" media="all" href="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/css/styles.css" />
+<?php
+/*
+Plugin Name: Design Approval System
+Plugin URI: http://slickremix.com/
+Description: A plugin to display Projects or Designs and have a client approve them by giving a digital signature.
+Version: 3.8.1
+Author: SlickRemix
+Author URI: http://slickremix.com/
+Requires at least: wordpress 3.5.0
+Tested up to: wordpress 3.9.1
+Stable tag: 3.8.1
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+ * @package    			Design Approval System
+ * @category   			Core
+ * @author     		    SlickRemix
+ * @copyright  			Copyright (c) 2012-2014 SlickRemix
+
+If you need support or want to tell us thanks please contact us at info@slickremix.com or use our support forum on slickremix.com
+
+This is the main file for building the plugin into wordpress
+
+*/
+define( 'DAS_PLUGIN_PATH', plugins_url() ) ;
+
+// Include core files and classes
+include( 'includes/das-functions.php' );
+include( 'includes/das-meta-box.php' );
+include( 'admin/das-settings-page.php' );
+include( 'admin/das-help-page.php' );
+include( 'admin/das-video-page.php' );
+include( 'admin/das-news-updates-page.php' );
+include( 'admin/das-projects-page.php' );
+include( 'updates/update-functions.php' );
 
 
-
-</head>
-<body <?php body_class(); ?> id="design-template">
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
-<div class="header-top"></div>
-<!--/header-top-->
-
-<div class="show-notes">show notes</div>
-<!--/show-notes-->
-
-<div class="header-wrap">
-  <div class="main-logo-tab">
-    <div id="main-logo"> <a href="/"><img src="<?php echo get_option('image_1'); ?>" alt="<?php echo get_option('das-settings-company-name'); ?>" /></a></div>
-    <!--/main-logo--> 
-  </div>
-  <!--/main-logo-tab-->
-  
-  <div class="header-info-wrap">
-    <div class="designers-name-wrap">Designer: <?php echo get_post_meta($post->ID, 'custom_designers_name', true); ?></div>
-    <ul class="header-title-text">
-      <li>Company</li>
-      <li>Date</li>
-      <li class="color-dark-grey">Title</li>
-    </ul>
-    <ul class="header-title-notes-wrap">
-      <li> <?php echo get_post_meta($post->ID, 'custom_client_name', true); ?> <br/>
-      </li>
-      <li>
-        <?php the_time('l, F jS, Y') ?>
-        at
-        <?php the_time() ?>
-      </li>
-      <li class="color-dark-grey"><?php echo get_post_meta($post->ID, 'custom_name_of_design', true); ?></li>
-    </ul>
-    <div class="clear"></div>
-  </div>
-  <!--/header-info-wrap-->
-  
-  <div class="header-tabs-wrap">
-    <ul id="das-nav">
-      <?php if(is_plugin_active('das-design-login/das-design-login.php') and $login_required == 'yes-login') { ?>
-      <li class="logout-btn-wrap"><a href="<?php echo wp_logout_url( get_permalink() ); ?>" class="logout-btn">Log Out</a></li>
-      <?php } ?>
-      <li><a class="project-timeline">Timeline: <?php echo get_post_meta($post->ID, 'custom_project_start_end', true); ?></a></li>
-      <li><a href="#" class="hide-notes">Hide Notes</a></li>
-      <li id="das-nav-history"><a href="javascript:;" class="versions" id="versions-tooltip">Versions</a>
-        <?php 
-echo '<ul>';
-
- if ( 'designapprovalsystem' == get_post_type() ) {
-
-	$das_cats = wp_get_post_terms( $post->ID, 'das_categories' );
-
-	if ( $das_cats ) {
-		$das_cats_ids = array();
-		foreach( $das_cats as $individual_das_cats ) $das_cats_ids[] = $individual_das_cats->term_id;
-		
-		$args = array(
-			'tax_query' => array(
-				array(
-					'taxonomy'  => 'das_categories',
-					'terms' 	=> $das_cats_ids,
-					'operator'  => 'IN'
-				)
-			),
-		
-			'posts_per_page' 		=> -1,
-			'ignore_sticky_posts' 	=> 1
-);
-
-		$my_query = new wp_query( $args );
-		if( $my_query->have_posts() ) {
-			
-			while ( $my_query->have_posts() ) :
-				$my_query->the_post();?>
-      <li> <a href="<?php the_permalink() ?>" rel="bookmark">Design <?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?> </a> </li>
-      <?php endwhile;
-		}
-		wp_reset_query();
-	}
+function ap_action_init()
+{
+// Localization
+load_plugin_textdomain('design-approval-system', false, basename( dirname( __FILE__ ) ) . '/languages' );
 }
+// Add actions
+add_action('init', 'ap_action_init');
 
-echo '</ul>';
+/**
+ * Returns current plugin version. SRL added
+ * 
+ * @return string Plugin version
+ */
+function dasystem_version() {
+	$plugin_data = get_plugin_data( __FILE__ );
+	$plugin_version = $plugin_data['Version'];
+	return $plugin_version;
+}	
 ?>
-      </li>
-      <li><a class="version-tab"><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?></a></li>
-    </ul>
-  </div>
-  <!--/header-tabs-wrap--> 
-  
-</div>
-<!--header-wrap-->
-
-
-
-
-<div class="designers-photo-wrap">
-  <div class="designers-photo-content">
-    <?php the_content() ?>
-  </div>
-  <!--/designers-photo-content-->
-  
-  <div class="clear"></div>
-</div>
-<!--designers-photo-wrap-->
-
-<div class="forms-wrapper">
-
-  <div class="approved-form-wrap">
-    <div class="status-area1">
-      <h2>Status: <span class="color-green">Approve</span></h2>
-      <a href="javascript:;" class="close">X</a>
-      <div class="clear"></div>
-      <div class="approved-form-text">Please be sure to double check this design comp thoroughly for any errors or discrepancies in
-        design, grammar, spelling, and overall vision. Your signature below represents the final
-        approval of this design comp as is, and any changes from your previously approved copy will
-        be charged accordingly.<br/>
-        <br/>
-        As the authorized decision maker of my firm I acknowledge that I have reviewed and
-        approved the proposed design comps designed by <?php echo get_option('das-settings-company-name'); ?>, and presented on <?php echo date('F j, Y'); ?>. </div>
-      <!--/approved-form-text-->
-      
-      <div class="digital-signature-wrap">
-        <?php
-					
-					//Check if Variable is empty if so do default text
-					if (get_option('das-settings-approved-dig-sig-message-to-designer') == '') {
-						$das_settings_approved_dig_sig_message_to_designer = 'This design comp has been approved by the client. Please take the next appropriate step.';
-					}
-					else{
-						$das_settings_approved_dig_sig_message_to_designer = get_option('das-settings-approved-dig-sig-message-to-designer');
-					}
-					
-					if (get_option('das-settings-approved-dig-sig-message-to-clients') == '') {
-						$das_settings_approved_dig_sig_message_to_clients = 'Thank you for approving your design comp. We will now take the next steps in finalizing your project. Below is a confirmation of your submission.
-						
-						As the authorized decision maker of my firm I acknowledge that I have reviewed and approved the proposed design comps designed by '.get_option('das-settings-company-name').'.';
-					}
-					else{
-						$das_settings_approved_dig_sig_message_to_clients = get_option('das-settings-approved-dig-sig-message-to-clients');
-					}
-					
-					?>
-                    
-                    
-
-         
-        <form action="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/form-processes/new-approved-digital-signature-process.php" class="myform" id="sendDigitalSignature" method="post" name="sendDigitalSignature">
-          <input id="human1" type="text"  name="human1" />
-          <input name="email1" class="design-client-email" value="<?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?>" />
-          <div class="label-digital-signature">
-            <label>Digital Signature:</label>
-            <br/>
-            <!-- note: this name used to be a1 but it is now changed to a more comprehensive name -->
-            <input type="text" name="custom_client_approved_signature" id="custom_client_approved_signature" value="<?php echo esc_html( get_post_meta( $post->ID, 'custom_client_approved_signature', true) ); ?>" />
-            <!-- note: value="Yes" tells DAS to save the approved meta info to make the stars appear in project board -->
-            <input type="hidden" value="Yes" name="custom_client_approved" id="custom_client_approved" />
-            <input type="hidden" name="designer_email" class="design-client-email" value="<?php echo get_post_meta($post->ID, 'custom_designers_email', true); ?>" />
-            <input type="hidden" value="<?php echo get_permalink() ?>" name="designtitle" />
-            <input type="hidden" value="<?php echo get_post_meta($post->ID, 'custom_name_of_design', true); ?>" name="customNameOfDesign" />
-            <input type="hidden" value="<?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?>" name="version4"  />
-            <input type="hidden" value="<?php echo get_post_meta($post->ID, 'custom_client_name', true); ?>" name="companyname4"  />
-            <input type="hidden" value="<?php echo get_option('das-settings-company-name'); ?>" name="dasSettingsCompanyName" />
-            <input type="hidden" value="<?php echo get_option('das-settings-company-email'); ?>" name="dasSettingsCompanyEmail" />
-            <input type="hidden" value="<?php echo ''.$das_settings_approved_dig_sig_message_to_designer.''; ?>" name="dasSettingsApprovedDigSigMessageToDesigner" />
-            <input type="hidden" value="<?php echo ''.$das_settings_approved_dig_sig_message_to_clients.''; ?>" name="dasSettingsApprovedDigSigMessageToClients" />
-       
-            <a id="submit" class="das-submit-signature" rel="<?php echo $post->ID; ?>">Submit</a>
-            
-          </div>
-        </form>
-        
-        
-      </div>
-      <!--/status-area1--> 
-    </div>
-    <!--/digital-signature-wrap-->
-    
-    <div class="clear"></div>
-  </div>
-  <!--/approved-form-wrap-->
-  
-  <div class="approved-thankyou-form-wrap">
-    <div class="dig-sig-thank-you-message">
-      <?php  
-	   		$company_name = get_option('das-settings-company-name'); 
-          if (get_option('das-settings-approved-dig-sig-thank-you') == '') {
-				echo 'Thank you for approving your design comp.<br/> '.$company_name.' will now take the next steps in finalizing your project.';
-		  }
-          else{
-				echo get_option('das-settings-approved-dig-sig-thank-you');
-          }
-	   ?>
-    </div>
-    <!--/dig-sig-thank-you-message--> 
-  </div>
-  <!--/approved-thankyou-form-wrap--> 
-  <!-----/status-Approved FORM--END------>
-  
-  <?php if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {
-	include('wp-content/plugins/das-changes-extension/das-changes-extension-template.php');
-}?>
-</div>
-<!--forms-wrapper-->
-
-<div class="designers-notes-backg">
-  <div class="designers-notes-wrap">
-    <div class="designers-notes-content-left-wrap">
-      <div class="designers-notes-tab">Designer's Notes</div>
-      <br class="clear"/>
-      <div class="designers-notes-content-left">
-        <div class="designer-notes-text">
-          <?php
-            if (get_option('das-settings-email-for-designers-message-to-clients') == '') {
-                $das_settings_email_for_designers_message_to_clients = 'Please review your design comp for changes and/or errors:';
-            }
-            else{
-                $das_settings_email_for_designers_message_to_clients = get_option('das-settings-email-for-designers-message-to-clients');
-            }?>
-          <form class="myform" id="sendEmailforDesigner" method="post" action="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/form-processes/new-email-for-designer-process.php" name="sendEmailforDesigner">
-            <input type="hidden" value="<?php echo get_post_meta($post->ID, 'custom_name_of_design', true); ?>" name="customNameOfDesign" />
-            <input type="hidden" name="designer_email" class="design-client-email" value="<?php echo get_post_meta($post->ID, 'custom_designers_email', true); ?>" />
-            <input type="hidden" name="email4" class="design-client-email" value="<?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?>" />
-            <input type="hidden" name="companyname4" class="design-client-email" value="<?php echo get_post_meta($post->ID, 'custom_client_name', true); ?>" />
-            <input type="hidden" name="version4" class="design-client-email" value="<?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?>" />
-            <input type="hidden" name="link4" class="design-client-permalink" value="<?php echo get_permalink();?>" />
-            <input type="hidden" value="<?php echo get_option('das-settings-company-name'); ?>" name="dasSettingsCompanyName" />
-            <input type="hidden" value="<?php echo get_option('das-settings-company-email'); ?>" name="dasSettingsCompanyEmail" />
-            <input type="hidden" value="<?php echo ''.$das_settings_email_for_designers_message_to_clients.''; ?>" name="dasSettingsEmailForDesignersMessageToClients" />
-            <input type="hidden" value="<?php echo $post->post_title ?> "  name="pagetitle"  />
-            <input id="human4" type="text"  name="human4" value="" />
-            <?php echo get_post_meta($post->ID, 'custom_designer_notes', true); ?>
-            <div class="entry-utility">
-              <?php edit_post_link( __( 'Edit'), '<span class="edit-link">', '</span> | <span id="send-email-for-designer" onClick="jQuery(\'#sendEmailforDesigner\').ajaxSubmit({ target: \'#output\'}); return false;">Send Email</span> <span id="send-email-for-designer-done">Thank-you. Your email has been sent.</span>' ); ?>
-            </div>
-            <!-- .entry-utility -->
-          </form>
-        </div>
-        <!-- designer-notes-text -->
-          <div class="client-notes <?php echo get_post_meta($post->ID, 'custom_client_notes_on_off', true); ?>">
-            <h3>Client Notes</h3>
-        	<div class="client-notes-textarea"><?php echo get_post_meta($post->ID, 'custom_client_notes', true); ?></div>
-         </div>
-      </div>
-      <!--designers-notes-content-left--> 
-    </div>
-    <!--designers-notes-content-left-wrap-->
-    
-    <div class="designers-notes-content-right-wrap">
-      <div class="designers-options-tab">Design Options</div> 
-      <br class="clear"/>
-      <div class="designers-notes-content-right"> 
-      <?php
-if ( is_user_logged_in() ) {
-	$alreadyapproved = get_post_meta($post->ID, 'custom_client_approved', true);
-	if ($alreadyapproved == 'Yes') { ?>
-    <div class="approved-wrap">You have approved this Design, Thank-You. <a href="javascript:;" class="design-option-btn">Approved</a></div><?php
-	} 
-	else { ?> <div class="not-approved-wrap">Would you like to Approve this Design? <a href="javascript:;" class="design-option-btn design-approval-btn">Approve</a></div><?php
-		}
-	}
-else if ( !is_user_logged_in() ) { ?> Would you like to Approve this Design? <a href="<?php echo wp_login_url( get_permalink() ); ?>" class="design-option-btn">Login</a> <?php 
-		}
-?>		
-		<div class="approved-wrap" style="display:none">"You have approved this Design, Thank-You. <a href="javascript:;" class="design-option-btn">Approved</a></div>
-      </div>
-      <!--designers-notes-content-right-->
-      
-      <?php if(is_plugin_active('das-changes-extension/das-changes-extension.php')) { ?>
-      
-      <?php
-if ( is_user_logged_in() ) {
-	  ?><div class="designers-notes-content-right changes-wrap"> Would you like to make Changes to this Design? <a href="javascript:;" class="design-option-btn" id="<?php echo get_post_meta($post->ID, 'custom_paid_not_paid', true); ?>">Changes</a> </div>
-      <!--designers-notes-content-right--> 
-<?php }
-else if ( !is_user_logged_in() ) {  ?>
-	<div class="designers-notes-content-right changes-wrap"> Would you like to make Changes to this Design? <a href="<?php echo wp_login_url( get_permalink() ); ?>" class="design-option-btn">Login</a></div>
-      <!--designers-notes-content-right--> 
-     <?php } 
-	     }?><!-- is user logged in if statement -->
-    </div>
-    <!--designers-notes-content-right-wrap-->
-    <div class="clear"></div>
-  </div>
-  <!--designers-notes-wrap-->
-  <div class="pop-up-backg"></div>
-  <!--pop-up-backg---> 
-</div>
-<!--designer-notes-backg-->
-
-<?php endwhile; ?>
-<div style="display:none" id="output"></div>
-<script type="text/javascript">
-// We placed this javascript here to make it easy to customize things if you want using simple jquery tools. Enjoy!
-function mainmenu(){
-	
-	jQuery(" #das-nav li").hover(function(){
-			jQuery(this).find('ul:first').fadeIn('fast');
-		},
-	function(){
-		jQuery(this).find('ul:first').fadeOut('fast');
-	 });
-}
-	
-	jQuery(document).ready(function() {
-		mainmenu();
-		
-		jQuery('.hide-notes').click(function () {
-			jQuery('.main-logo-tab,  .designers-notes-backg, .header-wrap').hide();
-			jQuery('.header-wrap').slideUp();
-			jQuery('.show-notes').show();
-			jQuery('.show-notes a').fadeIn(1000);
-			jQuery('body').css('background', 'none #000000');
-		});
-		jQuery('.show-notes').click(function () {	
-			jQuery('.header-wrap, .designers-notes-backg').slideDown();
-			jQuery('.show-notes').hide();
-			jQuery('.main-logo-tab').fadeIn(1000);
-			jQuery('body').css('background', 'url(<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/images/designer-backg-grey.png) no-repeat top left #000000');
-		});
-		
-	});	
-</script> 
-
-<!-- this is the main template -->
-<?php wp_footer(); ?>
-</body>
-</html>

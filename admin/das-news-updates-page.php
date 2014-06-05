@@ -1,8 +1,8 @@
 <?php function das_news_updates_page() { ?>
 <div class="das-video-admin-wrap das-news-admin-wrap">
- <a class="buy-extensions-btn" href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank">Get Extensions Here!</a>
- <h2>DAS News and Updates</h2>
-<div class="use-of-plugin">Read articles below to find out about our most recent <strong>News</strong> and <strong>Updates</strong>.<br/>You can also join our <a href="https://www.facebook.com/groups/163760557102843/" target="_blank">Facebook Group</a> to receive updates in your news feed too.<br/> What better way to read about new updates, premium extensions or specials we have<br/>running. <strong>Thanks for the Support!</strong></div>
+ <a class="buy-extensions-btn" href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank"><?php _e('Get Extensions Here!', 'design-approval-system') ?></a>
+ <h2><?php _e('DAS News and Updates', 'design-approval-system') ?></h2>
+<div class="use-of-plugin"><?php _e('Read articles below to find out about our most recent <strong>News</strong> and <strong>Updates</strong>.<br/>You can also join our <a href="https://www.facebook.com/groups/163760557102843/" target="_blank">Facebook Group</a> to receive updates in your news feed too.<br/> What better way to read about new updates, premium extensions or specials we have<br/>running. <strong>Thanks for the Support!</strong>', 'design-approval-system') ?></div>
 
 <?php
 //Number of Posts to show [max is 24] I believe Facebook is only allowing me to recieve that many
@@ -87,8 +87,10 @@ $FBpost_id = $d->id;
 				  print '<a href="'.$FBlink.'" target="_blank" class="jal-fb-name">'.$FBname.'</a>';
 			  };
 			  //Output Link Caption
-			  if ( $FBcaption  == 'Attachment UnavailableThis attachment may have been removed or the person who shared it may not have permission to share it with you.' ) {
-					print '<div class="jal-fb-caption" style="width:100% !important">This user\'s persmissions are keeping you from seeing this post. Please Click "See More" to view this post on this group\'s facebook wall.</div>';
+			  if ( $FBcaption  == __('Attachment Unavailable This attachment may have been removed or the person who shared it may not have permission to share it with you.', 'design-approval-system') ) {
+					print '<div class="jal-fb-caption" style="width:100% !important">';
+					_e('This user\'s persmissions are keeping you from seeing this post. Please Click "See More" to view this post on this group\'s facebook wall.', 'design-approval-system');
+					print '</div>';
 			  }
 			  else {
 				  print '<div class="jal-fb-caption">'.$FBcaption.'</div>';
@@ -286,7 +288,7 @@ print '</div><!--/jal-single-fb-post-->';
 	 }	
   print '</div><!--/jal-fb-group-display-->';
   print '<div class="clear"></div>'; 
-  print '<a class="das-settings-admin-slick-logo" href="http://www.slickremix.com" target="_blank"></a></div><!--/das-help-admin-wrap-->';
+  print '</div><!--/das-help-admin-wrap-->';
 
   include('walkthrough/walkthrough.php');	
 }
