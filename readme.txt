@@ -3,7 +3,7 @@ Contributors: slickremix
 Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature, work flow, multi language, woocommerce, shopping cart, woo, commerce
 Requires at least: 3.5.0
 Tested up to: 3.9.1
-Stable tag: 3.8.1
+Stable tag: 3.8.2
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, documents, videos, or music approved by clients quickly.
@@ -83,6 +83,9 @@ If you would like to become apart of our team and help develop and make money ch
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Change-log ==
+= Version 3.8.2 / Thursday June 5th, 2014 =
+ * FIXED: Default template update on update 3.8.1
+ 
 = Version 3.8.1 / Thursday June 5th, 2014 =
  * REQUIRED: If you update this version of DAS you will also need to update any premium plugins you've purchased as every DAS plugin except the User Roles, Public and Private Project Board plugin have been updated. We will be updatin the Public and Private Project Board shortly after as well.
  * FIXED: Logo upload now uses the latest media frame.
