@@ -1,14 +1,16 @@
 === Design Approval System ===
 Contributors: slickremix
-Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature, work flow
-Requires at least: 3.4.0
-Tested up to: 3.8.1
-Stable tag: 3.8
+Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature, work flow, multi language, woocommerce, shopping cart, woo, commerce
+Requires at least: 3.5.0
+Tested up to: 3.9.1
+Stable tag: 3.8.1
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, documents, videos, or music approved by clients quickly.
 
 == Description ==
+
+The Design Approval System is now multi-language ready. If you would like to contribute we are willing to pay for your help. [See more here](http://glotpress.slickremix.com/projects).
 
 Approved designs get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/). Clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Live Example](http://www.slickremix.com/project-board/). 
 
@@ -81,6 +83,19 @@ If you would like to become apart of our team and help develop and make money ch
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Change-log ==
+= Version 3.8.1 / Thursday June 5th, 2014 =
+ * REQUIRED: If you update this version of DAS you will also need to update any premium plugins you've purchased as every DAS plugin except the User Roles, Public and Private Project Board plugin have been updated. We will be updatin the Public and Private Project Board shortly after as well.
+ * FIXED: Logo upload now uses the latest media frame.
+ * FIXED: No Longer will you have to copy our template files into your child theme.
+ * FIXED: If you do not enter a date in the 'When the project will start and end' option in a design post the option will not display on the template now. The Clean Theme has also been edited to work this way.
+ * NEW: You can now create a folder called das in your theme if you want to customize any of our templates. This way if you do an update to DAS the changes will not effect your custom template. Existing das users template customization will not be effected and will still be used if already in place.
+ * NEW: DAS does not require the use of the plugin 'custom post template' anymore. We have finally created our own template selection option in the tabs are of our design edit options.
+ * NEW: DAS is now multi-language ready. We are currently working on a German version. If you would like to contribute we are willing to pay for your help. [See more here](http://glotpress.slickremix.com/projects).
+ * NEW: The Design Approval System Fields on the design edit pages have been completely re-designed with tabs.
+ * NEW: The Default Template is now WooCommerce ready, meaning if you have installed our new 'WooCommerce for the Design Approval System' plugin an option to create this design into a product and price option will be a tab on the design edit area. Then your price and add to cart button will appear next to the main logo. The Clean Theme has been updated with this feature too and the GQ theme also comes with this feature built in.
+ * NEW: [Premium QG Theme](http://www.slickremix.com/product/gq-theme-das-extension/). WooComerce ready, uses wordpress comments, and allows for media uploads. A must see!
+ * NEW: If you have the ['WooCommerce for Design Approval System'](http://www.slickremix.com/product/woocommerce-for-design-approval-system/) plugin installed and a customer purchases a product an icon will appear next to the approved icon on that design.
+ 
 = Version 3.8 / January 11th, 2014 =
  * UPDATED: UI overhaul for 3.8 wordpress update and all premium extensions. If you don't care about the 3.8 version update then don't worry about updating just yet.
  * FIXED: Replaced depreciated function for WP Max Upload Size on the help/system info page.
