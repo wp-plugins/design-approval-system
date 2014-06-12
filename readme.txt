@@ -81,19 +81,19 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 == Change-log ==
 
 = Version 3.8.4 / Wednesday June 11th, 2014 =
-	FIXED: Fatal Error on some installs.
-	FIXED: If you have the Premium Client Changes plugin the option for Paid or Not paid is now available under the 'Client Info' tab on a design post.
-	FIXED: wp-admin Project Board will now show all design posts to the DAS Client no matter what the amount of blog posts to be shown is set to in the reading settings wordpress menu. And breath :)
-	FIXED: Get more extensions links.
-	FIXED: CSS overhaul on the default template that fixes many elements to work with bootstrap or other themes using box-border.
-	FIXED: Default Template: we changed the logo db call in the settings page so you will have to resave the DAS settings page for your logo to appear again.
-	THANKS: Big up to Gordon and a few others for brining the fatal error to light and helping us debug for DAS and the Private Project Board premium plugin, which is set for a new update in the next day as well. Check out Gordon's site here. [http://www.webdesignperth.com.au/](http://www.webdesignperth.com.au/)
+ * FIXED: Fatal Error on some installs.
+ * FIXED: If you have the Premium Client Changes plugin the option for Paid or Not paid is now available under the 'Client Info' tab on a design post.
+ * FIXED: wp-admin Project Board will now show all design posts to the DAS Client no matter what the amount of blog posts to be shown is set to in the reading settings wordpress menu. And breath :)
+ * FIXED: Get more extensions links.
+ * FIXED: CSS overhaul on the default template that fixes many elements to work with bootstrap or other themes using box-border.
+ * FIXED: Default Template: we changed the logo db call in the settings page so you will have to resave the DAS settings page for your logo to appear again.
+ * THANKS: Big up to Gordon and a few others for brining the fatal error to light and helping us debug for DAS and the Private Project Board premium plugin, which is set for a new update in the next day as well. Check out Gordon's site here. [http://www.webdesignperth.com.au/](http://www.webdesignperth.com.au/)
 
 = Version 3.8.3 / Thursday June 5th, 2014 =
-	FIXED: Project Board update on update 3.8.1
+ * FIXED: Project Board update on update 3.8.1
 
 = Version 3.8.2 / Thursday June 5th, 2014 =
-	FIXED: Default template update on update 3.8.1
+ * FIXED: Default template update on update 3.8.1
 
 = Version 3.8.1 / Thursday June 5th, 2014 =
  * REQUIRED: If you update this version of DAS you will also need to update any premium plugins you've purchased as every DAS plugin except the User Roles, Public and Private Project Board plugin have been updated. We will be updatin the Public and Private Project Board shortly after as well.
@@ -273,7 +273,7 @@ Yes. It's not as hard as it may seem. Once you try it you'll see how easy we hav
 
 Well sadly it's not our fault but the <a href="http://www.slickremix.com/2013/07/15/my-page-is-now-getting-404-error-when-activating-your-plugin/">Solution is Here</a>!
 
-If you have more questions or would like to view other users questions please visit our support forum at http://www.slickremix.com/free-and-premium-support/
+If you have more questions or would like to view other users questions please visit our support forum at http://www.slickremix.com/support-forum/
 
 == Screenshots ==
 
