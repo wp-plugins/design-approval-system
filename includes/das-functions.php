@@ -582,44 +582,44 @@ add_action( 'admin_menu', 'my_remove_menu_pages' );
 // Create new Post Template for Doc It
 function DAS_post_template($das_post_template_load) {
 	  global $post;
-	  //Get Selected Template for Design Post Page.
-	  $das_post_template = get_post_meta($post->ID, 'custom_das_template_options', true);
-	  
-	  //Theme Locations for Template file in root of theme or "DAS" folder.
-	  $overridden_template_in_folder = locate_template('das/'.$das_post_template);
-	  $overridden_template = locate_template($das_post_template);
-	  
-	  //Check if Theme has a custom template file in DAS folder
-	   if($overridden_template_in_folder != '') {
-	   	$das_post_template_load = $overridden_template_in_folder;
-		//echo "DAS Template in folder";
-	   }
-	  //Check if Theme has a custom template file.
-	  elseif ($overridden_template != '') {
-		 // locate_template() returns path to file
-		 // if either the child theme or the parent theme have overridden the template
-		 $das_post_template_load = $overridden_template;
-		// echo "DAS Template in root";
-	   }
-	   //Theme has no custom file so use DEFAULT custom theme file!
-	   else {
-		  // echo "No DAS Template. Using Default.";
-		   //DAS Default Template
-		   if($das_post_template == 'das-default-template.php' or empty($das_post_template)){
-		   		$das_post_template_load = '../wp-content/plugins/design-approval-system/framework/das-main-frame.php';
-		   }
-		   //Clean Theme Template
-		   if($das_post_template == 'das-clean-theme-template.php'){
-				$das_post_template_load = '../wp-content/plugins/das-clean-theme/framework/das-clean-theme-main-frame.php';
-		   }
-		    //GQ Theme Template
-		   if($das_post_template == 'das-gq-theme-template.php'){
-				$das_post_template_load = '../wp-content/plugins/das-gq-theme/framework/das-gq-theme-main-frame.php';
-		   }
+	   if ($post->post_type == 'designapprovalsystem') {
+			//Get Selected Template for Design Post Page.
+			$das_post_template = get_post_meta($post->ID, 'custom_das_template_options', true);
+			
+			//Theme Locations for Template file in root of theme or "DAS" folder.
+			$overridden_template_in_folder = locate_template('das/'.$das_post_template);
+			$overridden_template = locate_template($das_post_template);
+			
+			//Check if Theme has a custom template file in DAS folder
+			 if($overridden_template_in_folder != '') {
+			  $das_post_template_load = $overridden_template_in_folder;
+			  //echo "DAS Template in folder";
+			 }
+			//Check if Theme has a custom template file.
+			elseif ($overridden_template != '') {
+			   // locate_template() returns path to file
+			   // if either the child theme or the parent theme have overridden the template
+			   $das_post_template_load = $overridden_template;
+			  // echo "DAS Template in root";
+			 }
+			 //Theme has no custom file so use DEFAULT custom theme file!
+			 else {
+				// echo "No DAS Template. Using Default.";
+				 //DAS Default Template
+				 if($das_post_template == 'das-default-template.php' or empty($das_post_template)){
+					  $das_post_template_load = WP_CONTENT_DIR.'/plugins/design-approval-system/framework/das-main-frame.php';
+				 }
+				 //Clean Theme Template
+				 if($das_post_template == 'das-clean-theme-template.php'){
+					  $das_post_template_load = WP_CONTENT_DIR.'/plugins/das-clean-theme/framework/das-clean-theme-main-frame.php';
+				 }
+				  //GQ Theme Template
+				 if($das_post_template == 'das-gq-theme-template.php'){
+					  $das_post_template_load = WP_CONTENT_DIR.'/plugins/das-gq-theme/framework/das-gq-theme-main-frame.php';
+				 }
+			}
 	  }
-	  if ($post->post_type == 'designapprovalsystem') {
-	  	return $das_post_template_load;
-	  }
+	  return $das_post_template_load;
 }
 add_filter('single_template','DAS_post_template',999);
 
