@@ -432,6 +432,14 @@ function edit_admin_menus() {
 		$submenu['edit.php?post_type=designapprovalsystem'][26][3] = __('Clean Theme Settings Page', 'design-approval-system');
 	}
 	
+	if (is_plugin_active('das-gq-theme/das-gq-theme.php')) {	
+		 
+		$submenu['edit.php?post_type=designapprovalsystem'][27][0] = __('GQ Theme Settings', 'design-approval-system');
+		$submenu['edit.php?post_type=designapprovalsystem'][27][1] = 'manage_options';
+		$submenu['edit.php?post_type=designapprovalsystem'][27][2] = 'das-gq-theme-settings-page';
+		$submenu['edit.php?post_type=designapprovalsystem'][27][3] = __('GQ Theme Settings', 'design-approval-system');
+	}
+	
 }
 add_action( 'admin_menu', 'edit_admin_menus' );
 
@@ -441,8 +449,8 @@ function das_dependencies() {
 
 if (is_plugin_active('design-approval-system/design-approval-system.php')) {
 
-			if (get_option('image_1') =='') {
-			echo '<div class="error"><p>' . __( 'Warning: The <strong>Design Approval System</strong> plugin needs you to fill the in REQUIRED fields on <a href="edit.php?post_type=designapprovalsystem&page=design-approval-system-settings-page"><strong>settings page</strong></a>. Additionally, if you are seeing any errors about not being able to copy or create the das-default-template.php then please <a target="_blank" href="http://www.slickremix.com/2013/06/03/error-on-install-regarding-template-creation/"><strong>click here for solution.</strong></a>', 'my-theme' ) . '</p></div>';
+			if (get_option('das_default_theme_logo_image') =='') {
+			echo '<div class="error"><p>' . __( 'Warning: The <strong>Design Approval System</strong> plugin needs you to fill the in REQUIRED fields on <a href="edit.php?post_type=designapprovalsystem&page=design-approval-system-settings-page"><strong>settings page</strong></a>.', 'my-theme' ) . '</p></div>';
 			}
 			elseif (get_option('das-settings-company-name') =='') {
 			echo '<div class="error"><p>' . __( 'Warning: The <strong>Design Approval System</strong> plugin needs you to fill the in REQUIRED fields on <a href="edit.php?post_type=designapprovalsystem&page=design-approval-system-settings-page"><strong>settings page</strong></a>.', 'my-theme' ) . '</p></div>';
@@ -635,5 +643,4 @@ $q->set( 'tax_query', array(array(
 remove_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
  
 }
-
 ?>

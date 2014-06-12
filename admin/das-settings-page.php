@@ -8,7 +8,7 @@ function das_settings_page() {
 ?>
 <div class="das-settings-admin-wrap">
   <h2><?php _e('Design Approval System Settings', 'design-approval-system') ?></h2>
-  <a class="buy-extensions-btn" href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank"><?php _e('Get Extensions Here!', 'design-approval-system') ?></a>
+  <a class="buy-extensions-btn" href="http://www.slickremix.com/downloads/category/design-approval-system/" target="_blank"><?php _e('Get Extensions Here!', 'design-approval-system') ?></a>
   <div class="use-of-plugin"><?php _e("Please fill out the settings below. If you don't understand what a field is for click the question mark next to that title.", "design-approval-system") ?></div>
   <h3><?php _e('COMPANY INFO', 'design-approval-system') ?></h3>
   <form method="post" class="das-settings-admin-form" action="options.php">
@@ -18,7 +18,7 @@ function das_settings_page() {
       <input id="das_default_theme_logo_image" name="das_default_theme_logo_image" class="das-settings-admin-input" type="text"  value="<?php echo get_option('das_default_theme_logo_image'); ?>" />
       <input id="das_logo_image_button" class="upload_image_button" type="button" value="Upload Image" />
       
-      <div class="das-settings-admin-input-example upload-logo-size"><?php _e('This logo will be displayed at the top of all your design posts. Size for the "defualt" template is 124px X 20px.', 'design-approval-system') ?></div>
+      <div class="das-settings-admin-input-example upload-logo-size"><?php _e('This logo will be displayed at the top of all your design posts. Size for the "default" template is 124px X 20px.', 'design-approval-system') ?></div>
       <div class="clear"></div>
       <div class="das-settings-id-answer answer1">
         <ul>

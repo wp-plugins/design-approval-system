@@ -1,6 +1,6 @@
 <?php function das_help_page(){ ?>
 <div class="das-help-admin-wrap"> 
-<a class="buy-extensions-btn" href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank"><?php _e('Get Extensions Here!', 'design-approval-system') ?></a>
+<a class="buy-extensions-btn" href="http://www.slickremix.com/downloads/category/design-approval-system/" target="_blank"><?php _e('Get Extensions Here!', 'design-approval-system') ?></a>
 <h2><?php _e('DAS Info and Help', 'design-approval-system') ?></h2>
 <div class="das-admin-help-wrap">
 <div class="use-of-plugin"><?php _e("Need help? Use our <a href='http://www.slickremix.com/support-forum/' target='_blank'>Support Forum</a> and someone will respond to your request asap. Usually we will respond the same day, the latest the following day. You may also find some of the existing posts to be helpfull too, so take a look around first. If you do submit a question please <a href='#' class='das-debug-report'>generate a report</a> and copy the info, ask your question in our <a href='http://www.slickremix.com/support-forum/' target='_blank'>support forum</a> then paste the info you just copied. That will help speed things along for sure.", "design-approval-system") ?> </div>
@@ -10,8 +10,8 @@
   	<ol>  
       <li><a href="http://www.slickremix.com/category/design-approval-system-tutorials/" target="_blank"><?php _e("I'd like to see some Design Approval System Tutorials.", "design-approval-system") ?></a></li>
       <li><a href="http://www.slickremix.com/support-forum" target="_blank"><?php _e("I need Design Approval System Support.", "design-approval-system") ?></a></li>
-      <li><a href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank"><?php _e("Show me where to get Extensions for this plugin.", "design-approval-system") ?></a></li>
-      <li><a href="http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/how-to-change-the-background-color-of-your-design-post-thread25/" target="_blank">How to change the Background Color of your Design Post?</a></li>
+      <li><a href="http://www.slickremix.com/downloads/category/design-approval-system/" target="_blank"><?php _e("Show me where to get Extensions for this plugin.", "design-approval-system") ?></a></li>
+      <li><a href="http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/how-to-change-the-background-color-of-your-design-post-thread25/" target="_blank"><?php _e("How to change the Background Color of your Design Post?") ?></a></li>
       <li><a href="http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/using-images-larger-990px-in-the-design-post-if-you-use-the-das-system-you-should-read-this-thread16/" target="_blank"><?php _e("Using images larger than 990px in a design post.", "design-approval-system") ?></a></li>
       <li><a href="http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/adding-the-free-duplicate-post-wordpress-plugin-to-our-das-thread23/" target="_blank"><?php _e("Adding the FREE Duplicate Post WordPress Plugin to our DAS.", "design-approval-system") ?></a></li>
       <li><a href="http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/adding-the-free-wordpress-editorial-calendar-plugin-to-our-das-thread22/" target="_blank"><?php _e("Adding the FREE WordPress Editorial Calendar Plugin to our DAS.", "design-approval-system") ?></a></li>

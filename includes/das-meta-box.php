@@ -53,25 +53,8 @@ $custom_meta_fields_tab1 = array(
 		'type'	=> 'textarea'
 	)
 );
+
 //TAB2
-if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {
-	$custom_meta_fields_tab2[] =	array(
-				'label'=> __('Paid or Not Paid Version:', 'design-approval-system'),
-				'desc'	=> __('Has the next set of design changes been paid for by client? If not select "Not Paid" and the next time the client trys to submit changes they will be notified that they are being charged for additional changes. If a client decides to submit additional changes you will receive an email letting you know that they have accepted, additionally it will send them an email confirming this.', 'design-approval-system'),
-				'id'	=> $prefix.'paid_not_paid',
-				'type'	=> 'select',
-				'options' => array (
-					'one' => array (
-						'label' => __('Paid', 'design-approval-system'),
-						'value'	=> 'paid', 'design-approval-system'
-					),
-					'two' => array (
-						'label' => __('Not Paid', 'design-approval-system'),
-						'value'	=> 'not-paid', 'design-approval-system'
-					)
-				  )
-	);
-}
 $custom_meta_fields_tab2 = array(
 	array(
 		'label'=> __('Name of the Project', 'design-approval-system'),
@@ -231,6 +214,26 @@ $custom_meta_fields_tab2 = array(
 	)
 	
 );
+
+if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {
+	$custom_meta_fields_tab2[] =	array(
+				'label'=> __('Paid or Not Paid Version:', 'design-approval-system'),
+				'desc'	=> __('Has the next set of design changes been paid for by client? If not select "Not Paid" and the next time the client trys to submit changes they will be notified that they are being charged for additional changes. If a client decides to submit additional changes you will receive an email letting you know that they have accepted, additionally it will send them an email confirming this.', 'design-approval-system'),
+				'id'	=> $prefix.'paid_not_paid',
+				'type'	=> 'select',
+				'options' => array (
+					'one' => array (
+						'label' => __('Paid', 'design-approval-system'),
+						'value'	=> 'paid', 'design-approval-system'
+					),
+					'two' => array (
+						'label' => __('Not Paid', 'design-approval-system'),
+						'value'	=> 'not-paid', 'design-approval-system'
+					)
+				  )
+	);
+}
+
 //TAB3
 $custom_meta_fields_tab3 = array(
 	
@@ -284,16 +287,16 @@ if(is_plugin_active('das-design-login/das-design-login.php')) {
 if(is_plugin_active('woocommerce-for-das/woocommerce-for-das.php')) {
 	$custom_meta_fields_tab5[] =	array(
 	'label'=> __('Turn design into a WooCommerce Product?', 'design-approval-system'),
-	'desc'	=> __('Selecting yes will create a product in Woocommerce.', 'design-approval-system'),
+	'desc'	=> __('Selecting yes will create a product in Woocommerce. Keep "Yes" selected and the Product will always update information in Woocommerce when this design post is saved.', 'design-approval-system'),
 	'id'	=> $prefix.'woo_product',
 	'type'	=> 'select',
 	'options' => array (
 		'two' => array (
-			'label' => __('No, Do not create Woo product', 'design-approval-system'),
+			'label' => __('No, Do not create or update this Design as a Woo product.', 'design-approval-system'),
 			'value'	=> 'no-woo-product', 'design-approval-system'
 		),
 		'one' => array (
-			'label' => __('Yes, Make this Design a Woo product.', 'design-approval-system'),
+			'label' => __('Yes, Create or Update this Design as a Woo product.', 'design-approval-system'),
 			'value'	=> 'yes-woo-product', 'design-approval-system'
 		)
 	  )
@@ -851,6 +854,8 @@ if(is_plugin_active('woocommerce-for-das/woocommerce-for-das.php')) {
 	include(WP_CONTENT_DIR .'/plugins/woocommerce-for-das/woocommerce-for-das-meta-box.php');
 };
 
+	
+	
 }
 add_action('save_post', 'save_custom_meta');  
 ?>

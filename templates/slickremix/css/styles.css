@@ -12,6 +12,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 body {
 	line-height: 1;
 }
+body, html {
+	background:none !important;
+}
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font-weight: normal;
@@ -153,7 +156,7 @@ hr {
 }
 /* Text elements */
 p {
-	margin-bottom: 18px;
+	/* margin-bottom: 18px; */
 }
 ul {
 	list-style: square;
@@ -335,8 +338,7 @@ a:hover {
 	Design Approval Template Header
 ================================================================*/
 body#design-template {
-	background: url(../images/designer-backg-grey.png) no-repeat top left;
-	background-color: #000;
+	background: url(../images/designer-backg-grey.png) no-repeat top left #000 !important;
 	font-family: verdana, arial, sans-serif;
 }
 .header-top {
@@ -345,13 +347,13 @@ body#design-template {
 }
 .header-wrap {
 	width: 965px;
+	position:relative;
 	margin: 0 auto;
 	height: 111px;
-	padding-right: 25px;
 	background: url(../images/header-wrap-backg.png) left top no-repeat #000000;
 }
 .header-info-wrap {
-	width: 790px;
+	/* width: 820px; */
 	height: 84px;
 	padding-top: 13px;
 	letter-spacing: 0.04em;
@@ -383,12 +385,12 @@ body#design-template {
 	font-size: 13px;
 	min-height:53px;
 	position:absolute;
-	left:135px;
+	left:130px;
 }
 .header-title-text {
 	float: left;
 	list-style-type: none;
-	margin: 0 0 0 27px;
+	margin: 0 0 0 28px;
 	padding: 0;
 	text-align: right;
 	display: block;
@@ -397,7 +399,7 @@ body#design-template {
 	font-weight:bold;
 }
 .main-logo-tab {
-	width: 139px;
+	margin-left:15px;
 	height: 41px;
 	float: right;
 	background-color: #323232;
@@ -408,8 +410,8 @@ body#design-template {
 	height: 41px;
 	float: right;
 	background-color: #323232;
-	margin-right:1px;
-	margin-left:12px;
+	margin-right:-14px;
+	margin-left:18px;
 	color:#FFF;
 	position:relative;
 	z-index:5000;
@@ -418,7 +420,7 @@ body#design-template {
 
 .main-checkout-tab p {
 	border:none !important;
-	padding:7px 10px 0 15px !important;
+	padding:5px 10px 0 15px !important;
 }
 .add_to_cart_button {
 	
@@ -430,7 +432,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b6b5b5', endC
 .main-checkout-tab a {
 	/* background:url(../images/80-shopping-cart@2x.png) no-repeat; */
 	background-size:25px 25px;
-	height:25px;
+	height:12px !important;
+	padding:6px 10px !important;
 	margin-left:10px !important;
 	display:block;
 	box-shadow:0px;
@@ -441,23 +444,24 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b6b5b5', endC
 }
 .main-checkout-tab .add_to_cart_button:before {
 	color:#FFF ;
+	top: 6px !important;
 }
 .main-checkout-tab a.added_to_cart {
 	color:#FFF !important;
-	padding-left:15px;
+	padding-left:12px !important;
 }
 .main-logo {
 	display: block;
 	margin: auto;
 }
 a.version-tab, a.hide-notes, a.project-timeline, a.versions, a.logout-btn {
-	height: 26px;
+	height: 25px;
 	padding: 0 20px;
 	background-color: #323232;
 	display: block;
 	padding-top: 5px;
 	text-align: center;
-	margin-left: 2px;
+	margin-left: 1px;
 	float: right;
 	text-decoration: none;
 	color: #1295DA;
@@ -552,11 +556,11 @@ a:hover.project-timeline {
 	line-height: 20px;
 	text-align: justify;
 	font-weight: normal;
-	background-color: #323232;
+	/* background-color: #323232; */
 }
 .designer-notes-text {
 	padding: 0 35px 0 17px;
-	min-height: 49px
+	min-height: 47px
 }
 .designers-notes-content-right-wrap {
 	float: left;
@@ -571,6 +575,14 @@ a:hover.project-timeline {
 }
 .changes-wrap {
 	border-top: 1px solid #3D3C3D;
+}
+.client-notes-tab {
+	/* height: 28px; */
+	background-color: #323232;
+	color: #0095da;
+	font-size: 16px;
+	/* float: left; */
+	padding: 25px 16px 15px 0px;
 }
 .designers-notes-tab {
 	/* height: 28px; */
@@ -619,8 +631,11 @@ a:hover.design-option-btn {
  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#dbdbdb', endColorstr='#b6b5b5');
 }
 .header-tabs-wrap {
-	width: 700px;
-	float: right;
+	min-width: 700px;
+	position:absolute;
+	right:0;
+	z-index:400;
+	bottom:1px;
 }
 /*===============================================================
 	status-Approved FORM
@@ -782,9 +797,10 @@ a:hover.design-option-btn {
 	color: #333333;
 	background: -moz-linear-gradient(top, #dbdbdb 0%, #b6b5b5 100%);
 	background: -webkit-gradient(linear, left top, left bottom, from(#dbdbdb), to(#b6b5b5));
- filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#dbdbdb', endColorstr='#b6b5b5');
+ 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#dbdbdb', endColorstr='#b6b5b5');
 	float: right;
 	cursor: pointer;
+	text-decoration:none;
 }
 .design-requests-area {
 	width: 801px;
@@ -903,20 +919,21 @@ a:hover.cancel-additional-requests2 {
 	position: absolute;
 }
 .submit-additional-requests {
-	height: auto !important;
+	height: 20px;
 	width: 220px !important;
 	text-align: center !important;
 	border: none !important;
 	outline: none !important;
-	padding: 7px 0 !important;
+	padding: 6px 0 !important;
 	color: #000000 !important;
-	background: -moz-linear-gradient(top, #b6b5b5 0%, #dbdbdb 100%);
-	background: -webkit-gradient(linear, left top, left bottom, from(#b6b5b5), to(#dbdbdb));
- filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#b6b5b5', endColorstr='#dbdbdb');
+	background: -moz-linear-gradient(top, #b6b5b5 0%, #dbdbdb 100%) !important;
+	background: -webkit-gradient(linear, left top, left bottom, from(#b6b5b5), to(#dbdbdb)) !important;
+ filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#b6b5b5', endColorstr='#dbdbdb') !important;
 	text-decoration: none;
 	font-size: 14px !important;
+	line-height:19px;
 	position: absolute;
-	top: 144px;
+	/* top: 144px; */
 	left: 163px;
 }
 .submit-additional-requests:hover {
@@ -931,7 +948,8 @@ a.cancel-additional-requests {
 	width: 81px;
 	text-align: center;
 	padding: 6px 0;
-	margin-top: 11px;
+	line-height:19px;
+	/* margin-top: 11px; */
 	color: #000000;
 	background: -moz-linear-gradient(top, #b6b5b5 0%, #dbdbdb 100%);
 	background: -webkit-gradient(linear, left top, left bottom, from(#b6b5b5), to(#dbdbdb));
@@ -972,7 +990,7 @@ a:hover.cancel-additional-requests {
 	color: #888!important;
 	font-size: 13px !important;
 	line-height: 20px !important;
-	text-decoration: underline !important;
+	text-decoration: none !important;
 	cursor: pointer !important;
 	margin: 0px !important;
 	padding: 0px !important;
@@ -1017,15 +1035,17 @@ span#send-email-for-designer-done {
 	height: auto;
 	min-width: 162px;
 	z-index: 5000;
-	padding-top: 15px;
+	padding-top: 10px;
 	position: absolute;
-	top: 25px;
-	left: -16px;
+	top: 30px;
+	left: -29px;
+	border-top:1px solid #000;
 	background-color: #323232;
 	-moz-box-shadow: 2px 2px 11px #323232;
 	-webkit-box-shadow: 2px 2px 11px #323232;
 	list-style-type: none;
 	line-height: inherit;
+	margin:0;
 	display: none;
 }
 #das-nav ul li {
@@ -1103,9 +1123,40 @@ span#send-email-for-designer-done {
 	max-height: 90px;
 	margin: 0 auto;
 	position: relative;
-	padding: 10px;
+	padding: 10px 14px;
 	overflow: hidden;
+	text-align:center;
 }
 #main-logo img {
 	z-index: 10;
+}
+.designers-notes-content-left-wrap .edit-link a:before {
+content: "";
+}
+
+.post-edit-link {
+background:none !important;
+box-shadow:none !important;
+border:none !important;
+border-radius:0 !important;
+color:#888 !important;
+cursor:pointer;
+font-weight:normal !important;
+left:auto; 
+margin:0;
+height:auto;
+overflow:visible;
+padding: 0 !important;
+position:relative;
+text-decoration:none !important;
+text-shadow:none !important;
+}
+
+.amount {
+	line-height:30px;
+}
+*  {
+-webkit-box-sizing: inherit;
+-moz-box-sizing: inherit;
+box-sizing:  inherit;
 }

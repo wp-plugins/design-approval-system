@@ -4,8 +4,6 @@
 <!--default das template CSS-->
 <link rel="stylesheet" type="text/css" media="all" href="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/css/styles.css" />
 
-
-
 </head>
 <body <?php body_class(); ?> id="design-template">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -18,18 +16,24 @@
 
 <div class="header-wrap">
   <div class="main-logo-tab">
-    <div id="main-logo"> <a href="/"><img src="<?php echo get_option('image_1'); ?>" alt="<?php echo get_option('das-settings-company-name'); ?>" /></a></div>
+    <div id="main-logo"> <a href="/"><img src="<?php echo get_option('das_default_theme_logo_image'); ?>" alt="<?php echo get_option('das-settings-company-name'); ?>" /></a></div>
     <!--/main-logo--> 
   </div>
   <!--/main-logo-tab-->
   
-<?php // BEGIN WOO CHECKOUT BUTTON 
-if(is_plugin_active('woocommerce-for-das/woocommerce-for-das.php')) { 
+  
+  
+<?php 
+// BEGIN WOO CHECKOUT BUTTON
+// make sure woocommerce plugin is active and woo for das is active before returning shortcode
+if(is_plugin_active('woocommerce/woocommerce.php') && is_plugin_active('woocommerce-for-das/woocommerce-for-das.php') ) { 
 	$das_woo_product = get_post_meta($post->ID, 'das_design_woo_product_id', true);
 	if (!empty($das_woo_product)) { ?>
 	  <div class="main-checkout-tab"><?php echo do_shortcode('[add_to_cart id="'.$das_woo_product.'"]'); ?></div>
 		  <?php }
-} // END WOO CHECKOUT BUTTON  ?>
+} 
+// END WOO CHECKOUT BUTTON 
+?>
           
   
   <div class="header-info-wrap">
@@ -265,7 +269,7 @@ echo '</ul>';
         </div>
         <!-- designer-notes-text -->
           <div class="client-notes <?php echo get_post_meta($post->ID, 'custom_client_notes_on_off', true); ?>">
-            <h3>Client Notes</h3>
+            <div class="client-notes-tab">Client Notes</div>
         	<div class="client-notes-textarea"><?php echo get_post_meta($post->ID, 'custom_client_notes', true); ?></div>
          </div>
       </div>
@@ -277,8 +281,8 @@ echo '</ul>';
       <div class="designers-options-tab">Design Options</div> 
       <br class="clear"/>
       <div class="designers-notes-content-right"> 
-      <?php
-if ( is_user_logged_in() ) {
+    <?php
+	if ( is_user_logged_in() ) {
 	$alreadyapproved = get_post_meta($post->ID, 'custom_client_approved', true);
 	if ($alreadyapproved == 'Yes') { ?>
     <div class="approved-wrap">You have approved this Design, Thank-You. <a href="javascript:;" class="design-option-btn">Approved</a></div><?php
@@ -286,22 +290,20 @@ if ( is_user_logged_in() ) {
 	else { ?> <div class="not-approved-wrap">Would you like to Approve this Design? <a href="javascript:;" class="design-option-btn design-approval-btn">Approve</a></div><?php
 		}
 	}
-else if ( !is_user_logged_in() ) { ?> Would you like to Approve this Design? <a href="<?php echo wp_login_url( get_permalink() ); ?>" class="design-option-btn">Login</a> <?php 
-		}
-?>		
+	else if ( !is_user_logged_in() ) { ?> Would you like to Approve this Design? <a href="<?php echo wp_login_url( get_permalink() ); ?>" class="design-option-btn">Login</a> <?php 
+		} ?>		
 		<div class="approved-wrap" style="display:none">"You have approved this Design, Thank-You. <a href="javascript:;" class="design-option-btn">Approved</a></div>
       </div>
       <!--designers-notes-content-right-->
       
-      <?php if(is_plugin_active('das-changes-extension/das-changes-extension.php')) { ?>
-      
-      <?php
-if ( is_user_logged_in() ) {
+      <?php if(is_plugin_active('das-changes-extension/das-changes-extension.php')) { 
+	  
+	  if ( is_user_logged_in() ) {
 	  ?><div class="designers-notes-content-right changes-wrap"> Would you like to make Changes to this Design? <a href="javascript:;" class="design-option-btn" id="<?php echo get_post_meta($post->ID, 'custom_paid_not_paid', true); ?>">Changes</a> </div>
       <!--designers-notes-content-right--> 
-<?php }
-else if ( !is_user_logged_in() ) {  ?>
-	<div class="designers-notes-content-right changes-wrap"> Would you like to make Changes to this Design? <a href="<?php echo wp_login_url( get_permalink() ); ?>" class="design-option-btn">Login</a></div>
+	  <?php }
+      else if ( !is_user_logged_in() ) {  ?>
+	  <div class="designers-notes-content-right changes-wrap"> Would you like to make Changes to this Design? <a href="<?php echo wp_login_url( get_permalink() ); ?>" class="design-option-btn">Login</a></div>
       <!--designers-notes-content-right--> 
      <?php } 
 	     }?><!-- is user logged in if statement -->

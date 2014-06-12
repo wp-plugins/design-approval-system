@@ -3,7 +3,7 @@ Contributors: slickremix
 Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature, work flow, multi language, woocommerce, shopping cart, woo, commerce
 Requires at least: 3.5.0
 Tested up to: 3.9.1
-Stable tag: 3.8.3
+Stable tag: 3.8.4
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, documents, videos, or music approved by clients quickly.
@@ -65,11 +65,7 @@ Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval
   4. [And More!](http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)         
 
 = THEMES AND EXTENSIONS =
-  1. [Select User and Email Extension](http://www.slickremix.com/product/client-changes-extension)
-  2. [Design Login Extension](http://www.slickremix.com/product/design-login-das-extension)
-  3. [All Extensions and Theme Bundle](http://www.slickremix.com/product/das-extensions-bundle)
-  4. [Clean Theme](http://www.slickremix.com/product/clean-theme-for-design-approval-system) Now fully customizable to fit your company look.
-  5. [Client Changes Extension](http://www.slickremix.com/product/client-changes-extension)
+  [Click here to view them all.](http://www.slickremix.com/downloads/category/design-approval-system/)
   
 = Join us on Facebook! =
 Don't get left behind! Make sure you "Like" our [Facebook](http://www.facebook.com/DesignApprovalSystem) for News, Updates, and Coupons! See our [Facebook](http://www.facebook.com/DesignApprovalSystem) for Details.
@@ -83,12 +79,22 @@ If you would like to become apart of our team and help develop and make money ch
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Change-log ==
+
+= Version 3.8.4 / Wednesday June 11th, 2014 =
+	FIXED: Fatal Error on some installs.
+	FIXED: If you have the Premium Client Changes plugin the option for Paid or Not paid is now available under the 'Client Info' tab on a design post.
+	FIXED: wp-admin Project Board will now show all design posts to the DAS Client no matter what the amount of blog posts to be shown is set to in the reading settings wordpress menu. And breath :)
+	FIXED: Get more extensions links.
+	FIXED: CSS overhaul on the default template that fixes many elements to work with bootstrap or other themes using box-border.
+	FIXED: Default Template: we changed the logo db call in the settings page so you will have to resave the DAS settings page for your logo to appear again.
+	THANKS: Big up to Gordon and a few others for brining the fatal error to light and helping us debug for DAS and the Private Project Board premium plugin, which is set for a new update in the next day as well. Check out Gordon's site here. [http://www.webdesignperth.com.au/](http://www.webdesignperth.com.au/)
+
 = Version 3.8.3 / Thursday June 5th, 2014 =
- * FIXED: Project Board update on update 3.8.1
- 
+	FIXED: Project Board update on update 3.8.1
+
 = Version 3.8.2 / Thursday June 5th, 2014 =
- * FIXED: Default template update on update 3.8.1
- 
+	FIXED: Default template update on update 3.8.1
+
 = Version 3.8.1 / Thursday June 5th, 2014 =
  * REQUIRED: If you update this version of DAS you will also need to update any premium plugins you've purchased as every DAS plugin except the User Roles, Public and Private Project Board plugin have been updated. We will be updatin the Public and Private Project Board shortly after as well.
  * FIXED: Logo upload now uses the latest media frame.

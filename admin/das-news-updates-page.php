@@ -1,6 +1,6 @@
 <?php function das_news_updates_page() { ?>
 <div class="das-video-admin-wrap das-news-admin-wrap">
- <a class="buy-extensions-btn" href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank"><?php _e('Get Extensions Here!', 'design-approval-system') ?></a>
+ <a class="buy-extensions-btn" href="http://www.slickremix.com/downloads/category/design-approval-system/" target="_blank"><?php _e('Get Extensions Here!', 'design-approval-system') ?></a>
  <h2><?php _e('DAS News and Updates', 'design-approval-system') ?></h2>
 <div class="use-of-plugin"><?php _e('Read articles below to find out about our most recent <strong>News</strong> and <strong>Updates</strong>.<br/>You can also join our <a href="https://www.facebook.com/groups/163760557102843/" target="_blank">Facebook Group</a> to receive updates in your news feed too.<br/> What better way to read about new updates, premium extensions or specials we have<br/>running. <strong>Thanks for the Support!</strong>', 'design-approval-system') ?></div>
 

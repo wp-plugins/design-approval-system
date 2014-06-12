@@ -319,7 +319,8 @@ $post_counts = array();
 foreach ($client as $term) :
 	$args = array(
 	  'post_type' => $post_type,
-	  'post_per_page' => 0,
+	  'post_per_page' => -1,
+	  'nopaging' => true,
 	  'post_status'   => 'publish',
 	  'caller_get_posts' => 1,
 	  'tax_query' => array(
@@ -387,6 +388,7 @@ $counter = 0;
 		$args = array(
 			'post_type' => $post_type,
 			'post_per_page' => -1,
+	 		'nopaging' => true,
 			'post_status'   => 'publish',
 			'caller_get_posts' => 1,'orderby'                  => 'name',
 	'order'                    => 'ASC',
