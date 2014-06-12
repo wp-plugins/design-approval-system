@@ -81,6 +81,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 == Change-log ==
 
 = Version 3.8.4 / Wednesday June 11th, 2014 =
+ * MUST READ: All premium plugin users must de-activate your das extensions before updating to this next version.
  * FIXED: Fatal Error on some installs.
  * FIXED: If you have the Premium Client Changes plugin the option for Paid or Not paid is now available under the 'Client Info' tab on a design post.
  * FIXED: wp-admin Project Board will now show all design posts to the DAS Client no matter what the amount of blog posts to be shown is set to in the reading settings wordpress menu. And breath :)
