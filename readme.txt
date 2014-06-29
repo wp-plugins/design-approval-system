@@ -71,8 +71,6 @@ Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval
   
 = Join us on Facebook! =
 Don't get left behind! Make sure you "Like" our [Facebook](http://www.facebook.com/DesignApprovalSystem) for News, Updates, and Coupons! See our [Facebook](http://www.facebook.com/DesignApprovalSystem) for Details.
-	
-If you would like to become apart of our team and help develop and make money check out this [page](http://www.slickremix.com/join-slickremix/) for more details.
 
   **DISCLAIMER:** SlickRemix **DOES NOT** code for IE. If it works awesome, if not we highly suggest one of the following modern browsers: [Google Chrome](https://www.google.com/intl/en/chrome/browser/), [Safari](http://www.apple.com/safari/) or [Firefox](http://www.mozilla.org/en-US/firefox/).
    
