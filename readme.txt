@@ -3,29 +3,19 @@ Contributors: slickremix
 Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature, work flow, multi language, woocommerce, shopping cart, woo, commerce
 Requires at least: 3.5.0
 Tested up to: 3.9.1
-Stable tag: 3.8.5
+Stable tag: 3.8.6
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, documents, videos, or music approved by clients quickly.
 
 == Description ==
-
-The Design Approval System is now multi-language ready. If you would like to contribute we are willing to pay for your help. [See more here](http://glotpress.slickremix.com/projects).
-
-PHP 5.3 or above required to run DAS and any extensions.
-
 Approved designs get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/). Clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Live Example](http://www.slickremix.com/project-board/). 
-
-If you enjoy using this plugin please take a second to tell others! [Click here to share.](http://www.facebook.com/sharer.php?u=http://wordpress.org/plugins/design-approval-system/&t=DesignApprovalSystem)
 
 Here's a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
-If you have an idea please don't hesitate to [email us @ info@slickremix.com](mailto:info@slickremix.com). We could not do this without everyones help. We want to make the Design Approval System the best and quickest way to get projects approved on the web.
-
 View the full tutorial about our [Design Approval System plugin and Client Changes Extension](http://youtu.be/pYdF2OJCOv4): 
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
-
 
 Here is what you, the clients, and the plugin can do:
 
@@ -36,14 +26,14 @@ Here is what you, the clients, and the plugin can do:
   * Display “Designer” notes for the client to read.
   * Display project start and end date.
   * Display ”Client” notes to assure the client you have completed all the things they have requested.
-  * …and much more!
+  * …and more.
 
  = THE CLIENT CAN… =
   * Approve designs. (An automatic email confirmation will be sent to both parties.)
   * See project start and end date.
   * See “Designer” notes.
   * See “Client” notes to double check the designer has completed all the things they have requested.
-  * …and much more!
+  * …and more.
 
 = THE PLUGIN CAN… =
   * Send automatic confirmation emails.
@@ -52,26 +42,16 @@ Here is what you, the clients, and the plugin can do:
   * Display a versions menu to show previous versions of a design.
   * Hide notes to show just the design on the design review page. (Especially nice for web designers wanting to show what a design will look like on a page.)
   * Show you a list of all of your clients and projects! (Project Board page) 
-  * …and much more!
-  
-= DAS PRO BUNDLE =
-Grab our [Pro Bundle](http://www.slickremix.com/product-category/design-approval-system-extensions) and step up your game even more.
+  * …and more.
   
 = SUPPORT FORUM =
-  * Having problems, or possibly looking to extend our plugin to fit your needs? You can find answers to your questions or drop us a line at our [Support Forum](http://www.slickremix.com/free-and-premium-support/).
-
-= SLICK DAS TIPS =
-  1. [HOW TO CHANGE the Background Color of your Design Post?](http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)
-  2. [Adding the FREE Duplicate Post WordPress Plugin to extend our DAS](http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)
-  3. [Adding the FREE WordPress Editorial Calendar Plugin to extend our DAS](http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)
-  4. [And More!](http://www.slickremix.com/support-forum/slick-tips-group7/design-approval-system-forum8/)         
+  * Having problems, or possibly looking to extend our plugin to fit your needs? You can find answers to your questions or drop us a line at our [Support Forum](http://www.slickremix.com/free-and-premium-support/). 
 
 = THEMES AND EXTENSIONS =
   [Click here to view them all.](http://www.slickremix.com/downloads/category/design-approval-system/)
   
-= Join us on Facebook! =
-Don't get left behind! Make sure you "Like" our [Facebook](http://www.facebook.com/DesignApprovalSystem) for News, Updates, and Coupons! See our [Facebook](http://www.facebook.com/DesignApprovalSystem) for Details.
-
+  If you would like to contribute in translating please [visist us here](http://glotpress.slickremix.com/projects).
+  
   **DISCLAIMER:** SlickRemix **DOES NOT** code for IE. If it works awesome, if not we highly suggest one of the following modern browsers: [Google Chrome](https://www.google.com/intl/en/chrome/browser/), [Safari](http://www.apple.com/safari/) or [Firefox](http://www.mozilla.org/en-US/firefox/).
    
 == Installation ==
@@ -79,6 +59,16 @@ Don't get left behind! Make sure you "Like" our [Facebook](http://www.facebook.c
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Change-log ==
+= Version 3.8.6 / Wednesday July 30th, 2014 =
+ * NEW: Language files for German and Portuguese. Add de_DE for German or pt_BR for Portuguese in your wp-config.php
+ * NEW: Brand new walkthrough using wordpress pointers. You can retake the tour at any time by visiting the Help page in our DAS menu.
+ * NEW: php5.3 check on the Help page. If you are not at least running php5.3 a notice will warn that you need to update.
+ * FIXED: Plugin update notices
+ * FIXED: flushrewrite for custom post type and taxonomy. Using proper method on activation now.
+ * UPDATED: Removed the news, videos and re-take tour menu items and pages.
+ * UPDATED: Project Board is now fully responsive, so it looks and works great on desktops, tablets and mobile devices and with different languages.
+ * UPDATED: Previous users of the premium project board will need to update to our new plugin that combines both the public and private project board. Existing users will not have to pay for this upgrade.
+ 
 = Version 3.8.5 / Thursday June 12th, 2014 =
  * FIXED: Single Template override wrong.
  * FIXED: Single Template path fixed.
@@ -294,6 +284,4 @@ If you have more questions or would like to view other users questions please vi
 10. Simply click on one of the project rows and watch your version(s) slide into view. You can also hover your mouse over the thumbnail to reveal more options.
 11. Clicking the details link on the thumbnail will show you the design details. If your client has added comments then they will be appear as well.
 12. Create a Das-Client user for your clients in wordpress, and add your clients email on the designs you make and they'll appear for your client once they login as depicted in the photo.
-13. We also have a Walk-Through to really help speed things along. This will explain what each menu item is for and give you a 3 step process to create your project board.
-14. The second step of the walk through just so you can see how easy we're trying to make this.
-15. This is an example of the client changes extension. If you need the option for your client to be able to make comments on your designs, this extension is what you need. It automatically makes an update to the page for the client to see his/her comments without refreshing the page too, once the client has submitted the form. And it also sends an email to you, the designer and the client letting them know about the design comments.
+13. This is an example of the client changes extension. If you need the option for your client to be able to make comments on your designs, this extension is what you need. It automatically makes an update to the page for the client to see his/her comments without refreshing the page too, once the client has submitted the form. And it also sends an email to you, the designer and the client letting them know about the design comments.
