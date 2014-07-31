@@ -45,7 +45,7 @@ Here is what you, the clients, and the plugin can do:
   * …and more.
   
 = SUPPORT FORUM =
-  * Having problems, or possibly looking to extend our plugin to fit your needs? You can find answers to your questions or drop us a line at our [Support Forum](http://www.slickremix.com/free-and-premium-support/). 
+  * Having problems, or possibly looking to extend our plugin to fit your needs? You can find answers to your questions or drop us a line at our [Support Forum](http://www.slickremix.com/support-forum/). 
 
 = THEMES AND EXTENSIONS =
   [Click here to view them all.](http://www.slickremix.com/downloads/category/design-approval-system/)
