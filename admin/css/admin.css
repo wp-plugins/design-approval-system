@@ -1,3 +1,25 @@
+/* Wordpress Pointers for our DAS Tour */
+.designapprovalsystem_page_design-approval-system-projects-page #wp-pointer-0 .wp-pointer-arrow {
+	top:56px;
+}
+.designapprovalsystem_page_design-approval-system-projects-page #wp-pointer-0 .wp-pointer-content  {
+	margin-top:-32px !important;
+}
+.post-type-designapprovalsystem.taxonomy-das_categories #wp-pointer-0 .wp-pointer-arrow {
+	top:85px;
+}
+.post-new-php.post-type-designapprovalsystem  #wp-pointer-0 .wp-pointer-arrow {
+	top:111px;
+}
+.edit-php.post-type-designapprovalsystem #wp-pointer-0 .wp-pointer-arrow {
+	top:139px;
+}
+.designapprovalsystem_page_design-approval-system-help-page #wp-pointer-0 .wp-pointer-arrow {
+	top:218px;
+}
+.designapprovalsystem_page_design-approval-system-settings-page #wp-pointer-0 .wp-pointer-arrow {
+	top:247px;
+}
 .menu-icon-designapprovalsystem .wp-not-current-submenu div.wp-menu-image {
 	background-image: url('../images/design-approval-icon-sprite.png');
 	background-position: 9px -17px;

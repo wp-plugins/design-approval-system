@@ -1,6 +1,6 @@
 <?php
 /*
-	This is file is for creating the options page for Wordpress's backend
+	This is file is for creating the das settings page for Wordpress's backend
 */
 
 //Main setting page function
@@ -181,16 +181,8 @@ else	{
   <div class="das-settings-icon-wrap"><a href="https://www.facebook.com/SlickRemix" target="_blank" class="facebook-icon"></a><a class="das-settings-admin-slick-logo" href="http://www.slickremix.com" target="_blank"></a></div>
 
   
- 
- 
- 
  </div>
 <!--/das-settings-admin-wrap--> 
 
 <script type="text/javascript" src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/js/admin.js"></script>
-<?php
-
-	include('walkthrough/walkthrough.php');	
-
-}
-?>
+<?php } ?>
