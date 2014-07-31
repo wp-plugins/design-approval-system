@@ -50,7 +50,7 @@ Here is what you, the clients, and the plugin can do:
 = THEMES AND EXTENSIONS =
   [Click here to view them all.](http://www.slickremix.com/downloads/category/design-approval-system/)
   
-  If you would like to contribute in translating please [visist us here](http://glotpress.slickremix.com/projects).
+  If you would like to contribute in translating please [visit us here](http://glotpress.slickremix.com/projects).
   
   **DISCLAIMER:** SlickRemix **DOES NOT** code for IE. If it works awesome, if not we highly suggest one of the following modern browsers: [Google Chrome](https://www.google.com/intl/en/chrome/browser/), [Safari](http://www.apple.com/safari/) or [Firefox](http://www.mozilla.org/en-US/firefox/).
    
