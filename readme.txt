@@ -60,7 +60,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 == Change-log ==
 = Version 3.8.7 / Saturday August 9th, 2014 =
- * IMPORTANT: Make sure you have all the most recent updates for your premium plugins before updating.
+ * IMPORTANT: Make sure you have all the most recent updates for your premium plugins before updating. You can find your plugins in the my account area of slickremix.com [http://slickremix.com/my-account](http://slickremix.com/my-account)
  * NEW PREMIUM PLUGINS: Today marks the day we launch the GQ Theme/Template for DAS and the Woocommerce for DAS plugins. See our shop at slickremix.com.
  * ADDED: Additional functionality for the new WooCommerce for DAS plugin.
  * FIXED: Register settings options correctly.
