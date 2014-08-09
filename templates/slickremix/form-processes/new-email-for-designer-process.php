@@ -22,9 +22,6 @@ $das_settings_company_email = ($_GET['dasSettingsCompanyEmail']) ?$_GET['dasSett
 //Messages
 $das_settings_email_for_designers_message_to_clients = ($_GET['dasSettingsEmailForDesignersMessageToClients']) ?$_GET['dasSettingsEmailForDesignersMessageToClients'] : $_POST['dasSettingsEmailForDesignersMessageToClients'];
 
-?>
-<script language="JavaScript"><?
-
 //flag to indicate which method it uses. If POST set it to 1
 if ($_POST) $post=1;
 
@@ -32,9 +29,6 @@ if ($_POST) $post=1;
 
 if (!$human4 ['human4'] == '') {$errors[count($errors)] = 'It appears you may be trying to submit spam. Please disreguard this notice and try again if we made a mistake.'; }
 
-//if the errors array is empty, send the mail
-?></script>
-<?
 
 $recipients = array("designer", "client");
 

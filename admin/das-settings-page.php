@@ -12,7 +12,10 @@ function das_settings_page() {
   <div class="use-of-plugin"><?php _e("Please fill out the settings below. If you don't understand what a field is for click the question mark next to that title.", "design-approval-system") ?></div>
   <h3><?php _e('COMPANY INFO', 'design-approval-system') ?></h3>
   <form method="post" class="das-settings-admin-form" action="options.php">
-    <?php wp_nonce_field('update-options'); ?>
+  
+     <?php // get our registered settings from the gq theme functions 
+	 	   settings_fields('design-approval-system-settings'); ?> 
+    
     <div class="das-settings-admin-input-wrap company-info-style">
       <div class="das-settings-admin-input-label"><?php _e('Company Logo (required)', 'design-approval-system') ?>: <a class="question1"><?php _e('?', 'design-approval-system') ?></a></div>
       <input id="das_default_theme_logo_image" name="das_default_theme_logo_image" class="das-settings-admin-input" type="text"  value="<?php echo get_option('das_default_theme_logo_image'); ?>" />
@@ -24,7 +27,7 @@ function das_settings_page() {
         <ul>
           <li><?php _e('Your logo will be placed at the left right of the page.', 'design-approval-system') ?></li>
         </ul>
-        <img src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/images/how-to/admin-help-logo.jpg" width="857" height="133" alt="Header Logo Example" /> <a class="im-done"><?php _e('close', 'design-approval-system') ?></a> </div>
+        <img src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/images/how-to/admin-help-logo.jpg" alt="Header Logo Example" /> <a class="im-done"><?php _e('close', 'design-approval-system') ?></a> </div>
       <!--/das-settings-id-answer-->
       
       <div class="clear"></div>
@@ -105,7 +108,7 @@ else	{
         <ul>
           <li><?php _e('Please review your design comp for changes and/or errors:', 'design-approval-system') ?></li>
         </ul>
-        <span><?php _e('Example of Email', 'design-approval-system') ?></span> <img src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/images/how-to/help-designers-email.jpg" width="857" height="189" /> <a class="im-done"><?php _e('close', 'design-approval-system') ?></a> </div>
+        <span><?php _e('Example of Email', 'design-approval-system') ?></span> <img src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/images/how-to/help-designers-email.jpg" /> <a class="im-done"><?php _e('close', 'design-approval-system') ?></a> </div>
       <!--/das-settings-id-answer-->
       <div class="clear"></div>
     </div>
@@ -124,7 +127,7 @@ else	{
         <ul>
           <li><?php _e("This design comp has been approved by the client. Please take the next appropriate step.", "design-approval-system") ?></li>
         </ul>
-        <span><?php _e('Example of Email', 'design-approval-system') ?></span> <img src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/images/how-to/help-approval-designer.jpg" width="857" height="189" /> <a class="im-done"><?php _e('close', 'design-approval-system') ?></a> </div>
+        <span><?php _e('Example of Email', 'design-approval-system') ?></span> <img src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/images/how-to/help-approval-designer.jpg" /> <a class="im-done"><?php _e('close', 'design-approval-system') ?></a> </div>
       <!--/das-settings-id-answer-->
       <div class="clear"></div>
     </div>
@@ -141,7 +144,7 @@ else	{
           <li><?php _e('Thank you for approving your design comp. We will now take the next steps in finalizing your project. Below is a confirmation of your submission.<br/>
             As the authorized decision maker of my firm I acknowledge that I have reviewed and approved the proposed design comps designed by [Your Company Name].', 'design-approval-system') ?></li>
         </ul>
-        <span><?php _e('Example of Email', 'design-approval-system') ?></span> <img src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/images/how-to/help-approval-email.jpg" width="857" height="301" /> <a class="im-done"><?php _e('close', 'design-approval-system') ?></a> </div>
+        <span><?php _e('Example of Email', 'design-approval-system') ?></span> <img src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/images/how-to/help-approval-email.jpg" /> <a class="im-done"><?php _e('close', 'design-approval-system') ?></a> </div>
       <!--/das-settings-id-answer-->
       <div class="clear"></div>
     </div>
@@ -158,7 +161,7 @@ else	{
           <li><?php _e('Thank you for approving your design comp. <br/>
             [Your Company Name] will now take the next steps in finalizing your project.', 'design-approval-system') ?></li>
         </ul>
-        <span><?php _e('Example of Pop Up Meessage that appears when a client approves a design', 'design-approval-system') ?></span> <img src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/images/how-to/help-approval-popup.jpg" width="857" height="301" /> <a class="im-done"><?php _e('close', 'design-approval-system') ?></a> </div>
+        <span><?php _e('Example of Pop Up Meessage that appears when a client approves a design', 'design-approval-system') ?></span> <img src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/images/how-to/help-approval-popup.jpg" /> <a class="im-done"><?php _e('close', 'design-approval-system') ?></a> </div>
       <!--/das-settings-id-answer-->
       <div class="clear"></div>
     </div>
@@ -171,9 +174,7 @@ else	{
     <?php if(is_plugin_active('das-roles-extension/das-roles-extension.php')) {
 		include('../wp-content/plugins/das-roles-extension/admin/das-roles-extension-settings-page.php');
 }?>
-
-    <input type="hidden" name="action" value="update" />
-    <input type="hidden" name="page_options" value="das_default_theme_logo_image, das-settings-company-name, das-settings-company-email, das-settings-smtp, das-smtp-server, das-smtp-port, das-smtp-checkbox-authenticate, das-smtp-authenticate-username, das-smtp-authenticate-password, das-settings-email-for-designers-message-to-clients, das-settings-approved-dig-sig-message-to-designer, das-settings-approved-dig-sig-message-to-clients, das-settings-approved-dig-sig-thank-you<?php if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {?>, das-settings-design-requests-message-to-designer, das-settings-design-requests-message-to-clients, das-settings-design-requests-thank-you, das-settings-add-design-requests-message-to-designer, das-settings-add-design-requests-message-to-clients, <?php }?> <?php if(is_plugin_active('das-roles-extension/das-roles-extension.php')) {?> das-settings-designer-role, das-settings-client-role <?php }?>" />
+ 
     <input type="submit" class="das-settings-admin-submit-btn" value="<?php _e('Save Changes', 'design-approval-system') ?>" />
   </form>
   

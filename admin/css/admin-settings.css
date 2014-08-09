@@ -84,7 +84,8 @@ input[type=checkbox]#das-settings-smtp, .designapprovalsystem_page_das-clean-the
 .das-settings-admin-wrap h2 {
 	color: rgb(255, 255, 255);
 	font-size: 28px;
-	margin: 0px 0 15px -2px;
+	margin: -8px 0 15px -2px;
+	line-height:32px;
 }
 .das-settings-admin-wrap h3 {
 	color: #FFFFFF;
@@ -396,7 +397,7 @@ a.im-done:hover, .upload_image_button:hover, .das-settings-admin-submit-btn:hove
 	color: #f1f1f1;
 }
 .das-settings-admin-submit-btn {
-	padding: 10px 40px;
+	padding: 10px 35px;
  margin-top: 0px;
  float:left;
  -webkit-transition: background 2s;
@@ -633,4 +634,9 @@ h2.project-board-header {
 	background-size:24px 27px;
 	font-family:arial;
 	line-height:.7em;
+}
+@media (max-width: 767px) {
+	.buy-extensions-btn {
+	display: none;
+	}
 }

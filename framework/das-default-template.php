@@ -28,7 +28,9 @@
 // make sure woocommerce plugin is active and woo for das is active before returning shortcode
 if(is_plugin_active('woocommerce/woocommerce.php') && is_plugin_active('woocommerce-for-das/woocommerce-for-das.php') ) { 
 	$das_woo_product = get_post_meta($post->ID, 'das_design_woo_product_id', true);
-	if (!empty($das_woo_product)) { ?>
+	$das_custom_woo_product = get_post_meta($post->ID, 'custom_woo_product', true);
+	
+	if (!empty($das_woo_product) && $das_custom_woo_product == 'yes-woo-product') { ?>
 	  <div class="main-checkout-tab"><?php echo do_shortcode('[add_to_cart id="'.$das_woo_product.'"]'); ?></div>
 		  <?php }
 } 

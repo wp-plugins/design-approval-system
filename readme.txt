@@ -2,14 +2,14 @@
 Contributors: slickremix
 Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature, work flow, multi language, woocommerce, shopping cart, woo, commerce
 Requires at least: 3.5.0
-Tested up to: 3.9.1
-Stable tag: 3.8.6
+Tested up to: 3.9.2
+Stable tag: 3.8.7
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, documents, videos, or music approved by clients quickly.
 
 == Description ==
-Approved designs get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/2013/01/22/das-project-board-tutorial/). Clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Live Example](http://www.slickremix.com/project-board/). 
+See [full documentaion](http://www.slickremix.com/design-approval-system-docs/). Approved designs get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/docs/how-to-setup-the-project-board). Clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Live Example](http://www.slickremix.com/project-board/). 
 
 Here's a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
@@ -59,6 +59,15 @@ Here is what you, the clients, and the plugin can do:
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Change-log ==
+= Version 3.8.7 / Saturday August 9th, 2014 =
+ * NEW PREMIUM PLUGINS: Today marks the day we launch the GQ Theme/Template for DAS and the Woocommerce for DAS plugins. See our shop at slickremix.com.
+ * ADDED: Additional functionality for the new WooCommerce for DAS plugin.
+ * FIXED: Register settings options correctly.
+ * FIXED: When deactivating or removing the plugin the user roles will be removed.
+ * FIXED: Register settings options correctly.
+ * EDITS: All php Notices when wp debug mode is on have been corrected.
+ * EDITS: CSS tweaks to the Project Board.
+
 = Version 3.8.6 / Wednesday July 30th, 2014 =
  * NEW: Language files for German and Portuguese. Add de_DE for German or pt_BR for Portuguese in your wp-config.php
  * NEW: Brand new walkthrough using wordpress pointers. You can retake the tour at any time by visiting the Help page in our DAS menu.

@@ -85,13 +85,15 @@ add_action('get_header', 'das_admin_redirect');
 function my_columns_filter_das($columns) {
  // unset($columns['author']);
  // unset($columns['categories']);
-    unset($columns['tags']);
-    unset($columns['custom-fields']);
-    //unset($columns['comments']);
+ // unset($columns['tags']);
+ // unset($columns['custom-fields']);
+ // unset($columns['comments']);
     return $columns;
 }
 function my_das_column_init() {
 	add_filter( 'manage_edit-designapprovalsystem_columns', 'my_columns_filter_das');
+	
+	
 }
 add_action( 'admin_init' , 'my_das_column_init' );
 
@@ -104,7 +106,17 @@ function my_script_enqueuer() {
    wp_enqueue_script( 'my_dasChecker_script' );
 	// Load validate
 	// wp_enqueue_script('validate','http://ajax.microsoft.com/ajax/jQuery.Validate/1.6/jQuery.Validate.min.js', array('jquery'), true);
-
+	
+	 // redirect clients if they try to access the design edit page
+	 if( current_user_can('das_client')) {  
+ 
+		$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+				if (false !== strpos($url,'post.php?post=')){
+					wp_redirect(home_url()); 
+					exit;
+				}
+ }
+		
 }
 add_action( 'init', 'my_script_enqueuer' );
 
@@ -137,7 +149,14 @@ function my_client_changes_dasChecker() {
 
 
 
-//Create Taxenomy for DAS
+		global $wp_roles;
+		if ( !isset( $wp_roles ) )
+			$wp_roles = new WP_Roles();
+	
+		$das_client = $wp_roles->get_role('das_client');
+		
+		
+//Create Taxenomy for DAS and ROLES
 function register_taxonomy_das_categories() {
 
     $labels2 = array( 
@@ -171,6 +190,7 @@ function register_taxonomy_das_categories() {
     );
 
     register_taxonomy( 'das_categories', array('Design Approval System'), $args1 );
+	
 
 }
 function design_approval_system__custom_tax_activate() {
@@ -224,7 +244,6 @@ function das_custom_post_type_init() {
 		 );
 		 
 	    register_post_type( 'Design Approval System', $args );
-		
  }
 function design_approval_system_activate() {
 	das_custom_post_type_init();
@@ -410,12 +429,47 @@ function remove_tags_menu() {
     remove_submenu_page( 'edit.php?post_type=designapprovalsystem', 'edit-tags.php?taxonomy=post_tag&amp;post_type=designapprovalsystem' );
 }
 
+
+
+if ( is_admin() ){
 //Adds setting page to DAS sub menu
 add_action('admin_menu', 'register_das_settings_submenu_page');
-
+	add_action( 'admin_init', 'das_settings_page_register_settings' );
+}
 function register_das_settings_submenu_page() {
 	add_submenu_page( 'edit.php?post_type=designapprovalsystem', __('Design Approval System Settings', 'design-approval-system'), __('Settings', 'design-approval-system'), 'manage_options', 'design-approval-system-settings-page', 'das_settings_page' ); 
 }
+function das_settings_page_register_settings() { 
+  register_setting( 'design-approval-system-settings', 'das_default_theme_logo_image' );
+  register_setting( 'design-approval-system-settings', 'das-settings-company-name' );
+  register_setting( 'design-approval-system-settings', 'das-settings-company-email' );
+  register_setting( 'design-approval-system-settings', 'das-settings-smtp' );
+  register_setting( 'design-approval-system-settings', 'das-smtp-server' );
+  register_setting( 'design-approval-system-settings', 'das-smtp-port' );
+  register_setting( 'design-approval-system-settings', 'das-smtp-checkbox-authenticate' );
+  register_setting( 'design-approval-system-settings', 'das-smtp-authenticate-username' );
+  register_setting( 'design-approval-system-settings', 'das-smtp-authenticate-password' );
+  register_setting( 'design-approval-system-settings', 'das-settings-email-for-designers-message-to-clients' );
+  register_setting( 'design-approval-system-settings', 'das-settings-approved-dig-sig-message-to-designer' );
+  register_setting( 'design-approval-system-settings', 'das-settings-approved-dig-sig-message-to-clients' );
+  register_setting( 'design-approval-system-settings', 'das-settings-approved-dig-sig-thank-you' );
+  
+	if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {
+	  register_setting( 'design-approval-system-settings', 'das-settings-design-requests-message-to-designer' );
+	  register_setting( 'design-approval-system-settings', 'das-settings-design-requests-message-to-clients' );
+	  register_setting( 'design-approval-system-settings', 'das-settings-design-requests-thank-you' );
+	  register_setting( 'design-approval-system-settings', 'das-settings-add-design-requests-message-to-designer' );
+	  register_setting( 'design-approval-system-settings', 'das-settings-add-design-requests-message-to-clients' );
+	}
+	
+ 
+	 if(is_plugin_active('das-roles-extension/das-roles-extension.php')) { 
+	  register_setting( 'design-approval-system-settings', 'das-settings-designer-role' );
+	  register_setting( 'design-approval-system-settings', 'das-settings-client-role' );
+	 }
+}
+
+
 //Enque admin-setttings.css only for this page
 function das_main_settings_admin_scripts(){
 	wp_enqueue_script('jquery');
@@ -545,98 +599,7 @@ if (is_plugin_active('design-approval-system/design-approval-system.php')) {
 			}
 	}
 }
-
-remove_role( 'das_designer');
-
-/* Add member role to the site */
-add_role('das_designer', 'DAS Designer', array(
-    'read' => true,
-    'edit_posts' => true,
-    'delete_posts' => true,
-	'manage_network' => false,			
-	'manage_sites' => false,
-	'manage_network_users' => false,
-	'manage_network_themes' => false,
-	'manage_network_options' => false,
-	'unfiltered_html' => false,
-	'activate_plugins' => false,
-	'create_users' => true,
-	'delete_plugins' => false,
-	'delete_themes' => false,
-	'delete_users' => false,
-	'edit_files' => false,
-	'edit_plugins' => false,
-	'edit_theme_options' => false,
-	'edit_themes' => false,
-	'edit_users' => true,
-	'export' => true,
-	'import' => true,
-	'install_plugins' => false,
-	'install_themes' => false,
-	'list_users' => false,
-	'manage_options' => true,
-	'promote_users' => true,
-	'remove_users' => true,
-	'switch_themes' => false,
-	'unfiltered_upload' => false,
-	'update_core' => false,
-	'update_plugins' => false,
-	'update_themes' => false,
-	'edit_dashboard' => false,
-	'moderate_comments' => true,
-	'manage_categories' => true,
-	'manage_links' => true,
-	'unfiltered_html' => true,
-	'edit_others_posts' => true,
-	'edit_pages' => true,
-	'edit_others_pages' => true,
-	'edit_published_pages' => true,
-	'publish_pages' => true,
-	'delete_pages' => true,
-	'delete_others_pages' => true,
-	'delete_published_pages' => true,
-	'delete_others_posts' => true,
-	'delete_private_posts' => true,
-	'edit_private_posts' => true,
-	'read_private_posts' => true,
-	'delete_private_pages' => true,
-	'edit_private_pages' => true,
-	'read_private_pages' => true,
-	'edit_published_posts' => true,
-	'upload_files' => true, 
-	'publish_posts' => true,
-	'delete_published_posts' => true,
-	'manage_woocommerce_products' => true,
-	'edit_product' => true,
-	'read_product' => true,
-	'delete_product' => true,
-	'edit_products' => true,
-	'edit_others_products' => true,
-	'publish_products' => true,
-	'read_private_products' => true,
-	'delete_products' => true,
-	'delete_private_products' => true,
-	'delete_published_products' => true,
-	'delete_others_products' => true,
-	'edit_private_products' => true,
-	'edit_published_products' => true,
 	
-));
-/* Add DAS Client role to the site */
-add_role('das_client', 'DAS Client', array(
-    'read' => true,
-    'edit_posts' => false,
-    'delete_posts' => false,
-	'manage_options' => true,
-	'upload_files' => true,
-));
-
-		global $wp_roles;
-		if ( !isset( $wp_roles ) )
-			$wp_roles = new WP_Roles();
-	
-		$das_client = $wp_roles->get_role('das_client');
-		
 
 
 //Walkthrough Scripts
@@ -682,11 +645,11 @@ function DAS_post_template($das_post_template_load) {
 					  $das_post_template_load = WP_CONTENT_DIR.'/plugins/design-approval-system/framework/das-main-frame.php';
 				 }
 				 //Clean Theme Template
-				 if($das_post_template == 'das-clean-theme-template.php'){
+				 if($das_post_template == 'das-clean-theme-main.php'){
 					  $das_post_template_load = WP_CONTENT_DIR.'/plugins/das-clean-theme/framework/das-clean-theme-main-frame.php';
 				 }
 				  //GQ Theme Template
-				 if($das_post_template == 'das-gq-theme-template.php'){
+				 if($das_post_template == 'das-gq-theme-main.php'){
 					  $das_post_template_load = WP_CONTENT_DIR.'/plugins/das-gq-theme/framework/das-gq-theme-main-frame.php';
 				 }
 			}
@@ -730,11 +693,12 @@ if (isset($_GET['page']) && $_GET['page'] == 'design-approval-system-projects-pa
 function das_private_project_board_function() {
   ob_start();
   
- if ( current_user_can_for_blog($user_blog_id, 'administrator') || current_user_can_for_blog($user_blog_id, 'das_designer') || current_user_can_for_blog($user_blog_id, 'das_client')) {
+ if ( current_user_can('administrator') || current_user_can('das_designer') || current_user_can('das_client')) {
  
   ?> <div class="das-project-admin-wrap"> 
   
   <?php
+  
   	$user_id = $current_user->ID;
 $user_blogs = get_blogs_of_user( $user_id );
 
@@ -771,7 +735,7 @@ foreach ($client as $term) :
 	  'post_per_page' => -1,
 	  'nopaging' => true,
 	  'post_status'   => 'publish',
-	  'caller_get_posts' => 1,
+	  'ignore_sticky_posts' => 1,
 	  'tax_query' => array(
 			   array(
 				 'taxonomy' => $tax,
@@ -839,7 +803,7 @@ $counter = 0;
 			'post_per_page'     => -1,
 	 		'nopaging'          => true,
 			'post_status'       => 'publish',
-			'caller_get_posts'  => 1,
+			'ignore_sticky_posts'  => 1,
 			'orderby'   		=> 'name',
 			'order'             => 'ASC',
 			'tax_query'         => array(
@@ -993,7 +957,7 @@ $counter = 0;
 			'post_type' => $post_type,
 			'posts_per_page' => -1,
 			'post_status'   => 'publish',
-			'caller_get_posts' => 1,
+			'ignore_sticky_posts' => 1,
 			'orderby' => 'name',
 			'order' => 'ASC',
 			'tax_query' => array(

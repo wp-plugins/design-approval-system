@@ -22,9 +22,9 @@ foreach ($user_blogs AS $user_blog) {
 if (current_user_can_for_blog($user_blog_id, 'administrator') || current_user_can_for_blog($user_blog_id, 'das_designer')) { ?>
 <div class="das-project-admin-wrap-main">
 
-<a class="buy-extensions-btn" href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank"><?php _e('Get Extensions Here!', 'design-approval-system') ?></a>
+<a class="buy-extensions-btn" href="http://www.slickremix.com/downloads/category/design-approval-system/" target="_blank"><?php _e('Get Extensions Here!', 'design-approval-system') ?></a>
 <h2 class="project-board-header"><?php _e('Project Board', 'design-approval-system') ?></h2>
-<div class="use-of-plugin"><?php _e('Below are your Clients and their Projects: We suggest you use the', 'design-approval-system') ?> <a href="http://www.slickremix.com/downloads/select-user-and-email-das-extension/" target="_blank"><?php _e('Select User and Email, DAS Extension', 'design-approval-system') ?></a> <?php _e('to make this list work seamlessly. Learn how to use and setup the', 'design-approval-system') ?> <a href="http://www.slickremix.com/2013/01/22/das-project-board-tutorial/" target="_blank"><?php _e('Project Board Here', 'design-approval-system') ?></a>. </div>
+<div class="use-of-plugin"><?php _e('Below are your Clients and their Projects: We suggest you use the', 'design-approval-system') ?> <a href="http://www.slickremix.com/downloads/select-user-and-email-das-extension/" target="_blank"><?php _e('Select User and Email, DAS Extension', 'design-approval-system') ?></a> <?php _e('to make this list work seamlessly. Learn how to use and setup the', 'design-approval-system') ?> <a href="http://www.slickremix.com/docs/how-to-setup-the-project-board/" target="_blank"><?php _e('Project Board Here', 'design-approval-system') ?></a>. </div>
 
 <?php 
 		// echo our short code for the Public Board

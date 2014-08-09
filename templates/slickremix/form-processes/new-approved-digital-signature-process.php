@@ -169,12 +169,12 @@ $dasSettingsSmtp = get_option( 'das-settings-smtp' );
 					 if ($das_gq_plugin && $das_template_name == $das_gq_plugin_compare )  { 
 					 ?> 
 						setTimeout (function(){
-						jQuery('.status-area1').hide(); },500); 
+						jQuery('.approved-js-action-after-submit').hide(); },500); 
 						
 					<?php   } 
 					  else { ?>
 					  		setTimeout (function(){
-					  		jQuery('.status-area1').fadeOut(400); },400); 	
+					  		jQuery('.approved-js-action-after-submit').fadeOut(400); },400); 	
 					 <?php  } ?>
 					 
 							setTimeout (function(){

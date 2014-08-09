@@ -41,6 +41,100 @@ load_plugin_textdomain('design-approval-system', false, basename( dirname( __FIL
 // Add actions
 add_action('init', 'ap_action_init');
 
+	
+function design_approval_system__activate() {	
+		/* Add member role to the site */
+	add_role('das_designer', 'DAS Designer', array(
+		'read' => true,
+		'edit_posts' => true,
+		'delete_posts' => true,
+		'manage_network' => false,			
+		'manage_sites' => false,
+		'manage_network_users' => false,
+		'manage_network_themes' => false,
+		'manage_network_options' => false,
+		'unfiltered_html' => false,
+		'activate_plugins' => false,
+		'create_users' => true,
+		'delete_plugins' => false,
+		'delete_themes' => false,
+		'delete_users' => false,
+		'edit_files' => false,
+		'edit_plugins' => false,
+		'edit_theme_options' => false,
+		'edit_themes' => false,
+		'edit_users' => true,
+		'export' => true,
+		'import' => true,
+		'install_plugins' => false,
+		'install_themes' => false,
+		'list_users' => false,
+		'manage_options' => true,
+		'promote_users' => true,
+		'remove_users' => true,
+		'switch_themes' => false,
+		'unfiltered_upload' => false,
+		'update_core' => false,
+		'update_plugins' => false,
+		'update_themes' => false,
+		'edit_dashboard' => false,
+		'moderate_comments' => true,
+		'manage_categories' => true,
+		'manage_links' => true,
+		'unfiltered_html' => true,
+		'edit_others_posts' => true,
+		'edit_pages' => true,
+		'edit_others_pages' => true,
+		'edit_published_pages' => true,
+		'publish_pages' => true,
+		'delete_pages' => true,
+		'delete_others_pages' => true,
+		'delete_published_pages' => true,
+		'delete_others_posts' => true,
+		'delete_private_posts' => true,
+		'edit_private_posts' => true,
+		'read_private_posts' => true,
+		'delete_private_pages' => true,
+		'edit_private_pages' => true,
+		'read_private_pages' => true,
+		'edit_published_posts' => true,
+		'upload_files' => true, 
+		'publish_posts' => true,
+		'delete_published_posts' => true,
+		'manage_woocommerce_products' => true,
+		'edit_product' => true,
+		'read_product' => true,
+		'delete_product' => true,
+		'edit_products' => true,
+		'edit_others_products' => true,
+		'publish_products' => true,
+		'read_private_products' => true,
+		'delete_products' => true,
+		'delete_private_products' => true,
+		'delete_published_products' => true,
+		'delete_others_products' => true,
+		'edit_private_products' => true,
+		'edit_published_products' => true,
+		
+	));
+	
+	/* Add DAS Client role to the site */
+	add_role('das_client', 'DAS Client', array(
+		'read' => true,
+		'edit_others_posts' => true,
+		'edit_published_posts' => true,
+		'upload_files' => true, 
+	));
+}
+
+function design_approval_system__deactivate() { 
+	remove_role( 'das_designer');
+	remove_role( 'das_client' );
+	//das_roles_remove();
+}
+register_activation_hook( __FILE__, 'design_approval_system__activate' );
+register_deactivation_hook( __FILE__, 'design_approval_system__deactivate' );
+
 /**
  * Returns current plugin version. SRL added
  * 

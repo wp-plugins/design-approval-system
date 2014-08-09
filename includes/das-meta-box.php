@@ -302,8 +302,9 @@ if(is_plugin_active('woocommerce-for-das/woocommerce-for-das.php')) {
 	  )
 	  
 	);
-	
-   $custom_woo_product_price = get_post_meta($post_id, 'custom_woo_product', true);
+   global $post;	
+   $das_product_id = get_post_meta($post, 'das_design_woo_product_id', true); 
+   $custom_woo_product_price = get_post_meta($post, 'custom_woo_product', true);
    $set_woo_product_price = get_post_meta($das_product_id, '_price', true);
    
    if($custom_woo_product_price != $set_woo_product_price)	{

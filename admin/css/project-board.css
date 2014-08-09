@@ -320,7 +320,6 @@ span.project-notes-show {
 	transform: rotate(95deg) scale(.95);
 	-ms-transform: rotate(95deg) scale(.95); /* IE 9 */
 	-webkit-transform: rotate(95deg) scale(.95); /* Safari and Chrome */
-	;
 	transition-delay: 0.2s;
 	-webkit-transition-duration: 0.2s;
 	-moz-transition-duration: 0.2s;
@@ -337,7 +336,7 @@ span.project-notes-show {
 	width: 18px;
 	display: block !important;
 }
-.das-approved-design span.view-all-articles, .das-approved-design-title span.view-all-articles {
+.das-approved-design span.view-all-articles, .das-approved-design-title span.view-all-articles, .das-purchased-design span.view-all-articles, .das-purchased-design-title span.view-all-articles  {
 	opacity: 0;
 	display: inline-block;
 	position: relative;
@@ -361,30 +360,9 @@ span.project-notes-show {
 	-o-transition-duration: 0.2s;
 	transition-duration: 0.2s;
 }
-.das-purchased-design span.view-all-articles, .das-purchased-design-title span.view-all-articles {
-	opacity: 0;
-	display: block;
-	position: relative;
-	left: 0px;
-	height: 17px;
-	top: 25px;
-	text-align: left;
-	color: #FFF;
-	font-weight: normal;
-	letter-spacing: 1px;
-	font-size: 11px;
-	width: 67px;
-	background: rgba(0, 0, 0, 0.6);
-	border-radius: 1px;
-	padding: 3px 4px 3px 9px;
-	-webkit-transition-delay: 0.2s;
-	-moz-transition-delay: 0.2s;
-	-o-transition-delay: 0.2s;
-	transition-delay: 0.2s;
-	-webkit-transition-duration: 0.2s;
-	-moz-transition-duration: 0.2s;
-	-o-transition-duration: 0.2s;
-	transition-duration: 0.2s;
+.das-purchased-design span.view-all-articles, .das-purchased-design-title span.view-all-articles  {
+	top: 23px;
+	left: 2px;
 }
 .das-approved-design a.icon-view-all:hover span.view-all-articles, .das-approved-design-title a.icon-view-all:hover span.view-all-articles, .das-purchased-design a.icon-view-all:hover span.view-all-articles, .das-purchased-design-title a.icon-view-all:hover span.view-all-articles {
 	opacity: 1;
@@ -463,10 +441,6 @@ span.project-notes-show {
 }
 @media (max-width: 767px) {
 
-.buy-extensions-btn {
-	display:none;
-	}
-	
 .das-project-admin-wrap-main {
 	padding: 14px 12px 30px 0px !important;
 }

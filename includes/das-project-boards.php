@@ -34,8 +34,7 @@
 										$client_email = get_post_meta($post->ID, 'custom_clients_email', true);
 										//Get user ID for design based on client's email
 										$client_id = get_user_by( 'email', $client_email );
-								
-								
+								 
 										
 										//Check if client Purchased design
 										if (wc_customer_bought_product($client_email, $client_id->ID, $das_product_id )) { ?>
@@ -53,7 +52,7 @@
   
   <div class="pb-board-cover">
           <span class="project-notes-entry-utility project-notes-backg"></span>
-          <?php if( current_user_can_for_blog($user_blog_id, 'administrator') || current_user_can_for_blog($user_blog_id, 'das_designer') ) : ?>
+          <?php if( current_user_can('administrator') || current_user_can('das_designer') ) : ?>
           <?php edit_post_link( __('Edit', 'design-approval-system'), '<span class="edit-link project-notes-entry-utility project-notes-edit">', '</span>' ); ?>
           <?php else : ?>
           <span class="edit-link project-notes-entry-utility project-notes-edit"><a href="<?php the_permalink();?>" target="_blank" title="<?php the_title_attribute(); ?>"><?php _e('View', 'design-approval-system') ?></a></span>
@@ -85,24 +84,31 @@
        
         <?php 
 			// SRL . check to make sure the client logged in == $client_value so we know to show the email or not for the public project board. If the admin or designer are logged in they can see all emails on all projects, but if a client is logged in and looking at the project board they cannot see any projects emails, but they will be able to see email on there projects.
-			$client_email_pb_check = get_post_meta($post->ID, 'custom_clients_email', true);
+		$client_email_pb_check = get_post_meta($post->ID, 'custom_clients_email', true);
 			
-		if( current_user_can_for_blog($user_blog_id, 'administrator') || current_user_can_for_blog($user_blog_id, 'das_designer') || $client_value == $client_email_pb_check  ) : ?>
+		if( current_user_can('administrator') || current_user_can('das_designer') || $client_value == $client_email_pb_check  ) { ?>
  		 <strong><?php _e('Client Email', 'design-approval-system') ?></strong>: <a href="mailto:<?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?>"><?php echo get_post_meta($post->ID, 'custom_clients_email', true); ?></a><br/>
- 		<?php endif; ?>
+ 		<?php } ?>
         <strong><?php _e('Designer', 'design-approval-system') ?></strong>: <?php echo get_post_meta($post->ID, 'custom_designers_name', true); ?><br/>
         <?php 
 			   if(get_post_meta($post->ID, 'custom_client_approved', true) == 'Yes') { ?>
         <strong><?php _e('Client Approved', 'design-approval-system') ?></strong>: <span class="custom_client_approved"><?php echo get_post_meta($post->ID, 'custom_client_approved', true); ?><span class="arrow-right"></span></span><br/>
         <strong><?php _e('Client Signature', 'design-approval-system') ?></strong>: <span class="custom_client_approved"><?php echo get_post_meta($post->ID, 'custom_client_approved_signature', true); ?><span class="arrow-right"></span></span><br/>
           <?php }  
-                else {
-                	
-                }
+		  
                
-			   if($custom_woo_product) {
+			   
+			   
+			//Woo for DAS
+			if(is_plugin_active('woocommerce-for-das/woocommerce-for-das.php') && is_plugin_active('woocommerce/woocommerce.php')) { 
+			   
+			   $das_product_id = get_post_meta($post->ID, 'das_design_woo_product_id', true); 	   
+			   $woofordascost = get_post_meta($das_product_id, '_regular_price', true);
+			   $wooactualdasproduct = get_post_meta($post->ID, 'custom_woo_product', true); 
+			   if($woofordascost && $wooactualdasproduct == 'yes-woo-product') {
 					echo '<br/><strong>Cost:</strong> ' . get_post_meta($das_product_id, '_regular_price', true);    
 			   }
+			}
 			   
 			    ?>
                 
