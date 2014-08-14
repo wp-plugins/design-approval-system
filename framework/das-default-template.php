@@ -284,6 +284,9 @@ echo '</ul>';
       <br class="clear"/>
       <div class="designers-notes-content-right"> 
     <?php
+	 // new method for getting login url since some plugins/themes can create overrides for the basic wp_login_url();
+	 $slickUrl = site_url('wp-login.php?redirect_to='. get_permalink(),'slick_login_post');
+	 
 	if ( is_user_logged_in() ) {
 	$alreadyapproved = get_post_meta($post->ID, 'custom_client_approved', true);
 	if ($alreadyapproved == 'Yes') { ?>
@@ -292,7 +295,7 @@ echo '</ul>';
 	else { ?> <div class="not-approved-wrap">Would you like to Approve this Design? <a href="javascript:;" class="design-option-btn design-approval-btn">Approve</a></div><?php
 		}
 	}
-	else if ( !is_user_logged_in() ) { ?> Would you like to Approve this Design? <a href="<?php echo wp_login_url( get_permalink() ); ?>" class="design-option-btn">Login</a> <?php 
+	else if ( !is_user_logged_in() ) { ?>Would you like to Approve this Design? <a href="<?php echo $slickUrl ?>" class="design-option-btn">Login</a> <?php 
 		} ?>		
 		<div class="approved-wrap" style="display:none">"You have approved this Design, Thank-You. <a href="javascript:;" class="design-option-btn">Approved</a></div>
       </div>
@@ -305,7 +308,7 @@ echo '</ul>';
       <!--designers-notes-content-right--> 
 	  <?php }
       else if ( !is_user_logged_in() ) {  ?>
-	  <div class="designers-notes-content-right changes-wrap"> Would you like to make Changes to this Design? <a href="<?php echo wp_login_url( get_permalink() ); ?>" class="design-option-btn">Login</a></div>
+	  <div class="designers-notes-content-right changes-wrap"> Would you like to make Changes to this Design? <a href="<?php echo $slickUrl ?>" class="design-option-btn">Login</a></div>
       <!--designers-notes-content-right--> 
      <?php } 
 	     }?><!-- is user logged in if statement -->

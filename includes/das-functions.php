@@ -16,9 +16,6 @@ function dasplugin_wp_pointers_remove() {
 		// $meta_data_check = get_user_meta(get_current_user_id(), 'dismissed_wp_pointers', true);
  	   // print Print_r ($meta_data_check);
 }
-add_action( 'wp_ajax_dasplugin_wp_pointers_remove', 'dasplugin_wp_pointers_remove' );
-
-
 // Function to Fire the Activation/Deactivation Notes. This is only active when the pointer has not been closed.
 function my_dasplugin_activate() {
   add_option( 'Activated_Plugin', 'Design-Approval-Sytem' );
@@ -32,7 +29,11 @@ function load_dasplugin() {
         include_once dirname( __FILE__ ) . '/welcome-notes.php';
     }
 }
-add_action( 'admin_init', 'load_dasplugin' );
+// we only want to fire and show the tutorial to the admin otherwise the tour will not follow the proper steps because some menu items will be missing.
+if (is_admin()){
+	add_action( 'wp_ajax_dasplugin_wp_pointers_remove', 'dasplugin_wp_pointers_remove' );
+	add_action( 'admin_init', 'load_dasplugin' );
+};
 // end activation notes
 /**************************************************************************************************************************************/
 

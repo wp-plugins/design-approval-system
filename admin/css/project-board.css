@@ -393,6 +393,7 @@ span.project-notes-show {
 .project-large-thumbnail img {
 	width: 150px;
 	height: 150px;
+	margin-bottom: 0px !important;
 }
 .pb-no-thumbnail-image {
 	background: url(../images/no-image-thumb.png) no-repeat;
