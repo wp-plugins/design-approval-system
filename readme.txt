@@ -63,6 +63,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
  * ADDED BACK: By popular demand clients do not have to login to approve or make changes. You can view these new options on the das settings page. If you have the client changes extension an option for not requiring login will appear as well.
  * ADDED: Additional notes on first tour pointer about using the free duplicate post plugin to make the task of creating version easier for clients.
  * FIXED: Removed general function name from wp pointer that was causing a conflict with another theme using the same function name.
+ * EDITS: Admins and Designers can see the Private Project Board on the front end.
  * EDITS: Additional front end Project Board CSS fixes to override themes h1, p, ul tags etc.
  * EDITS: Default template CSS.
  
