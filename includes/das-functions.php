@@ -454,6 +454,7 @@ function das_settings_page_register_settings() {
   register_setting( 'design-approval-system-settings', 'das-settings-approved-dig-sig-message-to-designer' );
   register_setting( 'design-approval-system-settings', 'das-settings-approved-dig-sig-message-to-clients' );
   register_setting( 'design-approval-system-settings', 'das-settings-approved-dig-sig-thank-you' );
+  register_setting( 'design-approval-system-settings', 'das-settings-approve-login-overide' );
   
 	if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {
 	  register_setting( 'design-approval-system-settings', 'das-settings-design-requests-message-to-designer' );
@@ -461,6 +462,7 @@ function das_settings_page_register_settings() {
 	  register_setting( 'design-approval-system-settings', 'das-settings-design-requests-thank-you' );
 	  register_setting( 'design-approval-system-settings', 'das-settings-add-design-requests-message-to-designer' );
 	  register_setting( 'design-approval-system-settings', 'das-settings-add-design-requests-message-to-clients' );
+  	  register_setting( 'design-approval-system-settings', 'das-settings-changes-login-overide' );
 	}
 	
  
@@ -693,8 +695,10 @@ if (isset($_GET['page']) && $_GET['page'] == 'design-approval-system-projects-pa
 
 function das_private_project_board_function() {
   ob_start();
-  
- if ( current_user_can('administrator') || current_user_can('das_designer') || current_user_can('das_client')) {
+ if ( current_user_can('administrator') || current_user_can('das_designer') ) {
+	  print do_shortcode('[DASPublicBoard]');
+ }
+ elseif ( current_user_can('das_client')) {
  
   ?> <div class="das-project-admin-wrap"> 
   
@@ -1088,9 +1092,9 @@ wp_reset_postdata();
  * - http://wpengineer.com/2272/how-to-add-and-deactivate-the-new-feature-pointer-in-wordpress-3-3/
  * 
  */
-add_action( 'admin_enqueue_scripts', 'myHelpPointers' );
+add_action( 'admin_enqueue_scripts', 'myDasHelpPointers' );
 
-function myHelpPointers()
+function myDasHelpPointers()
 {
     $pointers = array(
         array(
@@ -1116,11 +1120,11 @@ function myHelpPointers()
             )
         ),
     );
-    new B5F_Admin_Pointer( $pointers );
+    new DAS_Admin_Pointer( $pointers );
 }
 
 
-class B5F_Admin_Pointer
+class DAS_Admin_Pointer
 {
     public $screen_id;
     public $valid;

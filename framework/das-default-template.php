@@ -286,8 +286,10 @@ echo '</ul>';
     <?php
 	 // new method for getting login url since some plugins/themes can create overrides for the basic wp_login_url();
 	 $slickUrl = site_url('wp-login.php?redirect_to='. get_permalink(),'slick_login_post');
+	 // Added SRL 8/24/14
+	 $approveLoginOveride = get_option('das-settings-approve-login-overide');
 	 
-	if ( is_user_logged_in() ) {
+	if ( is_user_logged_in() || $approveLoginOveride == 1) {
 	$alreadyapproved = get_post_meta($post->ID, 'custom_client_approved', true);
 	if ($alreadyapproved == 'Yes') { ?>
     <div class="approved-wrap">You have approved this Design, Thank-You. <a href="javascript:;" class="design-option-btn">Approved</a></div><?php
@@ -303,11 +305,14 @@ echo '</ul>';
       
       <?php if(is_plugin_active('das-changes-extension/das-changes-extension.php')) { 
 	  
-	  if ( is_user_logged_in() ) {
+	   // Added SRL 8/24/14
+	 $changesLoginOveride = get_option('das-settings-changes-login-overide');
+	 
+	if ( is_user_logged_in() || $changesLoginOveride == 1) {
 	  ?><div class="designers-notes-content-right changes-wrap"> Would you like to make Changes to this Design? <a href="javascript:;" class="design-option-btn" id="<?php echo get_post_meta($post->ID, 'custom_paid_not_paid', true); ?>">Changes</a> </div>
       <!--designers-notes-content-right--> 
 	  <?php }
-      else if ( !is_user_logged_in() ) {  ?>
+      else if ( !is_user_logged_in() || $loginoveride ) {  ?>
 	  <div class="designers-notes-content-right changes-wrap"> Would you like to make Changes to this Design? <a href="<?php echo $slickUrl ?>" class="design-option-btn">Login</a></div>
       <!--designers-notes-content-right--> 
      <?php } 

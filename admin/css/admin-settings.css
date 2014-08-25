@@ -635,6 +635,19 @@ h2.project-board-header {
 	font-family:arial;
 	line-height:.7em;
 }
+.das-custom-checkbox-wrap {
+	clear:both;
+	
+}
+.das-custom-checkbox-wrap {
+	padding:11px 0;
+	margin-top:4px;
+	border-top:1px solid #ccc;
+}
+input#das-settings-approve-login-overide, input#das-settings-changes-login-overide { 
+
+margin:10px 8px 11px 2px !important;
+}
 @media (max-width: 767px) {
 	.buy-extensions-btn {
 	display: none;

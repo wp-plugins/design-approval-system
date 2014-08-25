@@ -3,7 +3,7 @@ jQuery(document).ready(function() {
 		
 	var validation = jQuery("#sendDigitalSignature #custom_client_approved_signature").val(); 
 	
-	if(validation == "")
+	if(validation == "" || validation == " ")
 	{
 	  alert("Please enter your name.");
 	  jQuery("input[name=custom_client_approved_signature]").addClass('hightlight1');
@@ -45,7 +45,7 @@ jQuery(document).ready(function() {
 	// custom_client_changes is the id for the design request textarea	
 	var validation = tinymce.activeEditor.getContent(); 
 	
-	if(validation == "")
+	if(validation == "" || validation == " ")
 	{
 	  alert("Please add some text before submitting the form.");
 	  return false;
@@ -72,9 +72,51 @@ jQuery(document).ready(function() {
 				jQuery('#sendDesignRequests').ajaxSubmit({ target: '#output'}); 
        			var button2 = jQuery('.das-submit-requests').html('Submit Comments');
 				console.log(button2);
-				return false;
 			}
         }); // end of ajax()
         return false;
-    }); // end of document.ready
-}); // end of form.submit
+    }); // end of click function
+	
+	
+	
+	
+	 jQuery("#das-submit-design-request-not-logged-in").click(function() {
+	// custom_client_changes is the id for the design request textarea	
+	 var validation = jQuery('#custom_client_changes').val(); 
+	// var validation = tinymce.activeEditor.getContent();
+	if(validation == "" || validation == " ")
+	{
+	  alert("Please add some text before submitting the form.");
+	  return false;
+	}
+	else {
+        console.log('Submit Function');
+		 var postMeta = jQuery('#custom_client_changes').val();
+		console.log(postMeta);
+		var postID = jQuery('.das-submit-requests').prop("rel");
+		console.log(postID);
+        var button = jQuery('.das-submit-requests').html('saving...');
+		console.log(button);
+		//jQuery( "#sendDesignRequests" ).submit();
+		 jQuery.ajax({
+            data: {action: "my_client_changes_dasChecker", post_id: postID, post_meta: postMeta  },
+            type: 'POST',
+            url: myAjax.ajaxurl,
+            success: function( result ) {
+			//	console.log('Client notes posted: ' + result);
+			//	jQuery('.custom_client_changes').html(result);
+				console.log('Client notes echoed to textarea for email form process double check: ' + result);
+				console.log('Form process sending');
+				jQuery('#sendDesignRequests').ajaxSubmit({ target: '#output'});
+       			var button2 = jQuery('.das-submit-requests').html('Submit Comments');
+				console.log(button2);
+				
+			}
+        }); // end of ajax()
+        return false;
+	}
+        return false;
+    }); // end of click function
+	
+	
+}); // end of document ready

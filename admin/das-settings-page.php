@@ -19,7 +19,7 @@ function das_settings_page() {
     <div class="das-settings-admin-input-wrap company-info-style">
       <div class="das-settings-admin-input-label"><?php _e('Company Logo (required)', 'design-approval-system') ?>: <a class="question1"><?php _e('?', 'design-approval-system') ?></a></div>
       <input id="das_default_theme_logo_image" name="das_default_theme_logo_image" class="das-settings-admin-input" type="text"  value="<?php echo get_option('das_default_theme_logo_image'); ?>" />
-      <input id="das_logo_image_button" class="upload_image_button" type="button" value="Upload Image" />
+      <input id="das_logo_image_button" class="upload_image_button" type="button" value="<?php _e('Upload Image') ?>" />
       
       <div class="das-settings-admin-input-example upload-logo-size"><?php _e('This logo will be displayed at the top of all your design posts. Size for the "default" template is 124px X 20px.', 'design-approval-system') ?></div>
       <div class="clear"></div>
@@ -37,7 +37,7 @@ function das_settings_page() {
     <div class="das-settings-admin-input-wrap company-info-style">
       <div class="das-settings-admin-input-label"><?php _e('Company Name (required)', 'design-approval-system') ?></div>
       <input name="das-settings-company-name" class="das-settings-admin-input" type="text" id="das-settings-company-name" value="<?php echo get_option('das-settings-company-name'); ?>" />
-      <div class="das-settings-admin-input-example">This is used when sending emails to a client, and will also appear on the approval form too.</div>
+      <div class="das-settings-admin-input-example"><?php _e('This is used when sending emails to a client, and will also appear on the approval form too.') ?></div>
     </div>
     <!--/das-settings-admin-input-wrap-->
     
@@ -47,6 +47,59 @@ function das_settings_page() {
       <div class="das-settings-admin-input-example"><?php _e('This is required to send emails to a client through our system', 'design-approval-system') ?></div>
     </div>
     <!--/das-settings-admin-input-wrap-->
+    
+     <div class="das-settings-admin-input-wrap company-info-style">
+      <div class="das-settings-admin-input-label"><?php _e('Should Users be logged in to Approve Designs?', 'design-approval-system') ?></div>
+     
+      <input name="das-settings-approve-login-overide" class="das-settings-admin-input fleft" type="checkbox" id="das-settings-approve-login-overide" value="1" <?php checked( '1', get_option( 'das-settings-approve-login-overide' ) ); ?> /> 
+      <?php 
+	   $approveLoginOveride = get_option( 'das-settings-approve-login-overide' );
+		
+if ($approveLoginOveride == '1') {
+  _e('Checked, you are not requiring clients to login before approving designs.', 'design-approval-system');
+}
+else	{
+  _e('Not checked, you require clients to be logged in before approving.', 'design-approval-system');
+}
+
+?>  
+      
+      <div class="das-custom-checkbox-wrap"><?php _e('<strong>NOTE:</strong> If you check this option on each design post you will have to manually add the Signature and select Yes to approve the design so a star will appear on the project board, if you want to. This is a good option if you are just trying to get something approved quicky without the hassle of creating users for your clients.', 'design-approval-system') ?></div>
+     
+     
+    </div>
+    <!--/das-settings-admin-input-wrap-->
+    
+    
+    
+   <?php if(is_plugin_active('das-changes-extension/das-changes-extension.php')) { ?> 
+    <div class="das-settings-admin-input-wrap company-info-style">
+      <div class="das-settings-admin-input-label"><?php _e('Should Users be logged in to Make Change Requests?', 'design-approval-system') ?></div>
+     
+      <input name="das-settings-changes-login-overide" class="das-settings-admin-input fleft" type="checkbox" id="das-settings-changes-login-overide" value="1" <?php checked( '1', get_option( 'das-settings-changes-login-overide' ) ); ?> /> 
+      <?php 
+	   $changesLoginOveride = get_option( 'das-settings-changes-login-overide' );
+		
+if ($changesLoginOveride == '1') {
+  _e('Checked, you are not requiring clients to login before Making Change Requests.', 'design-approval-system');
+}
+else	{
+  _e('Not checked, you are requiring clients to login before Making Change Requests.', 'design-approval-system');
+}
+
+?>  
+      
+      <div class="das-custom-checkbox-wrap"><?php _e('<strong>NOTE:</strong> If you check this option you will have to manually add the comments to each design post from your email then the comments will appear on the project board and front end. This is a good option if you just want to get comments submitted quickly and don\'t want to create users for you clients. ', 'design-approval-system') ?></div>
+     
+     
+    </div>
+    <!--/das-settings-admin-input-wrap-->
+    <?php } ?>
+    
+    
+    
+    
+   
     
     <div class="das-settings-admin-input-wrap company-info-style ">
       <div class="das-settings-admin-input-label das-smtp-custom"<?php _e('Send emails using SMTP', 'design-approval-system') ?>><!--<a class="question7">?</a>--></div>
@@ -65,19 +118,19 @@ else	{
    ?>
   
    <div class="smpt-form-wrap">
-   <label>SMTP Server</label>
+   <label><?php  _e('SMTP Server') ?></label>
    <input type="text" name="das-smtp-server" id="das-smtp-server" value="<?php echo get_option( 'das-smtp-server' ); ?>" placeholder="<?php  _e('mail.yourdomain.com', 'design-approval-system') ?>">
    
-   <label>SMTP Port</label>
+   <label><?php  _e('SMTP Port') ?></label>
    <input type="text" name="das-smtp-port" value="<?php echo get_option( 'das-smtp-port' ); ?>"  placeholder="<?php  _e('26 is usually the default SMPT port', 'design-approval-system') ?>">
    
-   <label class="checkbox-label">SMTP Authenticate?</label>
+   <label class="checkbox-label"><?php  _e('SMTP Authenticate?') ?></label>
    <input class="checkbox-input" type="checkbox" name="das-smtp-checkbox-authenticate" id="das-smtp-checkbox-authenticate" value="1" <?php echo checked( '1', get_option( 'das-smtp-checkbox-authenticate' ) ); ?>/>
    <div class="clear"></div>
-   <label>Authenticate Username</label>
+   <label><?php  _e('Authenticate Username') ?></label>
    <input type="text" name="das-smtp-authenticate-username" id="das-smtp-authenticate-username" value="<?php echo get_option( 'das-smtp-authenticate-username' ); ?>" placeholder="<?php  _e('example@yourdomain.com', 'design-approval-system') ?>">
    
-   <label>Authenticate Password</label>
+   <label><?php  _e('Authenticate Password') ?></label>
    <input type="password" name="das-smtp-authenticate-password" id="das-smtp-authenticate-password" value="<?php echo get_option( 'das-smtp-authenticate-password' ); ?>">
    </div>
    

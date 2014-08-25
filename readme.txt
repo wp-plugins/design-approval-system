@@ -3,7 +3,7 @@ Contributors: slickremix
 Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature, work flow, multi language, woocommerce, shopping cart, woo, commerce
 Requires at least: 3.5.0
 Tested up to: 3.9.2
-Stable tag: 3.8.8
+Stable tag: 3.8.9
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, documents, videos, or music approved by clients quickly.
@@ -59,6 +59,13 @@ Here is what you, the clients, and the plugin can do:
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Change-log ==
+= Version 3.8.9 / August 25th, 2014 =
+ * ADDED BACK: By popular demand clients do not have to login to approve or make changes. You can view these new options on the das settings page. If you have the client changes extension an option for not requiring login will appear as well.
+ * ADDED: Additional notes on first tour pointer about using the free duplicate post plugin to make the task of creating version easier for clients.
+ * FIXED: Removed general function name from wp pointer that was causing a conflict with another theme using the same function name.
+ * EDITS: Additional front end Project Board CSS fixes to override themes h1, p, ul tags etc.
+ * EDITS: Default template CSS.
+ 
 = Version 3.8.8 / August 13th, 2014 =
  * IMPORTANT: Make sure you have all the most recent updates for your premium plugins before updating. You can find your plugins in the my account area of slickremix.com [http://slickremix.com/my-account](http://slickremix.com/my-account)
  * EDITS: Front end Project Board CSS fixes.

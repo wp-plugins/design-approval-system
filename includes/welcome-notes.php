@@ -68,11 +68,11 @@ class WordImpress_Theme_Tour_design_approval_system {
 			// WELCOME POINTER ON WP ADMIN PLUGINS PAGE
             'plugins' => array(
                 'content' => "<h3>" . __("Welcome to the Design Approval System", 'design-approval-system') . "</h3>"
-                    . "<p>" . __("You have just installed the Design Approval System. Congrats! Take a moment and see the short tour on how to get things setup. You can restart this tour at any time on our <a href='edit.php?post_type=designapprovalsystem&page=design-approval-system-help-page' style='text-decoration:none;'>help page</a>.", 'design-approval-system') . "</p>", //Content for this pointer
+                    . "<p>" . __("<p>You have just installed the Design Approval System. Congrats! Take a moment and see the short tour on how to get things setup. You can restart this tour at any time on our <a href='edit.php?post_type=designapprovalsystem&page=design-approval-system-help-page' style='text-decoration:none;'>help page</a>.</p><p>If you don't already, we highly suggest installing the free <a href='plugin-install.php?tab=search&s=duplicate+post&plugin-search-input=Search+Plugins' style='text-decoration:none;'>Duplicate Post Plugin</a> to help make the task of creating versions for clients easier. Install that plugin and once activated you will return to this message so you can continue the tour.", 'design-approval-system') . "</p>", //Content for this pointer
                 'id' => 'menu-plugins', //ID of element where the pointer will point
                 'position' => array(
                     'edge' => 'left', //Arrow position; change depending on where the element is located
-                    'align' => 'top' //Alignment of Pointer
+                    'align' => 'center' //Alignment of Pointer
                 ),
 				'button2' => __('Next', 'design-approval-system'), //text for the next button
                 'function' => 'window.location="' . admin_url('edit.php?post_type=designapprovalsystem&page=design-approval-system-projects-page') . '";' //where to take the user
