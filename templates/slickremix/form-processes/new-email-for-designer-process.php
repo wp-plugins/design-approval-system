@@ -103,6 +103,7 @@ $dasSettingsSmtp = get_option( 'das-settings-smtp' );
 	  
 	  $mail->IsSMTP();  // telling the class to use SMTP
 	  $mail->SMTPDebug  = 1;
+	  $mail->SMTPSecure = get_option( 'das-settings-das-ssl-or-tls-option');
 	  $mail->SMTPAuth   = $das_smtp_checkbox_authenticate_final;
 	  $mail->Port       = get_option( 'das-smtp-port' ); 
 	  $mail->Host       = get_option( 'das-smtp-server' ); 

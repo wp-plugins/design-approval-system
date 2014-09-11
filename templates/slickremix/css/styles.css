@@ -838,6 +838,10 @@ a:hover.design-option-btn {
 	font-size: 14px;
 	background-color: #dedbdb;
 }
+
+.requests-wrap textarea.dastinymcedisabled  {
+	min-height:176px;
+}
 #b1 {
 	display: block;
 }

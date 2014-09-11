@@ -2,9 +2,17 @@
 /*
 	This is file is for creating the das settings page for Wordpress's backend
 */
+// SRL added 6-6-13 to allow us to record the approved information directly to db
 
 //Main setting page function
 function das_settings_page() {
+	
+   wp_register_script( "das_settings_page_script", WP_PLUGIN_URL.'/design-approval-system/admin/js/admin.js', array('jquery') ); 
+   wp_register_script( "das_settings_page_script2", WP_PLUGIN_URL.'/design-approval-system/templates/slickremix/js/jquery.form.js', array('jquery') );
+
+   wp_enqueue_script( 'jquery' );
+   wp_enqueue_script( 'das_settings_page_script' );
+   wp_enqueue_script( 'das_settings_page_script2' );
 ?>
 <div class="das-settings-admin-wrap">
   <h2><?php _e('Design Approval System Settings', 'design-approval-system') ?></h2>
@@ -102,6 +110,7 @@ else	{
    
     
     <div class="das-settings-admin-input-wrap company-info-style ">
+   <div class="das-settings-admin-input-label"><?php _e('SMTP Settings. Need Help or having problems connecting?', 'design-approval-system') ?> <a href="http://www.slickremix.com/docs/gmail-or-server-smtp-setup/" target="_blank"><?php _e('See Instructions', 'design-approval-system') ?></a></div>
       <div class="das-settings-admin-input-label das-smtp-custom"<?php _e('Send emails using SMTP', 'design-approval-system') ?>><!--<a class="question7">?</a>--></div>
 
       <input name="das-settings-smtp" class="das-settings-admin-input" type="checkbox"  id="das-settings-smtp" value="1" <?php checked( '1', get_option( 'das-settings-smtp' ) ); ?>/>
@@ -118,11 +127,21 @@ else	{
    ?>
   
    <div class="smpt-form-wrap">
+   
    <label><?php  _e('SMTP Server') ?></label>
-   <input type="text" name="das-smtp-server" id="das-smtp-server" value="<?php echo get_option( 'das-smtp-server' ); ?>" placeholder="<?php  _e('mail.yourdomain.com', 'design-approval-system') ?>">
+   <input type="text" name="das-smtp-server" id="das-smtp-server" value="<?php echo get_option( 'das-smtp-server' ); ?>" placeholder="<?php  _e('mail.yourdomain.com or smtp.gmail.com etc.', 'design-approval-system') ?>">
+  
+   <?php $dasSSLorTLSoption = get_option( 'das-settings-das-ssl-or-tls-option'); ?>
+   <label><?php  _e('SSL / TLS') ?></label>
+   <select id="das-settings-das-ssl-or-tls-option" name="das-settings-das-ssl-or-tls-option">
+            <option value="" <?php if ($dasSSLorTLSoption == '' ) echo 'selected="selected"'; ?>><?php echo('None'); ?></option>
+            <option value="ssl" <?php if ($dasSSLorTLSoption == 'ssl' ) echo 'selected="selected"'; ?>><?php echo('SSL'); ?></option>
+            <option value="tls" <?php if ($dasSSLorTLSoption == 'tls' ) echo 'selected="selected"'; ?>><?php echo('TLS'); ?></option>
+   </select>
+   <div class="clear"></div>
    
    <label><?php  _e('SMTP Port') ?></label>
-   <input type="text" name="das-smtp-port" value="<?php echo get_option( 'das-smtp-port' ); ?>"  placeholder="<?php  _e('26 is usually the default SMPT port', 'design-approval-system') ?>">
+   <input type="text" name="das-smtp-port" value="<?php echo get_option( 'das-smtp-port' ); ?>"  placeholder="<?php  _e('Typically port 465 for ssl and port 587 for tls', 'design-approval-system') ?>">
    
    <label class="checkbox-label"><?php  _e('SMTP Authenticate?') ?></label>
    <input class="checkbox-input" type="checkbox" name="das-smtp-checkbox-authenticate" id="das-smtp-checkbox-authenticate" value="1" <?php echo checked( '1', get_option( 'das-smtp-checkbox-authenticate' ) ); ?>/>
@@ -132,17 +151,45 @@ else	{
    
    <label><?php  _e('Authenticate Password') ?></label>
    <input type="password" name="das-smtp-authenticate-password" id="das-smtp-authenticate-password" value="<?php echo get_option( 'das-smtp-authenticate-password' ); ?>">
-   </div>
+ 
+   <label></label><input type="submit" class="das-settings-admin-submit-btn" style="float:none; width:200px; margin-left:3px;" value="Save SMTP Settings">
+   <div class="clear"></div>
+   <br/>
+   <div class="das-custom-checkbox-wrap">
    
-     <p><?php  _e('<strong>NOTE:</strong> If you check SMTP authenticate and enter your username or password incorrectly the form will not submit and show Thank-You message, letting you know your information is incorrect. You should test this before allowing clients to use your Design Approval System.</p>
-     <p>There are many things that can go wrong with sending mail through SMTP and most of the problems come from permission issues.</p>
-     <ul>
- <li>1. Does your Host have permission to relay through the SMTP Host?</li>
- <li>2. Does your host require POP before SMTP?</li>
- <li>3. Does your Host require SMTP authentication?</li>
- <li>4. Are your SMTP settings correct for the remote host username / password?</li>
-</ul>
-', 'design-approval-system') ?>
+   
+   <div style="text-transform: none; font-weight: normal; "><p><?php _e('<strong>SEND TEST EMAIL USING BASIC SENDMAIL OR SMTP EMAIL SETTINGS</strong><ol class="smtp-check-list"><li>Make sure all settings have been saved.</li><li>To send a SMTP test email make sure you have the SMTP option checked and the settings filled out, otherwise it will send the test email using the default sendmail method.</li><li>The test email will be sent to the one you added in the Company Email Address field or the SMTP Authenticate Username field if you have checked the use SMTP checkbox.</li></ol>', 'design-approval-system') ?> </p>
+   
+<?php $das_smtp_checkbox = get_option('das-settings-smtp'); ?>
+    <a href="javascript:;" id="send-email-settings-page-test" onclick="jQuery('#settingsTestEmail').ajaxSubmit({ target: '#output'}); return false;" class="smtp-test-email-send-button"><?php _e('Send Test Email', 'design-approval-system') ?></a>
+    <div id="send-email-settings-page-test-done" style="display:none; border: 1px solid rgb(177, 245, 144);
+color: rgb(0, 0, 0);
+background: rgb(229, 255, 211);
+padding-left: 15px;
+text-align: left;" class="smtp-test-email-send-button"><strong>SUCCESS:</strong> Your <?php
+	  //SMTP Authenticate?
+	  if ($das_smtp_checkbox == '1') {
+		 echo 'SMTP Test Email has been sent to '?>
+		 <a href="mailto:<?php echo get_option('das-smtp-authenticate-username'); ?>"><?php echo get_option('das-smtp-authenticate-username'); ?></a> <?php
+	  }
+	  //SMTP Authenticate?
+	  if (!$das_smtp_checkbox == '1') {
+		 echo 'Default Test Email has been sent to '; ?>
+		 <a href="mailto:<?php echo get_option('das-settings-company-email'); ?>"><?php echo get_option('das-settings-company-email'); ?></a>. <?php
+		 echo 'You may need to check your spam folder for the first email unless you use SMTP.';
+	  }?></div>
+    
+    
+    <div id="send-email-settings-page-test-error" style="display:none;border: 1px solid rgb(245, 144, 144); color: rgb(0, 0, 0); background: rgb(255, 211, 211);padding-left: 15px;
+text-align: left;" class="smtp-test-email-send-button"></div>
+    
+    </div>
+   </div></div>
+   			
+   
+   
+          
+  			
 <div class="clear"></div>
     </div>
     <!--/das-settings-admin-input-wrap-->
@@ -238,5 +285,10 @@ else	{
  </div>
 <!--/das-settings-admin-wrap--> 
 
-<script type="text/javascript" src="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/admin/js/admin.js"></script>
+<form class="myform" id="settingsTestEmail" method="post" action="<?php print DAS_PLUGIN_PATH ?>/design-approval-system/templates/slickremix/form-processes/settings-page-test-email-process.php" name="settingsTestEmail">
+    <input type="hidden" value="<?php echo get_option('das-settings-company-name'); ?>" name="dasSettingsCompanyName" />
+    <input type="hidden" value="<?php echo get_option( 'das-smtp-authenticate-username' ); ?>" name="dasSettingsCompanyEmail" />
+    <input type="hidden" value="<?php echo get_option( 'das-settings-company-email' ); ?>" name="dasSettingsCompanyEmail" />
+    <input type="submit"/>
+</form><div style="display:none" id="output"></div>
 <?php } ?>

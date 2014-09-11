@@ -66,8 +66,28 @@ input[type=checkbox]#das-settings-smtp, .designapprovalsystem_page_das-clean-the
 }
 .designapprovalsystem_page_das-clean-theme-settings-page .das-settings-admin-wrap {
 	max-width:975px;
-	
 }
+.smtp-test-email-send-button {
+	 padding: 8px 30px;
+	border: 1px solid #2C527A;
+	text-decoration: none;
+	color: #fff;
+	background: #2872B8;
+	display: block;
+	display:inline-block;
+	margin-bottom:-15px;
+	text-align: center;
+ -webkit-transition: background 2s;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
+ }
+.smtp-test-email-send-button:hover {
+	background: #2C527A; 
+	color: #fff;
+	border: 1px solid #2C527A;
+ }
 .das-settings-admin-wrap {
 	min-height: 379px;
 	background: url(../images/das-settings-back2.png) center top;
@@ -295,13 +315,13 @@ height: 34px;
 	right: 144px;
 }
 .smpt-form-wrap {
-     margin:15px 20px 30px 20px; 
+     margin:30px 20px 30px 20px; 
 }
 .checkbox-input {
      margin-top:10px !important;   
 }
 .checkbox-label {
-     margin-top:18px !important;   
+     margin-top:0px;   
 }
 #das-settings-smtp, #das-clean-theme-settings-custom-css, #das-clean-theme-settings-project-board-btn {
 	 margin: 0px 7px 0 2px !important;
@@ -312,22 +332,51 @@ height: 34px;
 .smpt-form-wrap label {
      width:30%;
      text-align:right;
-     margin-top:2px;
      line-height:15px;
      padding:5px;
      display:inline-block;
      
 }
 .smpt-form-wrap input {
-     width:50%;
-     margin-top:15px;
+     width:45%;
+     margin:5px 0;
      padding:10px;
+     display:inline-block;  
+}
+.smpt-form-wrap select {
+     width:20%;
+     margin:15px 0;
      display:inline-block;  
 }
 #das-smtp-checkbox-authenticate {
     width:17px;
 	 height:17px;
-    vertical-align:-14px;
+	margin:10px 0 !important;
+}
+@media screen and (max-width: 782px) {
+input#das-smtp-checkbox-authenticate {
+	width: 25px; !important;
+	height: 25px; !important;
+}
+.smpt-form-wrap input, .smpt-form-wrap select, .smpt-form-wrap #das-smtp-checkbox-authenticate {
+	display: block;
+	float:none;
+	margin:0 !important;
+}
+.smpt-form-wrap input, .smpt-form-wrap select {
+width: 100%;
+margin: 5px 0;
+padding: 10px;
+display: inline-block;
+}
+.smpt-form-wrap label {
+	display: block;
+	float:none;
+	text-align:left;
+	margin:15px 0 4px !important;
+	padding:0;
+	width:100%;
+}
 }
 /*=================================================
 	Design Approval System admin how to's
@@ -638,6 +687,9 @@ h2.project-board-header {
 .das-custom-checkbox-wrap {
 	clear:both;
 	
+}
+.smtp-check-list {
+	margin:0 0 25px 20px;
 }
 .das-custom-checkbox-wrap {
 	padding:11px 0;

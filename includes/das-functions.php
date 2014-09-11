@@ -455,6 +455,7 @@ function das_settings_page_register_settings() {
   register_setting( 'design-approval-system-settings', 'das-settings-approved-dig-sig-message-to-clients' );
   register_setting( 'design-approval-system-settings', 'das-settings-approved-dig-sig-thank-you' );
   register_setting( 'design-approval-system-settings', 'das-settings-approve-login-overide' );
+  register_setting( 'design-approval-system-settings', 'das-settings-das-ssl-or-tls-option' );
   
 	if(is_plugin_active('das-changes-extension/das-changes-extension.php')) {
 	  register_setting( 'design-approval-system-settings', 'das-settings-design-requests-message-to-designer' );
