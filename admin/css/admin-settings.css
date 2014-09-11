@@ -337,7 +337,7 @@ height: 34px;
      display:inline-block;
      
 }
-.smpt-form-wrap input {
+.smpt-form-wrap input, #das-smtp-authenticate-password {
      width:45%;
      margin:5px 0;
      padding:10px;
