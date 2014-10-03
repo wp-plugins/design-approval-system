@@ -60,7 +60,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 == Change-log ==
 = Version 4.0.0 / September 11th, 2014 =
- * ADDED: SSL/TLS select option on the settings page. Confirmed and working. Still having connection having problems? [Read Instructions](http://www.slickremix.com/docs/gmail-or-server-smtp-setup/). 
+ * ADDED: SSL/TLS select option on the settings page. Confirmed and working. Still having connection problems? [Read Instructions](http://www.slickremix.com/docs/gmail-or-server-smtp-setup/). 
  * IMPORTANT: Users with Client Changes plugin will want to upgrade that plugin in order for the new option to take effect. Visit your My Account page or if you have entered your license key you should get an update notice.
  * ADDED: es_ES Spanish mo and po files added. Translation Courtesy: Andrew Kurtis. [WebHostingHub](http://www.webhostinghub.com/)
  
