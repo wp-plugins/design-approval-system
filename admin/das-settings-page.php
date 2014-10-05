@@ -289,6 +289,6 @@ text-align: left;" class="smtp-test-email-send-button"></div>
     <input type="hidden" value="<?php echo get_option('das-settings-company-name'); ?>" name="dasSettingsCompanyName" />
     <input type="hidden" value="<?php echo get_option( 'das-smtp-authenticate-username' ); ?>" name="dasSettingsCompanyEmail" />
     <input type="hidden" value="<?php echo get_option( 'das-settings-company-email' ); ?>" name="dasSettingsCompanyEmail" />
-    <input type="submit"/>
+    <!-- <input type="submit"/> -->
 </form><div style="display:none" id="output"></div>
 <?php } ?>
