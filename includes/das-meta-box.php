@@ -384,7 +384,7 @@ echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce
     <?php if(is_plugin_active('das-gq-theme/das-gq-theme.php')) { ?><li id="das-id-7"><a href="#das-tabs-7"><?php _e('GQ Options', 'design-approval-system') ?></a></li><?php } ?>
   </ul>
   
-  <?	
+  <?php	
  	  ////////////////////////////
 	 // THIS IS THE FIRST TAB
 	//////////////////////////

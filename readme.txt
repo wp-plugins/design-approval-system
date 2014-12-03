@@ -2,8 +2,8 @@
 Contributors: slickremix
 Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature, work flow, multi language, woocommerce, shopping cart, woo, commerce
 Requires at least: 3.5.0
-Tested up to: 4.0.0
-Stable tag: 4.0.0
+Tested up to: 4.0.1
+Stable tag: 4.0.1
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, documents, videos, or music approved by clients quickly.
@@ -17,7 +17,7 @@ Here's a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A)
 View the full tutorial about our [DAS plugin and Client Changes Extension](http://youtu.be/pYdF2OJCOv4): 
 [youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
 
-Here’s what you, the clients, and the plugin can do:
+Here is what you, the clients, and the plugin can do:
 
 = YOU (THE DESIGNER) CAN… =
   * With the click of a button you can send the design’s review link to a client for approval. (An automatic confirmation email will be sent to both parties.)
@@ -59,9 +59,14 @@ Here’s what you, the clients, and the plugin can do:
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Change-log ==
+
+= Version 4.0.1 / December 3rd, 2014 =
+ * NEW: Admin menu icon
+ * FIXED: Shorthand php tag in das-meta-box.php on line 386
+ * REMOVED: Stray testing submit button at the bottom of settings page
+ 
 = Version 4.0.0 / September 11th, 2014 =
- * ADDED: SSL/TLS select option on the settings page. Confirmed and working. Still having connection problems? [Read Instructions](http://www.slickremix.com/docs/gmail-or-server-smtp-setup/). 
- * IMPORTANT: Users with Client Changes plugin will want to upgrade that plugin in order for the new option to take effect. Visit your My Account page or if you have entered your license key you should get an update notice.
+ * ADDED: SSL/TLS select option on the settings page. Users with Client Changes plugin will want to upgrade that too in order for the new option to take effect. Visit your My Account page or if you have entered you license key you should get an update notice.
  * ADDED: es_ES Spanish mo and po files added. Translation Courtesy: Andrew Kurtis. [WebHostingHub](http://www.webhostinghub.com/)
  
 = Version 3.8.9 / August 25th, 2014 =
