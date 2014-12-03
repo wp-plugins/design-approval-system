@@ -327,7 +327,7 @@ if(is_plugin_active('woocommerce-for-das/woocommerce-for-das.php')) {
 
 $custom_meta_fields_tab6[0] =	array(
 				'label'=> __('Template Selection', 'design-approval-system'),
-				'desc'	=> __('<p>Select which template you would like this post to have. If you would like to see other templates please <a href="http://www.slickremix.com/product-category/design-approval-system-extensions/" target="_blank">click here</a>.</p> We are always looking for new talented theme designers to help develop DAS further. <a href="mailto:info@slickremix.com">Contact us</a> if you are interested.</p>', 'design-approval-system'),
+				'desc'	=> __('<p>Select which template you would like this post to have. If you would like to see other templates please <a href="http://www.slickremix.com/downloads/category/design-approval-system/" target="_blank">click here</a>.</p> We are always looking for new talented theme designers to help develop DAS further. <a href="mailto:info@slickremix.com">Contact us</a> if you are interested.</p>', 'design-approval-system'),
 				'id'	=> $prefix.'das_template_options',
 				'type'	=> 'select',
 				'options' => array (
