@@ -11,6 +11,8 @@ A system to streamline the process of getting designs, photos, documents, videos
 == Description ==
 See [full documentaion](http://www.slickremix.com/design-approval-system-docs/). Approved designs get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/docs/how-to-setup-the-project-board). Clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Live Example](http://www.slickremix.com/project-board/). 
 
+NOTE: We realize the videos show outdated wordpress admin areas and we will be making updates soon. But rest assured our plugin still works and is even better now than the videos portray, however they are still informative to see quickly how our system works. That is the reason they are still here. Even better we do have a nice walkthrough when you activate our plugin to help you get setup quickly.
+
 Here's a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
 [youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
 
