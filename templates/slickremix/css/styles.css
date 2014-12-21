@@ -559,7 +559,7 @@ a:hover.project-timeline {
 	line-height: 20px;
 	text-align: justify;
 	font-weight: normal;
-	/* background-color: #323232; */
+	background-color: #323232;
 }
 .designer-notes-text {
 	padding: 0 35px 0 17px;

@@ -108,15 +108,16 @@ function my_script_enqueuer() {
 	// Load validate
 	// wp_enqueue_script('validate','http://ajax.microsoft.com/ajax/jQuery.Validate/1.6/jQuery.Validate.min.js', array('jquery'), true);
 	
-	 // redirect clients if they try to access the design edit page
-	 if( current_user_can('das_client')) {  
- 
-		$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-				if (false !== strpos($url,'post.php?post=')){
-					wp_redirect(home_url()); 
-					exit;
+global $current_user; 
+get_currentuserinfo(); 
+		 // redirect clients if they try to access the design edit page
+		 if(user_can( $current_user, "das_client" )) {  
+			$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+					if (false !== strpos($url,'post.php?post=')){
+						wp_redirect(home_url());
+						exit;
 				}
- }
+	 }
 		
 }
 add_action( 'init', 'my_script_enqueuer' );
@@ -245,6 +246,8 @@ function das_custom_post_type_init() {
 		 );
 		 
 	    register_post_type( 'Design Approval System', $args );
+		
+		
  }
 function design_approval_system_activate() {
 	das_custom_post_type_init();

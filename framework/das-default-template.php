@@ -262,11 +262,15 @@ echo '</ul>';
             <input type="hidden" value="<?php echo ''.$das_settings_email_for_designers_message_to_clients.''; ?>" name="dasSettingsEmailForDesignersMessageToClients" />
             <input type="hidden" value="<?php echo $post->post_title ?> "  name="pagetitle"  />
             <input id="human4" type="text"  name="human4" value="" />
-            <?php echo get_post_meta($post->ID, 'custom_designer_notes', true); ?>
+            <?php echo get_post_meta($post->ID, 'custom_designer_notes', true); 
+			global $current_user; 
+get_currentuserinfo(); 
+            if(!user_can( $current_user, "das_client" )) {   ?>
             <div class="entry-utility">
-              <?php edit_post_link( __( 'Edit'), '<span class="edit-link">', '</span> | <span id="send-email-for-designer" onClick="jQuery(\'#sendEmailforDesigner\').ajaxSubmit({ target: \'#output\'}); return false;">Send Email</span> <span id="send-email-for-designer-done">Thank-you. Your email has been sent.</span>' ); ?>
-            </div>
+              <?php edit_post_link( __( 'Edit'), '<span class="edit-link">', '</span> | <span id="send-email-for-designer" onClick="jQuery(\'#sendEmailforDesigner\').ajaxSubmit({ target: \'#output\'}); return false;">Send Email</span> <span id="send-email-for-designer-done">Thank-you. Your email has been sent.</span>' ); 
+			?> </div>
             <!-- .entry-utility -->
+			<?php } ?>
           </form>
         </div>
         <!-- designer-notes-text -->
