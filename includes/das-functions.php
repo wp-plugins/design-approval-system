@@ -110,8 +110,9 @@ function my_script_enqueuer() {
 	
 global $current_user; 
 get_currentuserinfo(); 
+
 		 // redirect clients if they try to access the design edit page
-		 if(user_can( $current_user, "das_client" )) {  
+		 if(user_can($current_user, "das_client" )) {  
 			$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 					if (false !== strpos($url,'post.php?post=')){
 						wp_redirect(home_url());
