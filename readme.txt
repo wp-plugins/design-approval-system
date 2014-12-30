@@ -3,7 +3,7 @@ Contributors: slickremix
 Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature, work flow, multi language, woocommerce, shopping cart, woo, commerce
 Requires at least: 3.5.0
 Tested up to: 4.1
-Stable tag: 4.0.3
+Stable tag: 4.0.4
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, documents, videos, or music approved by clients quickly.
@@ -59,12 +59,14 @@ Here is what you, the clients, and the plugin can do:
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Change-log ==
+= Version 4.0.4 / December 30th, 2014 =
+ * FIXED: CSS bug in default template. Now looks proper on mobile and tablet devices. [Example](http://www.slickremix.com/testblog/designs/idriveeurope-about-page-v1/)
+
 = Version 4.0.3 / December 20th, 2014 =
  * NEW: DAS Now works with Multisite Installs. IMPORTANT! Do not network active. To make this work you must activate each install you want on each subsite you create for your multisite install.
  * FIXED DEFAULT TEMPLATE: Edit and Send Email links showing when DAS Clients are logged in, they now do not.
  * FIXED: CSS bug on the default template for design notes.
  * Happy Holidays from all of us at SlickRemix!
-
 
 = Version 4.0.2 / December 12th, 2014 =
  * FIXED: Faster wp-admin loading now

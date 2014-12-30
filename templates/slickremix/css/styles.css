@@ -340,6 +340,7 @@ a:hover {
 body#design-template {
 	background: url(../images/designer-backg-grey.png) no-repeat top left #000 !important;
 	font-family: verdana, arial, sans-serif;
+	min-width: 990px;
 }
 .header-top {
 	height: 12px;
@@ -347,6 +348,7 @@ body#design-template {
 }
 .header-wrap {
 	width: 965px;
+	min-width: 990px;
 	position:relative;
 	margin: 0 auto;
 	height: 111px;
@@ -612,6 +614,7 @@ a:hover.project-timeline {
 	position: relative;
 	z-index: 0;
 	clear: both;
+	min-width: 990px;
 }
 a.design-option-btn {
 	display: block;
