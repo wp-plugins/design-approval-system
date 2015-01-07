@@ -9,7 +9,9 @@ License: GPLv2 or later
 A system to streamline the process of getting designs, photos, documents, videos, or music approved by clients quickly.
 
 == Description ==
-Now works on MultiSite Installs! See [full documentation](http://www.slickremix.com/design-approval-system-docs/). Approved designs get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/docs/how-to-setup-the-project-board). Clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Live Example](http://www.slickremix.com/project-board/). 
+See [Live Example](http://www.slickremix.com/testblog/designs/idriveeurope-about-page-v1/) and Approve the design.
+
+Now works on MultiSite Installs! See [full documentation](http://www.slickremix.com/design-approval-system-docs/). Approved designs get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/docs/how-to-setup-the-project-board). Clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Project Board](http://www.slickremix.com/project-board/). 
 
 NOTE: We realize the videos show outdated wordpress admin areas and we will be making updates soon. But rest assured our plugin still works and is even better now than the videos portray, however they are still informative to see quickly how our system works. That is the reason they are still here. Even better we do have a nice walkthrough when you activate our plugin to help you get setup quickly.
 
