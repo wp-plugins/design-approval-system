@@ -71,7 +71,7 @@ if(is_plugin_active('woocommerce/woocommerce.php') && is_plugin_active('woocomme
                             
                            <li><a class="project-timeline">Timeline: <?php echo get_post_meta($post->ID, 'custom_project_start_end', true); ?></a></li>
 								
-						<?	} ?>
+						<?php	} ?>
                         
                         
       

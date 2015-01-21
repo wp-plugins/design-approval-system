@@ -1,6 +1,6 @@
 <html>
 <head>
-<?php require( '../../../../../../wp-blog-header.php' );?>
+<?php require( '../../../../../../wp-load.php' );?>
 </head>
 <body>
 <?php
@@ -38,7 +38,7 @@ input.hightlight1, input.hightlight2, input.hightlight3  {
 	color:#222;
 	}
 </style>
-<?
+<?php
 
 //flag to indicate which method it uses. If POST set it to 1
 if ($_POST) $post=1;
@@ -46,7 +46,7 @@ if ($_POST) $post=1;
 if (!$human1 ['human1'] == '') {$errors[count($errors)] = 'It appears you may be trying to submit spam. Please disreguard this notice and try again if we made a mistake.'; }
 
 //if the errors array is empty, send the mail
-$recipients = array("designer", "client");
+$recipients = array('designer', 'client');
 
 if (!$errors) {
  
@@ -126,7 +126,7 @@ $dasSettingsSmtp = get_option( 'das-settings-smtp' );
 	$mail->IsSendmail(); // telling the class to use SendMail transport
   }
   
-  if ($recipient== "designer"){
+  if ($recipient== 'designer'){
 	$mail->AddReplyTo = $from;
 	$mail->FromName   = $das_settings_company_name;
 	$mail->From       = $das_settings_company_email;
@@ -136,7 +136,7 @@ $dasSettingsSmtp = get_option( 'das-settings-smtp' );
 	$mail->MsgHTML($message_designer);
   }
   
-  if ($recipient== "client"){
+  if ($recipient== 'client'){
 	$mail->AddReplyTo = $from;
 	$mail->FromName   = $das_settings_company_name;
 	$mail->From       = $das_settings_company_email;
@@ -205,7 +205,7 @@ $dasSettingsSmtp = get_option( 'das-settings-smtp' );
 	 echo "alert('Sorry, unexpected error. Please try again!');";
 	}
 	?>});</script>
-<?
+<?php
 } 
 ?>
 </body>

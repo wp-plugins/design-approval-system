@@ -1,6 +1,6 @@
 <html>
 <head>
-<?php require( '../../../../../../wp-blog-header.php' );?>
+<?php require( '../../../../../../wp-load.php' );?>
 </head>
 <body>
 <?php
@@ -112,7 +112,7 @@ $dasSettingsSmtp = get_option( 'das-settings-smtp' );
 	
 	//if POST was used, display the message straight away  echo $mail->ErrorInfo
 	?>
-<script language="JavaScript">jQuery(document).ready(function(){<?
+<script language="JavaScript">jQuery(document).ready(function(){<?php
 	if ($_POST) {
 		if ($myresult) echo "
 					jQuery('#send-email-settings-page-test').hide();
@@ -132,13 +132,13 @@ $dasSettingsSmtp = get_option( 'das-settings-smtp' );
 	}
 	?>});</script>
 
-<?
+<?php
 //if the errors array has values
 } else {
 	//display the errors message
 	?>
 
-<?
+<?php
 	exit;
 }
 

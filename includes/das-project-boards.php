@@ -79,7 +79,7 @@
                             
                             <strong><?php _e('Timeline', 'design-approval-system') ?></strong>: <?php echo get_post_meta($post->ID, 'custom_project_start_end', true); ?><br/>
 								
-		<?	} ?>
+		<?php } ?>
         
        
         <?php 
@@ -137,8 +137,6 @@
 					   echo "<div class='project-notes-text-padding'>";
 					   echo get_post_meta($post->ID, 'custom_client_notes', true); 
 					   echo "</div>";
-					} else {
-					 //do nothing or whatever you need when no custom field or text was found
-					}
-				?>
-  </div>
+					} else { 
+					//do nothing or whatever you need when no custom field or text was found 
+					} ?></div>

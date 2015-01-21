@@ -1,6 +1,6 @@
 <html>
 <head>
-<?php require( '../../../../../../wp-blog-header.php' );?>
+<?php require( '../../../../../../wp-load.php' ); ?>
 </head>
 <body>
 <?php
@@ -30,7 +30,7 @@ if ($_POST) $post=1;
 if (!$human4 ['human4'] == '') {$errors[count($errors)] = 'It appears you may be trying to submit spam. Please disreguard this notice and try again if we made a mistake.'; }
 
 
-$recipients = array("designer", "client");
+$recipients = array('designer', 'client');
 
 if (!$errors) {
  
@@ -103,8 +103,8 @@ $dasSettingsSmtp = get_option( 'das-settings-smtp' );
 	  
 	  $mail->IsSMTP();  // telling the class to use SMTP
 	  $mail->SMTPDebug  = 1;
-	  $mail->SMTPSecure = get_option( 'das-settings-das-ssl-or-tls-option');
 	  $mail->SMTPAuth   = $das_smtp_checkbox_authenticate_final;
+	  $mail->SMTPSecure = get_option( 'das-settings-das-ssl-or-tls-option');
 	  $mail->Port       = get_option( 'das-smtp-port' ); 
 	  $mail->Host       = get_option( 'das-smtp-server' ); 
 	  $mail->Username   = get_option( 'das-smtp-authenticate-username' ); 
@@ -114,7 +114,7 @@ $dasSettingsSmtp = get_option( 'das-settings-smtp' );
 	$mail->IsSendmail(); // telling the class to use SendMail transport
   }
   
-  if ($recipient== "designer"){
+  if ($recipient== 'designer'){
 	$mail->AddReplyTo = $from;
 	$mail->FromName   = $das_settings_company_name;
 	$mail->From       = $das_settings_company_email;
@@ -124,7 +124,7 @@ $dasSettingsSmtp = get_option( 'das-settings-smtp' );
 	$mail->MsgHTML($message_designer);
   }
   
-  if ($recipient== "client"){
+  if ($recipient== 'client'){
 	$mail->AddReplyTo = $from;
 	$mail->FromName   = $das_settings_company_name;
 	$mail->From       = $das_settings_company_email;
@@ -141,7 +141,7 @@ $dasSettingsSmtp = get_option( 'das-settings-smtp' );
 	
 	//if POST was used, display the message straight away
 	?>
-<script language="JavaScript">jQuery(document).ready(function(){<?
+<script language="JavaScript">jQuery(document).ready(function(){<?php
 	if ($_POST) {
 		if ($myresult) echo "
 					jQuery('#send-email-for-designer').hide();
@@ -157,20 +157,19 @@ $dasSettingsSmtp = get_option( 'das-settings-smtp' );
 	 echo "alert('Sorry, unexpected error. Please try again!');";
 	}
 	?>});</script>
-<?
+<?php
 //if the errors array has values
 } else {
 	//display the errors message
 	?>
-<script language="JavaScript">jQuery(document).ready(function(){<?
+<script language="JavaScript">jQuery(document).ready(function(){
 	//for ($i=0; $i<count($errors); $i++) $disperrors.= htmlspecialchars($errors[$i]) . '\n';
 	//echo("alert('".$disperrors."');");
 	//no alert for errors anymore
-	?>});</script>
-<?
+	});</script>
+<?php
 	exit;
 }
-
 ?>
 </body>
 </html>
