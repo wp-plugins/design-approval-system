@@ -132,6 +132,11 @@
                     <td><?php if ( defined('WP_DEBUG') && WP_DEBUG ) echo '<mark class="yes">' . __('Yes', 'dasystem') . '</mark>'; else echo '<mark class="no">' . __('No', 'dasystem') . '</mark>'; ?></td>
                 </tr>
                 
+                <tr>
+                    <td><?php _e('Magic Quotes','dasystem'); ?></td>
+                	<td><?php if ( get_magic_quotes_gpc()  ) echo '<mark class="yes">' . __('On', 'dasystem') . '</mark>'; else echo '<mark class="no">' . __('Off', 'dasystem') . '</mark>'; ?></td>
+                </tr>
+                
             </tbody>
 		</table> 
   </div><!--/das-admin-help-faqs-wrap-->   
