@@ -3,7 +3,7 @@ Contributors: slickremix
 Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature, work flow, multi language, woocommerce, shopping cart, woo, commerce
 Requires at least: 3.5.0
 Tested up to: 4.1
-Stable tag: 4.0.4
+Stable tag: 4.0.5
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, documents, videos, or music approved by clients quickly.
@@ -61,6 +61,9 @@ Here is what you, the clients, and the plugin can do:
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Change-log ==
+= Version 4.0.5 / January 20th, 2015 =
+ * FIXED: Major php bug for users who did not have magic quotes turned on in a php.ini file. Now templates, project board and forms all work as they should.
+
 = Version 4.0.4 / December 30th, 2014 =
  * FIXED: CSS bug in default template. Now looks proper on mobile and tablet devices. [Example](http://www.slickremix.com/testblog/designs/idriveeurope-about-page-v1/)
 
