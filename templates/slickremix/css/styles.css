@@ -1,7 +1,11 @@
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 	Layout and Design by Spencer Labadie and Justin Labadie, Slickremix.com
 -------------------------------------------------------------- */
-
+html {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 	background: transparent;
 	border: 0;
@@ -12,6 +16,22 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 body {
 	line-height: 1;
 }
+
+
+body:before {
+background: none;
+box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+content: "";
+display: block;
+height: 100%;
+min-height: 100%;
+position: fixed;
+top: 0;
+left: 0;
+width: auto;
+z-index: 0;
+}
+
 body, html {
 	background:none !important;
 }
@@ -1161,7 +1181,9 @@ position:relative;
 text-decoration:none !important;
 text-shadow:none !important;
 }
-
+.edit-link:before {
+	content:'';
+}
 .amount {
 	line-height:30px;
 }

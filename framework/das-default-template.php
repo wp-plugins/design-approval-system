@@ -263,12 +263,13 @@ echo '</ul>';
             <input type="hidden" value="<?php echo $post->post_title ?> "  name="pagetitle"  />
             <input id="human4" type="text"  name="human4" value="" />
             <?php echo get_post_meta($post->ID, 'custom_designer_notes', true); ?>
-			
+		
+        <?php if (current_user_can('administrator') || current_user_can('das_designer')) { ?>
             <div class="entry-utility">
               <?php edit_post_link( __( 'Edit'), '<span class="edit-link">', '</span> | <span id="send-email-for-designer" onClick="jQuery(\'#sendEmailforDesigner\').ajaxSubmit({ target: \'#output\'}); return false;">Send Email</span> <span id="send-email-for-designer-done">Thank-you. Your email has been sent.</span>' ); 
 			?> </div>
             <!-- .entry-utility -->
-		
+		<?php } ?>
           </form>
         </div>
         <!-- designer-notes-text -->
