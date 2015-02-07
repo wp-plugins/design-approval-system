@@ -61,7 +61,7 @@ Here is what you, the clients, and the plugin can do:
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Change-log ==
-= Version 4.0.6 / Wednesday February 4th, 2014
+= Version 4.0.6 / Wednesday February 4th, 2014 =
  * FIXED: Edit and Send Email link from showing when Das Client is logged in. Now only admin and Das Designers will be able to see those links. 
  * ADDED: CSS adjustments for design approval template.
  
