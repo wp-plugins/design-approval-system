@@ -2,8 +2,8 @@
 Contributors: slickremix
 Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature, work flow, multi language, woocommerce, shopping cart, woo, commerce
 Requires at least: 3.5.0
-Tested up to: 4.2.1
-Stable tag: 4.0.6
+Tested up to: 4.2.2
+Stable tag: 4.0.7
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, documents, videos, or music approved by clients quickly.
@@ -11,15 +11,7 @@ A system to streamline the process of getting designs, photos, documents, videos
 == Description ==
 See [Live Example](http://www.slickremix.com/testblog/designs/idriveeurope-about-page-v1/) and Approve the design.
 
-Now works on MultiSite Installs! See [full documentation](http://www.slickremix.com/design-approval-system-docs/). Approved designs get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/docs/how-to-setup-the-project-board). Clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Project Board](http://www.slickremix.com/project-board/). 
-
-NOTE: We realize the videos show outdated wordpress admin areas and we will be making updates soon. But rest assured our plugin still works and is even better now than the videos portray, however they are still informative to see quickly how our system works. That is the reason they are still here. Even better we do have a nice walkthrough when you activate our plugin to help you get setup quickly.
-
-Here's a quick look at our [Design Approval System](http://youtu.be/1CtzTrPuc1A): 
-[youtube http://www.youtube.com/watch?v=1CtzTrPuc1A]
-
-View the full tutorial about our [DAS plugin and Client Changes Extension](http://youtu.be/pYdF2OJCOv4): 
-[youtube http://www.youtube.com/watch?v=pYdF2OJCOv4]
+Now works on MultiSite Installs! See [full documentation](http://www.slickremix.com/design-approval-system-docs/). Approved designs get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/docs/how-to-setup-the-project-board). Clients, projects, & designs are organized on one page + Clients can login to see there designs! View [Project Board](http://www.slickremix.com/project-board/).
 
 Here is what you, the clients, and the plugin can do:
 
@@ -61,7 +53,11 @@ Here is what you, the clients, and the plugin can do:
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Change-log ==
-= Version 4.0.6 / Wednesday February 4th, 2015 =
+= Version 4.0.7 / Saturday May 9th, 2015
+ * NOTICE ABOUT MAJOR CHANGES COMING TO DAS: 4.0.8 will be a Major Update so it is important that you read the upgrade notice and changes before you update this plugin again to 4.0.8. To see what changes and improvements we have made [please click here}(http://www.slickremix.com/design-approval-system-major-changes). All current premium extension owners will be getting a coupon to recieve the new DAS Premium Plugin. We are making this update as a pre-notice of the changes to come. If you do not like the changes we will be providing a backup of DAS 4.0.7 will be available on the changes and improvements link above too.
+	* ADDED: Notice stating the change that will appear under update option before upgrading to 4.0.8. This notice will only appear once we have made the update to 4.0.8.
+	
+= Version 4.0.6 / Wednesday February 4th, 2015
  * FIXED: Edit and Send Email link from showing when Das Client is logged in. Now only admin and Das Designers will be able to see those links. 
  * ADDED: CSS adjustments for design approval template.
  

@@ -3,18 +3,18 @@
 Plugin Name: Design Approval System
 Plugin URI: http://slickremix.com/
 Description: A plugin to display Projects or Designs and have a client approve them by giving a digital signature.
-Version: 4.0.6
+Version: 4.0.7
 Author: SlickRemix
 Author URI: http://slickremix.com/
 Requires at least: wordpress 3.5.0
-Tested up to: wordpress 4.1
-Stable tag: 4.0.6
+Tested up to: wordpress 4.2.2
+Stable tag: 4.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
  * @package    			Design Approval System
  * @category   			Core
- * @author     		    SlickRemix
+ * @author     		 SlickRemix
  * @copyright  			Copyright (c) 2012-2015 SlickRemix
 
 If you need support or want to tell us thanks please contact us at info@slickremix.com or use our support forum on slickremix.com
@@ -144,5 +144,20 @@ function dasystem_version() {
 	$plugin_data = get_plugin_data( __FILE__ );
 	$plugin_version = $plugin_data['Version'];
 	return $plugin_version;
-}		
+}
+
+if (dasystem_version() > '1.0' && dasystem_version() < '4.0.8') {
+	// Better update message
+	$path = plugin_basename( __FILE__ );
+	$hook = "in_plugin_update_message-{$path}";
+	add_action( $hook, 'your_update_message_cb', 20, 2 );
+	/**
+	 * Displays an update message for plugin list screens.
+	 * Shows only the version updates from the current until the newest version
+	 */
+	function your_update_message_cb() {
+		$output = '<div class="das-update-message">'.__( '4.0.8 is a Major Update so it is important that you read the upgrade notice and changes before you update this plugin. To see what changes and improvements we have made <a href="http://www.slickremix.com/design-approval-system-major-changes" target="_blank">please click here</a>. All current premium extension owners will be getting a coupon to recieve the new DAS Premium Plugin.').'</div>';
+		return print $output;
+	}
+}
 ?>
