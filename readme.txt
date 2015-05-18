@@ -53,11 +53,11 @@ Here is what you, the clients, and the plugin can do:
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Change-log ==
-= Version 4.0.7 / Saturday May 9th, 2015
- * NOTICE ABOUT MAJOR CHANGES COMING TO DAS: 4.0.8 will be a Major Update so it is important that you read the upgrade notice and changes before you update this plugin again to 4.0.8. To see what changes and improvements we have made [please click here}(http://www.slickremix.com/design-approval-system-major-changes). All current premium extension owners will be getting a coupon to recieve the new DAS Premium Plugin. We are making this update as a pre-notice of the changes to come. If you do not like the changes we will be providing a backup of DAS 4.0.7 will be available on the changes and improvements link above too.
-	* ADDED: Notice stating the change that will appear under update option before upgrading to 4.0.8. This notice will only appear once we have made the update to 4.0.8.
+= Version 4.0.7 / Saturday May 9th, 2015 =
+ * NOTICE ABOUT MAJOR CHANGES COMING TO DAS: 4.0.8 will be a Major Update so it is important that you read the upgrade notice and changes before you update this plugin again to 4.0.8. To see what changes and improvements we have made [please click here}(http://www.slickremix.com/design-approval-system-major-changes). All current premium extension owners will be getting a coupon to receive the new DAS Premium Plugin. We are making this update as a pre-notice of the changes to come. If you do not like the changes we will be providing a backup of DAS 4.0.7 will be available on the changes and improvements link above too.
+ * ADDED: Notice stating the change that will appear under update option before upgrading to 4.0.8. This notice will only appear once we have made the update to 4.0.8.
 	
-= Version 4.0.6 / Wednesday February 4th, 2015
+= Version 4.0.6 / Wednesday February 4th, 2015 =
  * FIXED: Edit and Send Email link from showing when Das Client is logged in. Now only admin and Das Designers will be able to see those links. 
  * ADDED: CSS adjustments for design approval template.
  
