@@ -1,0 +1,1319 @@
+# Translation of Design Approval System in Spanish (Spain)
+# This file is distributed under the same license as the Design Approval System package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2014-09-09 15:28:28+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/0.1\n"
+"Project-Id-Version: Design Approval System\n"
+
+#: includes/das-functions.php:577 includes/das-functions.php:580
+msgid "GQ Theme Settings"
+msgstr "Ajustes de GQ tema\n"
+
+#: includes/das-meta-box.php:290
+msgid "Selecting yes will create a product in Woocommerce. Keep \"Yes\" selected and the Product will always update information in Woocommerce when this design post is saved."
+msgstr "Seleccionar sí creará un producto con Woocommerce. Mantenga \"Sí\" seleccionado y el Producto siempre actualizará la información en Woocommerce cuando este post de diseño es salvado."
+
+#: includes/das-meta-box.php:295
+msgid "No, Do not create or update this Design as a Woo product."
+msgstr ""
+"\n"
+"No, No cree o actualice este Diseño como un producto Woo.\n"
+
+#: includes/das-meta-box.php:299
+msgid "Yes, Create or Update this Design as a Woo product."
+msgstr "Sí, Cree o Actualice este Diseño como un producto Woo"
+
+#: includes/welcome-notes.php:70
+msgid "Welcome to the Design Approval System"
+msgstr "Bienvenido al Sistema de Aprobación de Diseño\n"
+
+#: includes/welcome-notes.php:71
+msgid "<p>You have just installed the Design Approval System. Congrats! Take a moment and see the short tour on how to get things setup. You can restart this tour at any time on our <a href='edit.php?post_type=designapprovalsystem&page=design-approval-system-help-page' style='text-decoration:none;'>help page</a>.</p><p>If you don't already, we highly suggest installing the free <a href='plugin-install.php?tab=search&s=duplicate+post&plugin-search-input=Search+Plugins' style='text-decoration:none;'>Duplicate Post Plugin</a> to help make the task of creating versions for clients easier. Install that plugin and once activated you will return to this message so you can continue the tour."
+msgstr "<p>Usted ha instalado el Sistema de Aprobación de Diseño. ¡Felicidades! Tómese un momento y vea el tour corto sobre cómo configurar las cosas. Usted puede reiniciar este tour cuando quiera en nuestra <a href='edit.php?post_type=designapprovalsystem&page=design-approval-system-help-page' style='text-decoration:none;'>página de ayuda</a>.</p><p> Si no lo ha hecho, le sugerimos instalar el <a href='plugin-install.php?tab=search&s=duplicate+post&plugin-search-input=Search+Plugins' style='text-decoration:none;'>Plugin de Post Duplicado</a> gratis para ayudar hacer la tarea de crear las versiones para los clientes más fácil. Instale este plugin y una vez activado usted retornará a este mensaje por lo que puede continuar el tour."
+
+#: includes/welcome-notes.php:77 includes/welcome-notes.php:90
+#: includes/welcome-notes.php:103 includes/welcome-notes.php:116
+#: includes/welcome-notes.php:129 includes/welcome-notes.php:143
+#: includes/welcome-notes.php:157 includes/welcome-notes.php:212
+msgid "Next"
+msgstr "Próximo\n"
+
+#: includes/welcome-notes.php:83
+msgid "<p>This page shows all of your clients and projects. You can view the details of each design, and if a design is approved a STAR will appear next to that project and design version.</p> <p>By following the Next <strong>3 steps</strong> in our walk-through your project board will come alive!</p><p><strong>Step 1:</strong> Make sure you have filled out the details in our <a href=\"edit.php?post_type=designapprovalsystem&page=design-approval-system-settings-page\" style=\"text-decoration:none;\">Settings Page</a></p>"
+msgstr "<p> Esta página muestra todos sus clientes y proyectos. Usted puede ver los detalles de cada diseño, y si un diseño es aprobado una ESTRELLA aparecerá próxima al proyecto y la versión de diseño.</p> <p> ¡Siguiendo los próximos <strong>3 pasos</strong> en nuestro walk-through su panel del proyecto vendrá a la vista!</p><p><strong>Paso 1:</strong> Esté seguro de que ha llenado los detalles en nuestra <a href=\"edit.php?post_type=designapprovalsystem&page=design-approval-system-settings-page\" style=\"text-decoration:none;\">Página de Ajustes</a></p>\n"
+
+#: includes/welcome-notes.php:96
+msgid "<p><strong>Step 2:</strong> Create a Project Name.<br>Make your name relative to your client and your project. Like this example,</p><p><i>Bomber Eyewear – Home Trial</i></p><p>This will make it easy to see quickly what project is for what client.</p>"
+msgstr "<p><strong>Paso 2:</strong> Cree un Nombre de Proyecto.<br> Haga su nombre relativo a su cliente y su proyecto. Como este ejemplo, </p><p><i>Bomber Eyewear – Home Trial</i></p><p> Esto hará más fácil ver rápidamente qué proyecto es para cuál cliente.</p"
+
+#: includes/welcome-notes.php:109
+msgid "Add New Design Page"
+msgstr "Adicionar Nueva Página de Diseño\n"
+
+#: includes/welcome-notes.php:109
+msgid "<p><strong>Step 3:</strong> Add a New Design.<br>Fill out the title with the name of your client and project. This is how we do it:</p><p><i>Bomber Eyewear, Home Trial V1</i></p><p>Then add your photo, video, music, or whatever you need approved into the large textbox on the page.</p> <p>Fill out the Design Approval Fields, making sure to enter your clients name and email.</p><p>Finally, make sure and check your Project Name for this Design version in the right sidebar and add a Featured Image. This is very important as it is what helps organize the Project Board.</p><p>Now your project board should have one project and a design version.</p>"
+msgstr "<p><strong>Paso 3:</strong>  Adicionar un Nuevo Diseño.<br> Llene el título con el nombre de su cliente y proyecto. Así es cómo lo hacemos: </p><p><i>Bomber Eyewear, Home Trial V1</i></p><p> Luego adicione su foto, video, música, o cualquier cosa que necesite aprobada dentro del textbox largo en la página.</p> <p> Llene los Campos de Aprobación de Diseño, esté seguro de entrar el nombre y el email de sus clientes.</p><p> Finalmente, esté seguro y chequee el Nombre del Proyecto para esta versión de Diseño en la vista lateral derecha y adicione una Imagen Personalizada. Esto es muy importante porque ayuda a organizar el Panel del Proyecto.</p><p> Ahora su panel de proyecto debería tener un proyecto y una versión de diseño.</p>\n"
+
+#: includes/welcome-notes.php:136
+msgid "DAS Clients & DAS Designers"
+msgstr "DAS Clientes & DAS Diseñadores"
+
+#: includes/welcome-notes.php:136
+msgid "<p>This page displays a list of all your clients that you will have signed up on the <a href=\"user-new.php\"  style=\"text-decoration:none\">add new users</a> page.</p> <p>IMPORTANT: Make sure your designs have the client(s) email you signed them up with so only your client can see his/her projects when they login.</p><p>When you sign up a DAS Designer and they login they will be able to see all of wordpress, but they can not edit your main wordpress settings. You can view a list of your DAS Designers by choosing the option above.</p><p>If you would like to control what the clients or designers see when logging in we suggest using a user role manager plugin. We use and like <a href=\"http://codecanyon.net/item/white-label-branding-for-wordpress/125617\" style=\"text-decoration:none\" target=\"_blank\">this one</a>.</p>"
+msgstr "<p> Esta página muestra una lista de todos sus clientes que se han registrado en la página <a href=\"user-new.php\" style=\"text-decoration:none\">adicionar nuevos usuarios</a>.<p>IMPORTANTE: Esté seguro que sus diseños tienen el email del cliente(s) que se registró por lo que sólo su cliente puede ver sus proyectos cuando se autentica.</p><p> Cuando usted se registra en Diseñadores de DAS y ellos se autentican ellos serán capaces de ver todo de wordpress, pero ellos no pueden editar sus ajustes de wordpress. Usted puede ver una lista de sus DAS Designers escogiendo la opción anterior.</p><p> Si desea controlar lo que los clientes o diseñadores ven cuando se loguean le sugerimos usar un plugin de gestión de roles. Nosotros usamos y nos gusta <a href=\"http://codecanyon.net/item/white-label-branding-for-wordpress/125617\" style=\"text-decoration:none\" target=\"_blank\">este</a>.</p>\n"
+
+#: includes/welcome-notes.php:150
+msgid "<p>You can find some good FAQS here, along with system settings about your worpress and the Design Approval System Version.</p><p>IMPORTANT: If you need help and want to submit an email or post on our support forum, please make sure and copy the System Info information on this page.</p>"
+msgstr "<p> Usted puede encontrar algunas FAQS buenas aquí, junto con los ajustes del sistema acerca de su wordpress y la Versión del Sistema de Aprobación de Diseño.</p><p>IMPORTANTE: Si necesita ayuda y desea enviar un email o post en nuestro foro de soporte, por favor esté seguro y copie la información de la Información del Sistema en esta página. </p>\n"
+
+#: includes/welcome-notes.php:164
+msgid "<p>This is what makes the Design Approval System work. Add your company logo, company name and email address to get started right away.</p><p>You can also customize the email for client message and the Approved Digital Signature email message that goes to your clients and more. Many other options will appear here with our premium extensions. "
+msgstr "<p> Esto es lo que hace que el Sistema de Aprobación de Diseño trabaje. Adiciona el logo de su compañía, el nombre de la compañía y la dirección de email para comenzar enseguida. </p><p> Usted puede además personalizar el email para el mensaje del cliente y el mensaje del email de la Firma Digital Aprobada que va a sus clientes y más. Muchas otras opciones aparecerán aquí con sus extensiones premium.\n"
+
+#: includes/welcome-notes.php:222
+msgid "Close"
+msgstr "Cerrar"
+
+#: updates/EDD_SL_Plugin_Licence_Manager.php:36
+msgid "Plugin License Options"
+msgstr "Opciones de Licencia de Plugin\n"
+
+#: updates/EDD_SL_Plugin_Licence_Manager.php:68
+msgid "Enter your license key"
+msgstr "Entre su clave de licencia \n"
+
+#: updates/EDD_SL_Plugin_Licence_Manager.php:71
+msgid "Deactivate License"
+msgstr "Desactivar Licencia"
+
+#: updates/EDD_SL_Plugin_Licence_Manager.php:72
+msgid "- Active"
+msgstr "- activo"
+
+#: updates/EDD_SL_Plugin_Licence_Manager.php:75
+msgid "Activate License"
+msgstr "Activar Licencia"
+
+#: admin/das-settings-page.php:84
+msgid "Checked, you are not requiring clients to login before Making Change Requests."
+msgstr ""
+"\n"
+"Seleccionado, no requiere que los clientes se autentiquen antes de Hacer Peticiones de Cambio.\n"
+
+#: admin/das-settings-page.php:87
+msgid "Not checked, you are requiring clients to login before Making Change Requests."
+msgstr ""
+"\n"
+"No seleccionado, si requiere que los clientes se autentiquen antes de Hacer  Peticiones de Cambio.\n"
+
+#: admin/das-settings-page.php:92
+msgid "<strong>NOTE:</strong> If you check this option you will have to manually add the comments to each design post from your email then the comments will appear on the project board and front end. This is a good option if you just want to get comments submitted quickly and don't want to create users for you clients. "
+msgstr ""
+"\n"
+"<strong>NOTA:</strong> Si usted selecciona esta opción usted tendrá que adicionar manualmente los comentarios para cada post de diseño de su email luego los comentarios aparecerán en el panel del proyecto y en la vista pública. Esto es una buena opción si usted solo desea obtener comentarios enviados rápidamente y no quiere crear usuarios para sus clientes.\n"
+
+#: admin/das-settings-page.php:121
+msgid "SMTP Server"
+msgstr ""
+"\n"
+"Servidor SMTP\n"
+
+#: admin/das-settings-page.php:124
+msgid "SMTP Port"
+msgstr ""
+"\n"
+"Puerto SMTP\n"
+
+#: admin/das-settings-page.php:127
+msgid "SMTP Authenticate?"
+msgstr ""
+"\n"
+"¿Autenticación SMTP?\n"
+
+#: admin/das-settings-page.php:130
+msgid "Authenticate Username"
+msgstr ""
+"\n"
+"Nombre de Usuario de Autenticación\n"
+
+#: admin/das-settings-page.php:133
+msgid "Authenticate Password"
+msgstr ""
+"\n"
+"Contraseña de Autenticación\n"
+
+#: admin/das-settings-page.php:22
+msgid "Upload Image"
+msgstr ""
+"\n"
+"Subir Imagen\n"
+
+#: admin/das-settings-page.php:24
+msgid "This logo will be displayed at the top of all your design posts. Size for the \"default\" template is 124px X 20px."
+msgstr ""
+"\n"
+"Este logo será mostrado en el inicio de todos sus posts de diseño. El tamaño para la plantilla \"por defecto\" es 124px X 20px.\n"
+
+#: admin/das-settings-page.php:40
+msgid "This is used when sending emails to a client, and will also appear on the approval form too."
+msgstr ""
+"\n"
+"Esto es usado cuando se envían emails a un cliente, y también aparecerán en la forma de aprobación.\n"
+
+#: admin/das-settings-page.php:52
+msgid "Should Users be logged in to Approve Designs?"
+msgstr ""
+"\n"
+"¿Deberían los Usuarios autenticarse en Aprobar Diseños?\n"
+
+#: admin/das-settings-page.php:59
+msgid "Checked, you are not requiring clients to login before approving designs."
+msgstr ""
+"\n"
+"Seleccionado, usted no está pidiendo a los clientes que se autentiquen antes de aprobar los diseños.\n"
+
+#: admin/das-settings-page.php:62
+msgid "Not checked, you require clients to be logged in before approving."
+msgstr ""
+"\n"
+"No seleccionado, usted está pidiendo a los clientes que se autentiquen antes de aprobar.\n"
+
+#: admin/das-settings-page.php:67
+msgid "<strong>NOTE:</strong> If you check this option on each design post you will have to manually add the Signature and select Yes to approve the design so a star will appear on the project board, if you want to. This is a good option if you are just trying to get something approved quicky without the hassle of creating users for your clients."
+msgstr ""
+"\n"
+"<strong>NOTA:</strong> Si usted selecciona esta opción en cada post de diseño usted tendrá que adicionar manualmente la Firma y seleccionar Sí para aprobar el diseño por lo que una estrella aparecerá en el panel del proyecto, si lo desea. Esto es una buena opción si está solamente tratando de que se apruebe algo rápidamente sin el trabajo de crear usuarios para sus clientes.\n"
+
+#: admin/das-settings-page.php:77
+msgid "Should Users be logged in to Make Change Requests?"
+msgstr ""
+"\n"
+"¿Deberían los usuarios autenticarse para Hacer Peticiones de Cambio?\n"
+
+#: admin/das-help-page.php:4 includes/welcome-notes.php:150
+msgid "DAS Info and Help"
+msgstr ""
+"\n"
+"Información de DAS y Ayuda\n"
+
+#: admin/das-help-page.php:6
+msgid "Need help? Use our <a href='http://www.slickremix.com/support-forum/' target='_blank'>Support Forum</a> and someone will respond to your request asap. Usually we will respond the same day, the latest the following day. You may also find some of the existing posts to be helpfull too, so take a look around first. If you do submit a question please <a href='#' class='das-debug-report'>generate a report</a> and copy the info, ask your question in our <a href='http://www.slickremix.com/support-forum/' target='_blank'>support forum</a> then paste the info you just copied. That will help speed things along for sure."
+msgstr ""
+"\n"
+"¿Necesita ayuda? Utilice nuestro <a href='http://www.slickremix.com/support-forum/' target='_blank'>Foro de Soporte</a> y alguien responderá a su petición tan pronto como sea posible. Usualmente respondemos el mismo día, como máximo al día siguiente. Usted puede encontrar también algunos posts existentes de gran ayuda, por tanto revise primero. Si usted envía una pregunta por favor <a href='#' class='das-debug-report'>genere un reporte</a> y copie la info, pregunte su pregunta en nuestro <a href='http://www.slickremix.com/support-forum/' target='_blank'>foro de soporte</a> y luego pegue la info que copió. Eso ayudará a acelerar las cosas por seguro.\n"
+
+#: admin/das-help-page.php:34
+msgid "I'd like to see some Design Approval System Tutorials."
+msgstr ""
+"\n"
+"Quisiera ver algunos Tutoriales del Sistema de Aprobación de Diseño.\n"
+
+#: admin/das-help-page.php:35
+msgid "I need Design Approval System Support."
+msgstr ""
+"\n"
+"Necesito Soporte con el Sistema de Aprobación de Diseño.\n"
+
+#: admin/das-help-page.php:36
+msgid "Show me where to get Extensions for this plugin."
+msgstr ""
+"\n"
+"Muéstrame dónde obtener Extensiones para este plugin.\n"
+
+#: admin/das-help-page.php:40
+msgid "System Info"
+msgstr ""
+"\n"
+"Información del Sistema\n"
+
+#: admin/das-help-page.php:41
+msgid "Please <a href='#' class='das-debug-report'>click here to generate a report</a> You will need to paste this information along with your question in our <a href='http://www.slickremix.com/support-forum/' target='_blank'>Support Forum</a>. Ask your question then paste the copied text below it."
+msgstr ""
+"\n"
+"Por favor <a href='#' class='das-debug-report'>haga click aquí para generar un reporte</a> Usted necesitará pegar esta información junto con la pregunta en nuestro <a href='http://www.slickremix.com/support-forum/' target='_blank'>Foro de Soporte</a>. Haga su pregunta y luego pegue el texto copiado debajo.\n"
+
+#: admin/das-help-page.php:46
+msgid "Versions"
+msgstr "Versiones"
+
+#: admin/das-help-page.php:52
+msgid "DAS Plugin version"
+msgstr ""
+"\n"
+"Versión del Plugin de DAS\n"
+
+#: admin/das-help-page.php:56
+msgid "WordPress version"
+msgstr ""
+"\n"
+"Versión de WordPress\n"
+
+#: admin/das-help-page.php:60
+msgid "Installed plugins"
+msgstr ""
+"\n"
+"Plugins instalados\n"
+
+#: admin/das-help-page.php:78
+msgid "by"
+msgstr ""
+"\n"
+"por\n"
+
+#: admin/das-help-page.php:78
+msgid "version"
+msgstr ""
+"\n"
+"versión\n"
+
+#: admin/das-help-page.php:93
+msgid "Server Environment"
+msgstr ""
+"\n"
+"Entorno del Servidor\n"
+
+#: admin/das-help-page.php:99
+msgid "PHP Version"
+msgstr ""
+"\n"
+"Versión PHP\n"
+
+#: admin/das-help-page.php:118
+msgid "Server Software"
+msgstr ""
+"\n"
+"Software de Servidor\n"
+
+#: admin/das-help-page.php:124
+msgid "WP Max Upload Size"
+msgstr ""
+"\n"
+"Tamaño Máx de Subida de WP\n"
+
+#: admin/das-help-page.php:131
+msgid "WP Debug Mode"
+msgstr ""
+"\n"
+"Modo de Depuración de WP\n"
+
+#: admin/das-help-page.php:132 includes/das-meta-box.php:251
+#: includes/das-meta-box.php:252
+msgid "Yes"
+msgstr ""
+"\n"
+"Sí\n"
+
+#: admin/das-help-page.php:132 includes/das-meta-box.php:247
+#: includes/das-meta-box.php:248
+msgid "No"
+msgstr ""
+"\n"
+"No\n"
+
+#: admin/das-settings-page.php:12
+msgid "Please fill out the settings below. If you don't understand what a field is for click the question mark next to that title."
+msgstr ""
+"\n"
+"Por favor llene los ajustes debajo. Si usted no entiende para qué es un campo haga clic en la marca de la pregunta del lado de ese título.\n"
+
+#: admin/das-settings-page.php:13
+msgid "COMPANY INFO"
+msgstr ""
+"\n"
+"INFORMACIÓN DE LA COMPAÑÍA\n"
+
+#: admin/das-settings-page.php:20
+msgid "Company Logo (required)"
+msgstr ""
+"\n"
+"Logo de la Compañía (requerido)\n"
+
+#: admin/das-settings-page.php:20 admin/das-settings-page.php:174
+#: admin/das-settings-page.php:190
+msgid "?"
+msgstr "?\n"
+
+#: admin/das-settings-page.php:28
+msgid "Your logo will be placed at the left right of the page."
+msgstr ""
+"\n"
+"Su logo será puesto en la izquierda derecha de la página.\n"
+
+#: admin/das-settings-page.php:30 admin/das-settings-page.php:164
+#: admin/das-settings-page.php:183 admin/das-settings-page.php:200
+#: admin/das-settings-page.php:217
+msgid "close"
+msgstr ""
+"\n"
+"cerrar\n"
+
+#: admin/das-settings-page.php:38
+msgid "Company Name (required)"
+msgstr ""
+"\n"
+"Nombre de la Compañía (requerido)\n"
+
+#: admin/das-settings-page.php:45
+msgid "Company Email Address (required)"
+msgstr ""
+"\n"
+"Dirección de Email de la Compañía (requerido)\n"
+
+#: admin/das-settings-page.php:47
+msgid "This is required to send emails to a client through our system"
+msgstr ""
+"\n"
+"Esto es requerido para enviar emails a un cliente a través de nuestro sistema\n"
+
+#: admin/das-settings-page.php:105
+msgid "Send emails using SMTP"
+msgstr ""
+"\n"
+"Enviar emails usando SMTP\n"
+
+#: admin/das-settings-page.php:113
+msgid "Checked, you are now using SMTP to send emails. You must contact your host provider if you are unsure of the settings to enter."
+msgstr ""
+"\n"
+"Seleccionado, usted está ahora usando SMTP para enviar emails. Usted tiene que contactar a su proveedor de host si no está seguro de cuáles ajustes entrar.\n"
+
+#: admin/das-settings-page.php:116
+msgid "Not checked, you are using sendmail. If your experiencing email troubles we suggest you check the box and enter your SMTP info."
+msgstr ""
+"\n"
+"No seleccionado, usted está usando sendmail. Si está experimentando problemas con los email le sugerimos seleccionar la casilla y entrar su información de SMTP.\n"
+
+#: admin/das-settings-page.php:122
+msgid "mail.yourdomain.com"
+msgstr "mail.yourdomain.com\n"
+
+#: admin/das-settings-page.php:125
+msgid "26 is usually the default SMPT port"
+msgstr ""
+"\n"
+"26 es usualmente el puerto por defecto SMTP\n"
+
+#: admin/das-settings-page.php:131
+msgid "example@yourdomain.com"
+msgstr "example@yourdomain.com\n"
+
+#: admin/das-settings-page.php:137
+msgid ""
+"<strong>NOTE:</strong> If you check SMTP authenticate and enter your username or password incorrectly the form will not submit and show Thank-You message, letting you know your information is incorrect. You should test this before allowing clients to use your Design Approval System.</p>\n"
+"     <p>There are many things that can go wrong with sending mail through SMTP and most of the problems come from permission issues.</p>\n"
+"     <ul>\n"
+" <li>1. Does your Host have permission to relay through the SMTP Host?</li>\n"
+" <li>2. Does your host require POP before SMTP?</li>\n"
+" <li>3. Does your Host require SMTP authentication?</li>\n"
+" <li>4. Are your SMTP settings correct for the remote host username / password?</li>\n"
+"</ul>\n"
+msgstr ""
+"\n"
+"<strong>NOTA:</strong> Si usted selecciona autenticación SMTP y entra su nombre de usuario y contraseña incorrectos el formulario no se enviará y no mostrará el mensaje Gracias, dejándole saber de que su información es incorrecta. Debería probar esto antes de permitir a los clientes usar su Sistema de Aprobación de Diseño. </p>\n"
+" <p> Hay muchas cosas que pueden ir mal enviando correo a través de SMTP y la mayoría de ellas vienen de problemas con permisos.</p>\n"
+" <ul>\n"
+" <li>1. ¿Su Host tiene permiso para retransmitir a través del Host SMTP?</li>\n"
+" <li>2. ¿Su host requiere POP antes de SMTP?</li>\n"
+" <li>3. ¿Su Host requiere autenticación SMTP?</li>\n"
+" <li>4. ¿Sus ajustes SMTP son correctos para el nombre de usuario/contraseña remotos? </li>\n"
+" </ul>\n"
+
+#: admin/das-settings-page.php:151
+msgid "Email for Designer Message"
+msgstr ""
+"\n"
+"Email para el Mensaje de Diseño\n"
+
+#: admin/das-settings-page.php:152
+msgid ""
+"These settings are for the email to your client, letting them know their design is ready to be reviewed.<br/>\n"
+"      It also Includes a confirmation email to you the Designer too."
+msgstr ""
+"\n"
+"Estos ajustes son para el email a su cliente, dejándole saber que su diseño está listo para ser revisado. <br/> También incluye un email de confirmación a usted el Diseñador.\n"
+
+#: admin/das-settings-page.php:155 admin/das-settings-page.php:190
+msgid "Message to Client (optional):"
+msgstr ""
+"\n"
+"Mensaje al Cliente (opcional):\n"
+
+#: admin/das-settings-page.php:157
+msgid "*NOTE* If you do not fill this out the <a class='question4'>default text</a> will be used."
+msgstr ""
+"\n"
+"*NOTA* Si usted no llena esto el <a class='question4'>texto por defecto</a> será utilizado.\n"
+
+#: admin/das-settings-page.php:160 admin/das-settings-page.php:179
+#: admin/das-settings-page.php:195 admin/das-settings-page.php:212
+msgid "The default text for this field is:"
+msgstr ""
+"\n"
+"El texto por defecto para este campo es:\n"
+
+#: admin/das-settings-page.php:162
+msgid "Please review your design comp for changes and/or errors:"
+msgstr ""
+"\n"
+"Por favor revise su comp del diseño para cambios y/o errores:\n"
+
+#: admin/das-settings-page.php:164 admin/das-settings-page.php:183
+#: admin/das-settings-page.php:200
+msgid "Example of Email"
+msgstr ""
+"\n"
+"Ejemplo de Email\n"
+
+#: admin/das-settings-page.php:170
+msgid "Approved Digital Signature Email and Popup Message"
+msgstr ""
+"\n"
+"Mensaje de Email y Popup de Firma Digital Aprobada\n"
+
+#: admin/das-settings-page.php:171
+msgid ""
+"These settings are for the email to you, the designer, letting you know the client has approved the design. <br/>\n"
+"      It also includes a confirmation email to your Client too."
+msgstr ""
+"\n"
+"Estos ajustes son para el email a usted, el diseñador, dejándole saber que el cliente aprobó el diseño <br/> También incluye un email de confirmación a su Cliente.\n"
+
+#: admin/das-settings-page.php:174
+msgid "Message to Designer (optional):"
+msgstr ""
+"\n"
+"Mensaje al Diseñador (opcional):\n"
+
+#: admin/das-settings-page.php:176
+msgid "*NOTE* If you do not fill this out the <a class='question5'>default text</a> will be used."
+msgstr ""
+"\n"
+"*NOTA* Si usted no llena esto el <a class='question5'>texto por defecto</a> será utilizado.\n"
+
+#: admin/das-settings-page.php:181
+msgid "This design comp has been approved by the client. Please take the next appropriate step."
+msgstr ""
+"\n"
+"Este comp del diseño ha sido aprobado por el cliente. Por favor haga el próximo paso apropiado.\n"
+
+#: admin/das-settings-page.php:192
+msgid "*NOTE* If you do not fill this out the <a class='question6'>default text</a> will be used."
+msgstr ""
+"\n"
+"*NOTA* Si usted no llena esto el <a class='question6'>texto por defecto</a> será utilizado.\n"
+
+#: admin/das-settings-page.php:197
+msgid ""
+"Thank you for approving your design comp. We will now take the next steps in finalizing your project. Below is a confirmation of your submission.<br/>\n"
+"            As the authorized decision maker of my firm I acknowledge that I have reviewed and approved the proposed design comps designed by [Your Company Name]."
+msgstr ""
+"\n"
+"Gracias por aprobar su comp de diseño. Nosotros ahora tomaremos los próximos pasos finalizando su proyecto. Debajo hay una confirmación de su envío. <br/> Como la persona autorizada de decisión de mi firma yo reconozco que he revisado y aprobado los comps de diseño propuestos diseñados por [El Nombre De Su Compañía].\n"
+
+#: admin/das-settings-page.php:207
+msgid "Thank You Message to Client after Digital Signature form is submitted (optional):"
+msgstr ""
+"\n"
+"Mensaje de Gracias al Cliente luego de que el formulario de Signatura Digital se envía (opcional):\n"
+
+#: admin/das-settings-page.php:209
+msgid "*NOTE* If you do not fill this out the <a class='question7'>default text</a> will be used."
+msgstr ""
+"\n"
+"*NOTA* Si usted no llena esto el <a class='question7'>texto por defecto</a> será utilizado.\n"
+
+#: admin/das-settings-page.php:214
+msgid ""
+"Thank you for approving your design comp. <br/>\n"
+"            [Your Company Name] will now take the next steps in finalizing your project."
+msgstr ""
+"\n"
+"Gracias por aprobar el comp de diseño. <br/> [El Nombre De Su Compañía] tomará ahora los próximos pasos finalizando su proyecto.\n"
+
+#: admin/das-settings-page.php:217
+msgid "Example of Pop Up Meessage that appears when a client approves a design"
+msgstr ""
+"\n"
+"Ejemplo de Mensaje de Pop Up que aparece cuando un cliente aprueba un diseño\n"
+
+#: includes/welcome-notes.php:122
+msgid "<p>This page displays a list of all your designs with a date title and author (designer name).</p> <p>You can also edit, add new or delete designs here too.</p>"
+msgstr ""
+"\n"
+"<p> Esta página muestra una lista de todos sus diseños con un título de fecha y autor (nombre del diseñador).</p> <p> Usted también puede editar, adicionar nuevo o borrar diseños aquí.</p>\n"
+
+#: includes/das-meta-box.php:11
+msgid "Design Approval System Fields"
+msgstr ""
+"\n"
+"Campos del Sistema de Aprobación de Diseño\n"
+
+#: includes/das-meta-box.php:38
+msgid "Designer's Name:"
+msgstr ""
+"\n"
+"Nombre del Diseñador:\n"
+
+#: includes/das-meta-box.php:39
+msgid "Full name of Designer on this project.<br/><small>(This will be used on the design template)</small>"
+msgstr ""
+"\n"
+"Nombre completo del Diseñador en este proyecto..<br/><small>(Esto será usado en la plantilla de diseño)</small>\n"
+
+#: includes/das-meta-box.php:44
+msgid "Designer's Email:"
+msgstr ""
+"\n"
+"Email del Diseñador:\n"
+
+#: includes/das-meta-box.php:45
+msgid "Email address of Designer for this project.<br/><small>(Only 1 email address allowed)</small>"
+msgstr ""
+"\n"
+"Dirección de email del Diseñador para este proyecto.<br/><small>(Solo una dirección de email permitida)</small>\n"
+
+#: includes/das-meta-box.php:51
+msgid "Notes about the project to the client."
+msgstr ""
+"\n"
+"Notas acerca del proyecto al cliente.\n"
+
+#: includes/das-meta-box.php:220
+msgid "Paid or Not Paid Version:"
+msgstr ""
+"\n"
+"Versión Pagada o No Pagada:\n"
+
+#: includes/das-meta-box.php:221
+msgid "Has the next set of design changes been paid for by client? If not select \"Not Paid\" and the next time the client trys to submit changes they will be notified that they are being charged for additional changes. If a client decides to submit additional changes you will receive an email letting you know that they have accepted, additionally it will send them an email confirming this."
+msgstr ""
+"\n"
+"¿El próximo grupo de cambios de diseño ha sido pagado por el cliente? Si no seleccione \"No Pagado\" y la próxima vez que el cliente trate de enviar cambios ellos serán notificados que les han cobrado por cargos adicionales. Si un cliente decide enviar cambios adicionales usted recibirá un email dejándole saber que ellos han aceptado, adicionalmente les enviará un email confirmando esto.\n"
+
+#: includes/das-meta-box.php:226
+msgid "Paid"
+msgstr ""
+"\n"
+"Pagado\n"
+
+#: includes/das-meta-box.php:230
+msgid "Not Paid"
+msgstr ""
+"\n"
+"No Pagado\n"
+
+#: includes/das-meta-box.php:60
+msgid "Name of the Project"
+msgstr ""
+"\n"
+"Nombre del Proyecto\n"
+
+#: includes/das-meta-box.php:61
+msgid "The title or name of the project.<br/><small>(Example: Home Page)</small>"
+msgstr ""
+"\n"
+"El título o nombre del proyecto. <br/><small>(Ejemplo: Página Home)</small>\n"
+
+#: includes/das-meta-box.php:67
+msgid "Version of the Project:"
+msgstr ""
+"\n"
+"Versión del Proyecto:\n"
+
+#: includes/das-meta-box.php:68
+msgid "What Version of the project is this?"
+msgstr ""
+"\n"
+"¿Cuál Versión del proyecto es esta?\n"
+
+#: includes/das-meta-box.php:77 includes/das-meta-box.php:78
+msgid "Version 2"
+msgstr ""
+"\n"
+"Versión 2\n"
+
+#: includes/das-meta-box.php:81 includes/das-meta-box.php:82
+msgid "Version 3"
+msgstr ""
+"\n"
+"Versión 3\n"
+
+#: includes/das-meta-box.php:85 includes/das-meta-box.php:86
+msgid "Version 4"
+msgstr ""
+"\n"
+"Versión 4\n"
+
+#: includes/das-meta-box.php:89 includes/das-meta-box.php:90
+msgid "Version 5"
+msgstr ""
+"\n"
+"Versión 5\n"
+
+#: includes/das-meta-box.php:93 includes/das-meta-box.php:94
+msgid "Version 6"
+msgstr ""
+"\n"
+"Versión 6\n"
+
+#: includes/das-meta-box.php:97 includes/das-meta-box.php:98
+msgid "Version 7"
+msgstr ""
+"\n"
+"Versión 7\n"
+
+#: includes/das-meta-box.php:101 includes/das-meta-box.php:102
+msgid "Version 8"
+msgstr ""
+"\n"
+"Versión 8\n"
+
+#: includes/das-meta-box.php:105 includes/das-meta-box.php:106
+msgid "Version 9"
+msgstr ""
+"\n"
+"Versión 9\n"
+
+#: includes/das-meta-box.php:109 includes/das-meta-box.php:110
+msgid "Version 10"
+msgstr ""
+"\n"
+"Versión 10\n"
+
+#: includes/das-meta-box.php:113 includes/das-meta-box.php:114
+msgid "Version 11"
+msgstr ""
+"\n"
+"Versión 11\n"
+
+#: includes/das-meta-box.php:117 includes/das-meta-box.php:118
+msgid "Version 12"
+msgstr ""
+"\n"
+"Versión 12\n"
+
+#: includes/das-meta-box.php:121 includes/das-meta-box.php:122
+msgid "Version 13"
+msgstr ""
+"\n"
+"Versión 13\n"
+
+#: includes/das-meta-box.php:125 includes/das-meta-box.php:126
+msgid "Version 14"
+msgstr ""
+"\n"
+"Versión 14\n"
+
+#: includes/das-meta-box.php:129 includes/das-meta-box.php:130
+msgid "Version 15"
+msgstr ""
+"\n"
+"Versión 15\n"
+
+#: includes/das-meta-box.php:133 includes/das-meta-box.php:134
+msgid "Version 16"
+msgstr ""
+"\n"
+"Versión 16\n"
+
+#: includes/das-meta-box.php:137 includes/das-meta-box.php:138
+msgid "Version 17"
+msgstr ""
+"\n"
+"Versión 17\n"
+
+#: includes/das-meta-box.php:141 includes/das-meta-box.php:142
+msgid "Version 18"
+msgstr ""
+"\n"
+"Versión 18\n"
+
+#: includes/das-meta-box.php:145 includes/das-meta-box.php:146
+msgid "Version 19"
+msgstr ""
+"\n"
+"Versión 19\n"
+
+#: includes/das-meta-box.php:149 includes/das-meta-box.php:150
+msgid "Version 20"
+msgstr ""
+"\n"
+"Versión 20\n"
+
+#: includes/das-meta-box.php:153 includes/das-meta-box.php:154
+msgid "Version 21"
+msgstr ""
+"\n"
+"Versión 21\n"
+
+#: includes/das-meta-box.php:157 includes/das-meta-box.php:158
+msgid "Version 22"
+msgstr ""
+"\n"
+"Versión 22\n"
+
+#: includes/das-meta-box.php:161 includes/das-meta-box.php:162
+msgid "Version 23"
+msgstr ""
+"\n"
+"Versión 23\n"
+
+#: includes/das-meta-box.php:165 includes/das-meta-box.php:166
+msgid "Version 24"
+msgstr ""
+"\n"
+"Versión 24\n"
+
+#: includes/das-meta-box.php:169 includes/das-meta-box.php:170
+msgid "Version 25"
+msgstr ""
+"\n"
+"Versión 25\n"
+
+#: includes/das-meta-box.php:175
+msgid "Company or Client Name:"
+msgstr ""
+"\n"
+"Nombre de Compañía o Cliente:\n"
+
+#: includes/das-meta-box.php:176
+msgid "Name of Company or Client this project is for."
+msgstr ""
+"\n"
+"Nombre de Compañía o Cliente para el cual es este proyecto.\n"
+
+#: includes/das-meta-box.php:181
+msgid "Company or Client Email:"
+msgstr ""
+"\n"
+"Email de Compañía o Cliente:\n"
+
+#: includes/das-meta-box.php:182
+msgid "Email address of Company or Client this project is for.<br/><small>(Only 1 email address allowed)</small>"
+msgstr ""
+"\n"
+"Dirección de Email de Compañía o Cliente para el cual es este proyecto. <br/><small>(Solamente 1 dirección de email permitida)</small>\n"
+
+#: includes/das-meta-box.php:187
+msgid "Project Start and End Date:"
+msgstr "Fecha de Inicio y finalización del Proyecto:\n"
+
+#: includes/das-meta-box.php:188
+msgid "When the project will start and end.<br/><small>(Example: 10-15-12 thru 10-20-12)</small>"
+msgstr ""
+"\n"
+"Cuando el proyecto comenzará y terminará.<br/><small>(Ejemplo: 10-15-12 thru 10-20-12)</small>\n"
+
+#: includes/das-meta-box.php:194
+msgid "Client Notes On or Off:"
+msgstr ""
+"\n"
+"Notas de los Clientes Activadas o Desactivadas\n"
+
+#: includes/das-meta-box.php:195
+msgid "Make the client notes viewable on the page."
+msgstr ""
+"\n"
+"Hacer que las notas de los clientes se puedan ver en la página.\n"
+
+#: includes/das-meta-box.php:200
+msgid "Client Notes On"
+msgstr ""
+"\n"
+"Notas del Cliente Activadas\n"
+
+#: includes/das-meta-box.php:204
+msgid "Client Notes Off"
+msgstr ""
+"\n"
+"Notas del Cliente Desactivadas\n"
+
+#: includes/das-meta-box.php:210
+msgid "Client Notes:"
+msgstr ""
+"\n"
+"Notas del Cliente:\n"
+
+#: includes/das-meta-box.php:211
+msgid "Notes from the client about the project. When a client submits comments on the design page they will show up here automatically, if you have the client changes premium extension installed."
+msgstr ""
+"\n"
+"Notas del cliente sobre el proyecto. Cuando un cliente envía los comentarios en la página de diseño ellas aparecerán aquí automáticamente, si usted tiene la extensión premium de cambios del cliente instalada.\n"
+
+#: includes/das-meta-box.php:241
+msgid "Design Approved:"
+msgstr ""
+"\n"
+"Diseño Aprobado:\n"
+
+#: includes/das-meta-box.php:242
+msgid "Did the client approve this version? If Yes, a STAR will appear for that project & version on your Project Board. This option will automatically change to \"Yes\" if a client submits their signature, but you can change it manually if you like. Once this option is set to \"Yes\" your client will not be able to approve this project version from the front end."
+msgstr ""
+"\n"
+"¿El cliente aprobó esta versión? Si sí, una ESTRELLA aparecerá para ese proyecto y versión en su Panel de Proyecto. Esta opción cambiará automáticamente a \"Sí\" si un cliente envía su firma, pero usted puede cambiarla manualmente si lo desea. Una vez que esta opción se establece a \"Sí\" si cliente no será capaz de aprobar esta versión de proyecto desde la parte pública.\n"
+
+#: includes/das-meta-box.php:258
+msgid "Client Approved Signature:"
+msgstr ""
+"\n"
+"Firma Aprobada del Cliente:\n"
+
+#: includes/das-meta-box.php:259
+msgid "If Approved, your clients digital signature will be here."
+msgstr ""
+"\n"
+"Si se Aprueba, la firma digital  de sus clientes estará aquí.\n"
+
+#: includes/das-meta-box.php:269
+msgid "Show custom login screen"
+msgstr ""
+"\n"
+"Mostrar pantalla de autenticación personalizada\n"
+
+#: includes/das-meta-box.php:270
+msgid "You must create a user for your client in wordpress to view this design now."
+msgstr ""
+"\n"
+"Debe crear un usuario para su cliente en wordpress para ver este diseño ahora.\n"
+
+#: includes/das-meta-box.php:275
+msgid "No, Login NOT Required"
+msgstr ""
+"\n"
+"No, No Requiere Autenticación\n"
+
+#: includes/das-meta-box.php:279
+msgid "Yes, Login Required"
+msgstr ""
+"\n"
+"Sí, Requiere Autenticación\n"
+
+#: includes/das-meta-box.php:289
+msgid "Turn design into a WooCommerce Product?"
+msgstr ""
+"\n"
+"¿Convertir diseño a Producto WooCommerce?\n"
+
+#: includes/das-meta-box.php:318
+msgid "Price of Design"
+msgstr ""
+"\n"
+"Precio del Diseño\n"
+
+#: includes/das-meta-box.php:319
+msgid "Set the price of the design. (This will change the price of the Design product that has been created in WooCommerce)"
+msgstr ""
+"\n"
+"Establecer el precio del diseño. (Esto cambiará el precio del producto de Diseño que se ha creado en WooCommerce)\n"
+
+#: includes/das-meta-box.php:329
+msgid "Template Selection"
+msgstr ""
+"\n"
+"Selección de plantilla\n"
+
+#: includes/das-meta-box.php:330
+msgid "<p>Select which template you would like this post to have. If you would like to see other templates please <a href=\"http://www.slickremix.com/product-category/design-approval-system-extensions/\" target=\"_blank\">click here</a>.</p> We are always looking for new talented theme designers to help develop DAS further. <a href=\"mailto:info@slickremix.com\">Contact us</a> if you are interested.</p>"
+msgstr ""
+"\n"
+"<p> Seleccione cuál plantilla desea que este post tenga. Si desea ver otra plantilla por favor <a href=\"http://www.slickremix.com/product-category/design-approval-system-extensions/\" target=\"_blank\">haga click aquí</a>.</p> Siempre estamos buscando por nuevos talentosos diseñadores de plantillas para ayudar a desarrollar más a DAS. <a href=\"mailto:info@slickremix.com\">Contáctenos</a> si está interesado.\n"
+
+#: includes/das-meta-box.php:335
+msgid "Default Template"
+msgstr ""
+"\n"
+"Plantilla por Defecto\n"
+
+#: includes/das-meta-box.php:345
+msgid "Clean Theme Template"
+msgstr ""
+"\n"
+"Plantilla de Tema Limpio\n"
+
+#: includes/das-meta-box.php:353
+msgid "GQ Theme Template"
+msgstr ""
+"\n"
+"Plantilla de Tema GQ\n"
+
+#: includes/das-meta-box.php:361
+msgid "Terms &amp; Conditions"
+msgstr ""
+"\n"
+"Términos y Condiciones\n"
+
+#: includes/das-meta-box.php:362
+msgid "By filling this out you will override the default Terms &amp; Conditions filled out on the GQ Theme Settings Page for only this post."
+msgstr ""
+"\n"
+"Llenando esto sobrescribirá los Términos y Condiciones por defecto llenados en la Página de Ajustes de Tema GQ para este post solamente.\n"
+
+#: includes/das-meta-box.php:378
+msgid "Designer Info"
+msgstr ""
+"\n"
+"Información del Diseñador\n"
+
+#: includes/das-meta-box.php:379
+msgid "Client Info"
+msgstr ""
+"\n"
+"Información del Cliente\n"
+
+#: includes/das-meta-box.php:381
+msgid "Custom Login"
+msgstr ""
+"\n"
+"Autenticación Personalizada\n"
+
+#: includes/das-meta-box.php:382
+msgid "Product Info"
+msgstr ""
+"\n"
+"Información del Producto\n"
+
+#: includes/das-meta-box.php:383
+msgid "Template"
+msgstr ""
+"\n"
+"Plantilla\n"
+
+#: includes/das-meta-box.php:384
+msgid "GQ Options"
+msgstr ""
+"\n"
+"Opciones GQ\n"
+
+#: includes/das-meta-box.php:413
+msgid "Please Select Designer"
+msgstr ""
+"\n"
+"Por Favor Seleccione el Diseñador\n"
+
+#: includes/das-meta-box.php:480
+msgid "Add Another design"
+msgstr ""
+"\n"
+"Adicionar Otro diseño\n"
+
+#: includes/das-meta-box.php:499
+msgid "Delete this design"
+msgstr ""
+"\n"
+"Eliminar este diseño\n"
+
+#: includes/das-meta-box.php:532
+msgid "Please Select Client"
+msgstr ""
+"\n"
+"Por Favor Seleccione un Cliente\n"
+
+#: admin/das-help-page.php:3 admin/das-projects-page.php:25
+#: admin/das-settings-page.php:11
+msgid "Get Extensions Here!"
+msgstr ""
+"\n"
+"¡Obtener extensiones aquí!\n"
+
+#: admin/das-projects-page.php:26 admin/das-projects-page.php:42
+#: includes/das-functions.php:494 includes/das-functions.php:497
+#: includes/welcome-notes.php:83
+msgid "Project Board"
+msgstr ""
+"\n"
+"Panel del Proyecto\n"
+
+#: admin/das-projects-page.php:27
+msgid "Below are your Clients and their Projects: We suggest you use the"
+msgstr ""
+"\n"
+"A continuación se presentan sus clientes y sus proyectos: Le recomendamos que utilice el\n"
+
+#: admin/das-projects-page.php:27
+msgid "Select User and Email, DAS Extension"
+msgstr ""
+"\n"
+"Seleccionar Usuario y Email, Extensión de DAS \n"
+
+#: admin/das-projects-page.php:27
+msgid "to make this list work seamlessly. Learn how to use and setup the"
+msgstr ""
+"\n"
+"para hacer que esta lista funcione sin esfuerzo. Aprenda cómo usar y configurar el\n"
+
+#: admin/das-projects-page.php:27
+msgid "Project Board Here"
+msgstr ""
+"\n"
+"Panel del Proyecto Aquí\n"
+
+#: includes/das-meta-box.php:380 includes/das-project-boards.php:14
+msgid "Approved"
+msgstr ""
+"\n"
+"Aprobado\n"
+
+#: includes/das-project-boards.php:41
+msgid "Purchased"
+msgstr ""
+"\n"
+"Comprado\n"
+
+#: framework/das-default-template.php:267 includes/das-project-boards.php:56
+msgid "Edit"
+msgstr ""
+"\n"
+"Modificar\n"
+
+#: includes/das-project-boards.php:58
+msgid "View"
+msgstr ""
+"\n"
+"Ver\n"
+
+#: includes/das-project-boards.php:64 includes/das-project-boards.php:69
+msgid "Details"
+msgstr ""
+"\n"
+"Detalles\n"
+
+#: includes/das-project-boards.php:70
+msgid "Post Name"
+msgstr ""
+"\n"
+"Nombre del Post\n"
+
+#: includes/das-project-boards.php:74
+msgid "Design Name"
+msgstr ""
+"\n"
+"Nombre del Diseño\n"
+
+#: includes/das-project-boards.php:80
+msgid "Timeline"
+msgstr ""
+"\n"
+"Línea del Tiempo\n"
+
+#: includes/das-project-boards.php:90
+msgid "Client Email"
+msgstr ""
+"\n"
+"Email del Cliente\n"
+
+#: includes/das-project-boards.php:92
+msgid "Designer"
+msgstr ""
+"\n"
+"Diseñador\n"
+
+#: includes/das-project-boards.php:95
+msgid "Client Approved"
+msgstr ""
+"\n"
+"Cliente Aprobado\n"
+
+#: includes/das-project-boards.php:96
+msgid "Client Signature"
+msgstr ""
+"\n"
+"Firma del Cliente\n"
+
+#: admin/das-settings-page.php:231
+msgid "Save Changes"
+msgstr ""
+"\n"
+"Guardar los Cambios\n"
+
+#: includes/das-functions.php:164 includes/das-functions.php:178
+#: includes/das-functions.php:500 includes/welcome-notes.php:96
+msgid "Project Names"
+msgstr ""
+"\n"
+"Nombres del Proyecto\n"
+
+#: includes/das-functions.php:165
+msgid "Project Name"
+msgstr ""
+"\n"
+"Nombre del Proyecto\n"
+
+#: includes/das-functions.php:166
+msgid "Search Project Names"
+msgstr ""
+"\n"
+"Buscar Nombres de Proyectos\n"
+
+#: includes/das-functions.php:168
+msgid "All Project Names"
+msgstr ""
+"\n"
+"Todos los Nombres de Proyectos\n"
+
+#: includes/das-functions.php:169 includes/das-functions.php:170
+msgid "Parent Project Name"
+msgstr ""
+"\n"
+"Nombre del Proyecto Padre\n"
+
+#: includes/das-functions.php:171
+msgid "Edit Project Name"
+msgstr ""
+"\n"
+"Modificar Nombre del Proyecto\n"
+
+#: includes/das-functions.php:172
+msgid "Update Project Name"
+msgstr ""
+"\n"
+"Actualizar Nombre del Proyecto\n"
+
+#: includes/das-functions.php:173
+msgid "Add New Project Name"
+msgstr ""
+"\n"
+"Adicionar Nuevo Nombre del Proyecto\n"
+
+#: includes/das-functions.php:174
+msgid "New Project Name"
+msgstr ""
+"\n"
+"Nuevo Nombre del Proyecto\n"
+
+#: includes/das-functions.php:175
+msgid "Separate Project Names with commas"
+msgstr ""
+"\n"
+"Separar los Nombres de los Proyectos con comas\n"
+
+#: includes/das-functions.php:176
+msgid "Add or remove Project Names"
+msgstr ""
+"\n"
+"Adicionar o eliminar Nombres de Proyectos\n"
+
+#: includes/das-functions.php:177
+msgid "Choose from the most used Project Names"
+msgstr ""
+"\n"
+"Elija entre los nombres de proyectos más utilizados\n"
+
+#: includes/das-functions.php:208 includes/das-functions.php:217
+#: includes/das-meta-box.php:13
+msgid "Design Approval System"
+msgstr ""
+"\n"
+"Sistema de Aprobación de Diseño\n"
+
+#: includes/das-functions.php:219
+msgid "Projects"
+msgstr ""
+"\n"
+"Proyectos\n"
+
+#: includes/das-functions.php:220 includes/welcome-notes.php:122
+msgid "All Your Designs"
+msgstr ""
+"\n"
+"Todos Sus Diseños\n"
+
+#: includes/das-functions.php:221
+msgid "Project"
+msgstr ""
+"\n"
+"Proyecto\n"
+
+#: includes/das-functions.php:416 includes/das-functions.php:549
+msgid "Design Approval System Help"
+msgstr ""
+"\n"
+"Ayuda del Sistema de Aprobación de Diseño\n"
+
+#: includes/das-functions.php:416 includes/das-functions.php:546
+msgid "Help"
+msgstr ""
+"\n"
+"Ayuda\n"
+
+#: admin/das-settings-page.php:10 includes/das-functions.php:441
+msgid "Design Approval System Settings"
+msgstr ""
+"\n"
+"Ajustes del Sistema de Aprobación de Diseño \n"
+
+#: includes/das-functions.php:441 includes/das-functions.php:553
+#: includes/das-functions.php:556 includes/welcome-notes.php:164
+msgid "Settings"
+msgstr ""
+"\n"
+"Ajustes\n"
+
+#: includes/das-functions.php:491
+msgid "Add New Project"
+msgstr ""
+"\n"
+"Adicionar Nuevo Proyecto\n"
+
+#: includes/das-functions.php:505
+msgid "Add New Design"
+msgstr ""
+"\n"
+"Adicionar Nuevo Diseño\n"
+
+#: includes/das-functions.php:511
+msgid "Designs"
+msgstr ""
+"\n"
+"Diseños\n"
+
+#: includes/das-functions.php:516
+msgid "DAS Clients"
+msgstr ""
+"\n"
+"Clientes de DAS\n"
+
+#: includes/das-functions.php:522
+msgid "DAS Designers"
+msgstr ""
+"\n"
+"Diseñadores de DAS\n"
+
+#: includes/das-functions.php:561
+msgid "Login Settings"
+msgstr ""
+"\n"
+"Ajustes de Autenticación\n"
+
+#: includes/das-functions.php:564
+msgid "Design Approval System Login Settings"
+msgstr ""
+"\n"
+"Ajustes de Autenticación del Sistema de Aprobación de Diseño\n"
+
+#: includes/das-functions.php:569
+msgid "Clean Theme Settings"
+msgstr ""
+"\n"
+"Ajustes de Tema Limpio\n"
+
+#: includes/das-functions.php:572
+msgid "Clean Theme Settings Page"
+msgstr ""
+"\n"
+"Página de Ajustes de Tema Limpio\n"
+
+#: includes/das-functions.php:595 includes/das-functions.php:598
+#: includes/das-functions.php:601
+msgid "Warning: The <strong>Design Approval System</strong> plugin needs you to fill the in REQUIRED fields on <a href=\"edit.php?post_type=designapprovalsystem&page=design-approval-system-settings-page\"><strong>settings page</strong></a>."
+msgstr "Advertencia: El plugin <strong>Sistema de Aprobación de Diseño</strong> necesita que llene los campos REQUERIDOS en la <a href=\"edit.php?post_type=designapprovalsystem&page=design-approval-system-settings-page\"><strong>página de ajustes</strong></a>.\n"
+
+#: includes/das-meta-box.php:73 includes/das-meta-box.php:74
+msgid "Version 1"
+msgstr ""
+"\n"
+"Versión 1\n"

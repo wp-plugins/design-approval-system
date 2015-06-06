@@ -1,0 +1,33 @@
+/* Wordpress Pointers for our DAS Tour */
+.designapprovalsystem_page_design-approval-system-projects-page #wp-pointer-0 .wp-pointer-arrow { top: 56px; }
+.designapprovalsystem_page_design-approval-system-projects-page #wp-pointer-0 .wp-pointer-content { margin-top: -32px !important; }
+.post-type-designapprovalsystem.taxonomy-das_categories #wp-pointer-0 .wp-pointer-arrow { top: 85px; }
+.post-new-php.post-type-designapprovalsystem #wp-pointer-0 .wp-pointer-arrow { top: 111px; }
+.edit-php.post-type-designapprovalsystem #wp-pointer-0 .wp-pointer-arrow { top: 139px; }
+.designapprovalsystem_page_design-approval-system-help-page #wp-pointer-0 .wp-pointer-arrow { top: 218px; }
+.designapprovalsystem_page_design-approval-system-settings-page #wp-pointer-0 .wp-pointer-arrow { top: 134px; }
+.designapprovalsystem_page_das-gq-theme-settings-page #wp-pointer-0 .wp-pointer-arrow { top: 144px; }
+@font-face { font-family: 'SlickRemix'; src: url('fonts/SlickRemix.eot?p9iqv'); src: url('fonts/SlickRemix.eot?#iefixp9iqv') format('embedded-opentype'), url('fonts/SlickRemix.woff?p9iqv') format('woff'), url('fonts/SlickRemix.ttf?p9iqv') format('truetype'), url('fonts/SlickRemix.svg?p9iqv#SlickRemix') format('svg'); font-weight: normal; font-style: normal; }
+ [class^="icon-"], [class*=" icon-"] {
+ font-family: 'SlickRemix';
+ speak: none;
+ font-style: normal;
+ font-weight: normal;
+ font-variant: normal;
+ text-transform: none;
+ line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
+#adminmenu #menu-posts-designapprovalsystem div.wp-menu-image:before { font-family: 'SlickRemix' !important; content: "\e600"; line-height: 1.2em; font-size: 1.2em!important; }
+ @media only screen and (max-width: 782px) {
+#adminmenu #menu-posts-designapprovalsystem div.wp-menu-image:before { line-height: normal !important; }
+}
+.das-update-message:before { color: #FFF; content: '\e600'; display: inline-block; font: 400 16px/1 SlickRemix; speak: none; margin: 0 8px 0 -1px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; vertical-align: top; }
+.das-update-message { font-weight: 400; color: #fff; background: #d54d21; padding: 1em; margin: 9px 0; }
+.das_old_plugins_message { margin: 15px 15px 0 0; }
+.das-update-message a { color: #fff; text-decoration: underline; }
+#menu-posts-designapprovalsystem ul li:last-child { display: none; }
+.designapprovalsystem_page_design-approval-system-projects-page .notice, .designapprovalsystem_page_design-approval-system-projects-page div.error, .designapprovalsystem_page_design-approval-system-projects-page div.updated, .designapprovalsystem_page_design-approval-system-help-page .notice, .designapprovalsystem_page_design-approval-system-help-page div.error, .designapprovalsystem_page_design-approval-system-help-page div.updated, .designapprovalsystem_page_das-gq-theme-settings-page .notice, .designapprovalsystem_page_das-gq-theme-settings-page div.error, .designapprovalsystem_page_das-gq-theme-settings-page div.updated, .designapprovalsystem_page_design-approval-system-settings-page .notice, .designapprovalsystem_page_design-approval-system-settings-page div.error, .designapprovalsystem_page_design-approval-system-settings-page div.updated { margin: 20px 15px 2px 0 !important; }

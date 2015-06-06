@@ -1,0 +1,61 @@
+/*  GQ Theme Settings Page CSS, also requires the Design Approval System admin-settings.css
+	Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+	Layout and Design by Spencer Labadie and Justin Labadie, Slickremix.com
+-------------------------------------------------------------- */
+
+/*=================================================
+	DAS - GQ admin Theme Settings
+=================================================*/
+.das-settings-admin-input { border: none !important; }
+.das-float-wrap-2column .das-settings-admin-input-wrap { width: 46% !important; float: left; padding: 7px 2% 25px 2% !important; margin: 15px 0 15px 0; min-height: 50px; position: relative; }
+.das-float-wrap-2column { /* border: 1px solid #333; */
+        /* border-radius:9px; */
+margin-bottom: 10px;/* box-shadow:0 1px 0px #666; */
+}
+.das-float-wrap-2column .das-settings-admin-input-wrap .das-settings-id-answer { margin: 0; padding: 0; border: none; }
+.das-float-wrap-2column .das-settings-admin-input-wrap .das-settings-id-answer img { margin: 0; padding: 0; width: 100%; position: relative; top: 10px; }
+.das-float-wrap-2column .das-settings-admin-input-example { height: 32px; display: none; }
+#theme-settings-wrap h3 { /* text-align:center; */
+padding: 8px 0 4px 0; text-transform: uppercase !important; }
+#theme-settings-wrap .das-float-wrap-2column .das-settings-admin-input { width: 100%; margin-left: 0px; }
+#theme-settings-wrap .das-settings-admin-input-label { font-size: 14px; color: #FFF; }
+#theme-settings-wrap .das-float-wrap-2column { background-color: rgba(246, 244, 244, 0.3) !important; }
+#theme-settings-wrap .das-settings-admin-input-wrap { position: relative; }
+#theme-settings-wrap .das-float-wrap-2column .company-info-style { background: none !important; margin-bottom: 0px; }
+#theme-settings-wrap .company-info-style { background-color: rgba(246, 244, 244, 0.3) !important; padding: 18px 19px; margin: 10px 0px 10px 0px; border: none; -webkit-border-radius: 1px; border-radius: 1px; -webkit-border-radius: 1px; }
+#theme-settings-wrap .company-info-style:hover { }
+#theme-settings-wrap p.special { background-color: rgba(246, 244, 244, 0.3) !important; padding: 18px 19px; color: #FFF; margin-bottom: 0px; margin-top: 0px; border: 1px solid #666; -webkit-border-radius: 1px; border-radius: 1px; -webkit-border-radius: 1px; }
+.das-gq-theme-settings-toggle { position: absolute; top: 5px; right: 12px; text-decoration: none; display: block; height: 15px; width: 15px; background: #FFF; text-align: center; border-radius: 25px; opacity: .45; color: #555; outline: none; -webkit-transition: all 0.30s ease-in-out; -moz-transition: all 0.30s ease-in-out; -o-transition: all 0.30s ease-in-out; transition: all 0.30s ease-in-out; }
+.das-gq-theme-settings-toggle:hover { color: #fff; background: #000; }
+.das-gq-theme-settings-toggle:before { content: "?"; font-family: arial; }
+.view-all-custom { position: absolute; right: 5px; top: 5px; background-color: #FFF; text-decoration: none; display: block; height: 20px; width: 20px; font-size: 13px; line-height: 21px; background: #FFF; text-align: center; border-radius: 25px; opacity: .45; font: verdana; color: #555; outline: none; -webkit-transition: all 0.30s ease-in-out; -moz-transition: all 0.30s ease-in-out; -o-transition: all 0.30s ease-in-out; transition: all 0.30s ease-in-out; }
+.view-all-custom:before { content: "?"; }
+span.view-all-articles { opacity: 0; display: block; position: relative; right: 117px; top: -23px; text-align: left; color: #FFF !important; font-weight: normal; letter-spacing: 1px; font-size: 11px; width: 88px; line-height: 16px; background: rgba(0, 0, 0, 0.9); border-radius: 1px; padding: 5px 4px 5px 12px; -webkit-transition-delay: 0.2s; -moz-transition-delay: 0.2s; -o-transition-delay: 0.2s; transition-delay: 0.2s; -webkit-transition-duration: 0.2s; -moz-transition-duration: 0.2s; -o-transition-duration: 0.2s; transition-duration: 0.2s; }
+.view-all-custom a.icon-view-all { height: 22px; width: 22px; background-size: 28px 28px; height: 28px; width: 28px; padding-left: 10px; position: relative; display: block; text-decoration: none; outline: none; }
+.company-info-style .das-settings-admin-input-example { color: #FFF !important; }
+.view-all-custom a.icon-view-all:hover span.view-all-articles { opacity: 1; -webkit-transition-delay: 0s; -moz-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; -webkit-transition-duration: 0.2s; -moz-transition-duration: 0.2s; -o-transition-duration: 0.2s; transition-duration: 0.2s; }
+.fnews-large-wrap-right { position: relative; }
+/* create an arrow that points right */
+.view-all-custom span.arrow-right { width: 0px; height: 0px; position: relative; right: -12px; top: -20px; opacity: .8; border-bottom: 7px solid transparent;  /* left arrow slant */ border-top: 7px solid transparent; /* right arrow slant */ border-left: 7px solid #000; /* bottom, add background color here */ font-size: 0px; line-height: 0px; }
+.das-gq-theme-turn-on-custom-colors:hover .view-all-custom, .das-settings-admin-input-wrap:hover a.das-gq-theme-settings-toggle { color: #fff; background: #000; opacity: .60; }
+.das-gq-theme-turn-on-custom-colors:hover span.view-all-articles { opacity: 1; -webkit-transition-delay: 0s; -moz-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; -webkit-transition-duration: 0.2s; -moz-transition-duration: 0.2s; -o-transition-duration: 0.2s; transition-duration: 0.2s; }
+.das-color-white { color: rgb(82, 161, 235); text-decoration: none; }
+.das-color-white:hover { color: #FFF; }
+.das-custom-color-btn { border-radius: 2px; padding: 12px 20px; background: rgba(247, 247, 247, 1); display: block; margin: 10px 0; font-size: 15px; text-align: center; text-decoration: none; -webkit-transition: all 0.30s ease-in-out; -moz-transition: all 0.30s ease-in-out; -o-transition: all 0.30s ease-in-out; transition: all 0.30s ease-in-out; }
+/* Clean GQ Admin overrides for now */
+.das-gq-theme-settings-toggle { height: 17px; width: 17px; }
+.designapprovalsystem_page_das-gq-theme-settings-page .das-settings-admin-submit-btn { margin-left: 0px; margin-top: 0px; margin-bottom: 10px; }
+.designapprovalsystem_page_das-gq-theme-settings-page .das-settings-admin-wrap { max-width: 975px; }
+.designapprovalsystem_page_das-gq-theme-settings-page .buy-extensions-btn { margin-top: 0px; right: 0px; top: 0px; }
+.das-gq-theme-turn-on-custom-colors input { margin: 10px 0 0 10px; line-height: 22px; padding: 2px 7px; }
+.das-settings-admin-form p input[type='checkbox'], .das-settings-admin-form input[type='checkbox'] { margin: -1px 7px 0 2px !important; }
+.das-settings-admin-form label { width: 85px; display: block; float: left; padding: 17px 0px 0 20px; text-align: left; }
+.das-settings-admin-form p { color: #FFF; }
+label.toggle-custom-textarea-show, label.toggle-custom-textarea-show-terms { width: 165px; float: none; color: #FFF; text-align: center; padding: 10px 0; background: #818181; border: 1px solid #666; border-radius: 2px; font-size: 12px; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; }
+label.toggle-custom-textarea-show:hover { background: #999; }
+.toggle-custom-textarea-hide, .toggle-custom-textarea-hide-terms { display: none; }
+.das-gq-theme-wp-header-custom { margin: 0px 0 35px 0; font-size: 13px; padding: 0px; line-height: 19px; }
+textarea#das-gq-theme-main-wrapper-css-input, textarea#das-gq-theme-main-wrapper-custom-terms { width: 100%; max-width: 100%; min-height: 350px; clear: both; background: #F9F9F9; font-family: Consolas, Monaco, monospace; font-size: 12px; width: 100%; padding: 15px; height: 300px; outline: 0; display: none; }
+.das-custom-css-text { display: none; color: #FFF; margin-bottom: 5px; }
+.das-settings-id-answer { padding: 0 !important; display: none; margin: 0px !important; font-weight: bold; border-top: 0px solid #ccc !important; }
+a:active, a:hover { color: #2ea2cc; }
