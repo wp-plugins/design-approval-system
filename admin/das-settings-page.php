@@ -22,7 +22,7 @@ function das_settings_page() {
 <h2>
 <?php _e('Design Approval System Settings', 'design-approval-system') ?>
 </h2>
-<a class="buy-extensions-btn" href="http://www.slickremix.com/downloads/category/design-approval-system/" target="_blank">
+<a class="buy-extensions-btn" href="http://www.slickremix.com/downloads/category/design-approval-system/" target="_blank" style="display:none;">
 <?php _e('Get Extensions Here!', 'design-approval-system') ?>
 </a>
 <div class="use-of-plugin">

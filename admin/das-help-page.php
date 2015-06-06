@@ -1,13 +1,13 @@
 <?php function das_help_page(){ ?>
 <div class="das-help-admin-wrap"> 
-<a class="buy-extensions-btn" href="http://www.slickremix.com/downloads/category/design-approval-system/" target="_blank"><?php _e('Get Extensions Here!', 'design-approval-system') ?></a>
+<a class="buy-extensions-btn" href="http://www.slickremix.com/downloads/category/design-approval-system/" target="_blank"><?php _e('Premium Extension', 'design-approval-system') ?></a>
 <h2><?php _e('DAS Info and Help', 'design-approval-system') ?></h2>
 <div class="das-admin-help-wrap">
 <div class="use-of-plugin"><?php _e("Need help? Use our <a href='http://www.slickremix.com/support-forum/' target='_blank'>Support Forum</a> and someone will respond to your request asap. Usually we will respond the same day, the latest the following day. You may also find some of the existing posts to be helpfull too, so take a look around first. If you do submit a question please <a href='#' class='das-debug-report'>generate a report</a> and copy the info, ask your question in our <a href='http://www.slickremix.com/support-forum/' target='_blank'>support forum</a> then paste the info you just copied. That will help speed things along for sure.", "design-approval-system") ?> </div>
-   <h3>Restart Tour</h3>
+   <h3><?php _e("Restart Tour", "design-approval-system") ?></h3>
     <div class="use-of-plugin"> 
    		<ol>
-   			<li><a href="#" id="das-retake-tour"><strong>Design Approval System Tour</strong></a></li>
+   			<li><a href="#" id="das-retake-tour"><strong><?php _e("Design Approval System Tour", "design-approval-system") ?></strong></a></li>
        </ol>
     </div>
     <script type="text/javascript">
@@ -28,12 +28,12 @@
                     	return false;
        });
     </script>
-  <h3>FAQs and Tips</h3>
+  <h3><?php _e("FAQs and Tips", "design-approval-system") ?></h3>
   <div class="das-admin-help-faqs-wrap use-of-plugin">
   	<ol>  
-      <li><a href="http://www.slickremix.com/category/design-approval-system-tutorials/" target="_blank"><?php _e("I'd like to see some Design Approval System Tutorials.", "design-approval-system") ?></a></li>
+      <li><a href="http://www.slickremix.com/design-approval-system-docs" target="_blank"><?php _e("I'd like to see some Design Approval System Documentation.", "design-approval-system") ?></a></li>
       <li><a href="http://www.slickremix.com/support-forum" target="_blank"><?php _e("I need Design Approval System Support.", "design-approval-system") ?></a></li>
-      <li><a href="http://www.slickremix.com/downloads/category/design-approval-system/" target="_blank"><?php _e("Show me where to get Extensions for this plugin.", "design-approval-system") ?></a></li>
+      <li><a href="http://www.slickremix.com/downloads/category/design-approval-system/" target="_blank"><?php _e("Show me where to get the premium extension for this plugin.", "design-approval-system") ?></a></li>
   </ol>
   </div><!--/das-admin-help-faqs-wrap-->
   
