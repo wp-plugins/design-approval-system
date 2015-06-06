@@ -7,9 +7,9 @@ function das_gq_theme_settings_page() {
     
 <div class="das-main-template-wrapper-all">
 <div class="das-settings-admin-wrap" id="theme-settings-wrap">
-  <h2><?php _e('GQ Theme Settings', 'design-approval-system'); ?></h2>
+  <h2><?php _e('Template Settings', 'design-approval-system'); ?></h2>
   <div class="use-of-plugin">
-    <p><?php _e('These settings are for the GQ Template.', 'design-approval-system'); ?></p>
+    <p><?php _e('These settings are for the front end design template where your cusomter can approve the design etc.', 'design-approval-system'); ?></p>
   </div>
   
   <form method="post" class="das-settings-admin-form" action="options.php">
