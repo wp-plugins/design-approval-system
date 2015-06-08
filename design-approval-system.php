@@ -21,8 +21,6 @@ This is the main file for building the plugin into wordpress
 define( 'DAS_PLUGIN_PATH', plugins_url() ) ;
 // Include Core Class
 include( 'includes/core-class.php' );
-//Admin Menu Class
-include( 'includes/admin-menu-class.php' );
 //WalkThrough Class
 include( 'includes/walk-through-class.php' );
 include( 'includes/admin-tour-pointers.php' );
@@ -44,6 +42,8 @@ include( 'includes/das-register-clients-shortcode.php' );
 include( 'includes/das-create-new-design-post-shortcode.php' );
 // Updater For Premium Plugins
 include( 'updates/update-functions.php' );
+//Admin Menu Class (must be last for menu reorder)
+include( 'includes/admin-menu-class.php' );
 function ap_action_init() {
 	// Localization
 	load_plugin_textdomain('design-approval-system', false, basename( dirname( __FILE__ ) ) . '/languages' );

@@ -29,7 +29,7 @@ class EDD_SL_Plugin_Licence_Manager	{
 	}
 function license_menu() {
 	//NOTE CUSTOM FOR DAS UPDATER!!!!!!!!!!!!!
-	add_submenu_page( null, __('Plugin License', 'design-approval-system'), __('Plugin License', 'design-approval-system'), 'manage_options', 'pluginname-license', array($this, 'license_page') ); 
+	add_submenu_page( 'edit.php?post_type=designapprovalsystem', __('Plugin License', 'design-approval-system'), __('Plugin License', 'design-approval-system'), 'manage_options', 'pluginname-license', array($this, 'license_page') ); 
 
 }
 

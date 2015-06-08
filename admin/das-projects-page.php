@@ -85,7 +85,7 @@ class Project_Board_Admin {
 			$output .= '<div class="das-project-admin-wrap-main">';
 			$output .= '<a class="buy-extensions-btn" href="http://www.slickremix.com/downloads/category/design-approval-system/" target="_blank">'.__('Get Extensions Here!', 'design-approval-system') .'</a>';
 			$output .= '<h2 class="project-board-header">'.__('Project Board', 'design-approval-system') .'</h2>';
-			$output .= '<div class="use-of-plugin">'.__('Below are your Clients and their Projects. Learn how to use and setup the ', 'design-approval-system').'<a href="http://www.slickremix.com/docs/how-to-setup-the-project-board/" target="_blank">'. __('Project Board', 'design-approval-system').'</a> '.__('here').'.</div>';
+			$output .= '<div class="use-of-plugin">'.__('Below are your Clients and their Projects. Learn how it all works ', 'design-approval-system').'<a href="http://www.slickremix.com/design-approval-system-docs" target="_blank">'. __('here', 'design-approval-system').'</a>.</div>';
 			// echo our short code for the Public Board
 			$output .= do_shortcode('[DASPublicBoard]');
 			$output .= '</div><!--das-project-admin-wrap-main-->';
