@@ -9,7 +9,7 @@ License: GPLv2 or later
 A system to streamline the process of getting designs, photos, documents, videos, or music approved by clients quickly.
 
 == Description ==
-See [Live Example](http://www.slickremix.com/testblog/designs/idriveeurope-about-page-v4/) and Approve the design.
+See [Live Example](http://www.slickremix.com/testblog/designs/idriveeurope-about-page-v1/) and Approve the design.
 
 Now works on MultiSite Installs! See [full documentation](http://www.slickremix.com/design-approval-system-docs/). Approved designs get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/docs/how-to-setup-the-project-board). Clients, projects, & designs are organized on one page + Clients can login to see there designs!
 
@@ -59,7 +59,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 = Version 4.0.7 / Saturday May 9th, 2015 =
  * NOTICE ABOUT MAJOR CHANGES COMING TO DAS: 4.0.8 will be a Major Update so it is important that you read the upgrade notice and changes before you update this plugin again to 4.0.8. To see what changes and improvements we have made <a href="http://www.slickremix.com/design-approval-system-major-changes" target="_blank">please click here</a>. All current premium extension owners will be getting a coupon to receive the new DAS Premium Plugin. We are making this update as a pre-notice of the changes to come. If you do not like the changes we will be providing a backup of DAS 4.0.7 will be available on the changes and improvements link above too.
 	
-= Version 4.0.6 / Wednesday February 4th, 2015
+= Version 4.0.6 / Wednesday February 4th, 2015 =
  * FIXED: Edit and Send Email link from showing when Das Client is logged in. Now only admin and Das Designers will be able to see those links. 
  * ADDED: CSS adjustments for design approval template.
  
