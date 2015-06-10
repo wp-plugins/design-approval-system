@@ -29,5 +29,5 @@
 .das-update-message { font-weight: 400; color: #fff; background: #d54d21; padding: 1em; margin: 9px 0; }
 .das_old_plugins_message { margin: 15px 15px 0 0; }
 .das-update-message a { color: #fff; text-decoration: underline; }
-#menu-posts-designapprovalsystem ul li:last-child { display: none; }
+#menu-posts-designapprovalsystem ul li:last-child { display: block; }
 .designapprovalsystem_page_design-approval-system-projects-page .notice, .designapprovalsystem_page_design-approval-system-projects-page div.error, .designapprovalsystem_page_design-approval-system-projects-page div.updated, .designapprovalsystem_page_design-approval-system-help-page .notice, .designapprovalsystem_page_design-approval-system-help-page div.error, .designapprovalsystem_page_design-approval-system-help-page div.updated, .designapprovalsystem_page_das-gq-theme-settings-page .notice, .designapprovalsystem_page_das-gq-theme-settings-page div.error, .designapprovalsystem_page_das-gq-theme-settings-page div.updated, .designapprovalsystem_page_design-approval-system-settings-page .notice, .designapprovalsystem_page_design-approval-system-settings-page div.error, .designapprovalsystem_page_design-approval-system-settings-page div.updated { margin: 20px 15px 2px 0 !important; }
