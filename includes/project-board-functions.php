@@ -207,7 +207,7 @@ class Project_Board extends Design_Approval_System_Core {
 		$das_project_rename_plural = get_option('das-settings-plural-pb-fep-name') ? get_option('das-settings-plural-pb-fep-name') : __('Projects', 'design-approval-system');
 		
 		$das_pagination_amount = get_option('das_pagination_amount_per_page');
-		$das_pagination_amount_fig = isset($das_pagination_amount) && $das_pagination_amount !=='' ? $das_pagination_amount : '10';
+		$das_pagination_amount_fig = isset($das_pagination_amount) && !empty($das_pagination_amount) ? $das_pagination_amount : '10';
 		
 		ob_start();
 		if (isset($_GET['trashed']) && $_GET['trashed'] == 1) {
@@ -558,17 +558,19 @@ class Project_Board extends Design_Approval_System_Core {
 				$output .= '</select><input type="submit" class="das-pagination-submit-btn" value="'.__('Clients per Page', 'design-approval-system') .'" /></form></div>';
 			}
 			$output .= '</div>';
-			$output .='<div class="project-board-pagination">';
-			$output .= paginate_links( array(
-					'base'       => add_query_arg( 'pagenum', '%#%' ),
-					'format'     => '?pagenum=%#%',
-					'current'    => $paged,
-					'prev_text'  => __('&#10094;&#10094;'),
-					'next_text'  => __('&#10095;&#10095;'),
-					'total'   => ceil( $number_of_series / $per_page ) // 3 items per page
-				) );
-			$output .='<div class="clear"></div>';
-			$output .='</div>';
+			if($number_of_series !== 0){
+				$output .='<div class="project-board-pagination">';
+				$output .= paginate_links( array(
+						'base'       => add_query_arg( 'pagenum', '%#%' ),
+						'format'     => '?pagenum=%#%',
+						'current'    => $paged,
+						'prev_text'  => __('&#10094;&#10094;'),
+						'next_text'  => __('&#10095;&#10095;'),
+						'total'   => ceil( $number_of_series / $per_page ) // 3 items per page
+					) );
+				$output .='<div class="clear"></div>';
+				$output .='</div>';
+			}
 		}
 		$output .='<div class="clear"></div>';
 		//If No Posts Show Message
