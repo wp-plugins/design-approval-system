@@ -1,12 +1,6 @@
 <?php
 namespace Design_Approval_System;
 /**
- * Plugin Name: My Amdin Pointers
- * Plugin URI:  https://gist.github.com/brasofilo/6947539
- * Version:     0.1
- * Author:      Rodolfo Buaiz
- * Author URI:  http://brasofilo.com
- * Licence:     GPLv3
  *
  * Based on
  * - http://wp.tutsplus.com/tutorials/integrating-with-wordpress-ui-admin-pointers/

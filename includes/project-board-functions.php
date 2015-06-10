@@ -205,6 +205,10 @@ class Project_Board extends Design_Approval_System_Core {
 	//**************************************************
 	function das_public_project_board_function() {
 		$das_project_rename_plural = get_option('das-settings-plural-pb-fep-name') ? get_option('das-settings-plural-pb-fep-name') : __('Projects', 'design-approval-system');
+		
+		$das_pagination_amount = get_option('das_pagination_amount_per_page');
+		$das_pagination_amount_fig = isset($das_pagination_amount) && $das_pagination_amount !=='' ? $das_pagination_amount : '10';
+		
 		ob_start();
 		if (isset($_GET['trashed']) && $_GET['trashed'] == 1) {
 			$output = '<p class="simple-das-notice">'.__('Design post moved to the Trash successfully.', 'design-approval-system').'';
@@ -238,7 +242,7 @@ class Project_Board extends Design_Approval_System_Core {
 		if (!$_GET['search_pb']) {
 			$paged = isset( $_GET['pagenum'] ) ? intval( $_GET['pagenum'] ) : 1;
 			if (isset($_GET['page']) && $_GET['page'] == 'design-approval-system-projects-page') {
-				$select_per_page  = get_option('das_pagination_amount_per_page');
+				$select_per_page  = $das_pagination_amount_fig;
 			}
 			else {
 				$select_per_page  = isset( $_GET['select_per_page']) ? intval( $_GET['select_per_page'] ) : 2;
@@ -515,7 +519,8 @@ class Project_Board extends Design_Approval_System_Core {
 				do_settings_sections('das_pagination_settings');
 				$output .= ob_get_clean();
 				ob_start();
-				$output .='<input id="das_pagination_amount_per_page" placeholder="10" name="das_pagination_amount_per_page" class="das-pagination-input" type="text"  value="'.get_option('das_pagination_amount_per_page').'" />
+				
+				$output .='<input id="das_pagination_amount_per_page" placeholder="10" name="das_pagination_amount_per_page" class="das-pagination-input" type="text"  value="'.$das_pagination_amount_fig.'" />
 					<input type="submit" class="das-pagination-submit-btn" value="'.__('Clients per Page', 'design-approval-system') .'" /></form>';
 			}
 			else {
