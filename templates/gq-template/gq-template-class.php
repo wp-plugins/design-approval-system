@@ -56,9 +56,9 @@ class GQ_Theme extends Design_Approval_System_Core {
             //padding
             $output .= !empty($das_gq_theme_custom_css_padding) ? 'padding: '.get_option('das-gq-theme-main-wrapper-padding-input').' !important;' : '';    
             //margin
-            $output .= !empty($$das_gq_theme_custom_css_margin) ? 'margin: '.get_option('das-gq-theme-main-wrapper-margin-input').' !important;' : '';
+            $output .= !empty($das_gq_theme_custom_css_margin) ? 'margin: '.get_option('das-gq-theme-main-wrapper-margin-input').' !important;' : '';
             //max width
-            $output .= !empty($$das_gq_theme_custom_css_max_width) ? 'max-width: '.get_option('das-gq-theme-main-wrapper-width-input').' !important;' : ''; 
+            $output .= !empty($das_gq_theme_custom_css_max_width) ? 'max-width: '.get_option('das-gq-theme-main-wrapper-width-input').' !important;' : ''; 
         $output .= '}</style>';
         echo $output;
     }
