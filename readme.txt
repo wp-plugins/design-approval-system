@@ -11,7 +11,7 @@ A system to streamline the process of getting designs, photos, documents, videos
 == Description ==
 See [Live Example](http://www.slickremix.com/testblog/designs/idriveeurope-about-page-v1/) and Approve the design.
 
-Now works on MultiSite Installs! See [full documentation](http://www.slickremix.com/design-approval-system-docs/). Approved designs get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/docs/how-to-setup-the-project-board). Clients, projects, & designs are organized on one page + Clients can login to see there designs!
+Now works on MultiSite Installs! See [full documentation](http://www.slickremix.com/design-approval-system-docs/). Approved designs get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/docs/project-board). Clients, projects, & designs are organized on one page + Clients can login to see there designs!
 
 Here is what you, the clients, and the plugin can do:
 
@@ -54,7 +54,7 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 == Change-log ==
 = Version 4.0.8 / June 8th, 2015 =
- * MAJOR CHANGES TO DAS: 4.0.8 is a Major Update so it is important that you read the upgrade notice and changes before to see what changes and improvements we have made <a href="http://www.slickremix.com/design-approval-system-major-changes" target="_blank">please click here</a>. All current premium extension owners will be getting a coupon to receive the new DAS Premium Plugin. Here is a link to [Version 4.0.6](http://www.slickremix.com/wp-content/uploads/2015/05/design-approval-system-4.0.61.zip) if your plugin was updated by mistake, version 4.0.7 was just a pre-notification changes to come.
+ * MAJOR CHANGES TO DAS: 4.0.8 is a Major Update so it is important that you read the upgrade notice and changes before upgrading, <a href="http://www.slickremix.com/design-approval-system-major-changes" target="_blank">please click here</a>. All current premium extension owners will be getting a coupon to receive the new DAS Premium Plugin. Here is a link to [Version 4.0.6](http://www.slickremix.com/wp-content/uploads/2015/05/design-approval-system-4.0.61.zip) if your plugin was updated by mistake, version 4.0.7 was just a pre-notification changes to come.
 
 = Version 4.0.7 / Saturday May 9th, 2015 =
  * NOTICE ABOUT MAJOR CHANGES COMING TO DAS: 4.0.8 will be a Major Update so it is important that you read the upgrade notice and changes before you update this plugin again to 4.0.8. To see what changes and improvements we have made <a href="http://www.slickremix.com/design-approval-system-major-changes" target="_blank">please click here</a>. All current premium extension owners will be getting a coupon to receive the new DAS Premium Plugin. We are making this update as a pre-notice of the changes to come. If you do not like the changes we will be providing a backup of DAS 4.0.7 will be available on the changes and improvements link above too.
