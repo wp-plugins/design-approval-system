@@ -109,14 +109,6 @@ class Admin_Menu extends Design_Approval_System_Core {
 			$submenu['edit.php?post_type=designapprovalsystem'][25][1] = 'manage_options';
 			$submenu['edit.php?post_type=designapprovalsystem'][25][2] = 'das-gq-theme-settings-page';
 			$submenu['edit.php?post_type=designapprovalsystem'][25][3] = __('Template Settings', 'design-approval-system');
-			
-			if(is_plugin_active('das-premium/das-premium.php')){
-				//Plugin License 
-				$submenu['edit.php?post_type=designapprovalsystem'][30][0] = __('Plugin License', 'design-approval-system');
-				$submenu['edit.php?post_type=designapprovalsystem'][30][1] = 'manage_options';
-				$submenu['edit.php?post_type=designapprovalsystem'][30][2] = 'pluginname-license';
-				$submenu['edit.php?post_type=designapprovalsystem'][30][3] = __('Plugin License', 'design-approval-system');
-			}
 	}
 }
 new Admin_Menu();
