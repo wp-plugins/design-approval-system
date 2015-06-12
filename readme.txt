@@ -9,7 +9,13 @@ License: GPLv2 or later
 A system to streamline the process of getting designs, photos, documents, videos, or music approved by clients quickly.
 
 == Description ==
-See [Live Example](http://www.slickremix.com/testblog/designs/idriveeurope-about-page-v1/) and Approve the design.
+See [Live Example](http://www.slickremix.com/testblog/designs/idriveeurope-about-page-v1/) and Approve the design. 
+
+Here's a look at how fast you can be setup!
+(https://youtu.be/GSAyozmRHLw): 
+[youtube https://www.youtube.com/watch?v=GSAyozmRHLw]
+
+
 
 Now works on MultiSite Installs! See [full documentation](http://www.slickremix.com/design-approval-system-docs/). Approved designs get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/docs/project-board). Clients, projects, & designs are organized on one page + Clients can login to see there designs!
 
