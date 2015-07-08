@@ -1,5 +1,4 @@
-<?php
-namespace Design_Approval_System;
+<?php namespace Design_Approval_System;
 class Design_Approval_System_Core {
 	function __construct() {
 		//Register DAS Taxonomies on plugin activation.
@@ -39,7 +38,7 @@ class Design_Approval_System_Core {
 		add_action( 'pre_get_posts', array($this, 'das_woo_pre_get_posts_query'));
 		//Start Walkthrough
 		add_action( 'admin_enqueue_scripts', array($this,'myDasHelpPointers'));
-		
+
 		$old_plugs = $this->old_extenstions_check();
 		//If there are old plugins Display notice!
 		if($old_plugs == true){
@@ -49,31 +48,31 @@ class Design_Approval_System_Core {
 		add_action( 'admin_init', array($this, 'das_old_extenstions_block'));
 	}
 	//**************************************************
-	// Block for Old Extenstions 
+	// Block for Old Extenstions
 	//**************************************************
 	function das_old_extenstions_block() {
-			global $current_user ;
-	        $user_id = $current_user->ID;
-				$list_old_plugins = array(
-					'das-gq-theme/das-gq-theme.php',
-					'das-roles-extension/das-roles-extension.php',
-					'das-changes-extension/das-changes-extension.php',
-					'das-design-login/das-design-login.php',
-					'das-public-private-project-board/das-public-private-project-board.php',
-					'das-clean-theme/das-clean-theme.php',
-					'woocommerce-for-das/woocommerce-for-das.php'
-				);
-			foreach($list_old_plugins as $single_plugin){	
-				if(is_plugin_active($single_plugin)){
-					//Don't Let Old Plugins Activate
-				 	deactivate_plugins($single_plugin);
-				 	//Clear The hide message so user knows they can't activate old plugins
-				 	delete_user_meta( $user_id, 'das_old_plugins_ignore');	
-				}
+		global $current_user ;
+		$user_id = $current_user->ID;
+		$list_old_plugins = array(
+			'das-gq-theme/das-gq-theme.php',
+			'das-roles-extension/das-roles-extension.php',
+			'das-changes-extension/das-changes-extension.php',
+			'das-design-login/das-design-login.php',
+			'das-public-private-project-board/das-public-private-project-board.php',
+			'das-clean-theme/das-clean-theme.php',
+			'woocommerce-for-das/woocommerce-for-das.php'
+		);
+		foreach($list_old_plugins as $single_plugin){
+			if(is_plugin_active($single_plugin)){
+				//Don't Let Old Plugins Activate
+				deactivate_plugins($single_plugin);
+				//Clear The hide message so user knows they can't activate old plugins
+				delete_user_meta( $user_id, 'das_old_plugins_ignore');
 			}
+		}
 	}
 	//**************************************************
-	// Check for Old Extenstions 
+	// Check for Old Extenstions
 	//**************************************************
 	function old_extenstions_check() {
 		// Check if get_plugins() function exists. This is required on the front end of the
@@ -83,22 +82,22 @@ class Design_Approval_System_Core {
 		}
 		$all_plugins = get_plugins();
 		$list_old_plugins = array(
-					'das-gq-theme/das-gq-theme.php',
-					'das-roles-extension/das-roles-extension.php',
-					'das-changes-extension/das-changes-extension.php',
-					'das-design-login/das-design-login.php',
-					'das-public-private-project-board/das-public-private-project-board.php',
-					'das-clean-theme/das-clean-theme.php',
-					'woocommerce-for-das/woocommerce-for-das.php'
-				);
-		
+			'das-gq-theme/das-gq-theme.php',
+			'das-roles-extension/das-roles-extension.php',
+			'das-changes-extension/das-changes-extension.php',
+			'das-design-login/das-design-login.php',
+			'das-public-private-project-board/das-public-private-project-board.php',
+			'das-clean-theme/das-clean-theme.php',
+			'woocommerce-for-das/woocommerce-for-das.php'
+		);
+
 		$any_old_plugins = false;
 		if($all_plugins){
 			foreach($all_plugins as $single_plugin => $single_plugin_info){
 				//Are there old plugins Install in WordPress
 				$any_old_plugins = in_array($single_plugin, $list_old_plugins);
 				if($any_old_plugins){
-				 return true;
+					return true;
 				}
 			}
 		}
@@ -108,13 +107,13 @@ class Design_Approval_System_Core {
 	//**************************************************
 	function das_old_plugin_admin_notice() {
 		global $current_user ;
-			//$is_an_admin = in_array('administrator', $current_user->roles);
-	        $user_id = $current_user->ID;
-	        /* Check that the user hasn't already clicked to ignore the message */
+		//$is_an_admin = in_array('administrator', $current_user->roles);
+		$user_id = $current_user->ID;
+		/* Check that the user hasn't already clicked to ignore the message */
 		if (!get_user_meta($user_id, 'das_old_plugins_ignore')) {
-	        echo '<div class="das-update-message das_old_plugins_message">'; 
-	        printf(__('Please uninstall ALL old DAS Plugins/Extenstions because they will no longer work with this version of DAS. All old features are now included in <a href="http://www.slickremix.com/downloads/das-premium/" target="_blank">DAS Premium</a>. Since you previously purchased one of the old extensions we want to give you 1 Year of DAS Premium for FREE! Please checkout with <a href="http://www.slickremix.com/downloads/das-premium/" target="_blank">DAS Premium</a> using COUPON CODE: <strong>dasmanager100</strong> | <a href="%1$s">HIDE NOTICE</a>'), '?das_old_plugins_ignore=0');
-	        echo "</div>";
+			echo '<div class="das-update-message das_old_plugins_message">';
+			printf(__('Please uninstall ALL old DAS Plugins/Extenstions because they will no longer work with this version of DAS. All old features are now included in <a href="http://www.slickremix.com/downloads/das-premium/" target="_blank">DAS Premium</a>. Since you previously purchased one of the old extensions we want to give you 1 Year of DAS Premium for FREE! Please checkout with <a href="http://www.slickremix.com/downloads/das-premium/" target="_blank">DAS Premium</a> using COUPON CODE: <strong>dasmanager100</strong> | <a href="%1$s">HIDE NOTICE</a>'), '?das_old_plugins_ignore=0');
+			echo "</div>";
 		}
 	}
 	//**************************************************
@@ -122,13 +121,13 @@ class Design_Approval_System_Core {
 	//**************************************************
 	function das_old_plugins_ignore() {
 		global $current_user;
-			$is_an_admin = in_array('administrator', $current_user->roles);
-	        $user_id = $current_user->ID;
-	        /* If user clicks to ignore the notice, add that to their user meta */
-	        if ( isset($_GET['das_old_plugins_ignore']) && '0' == $_GET['das_old_plugins_ignore'] && $is_an_admin == true) {
-	             add_user_meta($user_id, 'das_old_plugins_ignore', 'true', true);
-	             //delete_user_meta( $user_id, 'das_old_plugins_ignore');
-		    }
+		$is_an_admin = in_array('administrator', $current_user->roles);
+		$user_id = $current_user->ID;
+		/* If user clicks to ignore the notice, add that to their user meta */
+		if ( isset($_GET['das_old_plugins_ignore']) && '0' == $_GET['das_old_plugins_ignore'] && $is_an_admin == true) {
+			add_user_meta($user_id, 'das_old_plugins_ignore', 'true', true);
+			//delete_user_meta( $user_id, 'das_old_plugins_ignore');
+		}
 	}
 	//**************************************************
 	// DAS Admin CSS
