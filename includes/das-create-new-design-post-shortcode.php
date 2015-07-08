@@ -9,12 +9,12 @@ function  das_create_new_design_head() {
 
 // Really simple way of posting from the front end for WordPress
 function simple_das_fep($content = null) {
-	global $post, $wp_roles, $my_post_ID, $next_version; 
+	global $post, $wp_roles, $my_post_ID, $next_version;
 
 	// We're outputing a lot of html and the easiest way
 	// to do it is with output buffering from php.
 	ob_start();
-	
+
 	$current_user = wp_get_current_user();
 	$roles = $current_user->roles;
 	$role = array_shift($roles);
@@ -68,7 +68,7 @@ function simple_das_fep($content = null) {
 
 			echo '<option value="'.$row.'"', $meta == $row ? 'selected="selected"':'','>'.$row.' ['.$clients_email.'] </option>';
 		}
-?></select>
+		?></select>
       </p>
       <p style="display:none" class="das-select-client-email">
         <label>Client Email *</label>
@@ -214,14 +214,14 @@ function simple_das_fep($content = null) {
           <?php }?>
         </select>
       </p>
-      
-      
+
+
        <p class="das-due-date">
         <label><?php _e('When the Project will Start and End', 'design-approval-system'); ?><small><?php _e('ie* 2-15-17 thru 2-15-18', 'design-approval-system'); ?></small></label>
         <input type="text" name="custom_project_start_end" id="custom_project_start_end" value="<?php if (isset($my_post_ID)) { echo get_post_field('custom_project_start_end', $my_post_ID); } ?>" />
       </p>
-      
-      
+
+
       <label><?php _e('Set '.$das_project_rename_singular.' Thumbnail', 'design-approval-system'); ?><small><?php _e('To set the Thumbnail which shows on the '.$das_project_rename_singular.' Board click the Thumbnail Icon below and upload or choose an existing photo.', 'design-approval-system'); ?></small></label>
       <!-- Your add & remove image links -->
             <div class="project-large-thumbnail">
@@ -236,7 +236,7 @@ function simple_das_fep($content = null) {
               </a> <a <?php if (empty($das_thumbnail_image_id)) { echo "style='display:none'"; } ?> class="delete-custom-img" href="javascript:;">
               <?php _e('Change Image', 'design-approval-system') ?>
               </a> </div>
-              
+
       <!-- A hidden input to set and post the chosen image id -->
       <input id="das-custom-img-id" name="das_custom_img_id" value="<?php if (isset($my_post_ID) && $my_post_ID) { echo get_post_thumbnail_id( $my_post_ID ); } ?> " type="hidden" />
       <p class="das-enter-content-media-etc">
@@ -258,44 +258,44 @@ function simple_das_fep($content = null) {
 
 		wp_editor( $content, $editor_id );
 
-?></p>
-     	
+		?></p>
+
      <?php
-					
-					 // Allow the clients changes notes to customer area else show the allow comments options 
-					if(get_option('das-gq-theme-client-changes-global') == '1') { ?>
+
+		// Allow the clients changes notes to customer area else show the allow comments options
+		if(get_option('das-gq-theme-client-changes-global') == '1') { ?>
       <div class="clear"></div>
       <?php $designer_content_meta = get_post_meta($my_post_ID, 'custom_designer_notes', true); ?>
       <p>
         <label><?php _e($das_project_rename_singular.' Notes to Customer', 'design-approval-system'); ?></label>
         <textarea name="custom_designer_notes" id="custom_designer_notes" cols="60" rows="4"><?php if (isset($my_post_ID) && $my_post_ID) { echo $designer_content_meta; } ?>
-</textarea>  
-     
+</textarea>
+
       </p>
       <?php }
-						else {
-									?><p><label><?php _e('Allow Comments', 'design-approval-system'); ?><br/><small><?php _e("This will show the Comments button on the design template.", 'design-approval-system'); ?></small></label>
-          <select name="comment_status" id="comment_status"> 
+		else {
+			?><p><label><?php _e('Allow Comments', 'design-approval-system'); ?><br/><small><?php _e("This will show the Comments button on the design template.", 'design-approval-system'); ?></small></label>
+          <select name="comment_status" id="comment_status">
           		<option value="open" <?php if(comments_open()){echo "selected='selected'";} ?>>Yes</option>
           		<option value="0" <?php if($my_post_ID->comment_status){echo "selected='selected'";} ?>>No</option>
           </select></p>
-         <?
-						}?>
-      
+         <?php
+		}?>
+
       <div class="clear"></div>
-       <?php 
-	$das_product_id = get_post_meta($my_post_ID, 'das_design_woo_product_id', true);
-	$custom_woo_product_price = get_post_meta($my_post_ID, 'custom_woo_product', true);
-	$set_woo_product_price = get_post_meta($das_product_id, '_price', true);
-	if ($custom_woo_product_price != $set_woo_product_price) {
-		$product_set = $set_woo_product_price;
-	}//END IF
-	else {
-		$product_set = $custom_woo_product_price;
-	}
-	
+       <?php
+		$das_product_id = get_post_meta($my_post_ID, 'das_design_woo_product_id', true);
+		$custom_woo_product_price = get_post_meta($my_post_ID, 'custom_woo_product', true);
+		$set_woo_product_price = get_post_meta($das_product_id, '_price', true);
+		if ($custom_woo_product_price != $set_woo_product_price) {
+			$product_set = $set_woo_product_price;
+		}//END IF
+		else {
+			$product_set = $custom_woo_product_price;
+		}
+
 		//Woo for DAS
-			if(is_plugin_active('woocommerce/woocommerce.php') && is_plugin_active('das-premium/das-premium.php')) {  ?>
+		if(is_plugin_active('woocommerce/woocommerce.php') && is_plugin_active('das-premium/das-premium.php')) {  ?>
      <?php $custom_woo_product = get_post_meta($my_post_ID, 'custom_woo_product', true); ?>
       <p>
         <label for="custom_woo_product"><?php _e('Turn into a WooCommerce Product?', 'design-approval-system'); ?><br/>
@@ -306,10 +306,10 @@ function simple_das_fep($content = null) {
 				 <label for="custom_woo_design_price"><?php _e('Price of Design', 'design-approval-system'); ?><br/> <small><?php _e('Price of the '.$das_project_rename_singular.'. The price will always update in WooCommerce if you make changes.', 'design-approval-system'); ?></small></label>
        			 <?php $custom_woo_design_price = get_post_meta($my_post_ID, 'custom_woo_design_price', true); ?>
 				<input type="text" name="custom_woo_design_price" id="custom_woo_design_price" value="<?php echo $custom_woo_design_price ?>" size="30">
-							<br/>                
+							<br/>
       </p>
       <?php } ?>
-      
+
       <p style="display:none">
         <label>Tags</label>
         <input id="fep-tags" name="tags" type="text" tabindex="2" autocomplete="off" value="<?php esc_attr_e( 'Add tags', 'simple-das-fep' ); ?>" onfocus="this.value=(this.value=='<?php echo esc_js( __( 'Add tags', 'simple-das-fep' ) ); ?>') ? '' : this.value;" onblur="this.value=(this.value=='') ? '<?php echo esc_js( __( 'Add tags', 'simple-das-fep' ) ); ?>' : this.value;" />
@@ -494,8 +494,8 @@ jQuery(document).ready(function($) {
 			 attachment.filename
 			 attachment.link
 			 attachment.menuOrder
-			  
-		  		// Do something with attachment.id and/or attachment.url here	
+
+		  		// Do something with attachment.id and/or attachment.url here
 				var $edit = $("#fep-post-text");
 				var curValue = $edit.val();
 				var newValue = curValue + ' <a href="' + attachment.url + '">' + attachment.filename + '</a><br/>';
@@ -641,7 +641,7 @@ function simple_das_fep_add_post(){
 
 		$my_post_ID       = $_POST['my_post_ID'];
 		$next_version       = $_POST['next_version'];
-	    $project_name          = $_POST['custom_name_of_design'];
+		$project_name          = $_POST['custom_name_of_design'];
 
 		if (!empty($_POST['newcat'])) {
 			$custom_name_of_design        = isset($_POST['newcat']) ? $_POST['newcat'] : '';
@@ -666,15 +666,15 @@ function simple_das_fep_add_post(){
 		$comment_status      =  isset($_POST['comment_status']) ? $_POST['comment_status'] : '';
 
 		$das_post_thumbnail = isset($_POST['das_custom_img_id']) ? $_POST['das_custom_img_id'] : '';
-		
+
 		$custom_project_start_end      =  isset($_POST['custom_project_start_end']) ? $_POST['custom_project_start_end'] : '';
-		
+
 		// premium option
 		$custom_designer_notes        = isset($_POST['custom_designer_notes']) ? $_POST['custom_designer_notes'] : '';
 		// premium options
 		$custom_woo_design_price     = isset($_POST['custom_woo_design_price']) ? $_POST['custom_woo_design_price'] : '';
 		$custom_woo_product      =  isset($_POST['custom_woo_product']) ? $_POST['custom_woo_product'] : '';
-		
+
 
 
 
@@ -764,27 +764,27 @@ function simple_das_fep_add_post(){
 				update_post_meta($my_post_ID, 'custom_version_of_design', $custom_version_of_design);
 				update_post_meta($my_post_ID, 'custom_designer_notes', $custom_designer_notes);
 				update_post_meta($my_post_ID, 'custom_project_start_end', $custom_project_start_end);
-				
+
 				// This adds the options we neeed to Update an existing woo product
 				if (is_plugin_active('das-premium/das-premium.php')) {
-				update_post_meta($my_post_ID, 'custom_woo_design_price', $custom_woo_design_price);
-				update_post_meta($my_post_ID, 'custom_woo_product', $custom_woo_product);
-				// This needs to be corrected to work with new posts and others
- 				$post_id = $my_post_ID;
-				include(WP_CONTENT_DIR .'/plugins/das-premium/includes/woocommerce-for-das-meta-box.php');
+					update_post_meta($my_post_ID, 'custom_woo_design_price', $custom_woo_design_price);
+					update_post_meta($my_post_ID, 'custom_woo_product', $custom_woo_product);
+					// This needs to be corrected to work with new posts and others
+					$post_id = $my_post_ID;
+					include WP_CONTENT_DIR .'/plugins/das-premium/includes/woocommerce-for-das-meta-box.php';
 				}
-				
+
 				set_post_thumbnail($my_post_ID , $das_post_thumbnail);
 				wp_set_object_terms($my_post_ID, $location,'das_categories');
-				 
+
 			}
 			else {
-			
-			// need to make it so when browser is refreshred a new post is not created from the last	
-			// if($_GET['new'] !== 'yes') {	
+
+				// need to make it so when browser is refreshred a new post is not created from the last
+				// if($_GET['new'] !== 'yes') {
 				$post_id = wp_insert_post($my_post);
-			// }
-		 		
+				// }
+
 				add_post_meta($post_id, 'custom_client_name', $custom_client_name, true);
 				add_post_meta($post_id, 'custom_clients_email', $custom_clients_email, true);
 				add_post_meta($post_id, 'custom_designers_name', $custom_designers_name, true);
@@ -795,16 +795,16 @@ function simple_das_fep_add_post(){
 				add_post_meta($post_id, 'custom_designer_notes', $custom_designer_notes, true);
 				add_post_meta($post_id, 'custom_name_of_design', $custom_name_of_design, true);
 				add_post_meta($post_id, 'comment_status', $comment_status, true);
-				
+
 				add_post_meta($post_id, 'custom_woo_design_price', $custom_woo_design_price, true);
 				add_post_meta($post_id, 'custom_woo_product', $custom_woo_product, true);
-				
+
 				set_post_thumbnail($post_id , $das_post_thumbnail);
 				wp_set_object_terms($post_id, $location,'das_categories');
-	
+
 				// This adds the options we neeed to Create a new woo product
 				if (is_plugin_active('das-premium/das-premium.php')) {
-					include(WP_CONTENT_DIR .'/plugins/das-premium/includes/woocommerce-for-das-meta-box.php');
+					include WP_CONTENT_DIR .'/plugins/das-premium/includes/woocommerce-for-das-meta-box.php';
 				};
 			}
 
