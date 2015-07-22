@@ -375,7 +375,9 @@ class Project_Board extends Design_Approval_System_Core {
 			$term_value = $value;
 		if ($client_value == $value) {
 			//SHOW UNARCHIVED PROJECTS
-			$Archived_Projects_List = array();
+			if (!is_plugin_active('das-premium/das-premium.php') && is_plugin_active('design-approval-system/design-approval-system.php')) {
+						$Archived_Projects_List = array();
+				}
 			if (isset($_GET['pb_current_archives']) && $_GET['pb_current_archives'] == 'current' or !isset($_GET['pb_current_archives'])) {
 				if (!in_array($term_names['Project_ID'][$project_name], $Archived_Projects_List)) {
 					//Client Name
