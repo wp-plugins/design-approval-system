@@ -172,7 +172,7 @@ class GQ_Theme extends Design_Approval_System_Core {
 								$global_terms_button = get_option('das-gq-theme-main-wrapper-custom-terms');
 								$terms_custom_title = get_option('das-gq-theme-settings-terms-title');
 								if ($custom_design_terms_button || $global_terms_button) {
-									?> <div class="das-frame-inside"><a href="#das-terms-conditions" class="default-das-btn das-terms-conditions-btn">
+									?> <div class="das-frame-inside"><a href="javascript:;" class="default-das-btn das-terms-conditions-btn">
 			                       <?php if ($terms_custom_title) {
 									   echo get_option('das-gq-theme-settings-terms-title');
 								   }
@@ -183,7 +183,7 @@ class GQ_Theme extends Design_Approval_System_Core {
 			                        </a></div><!--das-frame-inside--><?php
 								}
 			            	?>
-			                <div class="das-frame-inside das-versions-history"><a href="#das-versions" class="versions das-versions-btn"><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?>  /
+			                <div class="das-frame-inside das-versions-history"><a href="javascript:;" class="versions das-versions-btn"><?php echo get_post_meta($post->ID, 'custom_version_of_design', true); ?>  /
 			                <?php if ( 'designapprovalsystem' == get_post_type() ) {
 								$das_cats = wp_get_post_terms( $post->ID, 'das_categories' );
 								if ( $das_cats ) { 
@@ -255,17 +255,17 @@ class GQ_Theme extends Design_Approval_System_Core {
 			   		<div class="das-frame-inside"><div class="approved-wrap default-das-btn"><?php _e('Approved', 'design-approval-system'); ?></div></div><?php
 				} 
 				else { ?>
-			   		<div class="das-frame-inside <?php if($comment_status == 'no') {?>das-frame-inside-60<?php } ?>"><div class="not-approved-wrap"><a href="#approved-form-wrap-gq" class="design-option-btn design-approval-btn-gq default-das-btn">
+			   		<div class="das-frame-inside <?php if($comment_status == 'no') {?>das-frame-inside-60<?php } ?>"><div class="not-approved-wrap"><a href="javascript:;" class="design-option-btn design-approval-btn-gq default-das-btn">
 					<?php if(get_option('das-gq-theme-client-changes-global') == '1')
 						{ _e('Approve or Request Changes', 'design-approval-system'); 
 						} 
 						else { _e('Approve', 'design-approval-system'); } ?></a></div><div class="approved-wrap default-das-btn" style="display:none"><?php _e('Approved', 'design-approval-system'); ?></div></div>
 			   		<?php } 
 						if(get_option( 'das-gq-theme-client-changes-global' ) !== '1' && is_user_logged_in() == true && comments_open() == '1') { ?>
-			                    <div class="das-frame-inside"><a href="#revision-form-wrap-gq" class="design-option-btn design-revision-btn-gq default-das-btn"><?php _e('Comment', 'design-approval-system'); ?></a></div><!--.das-frame-inside-->
+			                    <div class="das-frame-inside"><a href="javascript:;" class="design-option-btn design-revision-btn-gq default-das-btn"><?php _e('Comment', 'design-approval-system'); ?></a></div><!--.das-frame-inside-->
 			                <?php } ?>	
                     	 
-			            	<div class="das-frame-inside <?php if($comment_status == 'no') {?>das-frame-inside-40<?php } ?>"><a href="#" class="hide-notes"><?php _e('Hide Menus', 'design-approval-system'); ?></a></div>
+			            	<div class="das-frame-inside <?php if($comment_status == 'no') {?>das-frame-inside-40<?php } ?>"><a href="javascript:;" class="hide-notes"><?php _e('Hide Menus', 'design-approval-system'); ?></a></div>
 			            	</div><!--das-btns-backg-->
 			               <div class="clear"></div>
 			            </div><!--das-template-box-2-frame-->	 
@@ -783,12 +783,12 @@ class GQ_Theme extends Design_Approval_System_Core {
 			 		 	}
 							
 					  });
-					$('.design-revision-btn-gq').click(function () {	
-						$('.status-area1').show();
-				});
-				$('.design-approval-btn-gq').click(function () {	
-					$('.pop-up-backg, .approved-form-wrap').fadeIn();
-				});
+		//			$('.design-revision-btn-gq').click(function () {	
+		//				$('.status-area1').show();
+		//		});
+	//			$('.design-approval-btn-gq').click(function () {	
+	//				$('.pop-up-backg, .approved-form-wrap').fadeIn();
+	//			});
 					$('.hide-notes, .hide-notes-footer').click(function () {
 						$('.das-main-template-wrapper').hide();
 						$('.show-notes').show();
