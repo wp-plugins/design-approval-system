@@ -414,7 +414,7 @@ class Design_Approval_System_Core {
 	//**************************************************
 	function das_check_ajax() {
 		// SRL added 6-6-13 to allow us to record the approved information directly to db
-		wp_register_script( "dasChecker_script", WP_PLUGIN_URL.'/design-approval-system/templates/slickremix/js/my_dasChecker_script.js', array('jquery') );
+		wp_register_script( "dasChecker_script", DAS_PLUGIN_PATH.'/design-approval-system/templates/slickremix/js/my_dasChecker_script.js', array('jquery') );
 		wp_localize_script( 'dasChecker_script', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'dasChecker_script' );

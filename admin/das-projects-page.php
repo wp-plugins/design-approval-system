@@ -35,7 +35,7 @@ class Project_Board_Admin {
 		wp_enqueue_script('jquery');
 		wp_register_style('das_project_board_style', plugins_url('admin/css/project-board.css', dirname(__FILE__)));
 		wp_enqueue_style('das_project_board_style');
-		wp_register_script('das_project_board_script', WP_PLUGIN_URL.'/design-approval-system/admin/js/project-board.js', array('jquery'));
+		wp_register_script('das_project_board_script', DAS_PLUGIN_PATH.'/design-approval-system/admin/js/project-board.js', array('jquery'));
 		wp_enqueue_script('das_project_board_script');
 	}
 
