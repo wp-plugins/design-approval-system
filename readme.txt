@@ -17,7 +17,7 @@ Here's a look at how fast you can be setup!
 
 
 
-Now works on MultiSite Installs! See [full documentation](http://www.slickremix.com/design-approval-system-docs/). Approved designs get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/docs/project-board). Clients, projects, & designs are organized on one page + Clients can login to see there designs!
+See [full documentation](http://www.slickremix.com/design-approval-system-docs/). Approved designs get a STAR on the Project Board, and Clients signature is recorded to the database. Check out the [Project Board](http://www.slickremix.com/docs/project-board). Clients, projects, & designs are organized on one page + Clients can login to see there designs!
 
 Here is what you, the clients, and the plugin can do:
 
