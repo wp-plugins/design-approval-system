@@ -78,7 +78,7 @@ class Project_Board_Admin {
 				$user_blog_id = '';
 			}
 			else {
-						$user_blog_id = isset($user_blog->userblog_id) ? $user_blog->userblog_id : '';
+				$user_blog_id = isset($user_blog->userblog_id) ? $user_blog->userblog_id : '';
 			}
 		}
 		$output ='';
