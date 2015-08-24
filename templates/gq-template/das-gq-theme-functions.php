@@ -45,7 +45,7 @@ function  das_gq_das_client() {
 	$user_role = $current_user->roles;
 	foreach($user_role as $ur){
 			if( $ur == 'das_client') {  
-						echo'<!-- qq theme CSS override --><style type="text/css"> #wp-admin-bar-new-content, #menu-media, #wp-admin-bar-new-content, #wp-admin-bar-edit { display:none;}</style>';
+						echo'<!-- qq theme CSS override --><style type="text/css"> #wp-admin-bar-new-content, #menu-media, #wp-admin-bar-new-content, #wp-admin-bar-edit, .menu-icon-designapprovalsystem .wp-first-item{display:none;}</style>';
    }
 	}
 }
