@@ -71,13 +71,14 @@ class Project_Board_Admin {
 
 		$user_id = $current_user->ID;
 		$user_blogs = get_blogs_of_user( $user_id );
-
+		
 		foreach ($user_blogs as $user_blog) {
 			if ($user_blog->path == '/') {
 				# do nothing
+				$user_blog_id = '';
 			}
 			else {
-				$user_blog_id = isset($user_blog->userblog_id) ? $user_blog->userblog_id : '';
+						$user_blog_id = isset($user_blog->userblog_id) ? $user_blog->userblog_id : '';
 			}
 		}
 		$output ='';
