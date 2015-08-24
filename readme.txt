@@ -2,8 +2,8 @@
 Contributors: slickremix
 Tags: designer email, project, project board, login, user login, client login, password, username, SMTP, sendmail, authenticate, authenticate username, authenticate password, approval, design approval system, posts, Post, admin, image, images, imaging, page, comments, plugin, designers, designs, design, clients, client, slick remix, slick, remix, freelancer, graphic artists, freelancers, graphic designers, graphics, video, flash, show off, organize designs, organize, logo designers, photography,  wordpress plugin, proof, proofing, proofing software, system, wordpress, wordpress code, workflow, online, virtual, configurable, customizable, settings, email confirmation, links, stars, save comments, database, save digital signature, work flow, multi language, woocommerce, shopping cart, woo, commerce
 Requires at least: 3.5.0
-Tested up to: 4.2.2
-Stable tag: 4.0.8
+Tested up to: 4.3
+Stable tag: 4.0.9
 License: GPLv2 or later
 
 A system to streamline the process of getting designs, photos, documents, videos, or music approved by clients quickly.
@@ -59,6 +59,11 @@ Here is what you, the clients, and the plugin can do:
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Change-log ==
+= Version 4.0.9 / Monday August 24th, 2015 =
+ * FIXED: Issue with media button and a few others being hidden when our is plugin active on Multisite Installs.
+	* FIXED: Notice on project board for multisite installs.
+	* FIXED: Extra space in wp-admin menu when das_clients are logged in.
+	
 = Version 4.0.8 / June 8th, 2015 =
  * MAJOR CHANGES TO DAS: 4.0.8 is a Major Update so it is important that you read the upgrade notice and changes before upgrading, <a href="http://www.slickremix.com/design-approval-system-major-changes" target="_blank">please click here</a>. All current premium extension owners will be getting a coupon to receive the new DAS Premium Plugin. Here is a link to [Version 4.0.6](http://www.slickremix.com/wp-content/uploads/2015/05/design-approval-system-4.0.61.zip) if your plugin was updated by mistake, version 4.0.7 was just a pre-notification changes to come.
 
